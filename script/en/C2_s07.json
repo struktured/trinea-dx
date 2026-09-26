@@ -1,0 +1,596 @@
+{
+ "info": {
+  "block": "C2_s07",
+  "start": "0x02D514",
+  "end": "0x02F7AC",
+  "size": 8856,
+  "ptr_fmt": "16-bit LE offset within bank $C2 (table $C2:0000, index=script id)",
+  "ptr_loc": "0x02000E",
+  "en_translated": 70,
+  "messages": 70
+ },
+ "messages": [
+  {
+   "id": "C2_s07_0000",
+   "block": "C2_s07",
+   "kind": "dialogue",
+   "label": 1,
+   "snes": "$C2D517",
+   "en": "[page][hl]TRINEA[br]VER 0.1[hl][wait][page][END]",
+   "en_from": "C2_s09_0000"
+  },
+  {
+   "id": "C2_s07_0001",
+   "block": "C2_s07",
+   "kind": "dialogue",
+   "label": 249,
+   "snes": "$C2D544",
+   "en": "[END]",
+   "en_from": "C2_s01_0001"
+  },
+  {
+   "id": "C2_s07_0002",
+   "block": "C2_s07",
+   "kind": "dialogue",
+   "label": 101,
+   "snes": "$C2D559",
+   "en": "[hl]Hornisse[hl]: Hm[ENDK]"
+  },
+  {
+   "id": "C2_s07_0003",
+   "block": "C2_s07",
+   "kind": "dialogue",
+   "label": 101,
+   "snes": "$C2D576",
+   "en": "What's that?![wait][END]"
+  },
+  {
+   "id": "C2_s07_0004",
+   "block": "C2_s07",
+   "kind": "dialogue",
+   "label": 102,
+   "snes": "$C2D591",
+   "en": "[hl]Sara[hl]: Huh!? Wh-what's that!?[wait][END]"
+  },
+  {
+   "id": "C2_s07_0005",
+   "block": "C2_s07",
+   "kind": "dialogue",
+   "label": 103,
+   "snes": "$C2D5C9",
+   "en": "[hl]Ryo[hl]: Oh? What is this?[wait][END]"
+  },
+  {
+   "id": "C2_s07_0006",
+   "block": "C2_s07",
+   "kind": "dialogue",
+   "label": 87,
+   "snes": "$C2D7BB",
+   "en": "[hl]Hornisse[hl]: Looks like I can get in through that broken spot in the middle.[wait][END]"
+  },
+  {
+   "id": "C2_s07_0007",
+   "block": "C2_s07",
+   "kind": "dialogue",
+   "label": 88,
+   "snes": "$C2D802",
+   "en": "[hl]Sara[hl]: Looks like I can get in through that broken spot in the middle.[wait][END]"
+  },
+  {
+   "id": "C2_s07_0008",
+   "block": "C2_s07",
+   "kind": "dialogue",
+   "label": 89,
+   "snes": "$C2D845",
+   "en": "[hl]Ryo[hl]: It seems I can enter through the broken spot in the middle![wait][END]"
+  },
+  {
+   "id": "C2_s07_0009",
+   "block": "C2_s07",
+   "kind": "dialogue",
+   "label": 96,
+   "snes": "$C2D905",
+   "en": "[hl]Attempt Guard[hl]: Ah, you... have you been sent by the gods!?[wait][page][hl]Hornisse[hl]: Where is King Heyce?[wait][page][hl]Attempt Guard[hl]: I don't know.[wait][page]I've been stuck in here the whole time...[wait][page]Please... save the others too. I beg you.[wait][END]"
+  },
+  {
+   "id": "C2_s07_0010",
+   "block": "C2_s07",
+   "kind": "dialogue",
+   "label": 5,
+   "snes": "$C2DA05",
+   "en": "[hl]Attempt Guard[hl]: Ah, you... have you been sent by the gods!?[wait][page][hl]Sara[hl]: Oh, I'm nothing so grand![wait][page]More importantly... where's King Heyce?[wait][page][hl]Attempt Guard[hl]: He isn't here![wait][page]Please, I beg you. Save the others too![wait][END]"
+  },
+  {
+   "id": "C2_s07_0011",
+   "block": "C2_s07",
+   "kind": "dialogue",
+   "label": 4,
+   "snes": "$C2DB06",
+   "en": "[hl]Attempt Guard[hl]: Ah, you... have you been sent by the gods!?[wait][page][hl]Ryo[hl]: Hm? I suppose you could say that.[wait][page]More importantly... where is King Heyce?[wait][page][hl]Attempt Guard[hl]: He isn't here.[wait][page]Please, I beg you. Save the others too![wait][END]"
+  },
+  {
+   "id": "C2_s07_0012",
+   "block": "C2_s07",
+   "kind": "dialogue",
+   "label": 119,
+   "snes": "$C2DC01",
+   "en": "This is just a small token of thanks.[wait][page][hl]Special move uses increased by 1!![hl][ENDK]"
+  },
+  {
+   "id": "C2_s07_0013",
+   "block": "C2_s07",
+   "kind": "dialogue",
+   "label": 119,
+   "snes": "$C2DC4B",
+   "en": "[wait][END]",
+   "en_from": "C2_s01_0036"
+  },
+  {
+   "id": "C2_s07_0014",
+   "block": "C2_s07",
+   "kind": "dialogue",
+   "label": 8,
+   "snes": "$C2DCA5",
+   "en": "[hl]Attempt Guard[hl]: Ah, you...!?[wait][page][hl]Hornisse[hl]: Is King Heyce here?[wait][page][hl]Attempt Guard[hl]: Oh, you'll rescue the King?[wait] He isn't here, but surely... he must be close by.[wait][page]Please, you must rescue him. I beg you.[wait][END]"
+  },
+  {
+   "id": "C2_s07_0015",
+   "block": "C2_s07",
+   "kind": "dialogue",
+   "label": 10,
+   "snes": "$C2DDB0",
+   "en": "[hl]Attempt Guard[hl]: Ah, you...!?[wait][page][hl]Sara[hl]: Is King Heyce here?[wait][page][hl]Attempt Guard[hl]: Oh, you would rescue the King?[wait][page]How grateful I am! Please, I beg you.[wait][END]"
+  },
+  {
+   "id": "C2_s07_0016",
+   "block": "C2_s07",
+   "kind": "dialogue",
+   "label": 11,
+   "snes": "$C2DE89",
+   "en": "[hl]Attempt Guard[hl]: Ah, you...!?[wait][page][hl]Ryo[hl]: Is the King here?[wait][page][hl]Attempt Guard[hl]: Could it be... you've come for the King? Oh, how grateful I am![wait][END]"
+  },
+  {
+   "id": "C2_s07_0017",
+   "block": "C2_s07",
+   "kind": "dialogue",
+   "label": 118,
+   "snes": "$C2DF2F",
+   "en": "This is just a small token of thanks.[wait][page][hl]LIFE restored![hl][ENDK]"
+  },
+  {
+   "id": "C2_s07_0018",
+   "block": "C2_s07",
+   "kind": "dialogue",
+   "label": 118,
+   "snes": "$C2DF68",
+   "en": "[wait][END]",
+   "en_from": "C2_s01_0036"
+  },
+  {
+   "id": "C2_s07_0019",
+   "block": "C2_s07",
+   "kind": "dialogue",
+   "label": 12,
+   "snes": "$C2DFFA",
+   "en": "[hl]Attempt Guard[hl]: Oh, who are you?[wait][page][hl]Hornisse[hl]: The [hl]Blue Orb[hl]...... I mean, I want to rescue King Heyce![wait][END]"
+  },
+  {
+   "id": "C2_s07_0020",
+   "block": "C2_s07",
+   "kind": "dialogue",
+   "label": 13,
+   "snes": "$C2E07A",
+   "en": "[hl]Attempt Guard[hl]: Oh, who are you?[wait][page][hl]Sara[hl]: The [hl]Green Orb[hl]...... I mean, I want to rescue the King.[wait][END]"
+  },
+  {
+   "id": "C2_s07_0021",
+   "block": "C2_s07",
+   "kind": "dialogue",
+   "label": 14,
+   "snes": "$C2E0F6",
+   "en": "[hl]Attempt Guard[hl]: Oh, who are you?[wait][page][hl]Ryo[hl]: The [hl]Crimson Orb[hl]...... I mean, I wish to save the King![wait][END]"
+  },
+  {
+   "id": "C2_s07_0022",
+   "block": "C2_s07",
+   "kind": "dialogue",
+   "label": 117,
+   "snes": "$C2E16A",
+   "en": "[hl]Attempt Guard[hl]: Hm? What, you want the power of chaos too?[wait][page]Well, whatever... Lord Heyce would never allow it.[wait][page]Either way, he isn't here. Try somewhere else......[wait][END]"
+  },
+  {
+   "id": "C2_s07_0023",
+   "block": "C2_s07",
+   "kind": "dialogue",
+   "label": 15,
+   "snes": "$C2E274",
+   "en": "[hl]Attempt Guard[hl]: Oh, I'm saved![wait][page][hl]Hornisse[hl]: Where is King Heyce?[wait][page][hl]Attempt Guard[hl]: Oh... you'll rescue the King?[wait][page]Please, we're counting on you!![wait][END]"
+  },
+  {
+   "id": "C2_s07_0024",
+   "block": "C2_s07",
+   "kind": "dialogue",
+   "label": 16,
+   "snes": "$C2E32C",
+   "en": "[hl]Attempt Guard[hl]: Oh, I'm saved![wait][page][hl]Sara[hl]: I wonder where King Heyce is?[wait][page][hl]Attempt Guard[hl]: Oh... you'll rescue the King?[wait][page]Please, we're counting on you!![wait][END]"
+  },
+  {
+   "id": "C2_s07_0025",
+   "block": "C2_s07",
+   "kind": "dialogue",
+   "label": 17,
+   "snes": "$C2E3E4",
+   "en": "[hl]Attempt Guard[hl]: Oh, I'm saved![wait][page][hl]Ryo[hl]: Where is the King?[wait][page][hl]Attempt Guard[hl]: Oh... you'll rescue the King?[wait][page]Please, we're counting on you!![wait][END]"
+  },
+  {
+   "id": "C2_s07_0026",
+   "block": "C2_s07",
+   "kind": "dialogue",
+   "label": 133,
+   "snes": "$C2E48E",
+   "en": "This is just a small token of thanks.[wait][page][hl]LIFE restored![hl][ENDK]",
+   "en_from": "C2_s07_0017"
+  },
+  {
+   "id": "C2_s07_0027",
+   "block": "C2_s07",
+   "kind": "dialogue",
+   "label": 133,
+   "snes": "$C2E4C7",
+   "en": "[wait][END]",
+   "en_from": "C2_s01_0036"
+  },
+  {
+   "id": "C2_s07_0028",
+   "block": "C2_s07",
+   "kind": "dialogue",
+   "label": 42,
+   "snes": "$C2E531",
+   "en": "[hl]Stone Giant[hl]: You shall not pass! Prepare yourself!![wait][END]"
+  },
+  {
+   "id": "C2_s07_0029",
+   "block": "C2_s07",
+   "kind": "dialogue",
+   "label": 137,
+   "snes": "$C2E579",
+   "en": "[hl]Stone Giant[hl]: N-no...... I... lost...?[wait][END]"
+  },
+  {
+   "id": "C2_s07_0030",
+   "block": "C2_s07",
+   "kind": "dialogue",
+   "label": 137,
+   "snes": "$C2E5C3",
+   "en": "　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[br]　[88]　[88]　[88]　[88]　[88][ENDK]",
+   "en_from": "copy"
+  },
+  {
+   "id": "C2_s07_0031",
+   "block": "C2_s07",
+   "kind": "dialogue",
+   "label": 137,
+   "snes": "$C2E5F8",
+   "en": "[END]",
+   "en_from": "C2_s01_0001"
+  },
+  {
+   "id": "C2_s07_0032",
+   "block": "C2_s07",
+   "kind": "dialogue",
+   "label": 138,
+   "snes": "$C2E600",
+   "en": "[hl]Stone Giant[hl]: To a w-woman...... Wh-what... is this...[wait][END]"
+  },
+  {
+   "id": "C2_s07_0033",
+   "block": "C2_s07",
+   "kind": "dialogue",
+   "label": 138,
+   "snes": "$C2E648",
+   "en": "　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[br]　[88]　[88]　[88]　[88]　[88][ENDK]",
+   "en_from": "copy"
+  },
+  {
+   "id": "C2_s07_0034",
+   "block": "C2_s07",
+   "kind": "dialogue",
+   "label": 138,
+   "snes": "$C2E67D",
+   "en": "[END]",
+   "en_from": "C2_s01_0001"
+  },
+  {
+   "id": "C2_s07_0035",
+   "block": "C2_s07",
+   "kind": "dialogue",
+   "label": 139,
+   "snes": "$C2E685",
+   "en": "[hl]Stone Giant[hl]: Ugh...... So this... is... reality...[wait][END]"
+  },
+  {
+   "id": "C2_s07_0036",
+   "block": "C2_s07",
+   "kind": "dialogue",
+   "label": 139,
+   "snes": "$C2E6C1",
+   "en": "　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[br]　[88]　[88]　[88]　[88]　[88][ENDK]",
+   "en_from": "copy"
+  },
+  {
+   "id": "C2_s07_0037",
+   "block": "C2_s07",
+   "kind": "dialogue",
+   "label": 139,
+   "snes": "$C2E6F6",
+   "en": "[END]",
+   "en_from": "C2_s01_0001"
+  },
+  {
+   "id": "C2_s07_0038",
+   "block": "C2_s07",
+   "kind": "dialogue",
+   "label": 127,
+   "snes": "$C2E70A",
+   "en": "[hl]Hornisse[hl]: Now, onward![ENDK]"
+  },
+  {
+   "id": "C2_s07_0039",
+   "block": "C2_s07",
+   "kind": "dialogue",
+   "label": 127,
+   "snes": "$C2E735",
+   "en": "[wait][END]",
+   "en_from": "C2_s01_0036"
+  },
+  {
+   "id": "C2_s07_0040",
+   "block": "C2_s07",
+   "kind": "dialogue",
+   "label": 128,
+   "snes": "$C2E73A",
+   "en": "[hl]Sara[hl]: Okay, let's go![ENDK]"
+  },
+  {
+   "id": "C2_s07_0041",
+   "block": "C2_s07",
+   "kind": "dialogue",
+   "label": 128,
+   "snes": "$C2E761",
+   "en": "[wait][END]",
+   "en_from": "C2_s01_0036"
+  },
+  {
+   "id": "C2_s07_0042",
+   "block": "C2_s07",
+   "kind": "dialogue",
+   "label": 129,
+   "snes": "$C2E766",
+   "en": "[hl]Ryo[hl]: I must hurry on![ENDK]"
+  },
+  {
+   "id": "C2_s07_0043",
+   "block": "C2_s07",
+   "kind": "dialogue",
+   "label": 129,
+   "snes": "$C2E791",
+   "en": "[wait][END]",
+   "en_from": "C2_s01_0036"
+  },
+  {
+   "id": "C2_s07_0044",
+   "block": "C2_s07",
+   "kind": "dialogue",
+   "label": 99,
+   "snes": "$C2E806",
+   "en": "[hl]Stone Golem[hl]: Ha ha ha...[wait][page]Lord Seto says he has no business with the likes of you.[wait][page][hl]Stone Golem Jr.[hl]: That's right......[wait][page]Take some good advice! Just turn around and go home. Value your life!![wait][END]"
+  },
+  {
+   "id": "C2_s07_0045",
+   "block": "C2_s07",
+   "kind": "dialogue",
+   "label": 175,
+   "snes": "$C2E8C4",
+   "en": "[hl]Stone Golem[hl]: Ngh...... Lord... Seto... Gwah[wait][END]"
+  },
+  {
+   "id": "C2_s07_0046",
+   "block": "C2_s07",
+   "kind": "dialogue",
+   "label": 250,
+   "snes": "$C2E903",
+   "en": "[hl]Stone Golem Jr.[hl]: How can this be! That I... would...[wait][END]"
+  },
+  {
+   "id": "C2_s07_0047",
+   "block": "C2_s07",
+   "kind": "dialogue",
+   "label": 49,
+   "snes": "$C2E9A9",
+   "en": "[hl]Hornisse[hl]: That one... was tough.[wait][END]"
+  },
+  {
+   "id": "C2_s07_0048",
+   "block": "C2_s07",
+   "kind": "dialogue",
+   "label": 49,
+   "snes": "$C2E9E6",
+   "en": "　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[br]　[88]　[88]　[88]　[88]　[88][END]",
+   "en_from": "copy"
+  },
+  {
+   "id": "C2_s07_0049",
+   "block": "C2_s07",
+   "kind": "dialogue",
+   "label": 48,
+   "snes": "$C2EA22",
+   "en": "[hl]Sara[hl]: Phew, I did it.[wait][END]"
+  },
+  {
+   "id": "C2_s07_0050",
+   "block": "C2_s07",
+   "kind": "dialogue",
+   "label": 48,
+   "snes": "$C2EA54",
+   "en": "　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[br]　[88]　[88]　[88]　[88]　[88][END]",
+   "en_from": "copy"
+  },
+  {
+   "id": "C2_s07_0051",
+   "block": "C2_s07",
+   "kind": "dialogue",
+   "label": 47,
+   "snes": "$C2EA90",
+   "en": "[hl]Ryo[hl]: That was close.[wait][END]"
+  },
+  {
+   "id": "C2_s07_0052",
+   "block": "C2_s07",
+   "kind": "dialogue",
+   "label": 47,
+   "snes": "$C2EAC4",
+   "en": "　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[br]　[88]　[88]　[88]　[88]　[88][END]",
+   "en_from": "copy"
+  },
+  {
+   "id": "C2_s07_0053",
+   "block": "C2_s07",
+   "kind": "dialogue",
+   "label": 43,
+   "snes": "$C2EB32",
+   "en": "[hl]Seto[hl]: Oho... so you made it this far![wait][page]But I won't hand over the King! We need the King's power![wait][page]Now then... would you kindly die a nice, pleasant death?[wait][page]Ha ha ha!![wait][END]"
+  },
+  {
+   "id": "C2_s07_0054",
+   "block": "C2_s07",
+   "kind": "dialogue",
+   "label": 2,
+   "snes": "$C2EC06",
+   "en": "[hl]Seto[hl]: Ngh...... Imp...ossi...ble...[wait][END]"
+  },
+  {
+   "id": "C2_s07_0055",
+   "block": "C2_s07",
+   "kind": "dialogue",
+   "label": 2,
+   "snes": "$C2EC47",
+   "en": "　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[br]　[88]　[88]　[88]　[88]　[88]　[page][hl]Hornisse[hl]: Where is the King?[ENDK]"
+  },
+  {
+   "id": "C2_s07_0056",
+   "block": "C2_s07",
+   "kind": "dialogue",
+   "label": 2,
+   "snes": "$C2ECA9",
+   "en": "[wait][END]",
+   "en_from": "C2_s01_0036"
+  },
+  {
+   "id": "C2_s07_0057",
+   "block": "C2_s07",
+   "kind": "dialogue",
+   "label": 3,
+   "snes": "$C2ECB0",
+   "en": "[hl]Seto[hl]: Imp...ossi...ble...[wait][END]"
+  },
+  {
+   "id": "C2_s07_0058",
+   "block": "C2_s07",
+   "kind": "dialogue",
+   "label": 3,
+   "snes": "$C2ECE4",
+   "en": "　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[br]　[88]　[88]　[88]　[88]　[88]　[page][hl]Sara[hl]: All right, I did it![ENDK]"
+  },
+  {
+   "id": "C2_s07_0059",
+   "block": "C2_s07",
+   "kind": "dialogue",
+   "label": 3,
+   "snes": "$C2ED44",
+   "en": "[wait][END]",
+   "en_from": "C2_s01_0036"
+  },
+  {
+   "id": "C2_s07_0060",
+   "block": "C2_s07",
+   "kind": "dialogue",
+   "label": 7,
+   "snes": "$C2ED4B",
+   "en": "[hl]Seto[hl]: By... a mere... ninja...[wait][END]"
+  },
+  {
+   "id": "C2_s07_0061",
+   "block": "C2_s07",
+   "kind": "dialogue",
+   "label": 7,
+   "snes": "$C2ED7D",
+   "en": "　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[br]　[88]　[88]　[88]　[88]　[88]　[page][hl]Ryo[hl]: All right, I won![ENDK]"
+  },
+  {
+   "id": "C2_s07_0062",
+   "block": "C2_s07",
+   "kind": "dialogue",
+   "label": 7,
+   "snes": "$C2EDDD",
+   "en": "[wait][END]",
+   "en_from": "C2_s01_0036"
+  },
+  {
+   "id": "C2_s07_0063",
+   "block": "C2_s07",
+   "kind": "dialogue",
+   "label": 24,
+   "snes": "$C2EE36",
+   "en": "[hl]King Heyce[hl]: Oh, salvation from the gods? Who are you?[wait][END]"
+  },
+  {
+   "id": "C2_s07_0064",
+   "block": "C2_s07",
+   "kind": "dialogue",
+   "label": 217,
+   "snes": "$C2EE7C",
+   "en": "[hl]Hornisse[hl]: I am Hornisse. I have a request...[wait][page][hl]King Heyce[hl]: You have saved my life.[wait][page]If there is anything I can do, you need only name it.[wait][page][hl]Hornisse[hl]: It concerns... the [hl]Blue Orb[hl].[wait][page][hl]King Heyce[hl]: Wh-what did you say!? The [hl]Blue Orb[hl]!?[wait][page]Whatever for?[wait][page][hl]Hornisse[hl]: To stop the revival of the Penta Dragon![wait][page][hl]King Heyce[hl]: .........[wait][page]I see... so that is the reason...[wait][page]But whether [hl]that[hl] can truly stop the Penta Dragon's revival...[wait][page]no one can say. Will you still go through with it?[wait][page][hl]Hornisse[hl]: .........[wait][page][hl]King Heyce[hl]: Very well. I see you are serious.[wait][page]Then... take it with you! Do your best![wait][END]"
+  },
+  {
+   "id": "C2_s07_0065",
+   "block": "C2_s07",
+   "kind": "dialogue",
+   "label": 218,
+   "snes": "$C2F116",
+   "en": "[hl]Sara[hl]: I'm Sara.[wait][page]Actually... I have a favor to ask...[wait][page][hl]King Heyce[hl]: You have saved my life.[wait][page]If there is anything I can do, you need only name it.[wait][page][hl]Sara[hl]: It's about... the [hl]Green Orb[hl].[wait][page][hl]King Heyce[hl]: Wh-what did you say!? The [hl]Green Orb[hl]!?[wait][page]Whatever for?[wait][page][hl]Sara[hl]: To stop the revival of the Penta Dragon![wait][page][hl]King Heyce[hl]: .........[wait][page]I see... so that is the reason...[wait][page]But whether [hl]that[hl] can truly stop the Penta Dragon's revival...[wait][page]no one can say! Will you still go through with it?[wait][page][hl]Sara[hl]: .........[wait][page][hl]King Heyce[hl]: Very well. I see you are serious.[wait][page]Then... take it with you! Do your best![wait][END]"
+  },
+  {
+   "id": "C2_s07_0066",
+   "block": "C2_s07",
+   "kind": "dialogue",
+   "label": 219,
+   "snes": "$C2F3AC",
+   "en": "[hl]Ryo[hl]: I am called Ryo.[wait][page]In truth... I have a request of you...[wait][page][hl]King Heyce[hl]: You have saved my life.[wait][page]If there is anything I can do, you need only name it.[wait][page][hl]Ryo[hl]: It concerns... the [hl]Crimson Orb[hl].[wait][page][hl]King Heyce[hl]: Wh-what did you say!? The [hl]Crimson Orb[hl]!?[wait][page]Whatever for?[wait][page][hl]Ryo[hl]: To stop the revival of the Penta Dragon![wait][page][hl]King Heyce[hl]: .........[wait][page]I see... so that is the reason...[wait][page]But whether [hl]that[hl] can truly stop the Penta Dragon's revival...[wait][page]no one can say. Will you still go through with it?[wait][page][hl]Ryo[hl]: .........[wait][page][hl]King Heyce[hl]: Very well. I see you are serious.[wait][page]Then... take it with you! Do your best![wait][END]"
+  },
+  {
+   "id": "C2_s07_0067",
+   "block": "C2_s07",
+   "kind": "dialogue",
+   "label": 66,
+   "snes": "$C2F694",
+   "en": "　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[br]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[br]　[88]　[88]　[88]　[88][END]",
+   "en_from": "copy"
+  },
+  {
+   "id": "C2_s07_0068",
+   "block": "C2_s07",
+   "kind": "dialogue",
+   "label": 6,
+   "snes": "$C2F70B",
+   "en": "[hl]Lysis[hl]: Are you awake?[wait][page]Please be careful. Seto is powerful.[wait][page][hl]LIFE restored![hl][ENDK]"
+  },
+  {
+   "id": "C2_s07_0069",
+   "block": "C2_s07",
+   "kind": "dialogue",
+   "label": 6,
+   "snes": "$C2F77C",
+   "en": "[wait][page][hl]Lysis[hl]: Please... stay safe.[wait][END]"
+  }
+ ]
+}

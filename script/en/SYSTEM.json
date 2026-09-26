@@ -1,0 +1,26 @@
+{
+ "info": {
+  "block": "SYSTEM",
+  "ptr_fmt": "hard-coded addresses/lengths in bank $C0 code (TBD)",
+  "en_translated": 2,
+  "messages": 2
+ },
+ "messages": [
+  {
+   "id": "SYS_56C4",
+   "block": "SYSTEM",
+   "kind": "system",
+   "snes": "$C056C4",
+   "note": "char select screen strings (LE words, FFFF-terminated list)",
+   "en": "Name | Please choose a character."
+  },
+  {
+   "id": "SYS_7600",
+   "block": "SYSTEM",
+   "kind": "system",
+   "snes": "$C07600",
+   "note": "shop strings (LE words); boundaries fixed in code",
+   "en": "G | Raises max LIFE by 5. | Raises attack power. | Adds 1 special move use. | Return to the game. | Not enough | money!! | Sold out. | Increased! | Increased!!"
+  }
+ ]
+}

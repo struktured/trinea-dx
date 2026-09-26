@@ -1,0 +1,443 @@
+{
+ "info": {
+  "block": "C2_s04",
+  "start": "0x0241D8",
+  "end": "0x025DE2",
+  "size": 7178,
+  "ptr_fmt": "16-bit LE offset within bank $C2 (table $C2:0000, index=script id)",
+  "ptr_loc": "0x020008",
+  "en_translated": 51,
+  "messages": 51
+ },
+ "messages": [
+  {
+   "id": "C2_s04_0000",
+   "block": "C2_s04",
+   "kind": "dialogue",
+   "label": 1,
+   "snes": "$C241DB",
+   "en": "[page][hl]TRINEA[br]VER 0.1[hl][wait][page][END]",
+   "en_from": "C2_s09_0000"
+  },
+  {
+   "id": "C2_s04_0001",
+   "block": "C2_s04",
+   "kind": "dialogue",
+   "label": 200,
+   "snes": "$C2425E",
+   "en": "[hl]Lillie[hl]: Huh!? Who are you? What do you want?[wait][page][hl]Hornisse[hl]: Hmm...... My name is not worth giving.[wait][page]I have come here only... to save this era![wait][page][hl]Lillie[hl]: ???[wait][page][hl]Hornisse[hl]: I don't blame you for not believing me.[wait][page]But one thing is certain: evil has its claws in this era![wait][page][hl]Lillie[hl]: Well, but......[wait][page]The master of this house was killed by a man in black......[wait][page]and his daughter has gone off for revenge...[wait][page]I don't know anything more.[wait][page][hl]Hornisse[hl]: Hmm... That's all I need to know. I can guess who the villain is.[wait][page]You needn't worry any longer. I'll simply defeat this man in black and restore the peace![wait][END]"
+  },
+  {
+   "id": "C2_s04_0002",
+   "block": "C2_s04",
+   "kind": "dialogue",
+   "label": 203,
+   "snes": "$C244AF",
+   "en": "[hl]Lillie[hl]: What about the man in black?[wait][page]I see, not yet... Then why not rest a little before you go?[wait][page][hl]LIFE restored![hl][ENDK]"
+  },
+  {
+   "id": "C2_s04_0003",
+   "block": "C2_s04",
+   "kind": "dialogue",
+   "label": 203,
+   "snes": "$C24520",
+   "en": "[wait][page][hl]Lillie[hl]: Please... do take care.[wait][END]"
+  },
+  {
+   "id": "C2_s04_0004",
+   "block": "C2_s04",
+   "kind": "dialogue",
+   "label": 201,
+   "snes": "$C2455A",
+   "en": "[hl]Lillie[hl]: !?[wait][page]Sara... you're too late!! Your father... your father!![wait][page][hl]Sara[hl]: Huh!? What's happened to Father?[wait][page][hl]Lillie[hl]: And I was right here with him... I'm so sorry.[wait][page][hl]Sara[hl]: You're lying, right?[wait][page]It's a bad joke, isn't it? Stop it... Honestly, Lillie.[wait][page][hl]Lillie[hl]: .........[wait][page][hl]Sara[hl]: It's true?[wait][page][hl]Lillie[hl]: .........[wait][page][hl]Sara[hl]: What happened?! Who did this?[wait][page]Nooo!! Daaad!![wait][END]"
+  },
+  {
+   "id": "C2_s04_0005",
+   "block": "C2_s04",
+   "kind": "dialogue",
+   "label": 201,
+   "snes": "$C24731",
+   "en": "　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88][END]",
+   "en_from": "copy"
+  },
+  {
+   "id": "C2_s04_0006",
+   "block": "C2_s04",
+   "kind": "dialogue",
+   "label": 201,
+   "snes": "$C2474C",
+   "en": "[hl]Sara[hl]: Hehe...... Sorry I worried you.[wait] I'm okay now. I can't sit around moping forever.[wait][page][hl]Lillie[hl]: Sara......[wait] Honestly, you never stop surprising me.[wait][page]But when you're sad, it's all right to cry. That's what it means to be human, isn't it?[wait][page][hl]Sara[hl]: Yes...... but I......[wait][page]Well then! I'm going to meet this man in black! And for Dad......[wait][page][hl]Lillie[hl]: I see...[wait][page]Do whatever you think is right.[wait][page][hl]Sara[hl]: Thank you... Lillie. Well, I'm off![wait][END]"
+  },
+  {
+   "id": "C2_s04_0007",
+   "block": "C2_s04",
+   "kind": "dialogue",
+   "label": 202,
+   "snes": "$C24960",
+   "en": "[hl]Lillie[hl]: Who are you? What do you want?[wait][page][hl]Ryo[hl]: I am... a ninja of the Heaven Clan.[wait][page][hl]Lillie[hl]: ???[wait][page][hl]Ryo[hl]: It is only natural that you are confused.[wait][page]But one thing is certain: evil has its claws in this era![wait][page][hl]Lillie[hl]: Well, but......[wait][page]The master of this house was killed by a man in black......[wait][page]and his daughter has gone off for revenge...[wait][page]I don't know anything more.[wait][page][hl]Ryo[hl]: Good... That is enough for me to see who the villain is![wait][page]You need not worry any longer. I shall defeat this man in black and restore the peace![wait][END]"
+  },
+  {
+   "id": "C2_s04_0008",
+   "block": "C2_s04",
+   "kind": "dialogue",
+   "label": 121,
+   "snes": "$C24B77",
+   "en": "Forfahren's voice... echoed inside my head.[wait][page][hl]Rose Castle is a little further east![hl][wait][END]"
+  },
+  {
+   "id": "C2_s04_0009",
+   "block": "C2_s04",
+   "kind": "dialogue",
+   "label": 122,
+   "snes": "$C24BCF",
+   "en": "Graf's voice... echoed inside my head.[wait][page][hl]Rose Castle is a little further east![hl][wait][END]"
+  },
+  {
+   "id": "C2_s04_0010",
+   "block": "C2_s04",
+   "kind": "dialogue",
+   "label": 148,
+   "snes": "$C24C40",
+   "en": "<It doesn't seem to open.>[wait][END]",
+   "en_from": "C2_s03_0018"
+  },
+  {
+   "id": "C2_s04_0011",
+   "block": "C2_s04",
+   "kind": "dialogue",
+   "label": 140,
+   "snes": "$C24C73",
+   "en": "<It doesn't seem to open.>[wait][END]",
+   "en_from": "C2_s03_0018"
+  },
+  {
+   "id": "C2_s04_0012",
+   "block": "C2_s04",
+   "kind": "dialogue",
+   "label": 46,
+   "snes": "$C24CC7",
+   "en": "<It doesn't seem to open.>[wait][END]",
+   "en_from": "C2_s03_0018"
+  },
+  {
+   "id": "C2_s04_0013",
+   "block": "C2_s04",
+   "kind": "dialogue",
+   "label": 157,
+   "snes": "$C24D05",
+   "en": "[hl]Mysterious Voice[hl]: Oh my, welcome.[wait][END]"
+  },
+  {
+   "id": "C2_s04_0014",
+   "block": "C2_s04",
+   "kind": "dialogue",
+   "label": 159,
+   "snes": "$C24D33",
+   "en": "There's a secret entrance inside that coffin.[wait][page]If you please, come this way through there! I'll be waiting![wait][page]Vahahahaha![ENDK]"
+  },
+  {
+   "id": "C2_s04_0015",
+   "block": "C2_s04",
+   "kind": "dialogue",
+   "label": 159,
+   "snes": "$C24DB6",
+   "en": "[wait][END]",
+   "en_from": "C2_s01_0036"
+  },
+  {
+   "id": "C2_s04_0016",
+   "block": "C2_s04",
+   "kind": "dialogue",
+   "label": 156,
+   "snes": "$C24DBB",
+   "en": "[hl]Mysterious Voice[hl]: Miss Sara Weathers... was it?[wait][page]We each have a father to [hl]avenge[hl].[wait][page]Now, come just a little further.[wait][END]"
+  },
+  {
+   "id": "C2_s04_0017",
+   "block": "C2_s04",
+   "kind": "dialogue",
+   "label": 158,
+   "snes": "$C24E59",
+   "en": "[hl]Mysterious Voice[hl]: Mr. Ryo, was it?[wait][END]"
+  },
+  {
+   "id": "C2_s04_0018",
+   "block": "C2_s04",
+   "kind": "dialogue",
+   "label": 38,
+   "snes": "$C24EAC",
+   "en": "[hl]Mysterious Voice[hl]: That is... my late father's bedchamber.[wait][page]Though it has become a coffin in the truest sense...[wait][page]Not that Father is in there now.[wait][page]And now, a small present from me! Please......[wait][page][hl]LIFE restored![hl][ENDK]"
+  },
+  {
+   "id": "C2_s04_0019",
+   "block": "C2_s04",
+   "kind": "dialogue",
+   "label": 38,
+   "snes": "$C24F8D",
+   "en": "[wait][page][hl]Mysterious Voice[hl]: Well then, see you soon. Vahahahaha![ENDK]"
+  },
+  {
+   "id": "C2_s04_0020",
+   "block": "C2_s04",
+   "kind": "dialogue",
+   "label": 38,
+   "snes": "$C24FC7",
+   "en": "[wait][END]",
+   "en_from": "C2_s01_0036"
+  },
+  {
+   "id": "C2_s04_0021",
+   "block": "C2_s04",
+   "kind": "dialogue",
+   "label": 204,
+   "snes": "$C24FCC",
+   "en": "[END]",
+   "en_from": "C2_s01_0001"
+  },
+  {
+   "id": "C2_s04_0022",
+   "block": "C2_s04",
+   "kind": "dialogue",
+   "label": 60,
+   "snes": "$C25031",
+   "en": "[hl]Man in Black[hl]: Oho, so you've finally come. I'm sick of waiting![wait][END]"
+  },
+  {
+   "id": "C2_s04_0023",
+   "block": "C2_s04",
+   "kind": "dialogue",
+   "label": 62,
+   "snes": "$C2507B",
+   "en": "[hl]Hornisse[hl]: So you're the man in black?[wait][page][hl]Man in Black[hl]: That crimson cape, that attire![wait][page]Don't tell me... you're the legendary hero [hl]Hornisse[hl]?[wait][page][hl]Hornisse[hl]: .........[wait][page][hl]Man in Black[hl]: I knew it![wait][page]Playing the hero, hunting villains? Ha ha ha... don't make me laugh![wait][page][hl]Hornisse[hl]: .........[wait][page][hl]Man in Black[hl]: Rage and grief change a man!![wait][page][hl]Hornisse[hl]: .........[wait][page]It seems the one who turned you into an avenger... was me.[wait][page][hl]Man in Black[hl]: Vahahaha![ENDK]"
+  },
+  {
+   "id": "C2_s04_0024",
+   "block": "C2_s04",
+   "kind": "dialogue",
+   "label": 62,
+   "snes": "$C2524D",
+   "en": "[wait][page]So even legendary heroes tell lies.[wait] You think I'd believe such a made-up story?[wait][END]"
+  },
+  {
+   "id": "C2_s04_0025",
+   "block": "C2_s04",
+   "kind": "dialogue",
+   "label": 64,
+   "snes": "$C252A1",
+   "en": "[hl]Hornisse[hl]: It's no lie! That was nearly twenty years ago......[wait][page][hl]Man in Black[hl]: Still at it!![wait][page]My father... Count Vampierre...[wait] was defeated in battle by a girl named [hl]Sara Weathers[hl]![wait][page][hl]Hornisse[hl]: What do you mean?[wait][page][hl]Man in Black[hl]: Shut up![wait][page]It no longer matters who killed him![wait][page]We will simply take this world into our hands! By the power of this [hl]Cursed Song[hl]![wait][page][hl]Hornisse[hl]: Hm, \"we\"... What do you mean by that?[wait][page][hl]Man in Black[hl]: Vahahaha![ENDK]"
+  },
+  {
+   "id": "C2_s04_0026",
+   "block": "C2_s04",
+   "kind": "dialogue",
+   "label": 64,
+   "snes": "$C2546B",
+   "en": "[wait][page]Any thorn in the side of our world conquest must be plucked out![wait][page]Nothing personal! Vahahaha![ENDK]"
+  },
+  {
+   "id": "C2_s04_0027",
+   "block": "C2_s04",
+   "kind": "dialogue",
+   "label": 64,
+   "snes": "$C254CE",
+   "en": "[wait][END]",
+   "en_from": "C2_s01_0036"
+  },
+  {
+   "id": "C2_s04_0028",
+   "block": "C2_s04",
+   "kind": "dialogue",
+   "label": 61,
+   "snes": "$C254D5",
+   "en": "[hl]Sara[hl]: Was it you who killed my dad?![wait][page][hl]Man in Black[hl]: Yes, that's right! I'm the one who did it![wait][page]But it was you who killed my father, Count Vampierre![wait][page]So we're both avengers... We're even.[wait][page][hl]Sara[hl]: No!![wait][page]Unlike your father, my dad was not a bad man![wait][page][hl]Man in Black[hl]: Perhaps my father was a villain.[wait][page]But that doesn't change the fact that he was my father![wait][page]So... just like you, it doesn't change my grudge......[wait][page]Now is the time to settle it! My father's killer, here I come![ENDK]"
+  },
+  {
+   "id": "C2_s04_0029",
+   "block": "C2_s04",
+   "kind": "dialogue",
+   "label": 61,
+   "snes": "$C256D8",
+   "en": "[wait][END]",
+   "en_from": "C2_s01_0036"
+  },
+  {
+   "id": "C2_s04_0030",
+   "block": "C2_s04",
+   "kind": "dialogue",
+   "label": 63,
+   "snes": "$C256DF",
+   "en": "[hl]Ryo[hl]: Are you the man in black?[wait][page][hl]Man in Black[hl]: What if I am? Mr. Villain-Hunting Ninja![wait][page]Rage and grief change a man![wait][page][hl]Ryo[hl]: What good comes of living for revenge?[wait][page][hl]Man in Black[hl]: Shut up![wait][page]None of that matters anymore![wait][page]We will simply take this world into our hands! By the power of this [hl]Cursed Song[hl]![wait][page][hl]Ryo[hl]: Hm, \"we\"... What do you mean by that?[wait][page][hl]Man in Black[hl]: Vahahaha![ENDK]"
+  },
+  {
+   "id": "C2_s04_0031",
+   "block": "C2_s04",
+   "kind": "dialogue",
+   "label": 63,
+   "snes": "$C258A0",
+   "en": "[wait][page]Any thorn in the side of our world conquest must be plucked out![wait][page]Nothing personal! Vahahaha![ENDK]",
+   "en_from": "C2_s04_0026"
+  },
+  {
+   "id": "C2_s04_0032",
+   "block": "C2_s04",
+   "kind": "dialogue",
+   "label": 63,
+   "snes": "$C25903",
+   "en": "[wait][END]",
+   "en_from": "C2_s01_0036"
+  },
+  {
+   "id": "C2_s04_0033",
+   "block": "C2_s04",
+   "kind": "dialogue",
+   "label": 251,
+   "snes": "$C25915",
+   "en": "[hl]Man in Black[hl]: Father...... forgive...... Gurgh......[ENDK]"
+  },
+  {
+   "id": "C2_s04_0034",
+   "block": "C2_s04",
+   "kind": "dialogue",
+   "label": 251,
+   "snes": "$C25949",
+   "en": "[wait][END]",
+   "en_from": "C2_s01_0036"
+  },
+  {
+   "id": "C2_s04_0035",
+   "block": "C2_s04",
+   "kind": "dialogue",
+   "label": 251,
+   "snes": "$C25957",
+   "en": "　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[br]　[88]　[88]　[88]　[END]",
+   "en_from": "copy"
+  },
+  {
+   "id": "C2_s04_0036",
+   "block": "C2_s04",
+   "kind": "dialogue",
+   "label": 249,
+   "snes": "$C2598E",
+   "en": "[hl]Man in Black[hl]: Not again......... Gurgh......[ENDK]"
+  },
+  {
+   "id": "C2_s04_0037",
+   "block": "C2_s04",
+   "kind": "dialogue",
+   "label": 249,
+   "snes": "$C259C0",
+   "en": "[wait][END]",
+   "en_from": "C2_s01_0036"
+  },
+  {
+   "id": "C2_s04_0038",
+   "block": "C2_s04",
+   "kind": "dialogue",
+   "label": 249,
+   "snes": "$C259CE",
+   "en": "　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[br]　[88]　[88]　[88]　[END]",
+   "en_from": "copy"
+  },
+  {
+   "id": "C2_s04_0039",
+   "block": "C2_s04",
+   "kind": "dialogue",
+   "label": 248,
+   "snes": "$C25A05",
+   "en": "[hl]Man in Black[hl]: This... can't... be... Gurgh......[ENDK]"
+  },
+  {
+   "id": "C2_s04_0040",
+   "block": "C2_s04",
+   "kind": "dialogue",
+   "label": 248,
+   "snes": "$C25A39",
+   "en": "[wait][END]",
+   "en_from": "C2_s01_0036"
+  },
+  {
+   "id": "C2_s04_0041",
+   "block": "C2_s04",
+   "kind": "dialogue",
+   "label": 248,
+   "snes": "$C25A47",
+   "en": "　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[br]　[88]　[88]　[88]　[END]",
+   "en_from": "copy"
+  },
+  {
+   "id": "C2_s04_0042",
+   "block": "C2_s04",
+   "kind": "dialogue",
+   "label": 253,
+   "snes": "$C25A94",
+   "en": "[hl]Hornisse[hl]: All right, he's beaten! How's that?[wait][END]"
+  },
+  {
+   "id": "C2_s04_0043",
+   "block": "C2_s04",
+   "kind": "dialogue",
+   "label": 247,
+   "snes": "$C25AD1",
+   "en": "[hl]Sara[hl]: I did it![wait][END]"
+  },
+  {
+   "id": "C2_s04_0044",
+   "block": "C2_s04",
+   "kind": "dialogue",
+   "label": 246,
+   "snes": "$C25AF7",
+   "en": "[hl]Ryo[hl]: Good! How is that?[wait][END]"
+  },
+  {
+   "id": "C2_s04_0045",
+   "block": "C2_s04",
+   "kind": "dialogue",
+   "label": 3,
+   "snes": "$C25B3D",
+   "en": "[hl]Forfahren[hl]: Hmm... Quite impressive.[wait][page]But... this is no time to celebrate! Before we talk......[wait][END]"
+  },
+  {
+   "id": "C2_s04_0046",
+   "block": "C2_s04",
+   "kind": "dialogue",
+   "label": 4,
+   "snes": "$C25BB3",
+   "en": "[hl]Graf[hl]: Hmm... Quite impressive.[wait][page]But... this is no time to celebrate! Before we talk......[wait][END]"
+  },
+  {
+   "id": "C2_s04_0047",
+   "block": "C2_s04",
+   "kind": "dialogue",
+   "label": 7,
+   "snes": "$C25C23",
+   "en": "　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[br]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[br]　[88]　[88]　[88]　[88][END]",
+   "en_from": "copy"
+  },
+  {
+   "id": "C2_s04_0048",
+   "block": "C2_s04",
+   "kind": "dialogue",
+   "label": 179,
+   "snes": "$C25CA7",
+   "en": "　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[br]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[br]　[88]　[88]　[88]　[88][END]",
+   "en_from": "copy"
+  },
+  {
+   "id": "C2_s04_0049",
+   "block": "C2_s04",
+   "kind": "dialogue",
+   "label": 6,
+   "snes": "$C25D0E",
+   "en": "[hl]Lillie[hl]: When I found you lying there, collapsed......[wait][page]I thought my heart would break![wait][page][hl]LIFE restored![hl][ENDK]"
+  },
+  {
+   "id": "C2_s04_0050",
+   "block": "C2_s04",
+   "kind": "dialogue",
+   "label": 6,
+   "snes": "$C25D8C",
+   "en": "[wait][page][hl]Lillie[hl]: From now on... please, be very careful. Stay safe...[wait][END]",
+   "en_from": "C2_s03_0073"
+  }
+ ]
+}

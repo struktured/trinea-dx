@@ -1,0 +1,58 @@
+{
+ "C2_s01": {
+  "translated": 111,
+  "total": 111
+ },
+ "C2_s03": {
+  "translated": 74,
+  "total": 74
+ },
+ "C2_s04": {
+  "translated": 51,
+  "total": 51
+ },
+ "C2_s05": {
+  "translated": 88,
+  "total": 88
+ },
+ "C2_s06": {
+  "translated": 107,
+  "total": 107
+ },
+ "C2_s07": {
+  "translated": 70,
+  "total": 70
+ },
+ "C2_s08": {
+  "translated": 75,
+  "total": 75
+ },
+ "C2_s09": {
+  "translated": 1,
+  "total": 1
+ },
+ "C2_s10": {
+  "translated": 1,
+  "total": 1
+ },
+ "DB_0000": {
+  "translated": 54,
+  "total": 54
+ },
+ "DB_8000": {
+  "translated": 157,
+  "total": 157
+ },
+ "OPEN": {
+  "translated": 47,
+  "total": 47
+ },
+ "PROFILE": {
+  "translated": 3,
+  "total": 3
+ },
+ "SYSTEM": {
+  "translated": 2,
+  "total": 2
+ }
+}

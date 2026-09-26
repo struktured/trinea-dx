@@ -1,0 +1,771 @@
+{
+ "info": {
+  "block": "C2_s05",
+  "start": "0x025DE3",
+  "end": "0x027D89",
+  "size": 8102,
+  "ptr_fmt": "16-bit LE offset within bank $C2 (table $C2:0000, index=script id)",
+  "ptr_loc": "0x02000A",
+  "en_translated": 88,
+  "messages": 88
+ },
+ "messages": [
+  {
+   "id": "C2_s05_0000",
+   "block": "C2_s05",
+   "kind": "dialogue",
+   "label": 1,
+   "snes": "$C25DE6",
+   "en": "[page][hl]TRINEA[br]VER 0.1[hl][wait][page][END]",
+   "en_from": "C2_s09_0000"
+  },
+  {
+   "id": "C2_s05_0001",
+   "block": "C2_s05",
+   "kind": "dialogue",
+   "label": 10,
+   "snes": "$C25E10",
+   "en": "[END]",
+   "en_from": "C2_s01_0001"
+  },
+  {
+   "id": "C2_s05_0002",
+   "block": "C2_s05",
+   "kind": "dialogue",
+   "label": 160,
+   "snes": "$C25E25",
+   "en": "[hl]Ryo[hl]: I shall call on you once I have dealt with the culprit![wait][END]"
+  },
+  {
+   "id": "C2_s05_0003",
+   "block": "C2_s05",
+   "kind": "dialogue",
+   "label": 161,
+   "snes": "$C25E66",
+   "en": "[hl]Ryo[hl]: !?[ENDK]"
+  },
+  {
+   "id": "C2_s05_0004",
+   "block": "C2_s05",
+   "kind": "dialogue",
+   "label": 161,
+   "snes": "$C25E81",
+   "en": "[wait][page]Ah!?[wait] Forgive my intrusion.[wait][END]"
+  },
+  {
+   "id": "C2_s05_0005",
+   "block": "C2_s05",
+   "kind": "dialogue",
+   "label": 162,
+   "snes": "$C25EAB",
+   "en": "[hl]Ryo[hl]: Ah!? Wh-what is this?[wait][page][hl]Special move uses increased by 1!![hl][ENDK]"
+  },
+  {
+   "id": "C2_s05_0006",
+   "block": "C2_s05",
+   "kind": "dialogue",
+   "label": 162,
+   "snes": "$C25F07",
+   "en": "[wait][page][hl]Ryo[hl]: All right! Let's go!![ENDK]"
+  },
+  {
+   "id": "C2_s05_0007",
+   "block": "C2_s05",
+   "kind": "dialogue",
+   "label": 162,
+   "snes": "$C25F32",
+   "en": "[wait][END]",
+   "en_from": "C2_s01_0036"
+  },
+  {
+   "id": "C2_s05_0008",
+   "block": "C2_s05",
+   "kind": "dialogue",
+   "label": 163,
+   "snes": "$C25F39",
+   "en": "[hl]Ryo[hl]: There is nothing more here![ENDK]"
+  },
+  {
+   "id": "C2_s05_0009",
+   "block": "C2_s05",
+   "kind": "dialogue",
+   "label": 163,
+   "snes": "$C25F68",
+   "en": "[wait][END]",
+   "en_from": "C2_s01_0036"
+  },
+  {
+   "id": "C2_s05_0010",
+   "block": "C2_s05",
+   "kind": "dialogue",
+   "label": 20,
+   "snes": "$C25F87",
+   "en": "[hl]Ryo[hl]: .........Curse that Echigoya! Such a cowardly trick......[wait][page][hl]LIFE restored![hl][ENDK]"
+  },
+  {
+   "id": "C2_s05_0011",
+   "block": "C2_s05",
+   "kind": "dialogue",
+   "label": 20,
+   "snes": "$C25FE4",
+   "en": "[wait][page][hl]Ryo[hl]: All right! Let's go!![ENDK]",
+   "en_from": "C2_s05_0006"
+  },
+  {
+   "id": "C2_s05_0012",
+   "block": "C2_s05",
+   "kind": "dialogue",
+   "label": 20,
+   "snes": "$C2600F",
+   "en": "[wait][END]",
+   "en_from": "C2_s01_0036"
+  },
+  {
+   "id": "C2_s05_0013",
+   "block": "C2_s05",
+   "kind": "dialogue",
+   "label": 21,
+   "snes": "$C26038",
+   "en": "We are... the Armored Demon Ninja Squad![wait][page]Ninja of the Gray Clan![ENDK]"
+  },
+  {
+   "id": "C2_s05_0014",
+   "block": "C2_s05",
+   "kind": "dialogue",
+   "label": 21,
+   "snes": "$C26069",
+   "en": "[wait][page]Ninja of the Blue Clan![ENDK]"
+  },
+  {
+   "id": "C2_s05_0015",
+   "block": "C2_s05",
+   "kind": "dialogue",
+   "label": 21,
+   "snes": "$C2607D",
+   "en": "[wait][page]Ninja of the Green Clan![ENDK]"
+  },
+  {
+   "id": "C2_s05_0016",
+   "block": "C2_s05",
+   "kind": "dialogue",
+   "label": 21,
+   "snes": "$C26091",
+   "en": "[wait][page]The three ninja!![ENDK]"
+  },
+  {
+   "id": "C2_s05_0017",
+   "block": "C2_s05",
+   "kind": "dialogue",
+   "label": 21,
+   "snes": "$C260A5",
+   "en": "[wait][page]You will go no further, even if it costs us our lives![ENDK]"
+  },
+  {
+   "id": "C2_s05_0018",
+   "block": "C2_s05",
+   "kind": "dialogue",
+   "label": 21,
+   "snes": "$C260E3",
+   "en": "[wait][page][hl]Ryo[hl]: All right! Bring it on![ENDK]"
+  },
+  {
+   "id": "C2_s05_0019",
+   "block": "C2_s05",
+   "kind": "dialogue",
+   "label": 21,
+   "snes": "$C26112",
+   "en": "[wait][END]",
+   "en_from": "C2_s01_0036"
+  },
+  {
+   "id": "C2_s05_0020",
+   "block": "C2_s05",
+   "kind": "dialogue",
+   "label": 177,
+   "snes": "$C2612E",
+   "en": "[hl]Armored Demon Ninja Squad[hl]: Glory to us![wait][END]"
+  },
+  {
+   "id": "C2_s05_0021",
+   "block": "C2_s05",
+   "kind": "dialogue",
+   "label": 177,
+   "snes": "$C26167",
+   "en": "　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88][br]　[88]　[88]　[88][END]"
+  },
+  {
+   "id": "C2_s05_0022",
+   "block": "C2_s05",
+   "kind": "dialogue",
+   "label": 22,
+   "snes": "$C261A4",
+   "en": "[hl]Ryo[hl]: How's that! I win![ENDK]"
+  },
+  {
+   "id": "C2_s05_0023",
+   "block": "C2_s05",
+   "kind": "dialogue",
+   "label": 22,
+   "snes": "$C261CF",
+   "en": "[wait][END]",
+   "en_from": "C2_s01_0036"
+  },
+  {
+   "id": "C2_s05_0024",
+   "block": "C2_s05",
+   "kind": "dialogue",
+   "label": 172,
+   "snes": "$C261DB",
+   "en": "[hl]Gray Clan Ninja[hl]: I have... fail...ed... Ngh......[ENDK]"
+  },
+  {
+   "id": "C2_s05_0025",
+   "block": "C2_s05",
+   "kind": "dialogue",
+   "label": 172,
+   "snes": "$C26207",
+   "en": "[wait][END]",
+   "en_from": "C2_s01_0036"
+  },
+  {
+   "id": "C2_s05_0026",
+   "block": "C2_s05",
+   "kind": "dialogue",
+   "label": 173,
+   "snes": "$C26210",
+   "en": "[hl]Blue Clan Ninja[hl]: ...Ngh ......Gack......[ENDK]"
+  },
+  {
+   "id": "C2_s05_0027",
+   "block": "C2_s05",
+   "kind": "dialogue",
+   "label": 173,
+   "snes": "$C26236",
+   "en": "[wait][END]",
+   "en_from": "C2_s01_0036"
+  },
+  {
+   "id": "C2_s05_0028",
+   "block": "C2_s05",
+   "kind": "dialogue",
+   "label": 174,
+   "snes": "$C2623F",
+   "en": "[hl]Green Clan Ninja[hl]: That we... would be... de...feated... ......Curses... Gurgh...[ENDK]"
+  },
+  {
+   "id": "C2_s05_0029",
+   "block": "C2_s05",
+   "kind": "dialogue",
+   "label": 174,
+   "snes": "$C2627D",
+   "en": "[wait][END]",
+   "en_from": "C2_s01_0036"
+  },
+  {
+   "id": "C2_s05_0030",
+   "block": "C2_s05",
+   "kind": "dialogue",
+   "label": 5,
+   "snes": "$C262B3",
+   "en": "[hl]Ryo[hl]: Midori!! Where are you? Where?[wait][page][hl]Kappa Samurai[hl]: !?[wait][page]Intruder!! An intruder is attacking![ENDK]"
+  },
+  {
+   "id": "C2_s05_0031",
+   "block": "C2_s05",
+   "kind": "dialogue",
+   "label": 5,
+   "snes": "$C26323",
+   "en": "[wait][page][hl]Kokin Hyakuseki[hl]: Now, now...... no need to panic.[wait][page]\"Amid the battle / the samurai of the west / might it be myself?\"[wait][page]Mm... You see, I simply adore composing waka poetry......[wait][page]Anyone who disturbs it cannot be allowed to live. Please don't take it personally.[ENDK]"
+  },
+  {
+   "id": "C2_s05_0032",
+   "block": "C2_s05",
+   "kind": "dialogue",
+   "label": 5,
+   "snes": "$C263F2",
+   "en": "[wait][END]",
+   "en_from": "C2_s01_0036"
+  },
+  {
+   "id": "C2_s05_0033",
+   "block": "C2_s05",
+   "kind": "dialogue",
+   "label": 180,
+   "snes": "$C263F7",
+   "en": "[hl]Kokin Hyakuseki[hl]: \"In defeat, alas / he who knows not where he goes / is the victor, hm\"... Gwah.[ENDK]"
+  },
+  {
+   "id": "C2_s05_0034",
+   "block": "C2_s05",
+   "kind": "dialogue",
+   "label": 180,
+   "snes": "$C26435",
+   "en": "[wait][END]",
+   "en_from": "C2_s01_0036"
+  },
+  {
+   "id": "C2_s05_0035",
+   "block": "C2_s05",
+   "kind": "dialogue",
+   "label": 180,
+   "snes": "$C26441",
+   "en": "　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88][br]　[88]　[88]　[88][END]",
+   "en_from": "C2_s05_0021"
+  },
+  {
+   "id": "C2_s05_0036",
+   "block": "C2_s05",
+   "kind": "dialogue",
+   "label": 40,
+   "snes": "$C26476",
+   "en": "[hl]Ryo[hl]: Hah! I win![ENDK]"
+  },
+  {
+   "id": "C2_s05_0037",
+   "block": "C2_s05",
+   "kind": "dialogue",
+   "label": 40,
+   "snes": "$C2649F",
+   "en": "[wait][END]",
+   "en_from": "C2_s01_0036"
+  },
+  {
+   "id": "C2_s05_0038",
+   "block": "C2_s05",
+   "kind": "dialogue",
+   "label": 15,
+   "snes": "$C264F4",
+   "en": "[hl]Ryo[hl]: Hey! You there, culprit! Where is Midori!?[wait][page][hl]Armored Samurai SUKE[hl]: What was that!![wait][page]I've never cut down anyone in my life! Don't insult me![wait][page][hl]Armored Samurai KAKU[hl]: Who cares! Let's just cut this guy down![wait][page][hl]Ryo[hl]: What!? Bring it on![ENDK]"
+  },
+  {
+   "id": "C2_s05_0039",
+   "block": "C2_s05",
+   "kind": "dialogue",
+   "label": 15,
+   "snes": "$C265FC",
+   "en": "[wait][END]",
+   "en_from": "C2_s01_0036"
+  },
+  {
+   "id": "C2_s05_0040",
+   "block": "C2_s05",
+   "kind": "dialogue",
+   "label": 181,
+   "snes": "$C26601",
+   "en": "[hl]Armored Samurai SUKE[hl]: Beaten... by a... mere... ninja......[ENDK]"
+  },
+  {
+   "id": "C2_s05_0041",
+   "block": "C2_s05",
+   "kind": "dialogue",
+   "label": 181,
+   "snes": "$C26641",
+   "en": "[wait][END]",
+   "en_from": "C2_s01_0036"
+  },
+  {
+   "id": "C2_s05_0042",
+   "block": "C2_s05",
+   "kind": "dialogue",
+   "label": 182,
+   "snes": "$C2664A",
+   "en": "[hl]Armored Samurai KAKU[hl]: N-no way... We... got... beat...[ENDK]"
+  },
+  {
+   "id": "C2_s05_0043",
+   "block": "C2_s05",
+   "kind": "dialogue",
+   "label": 182,
+   "snes": "$C2668A",
+   "en": "[wait][END]",
+   "en_from": "C2_s01_0036"
+  },
+  {
+   "id": "C2_s05_0044",
+   "block": "C2_s05",
+   "kind": "dialogue",
+   "label": 253,
+   "snes": "$C266A3",
+   "en": "　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88][br]　[88]　[88]　[88][END]",
+   "en_from": "C2_s05_0021"
+  },
+  {
+   "id": "C2_s05_0045",
+   "block": "C2_s05",
+   "kind": "dialogue",
+   "label": 248,
+   "snes": "$C266D8",
+   "en": "[hl]Ryo[hl]: Midori! I won![ENDK]"
+  },
+  {
+   "id": "C2_s05_0046",
+   "block": "C2_s05",
+   "kind": "dialogue",
+   "label": 248,
+   "snes": "$C266FF",
+   "en": "[wait][END]",
+   "en_from": "C2_s01_0036"
+  },
+  {
+   "id": "C2_s05_0047",
+   "block": "C2_s05",
+   "kind": "dialogue",
+   "label": 249,
+   "snes": "$C26728",
+   "en": "　[88]　[88]　[88]　[88]　[ENDK]"
+  },
+  {
+   "id": "C2_s05_0048",
+   "block": "C2_s05",
+   "kind": "dialogue",
+   "label": 249,
+   "snes": "$C26738",
+   "en": "[hl]Ryo[hl]: Midori...... I was worried! Are you hurt?[wait][page][hl]Midori[hl]: Ryo... thank you. I knew you would come for me.[wait][page][hl]Ryo[hl]: Midori......[wait][page]Our joyful reunion must wait until later![wait][page]If Echigoya's men find you, you will be captured again.[wait][page]For now, please go home and wait for me![wait][page]I must deal with Echigoya...... Now hurry! We will meet up later!![wait][END]"
+  },
+  {
+   "id": "C2_s05_0049",
+   "block": "C2_s05",
+   "kind": "dialogue",
+   "label": 199,
+   "snes": "$C26900",
+   "en": "[hl]Ryo[hl]: Ah!? What is this!?[wait][END]"
+  },
+  {
+   "id": "C2_s05_0050",
+   "block": "C2_s05",
+   "kind": "dialogue",
+   "label": 199,
+   "snes": "$C2692A",
+   "en": "[hl]LIFE restored[hl][ENDK]"
+  },
+  {
+   "id": "C2_s05_0051",
+   "block": "C2_s05",
+   "kind": "dialogue",
+   "label": 199,
+   "snes": "$C26949",
+   "en": "[wait][page][hl]Ryo[hl]: All right! Let's go!![ENDK]",
+   "en_from": "C2_s05_0006"
+  },
+  {
+   "id": "C2_s05_0052",
+   "block": "C2_s05",
+   "kind": "dialogue",
+   "label": 199,
+   "snes": "$C26974",
+   "en": "[wait][END]",
+   "en_from": "C2_s01_0036"
+  },
+  {
+   "id": "C2_s05_0053",
+   "block": "C2_s05",
+   "kind": "dialogue",
+   "label": 198,
+   "snes": "$C2697B",
+   "en": "[hl]Ryo[hl]: Ah!? What is this!?[wait] Nothing at all, it seems.[wait][END]"
+  },
+  {
+   "id": "C2_s05_0054",
+   "block": "C2_s05",
+   "kind": "dialogue",
+   "label": 93,
+   "snes": "$C269D4",
+   "en": "[hl]Echigoya[hl]: A pity... A real pity.[wait][page]You refused to listen to me...... and then you go and do this...[wait][page][hl]Ryo[hl]: .........[wait][page]It seems you still do not know who you are dealing with![wait][page][hl]Echigoya[hl]: Ha ha ha![wait][page]Oh, I know perfectly well. A complete fool, am I right? Ha ha ha![wait][page][hl]Ryo[hl]: What did you say!?[wait][page]Ah, wait!![wait][END]"
+  },
+  {
+   "id": "C2_s05_0055",
+   "block": "C2_s05",
+   "kind": "dialogue",
+   "label": 159,
+   "snes": "$C26B65",
+   "en": "[hl]Echigoya[hl]: Now then...[wait][page]What happens to those who defy me...[wait][page]I'll teach you a thorough lesson... Ha ha ha![wait][END]"
+  },
+  {
+   "id": "C2_s05_0056",
+   "block": "C2_s05",
+   "kind": "dialogue",
+   "label": 252,
+   "snes": "$C26BDC",
+   "en": "[hl]Ryo[hl]: How's that! I win![ENDK]",
+   "en_from": "C2_s05_0022"
+  },
+  {
+   "id": "C2_s05_0057",
+   "block": "C2_s05",
+   "kind": "dialogue",
+   "label": 252,
+   "snes": "$C26C07",
+   "en": "[wait][END]",
+   "en_from": "C2_s01_0036"
+  },
+  {
+   "id": "C2_s05_0058",
+   "block": "C2_s05",
+   "kind": "dialogue",
+   "label": 252,
+   "snes": "$C26C12",
+   "en": "　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[br]　[88]　[88]　[88]　[END]",
+   "en_from": "copy"
+  },
+  {
+   "id": "C2_s05_0059",
+   "block": "C2_s05",
+   "kind": "dialogue",
+   "label": 2,
+   "snes": "$C26C4F",
+   "en": "[ENDK]",
+   "en_from": "C2_s01_0078"
+  },
+  {
+   "id": "C2_s05_0060",
+   "block": "C2_s05",
+   "kind": "dialogue",
+   "label": 203,
+   "snes": "$C26C82",
+   "en": "　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[br]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[br]　[88]　[88]　[88]　[88][END]",
+   "en_from": "copy"
+  },
+  {
+   "id": "C2_s05_0061",
+   "block": "C2_s05",
+   "kind": "dialogue",
+   "label": 3,
+   "snes": "$C26CE1",
+   "en": "[hl]Ryo[hl]: .........Where am I? What is this place!?[wait][page][hl]Mysterious Old Man[hl]: Ryo, my boy...[wait][page]Sorry to drag you off to a place like this so suddenly.[wait][page]This is... the year NEA 1403.[wait] In other words... some 700 years before your own time.[wait][page][hl]Ryo[hl]: What are you talking about? Who are you?[wait][page][hl]Mysterious Old Man[hl]: My name is... [hl]Forfahren[hl].[wait][END]"
+  },
+  {
+   "id": "C2_s05_0062",
+   "block": "C2_s05",
+   "kind": "dialogue",
+   "label": 28,
+   "snes": "$C26E45",
+   "en": "[hl]Ryo[hl]: ......!?[wait][page][hl]Forfahren[hl]: Tell me, do you know of wizards?[wait][page][hl]Ryo[hl]: Wizards......?[wait][page]You mean those things from the foreign priests' tales?[wait][page][hl]Forfahren[hl]: Hmm, well... something like that.[wait][page][hl]Ryo[hl]: Hmm, it seems you are no villain.[wait] So...... you are one of these wizards?[wait][page]But what business would you have with a ninja like me?[wait][page][hl]Forfahren[hl]: Ho ho ho, no need to be so formal.[wait][page]Besides, I'm not going to eat you.[wait][page]Though if you insist, you're welcome to test my magic...[wait][page][hl]Ryo[hl]: What!?[wait][page]My ninja arts could never lose to some foreign sorcery![wait][END]"
+  },
+  {
+   "id": "C2_s05_0063",
+   "block": "C2_s05",
+   "kind": "dialogue",
+   "label": 7,
+   "snes": "$C270DE",
+   "en": "[hl]Forfahren[hl]: Ho ho ho...[wait][page]But attack is not all there is to magic![wait][page]Using that magic, I watched your battle with Echigoya from here.[wait][page]And so...... I have a favor to ask. What do you say?[wait][page][hl]Ryo[hl]: .........[wait][page][hl]Forfahren[hl]: The favor is this...[wait][page]I want you to help me stop the revival of the [hl]Penta Dragon[hl]![wait][page][hl]Ryo[hl]: The Penta Dragon?![wait][page][hl]Forfahren[hl]: That's right.........[wait][page][hl]Ryo[hl]: .........[wait][page][hl]Forfahren[hl]: That Echigoya from before......[wait][page]What if the Penta Dragon was lurking in his shadow?[wait][END]"
+  },
+  {
+   "id": "C2_s05_0064",
+   "block": "C2_s05",
+   "kind": "dialogue",
+   "label": 8,
+   "snes": "$C272E7",
+   "en": "[hl]Ryo[hl]: What!? Echigoya?[wait][page][hl]Forfahren[hl]: Indeed...... You can't let that stand, can you?[wait][page][hl]Ryo[hl]: That... is certainly true, but......[wait][page][hl]Forfahren[hl]: Splendid! You've made up your mind![wait][page][hl]Ryo[hl]: Wait! Just one last time...[wait][page]Will you let me return to Neo Edo?[wait][page]Once that is done......[wait] Very well.[wait][page]Until the day the Penta Dragon falls, my life is in your hands![wait][page][hl]Forfahren[hl]: Very well! Off you go![wait][page]And when you're ready, call my name... Until then......[wait][END]"
+  },
+  {
+   "id": "C2_s05_0065",
+   "block": "C2_s05",
+   "kind": "dialogue",
+   "label": 12,
+   "snes": "$C274E9",
+   "en": "[hl]Midori[hl]: Huh?! Ryo......? What did you just say?[wait][page][hl]Ryo[hl]: That I may never see you again.[wait][page][hl]Midori[hl]: No![wait][page]Then...... why? Why did you save me?![wait][page]If I can't see you anymore, I'd rather Echigoya had killed me!![wait][END]"
+  },
+  {
+   "id": "C2_s05_0066",
+   "block": "C2_s05",
+   "kind": "dialogue",
+   "label": 12,
+   "snes": "$C275E3",
+   "en": "[hl]Ryo[hl]: .........It is for your sake. Please forgive me...[wait][page]I must go, no matter what. I am truly sorry......[wait][END]"
+  },
+  {
+   "id": "C2_s05_0067",
+   "block": "C2_s05",
+   "kind": "dialogue",
+   "label": 13,
+   "snes": "$C2766E",
+   "en": "Forfahren! Can you hear me?[wait][page][hl]Forfahren[hl]: Yes, I hear you. But...... are you sure about this?[wait][page][hl]Ryo[hl]: .........[wait][END]"
+  },
+  {
+   "id": "C2_s05_0068",
+   "block": "C2_s05",
+   "kind": "dialogue",
+   "label": 16,
+   "snes": "$C27707",
+   "en": "[hl]Midori[hl]: Ah, wait! Ryoooooo!![wait][END]"
+  },
+  {
+   "id": "C2_s05_0069",
+   "block": "C2_s05",
+   "kind": "dialogue",
+   "label": 24,
+   "snes": "$C27764",
+   "en": "[hl]Forfahren[hl]: Are you truly all right with leaving her like that?[wait][page][hl]Ryo[hl]: I am a ninja![wait][page]I live by the way of the shinobi. I have no need of a family![wait][page][hl]Forfahren[hl]: .........[wait] Well then, let us be off.[wait][END]"
+  },
+  {
+   "id": "C2_s05_0070",
+   "block": "C2_s05",
+   "kind": "dialogue",
+   "label": 4,
+   "snes": "$C27833",
+   "en": "[hl]Ryo[hl]: .........Where am I?[wait][page][hl]Mysterious Old Man[hl]: Sorry to drag you off to a place like this so suddenly.[wait][page]Ryo, my boy...[wait] This is... the year NEA 1403.[wait][page]In other words... some 700 years before your own time.[wait][page][hl]Ryo[hl]: Who are you!?[wait][page][hl]Mysterious Old Man[hl]: My name? Ho ho ho.........[wait][page]My name is... [hl]Graf[hl].[wait][page][hl]Ryo[hl]: And what business have you with me?[wait][END]"
+  },
+  {
+   "id": "C2_s05_0071",
+   "block": "C2_s05",
+   "kind": "dialogue",
+   "label": 119,
+   "snes": "$C279A3",
+   "en": "[hl]Graf[hl]: Well now...... I have two wishes.[wait][page]The first... is to stop the revival of the Penta Dragon.[wait][page]The second... is to stop the misdeeds of an evil wizard, who is also my friend![wait][page][hl]Ryo[hl]: .........[wait][page]And what does that have to do with me?[wait][page][hl]Graf[hl]: I'm glad you asked! But there's only one answer.[wait][page]The only one who can save this world is Ryo of the Heaven Clan...... you![wait][page]That's all there is to it. Won't you understand?[wait][page][hl]Ryo[hl]: ......[wait][page]I find that hard to believe. You are up to something, are you not?[wait][page][hl]Graf[hl]: Now, now, don't say that.[wait][page]So how about it...... Won't you lend me your strength, no questions asked?[wait][page]<What will you do?>[ENDK]"
+  },
+  {
+   "id": "C2_s05_0072",
+   "block": "C2_s05",
+   "kind": "choice",
+   "label": 119,
+   "snes": "$C27BE7",
+   "choice_jump_label": 117,
+   "en": "-[ENDK]",
+   "en_from": "C2_s01_0014"
+  },
+  {
+   "id": "C2_s05_0073",
+   "block": "C2_s05",
+   "kind": "choice",
+   "label": 119,
+   "snes": "$C27BEB",
+   "choice_jump_label": 118,
+   "en": "-[ENDK]",
+   "en_from": "C2_s01_0014"
+  },
+  {
+   "id": "C2_s05_0074",
+   "block": "C2_s05",
+   "kind": "choice",
+   "label": 119,
+   "snes": "$C27BEF",
+   "choice_jump_label": 117,
+   "en": "-[ENDK]",
+   "en_from": "C2_s01_0014"
+  },
+  {
+   "id": "C2_s05_0075",
+   "block": "C2_s05",
+   "kind": "choice",
+   "label": 119,
+   "snes": "$C27BF3",
+   "choice_jump_label": 118,
+   "en": "-[ENDK]",
+   "en_from": "C2_s01_0014"
+  },
+  {
+   "id": "C2_s05_0076",
+   "block": "C2_s05",
+   "kind": "choice",
+   "label": 119,
+   "snes": "$C27BF7",
+   "choice_jump_label": 117,
+   "en": "Lend a hand![ENDK]",
+   "en_from": "C2_s01_0094"
+  },
+  {
+   "id": "C2_s05_0077",
+   "block": "C2_s05",
+   "kind": "choice",
+   "label": 119,
+   "snes": "$C27C03",
+   "choice_jump_label": 118,
+   "en": "No thanks[ENDK]",
+   "en_from": "C2_s01_0083"
+  },
+  {
+   "id": "C2_s05_0078",
+   "block": "C2_s05",
+   "kind": "dialogue",
+   "label": 118,
+   "snes": "$C27C10",
+   "en": "[hl]Graf[hl]: Oh, don't say that. Won't you do this for me?[wait][page]<What will you do?>[ENDK]",
+   "en_from": "C2_s01_0100"
+  },
+  {
+   "id": "C2_s05_0079",
+   "block": "C2_s05",
+   "kind": "choice",
+   "label": 118,
+   "snes": "$C27C62",
+   "choice_jump_label": 117,
+   "en": "-[ENDK]",
+   "en_from": "C2_s01_0014"
+  },
+  {
+   "id": "C2_s05_0080",
+   "block": "C2_s05",
+   "kind": "choice",
+   "label": 118,
+   "snes": "$C27C66",
+   "choice_jump_label": 118,
+   "en": "-[ENDK]",
+   "en_from": "C2_s01_0014"
+  },
+  {
+   "id": "C2_s05_0081",
+   "block": "C2_s05",
+   "kind": "choice",
+   "label": 118,
+   "snes": "$C27C6A",
+   "choice_jump_label": 117,
+   "en": "-[ENDK]",
+   "en_from": "C2_s01_0014"
+  },
+  {
+   "id": "C2_s05_0082",
+   "block": "C2_s05",
+   "kind": "choice",
+   "label": 118,
+   "snes": "$C27C6E",
+   "choice_jump_label": 118,
+   "en": "-[ENDK]",
+   "en_from": "C2_s01_0014"
+  },
+  {
+   "id": "C2_s05_0083",
+   "block": "C2_s05",
+   "kind": "choice",
+   "label": 118,
+   "snes": "$C27C72",
+   "choice_jump_label": 117,
+   "en": "Lend a hand![ENDK]",
+   "en_from": "C2_s01_0094"
+  },
+  {
+   "id": "C2_s05_0084",
+   "block": "C2_s05",
+   "kind": "choice",
+   "label": 118,
+   "snes": "$C27C7E",
+   "choice_jump_label": 118,
+   "en": "No thanks[ENDK]",
+   "en_from": "C2_s01_0083"
+  },
+  {
+   "id": "C2_s05_0085",
+   "block": "C2_s05",
+   "kind": "dialogue",
+   "label": 117,
+   "snes": "$C27C8B",
+   "en": "[hl]Graf[hl]: Oh, you will! I'm truly grateful!![wait][page]Now, first of all...[wait][page]Oops, that's right. Before we talk, there's this![wait][END]",
+   "en_from": "C2_s01_0107"
+  },
+  {
+   "id": "C2_s05_0086",
+   "block": "C2_s05",
+   "kind": "dialogue",
+   "label": 6,
+   "snes": "$C27D13",
+   "en": "[hl]Ryo[hl]: .........What happened to me?[wait][page][hl]LIFE restored![hl][ENDK]"
+  },
+  {
+   "id": "C2_s05_0087",
+   "block": "C2_s05",
+   "kind": "dialogue",
+   "label": 6,
+   "snes": "$C27D5B",
+   "en": "[wait][page][hl]Ryo[hl]: How humiliating![wait][END]"
+  }
+ ]
+}

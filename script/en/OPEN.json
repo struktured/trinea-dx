@@ -1,0 +1,483 @@
+{
+ "info": {
+  "block": "OPEN",
+  "start": "0xA2000",
+  "end": "0x0A2CC5",
+  "size": 3269,
+  "ptr_fmt": "none (scan by entry id, $CE:49A7)",
+  "en_translated": 47,
+  "messages": 47
+ },
+ "messages": [
+  {
+   "id": "OPEN_01",
+   "block": "OPEN",
+   "kind": "cutscene",
+   "snes": "$CA2003",
+   "entry_id": 1,
+   "param": 1,
+   "note": "entry = 00 id param text... FF (83=newline). Located by linear scan ($CE:49A7), no pointers.",
+   "en": "Finally... the day has come.[ENDK]"
+  },
+  {
+   "id": "OPEN_02",
+   "block": "OPEN",
+   "kind": "cutscene",
+   "snes": "$CA2023",
+   "entry_id": 2,
+   "param": 1,
+   "note": "entry = 00 id param text... FF (83=newline). Located by linear scan ($CE:49A7), no pointers.",
+   "en": "The time, the people, the place...[br]All is now here before us...[ENDK]"
+  },
+  {
+   "id": "OPEN_03",
+   "block": "OPEN",
+   "kind": "cutscene",
+   "snes": "$CA2058",
+   "entry_id": 3,
+   "param": 1,
+   "note": "entry = 00 id param text... FF (83=newline). Located by linear scan ($CE:49A7), no pointers.",
+   "en": "Across the long ages...[ENDK]"
+  },
+  {
+   "id": "OPEN_04",
+   "block": "OPEN",
+   "kind": "cutscene",
+   "snes": "$CA2074",
+   "entry_id": 4,
+   "param": 1,
+   "note": "entry = 00 id param text... FF (83=newline). Located by linear scan ($CE:49A7), no pointers.",
+   "en": "Our wish shall now[br]become reality!![ENDK]"
+  },
+  {
+   "id": "OPEN_05",
+   "block": "OPEN",
+   "kind": "cutscene",
+   "snes": "$CA20AB",
+   "entry_id": 5,
+   "param": 1,
+   "note": "entry = 00 id param text... FF (83=newline). Located by linear scan ($CE:49A7), no pointers.",
+   "en": "Now...[br]With our magic, let us seize[br]the power of that chaos![ENDK]"
+  },
+  {
+   "id": "OPEN_06",
+   "block": "OPEN",
+   "kind": "cutscene",
+   "snes": "$CA20E7",
+   "entry_id": 6,
+   "param": 1,
+   "note": "entry = 00 id param text... FF (83=newline). Located by linear scan ($CE:49A7), no pointers.",
+   "en": "If even one of us loses focus,[br]our lives will be...[br]swallowed by the darkness!![ENDK]"
+  },
+  {
+   "id": "OPEN_07",
+   "block": "OPEN",
+   "kind": "cutscene",
+   "snes": "$CA213D",
+   "entry_id": 7,
+   "param": 1,
+   "note": "entry = 00 id param text... FF (83=newline). Located by linear scan ($CE:49A7), no pointers.",
+   "en": "O King of Chaos and Darkness...[ENDK]"
+  },
+  {
+   "id": "OPEN_08",
+   "block": "OPEN",
+   "kind": "cutscene",
+   "snes": "$CA2159",
+   "entry_id": 8,
+   "param": 1,
+   "note": "entry = 00 id param text... FF (83=newline). Located by linear scan ($CE:49A7), no pointers.",
+   "en": "O god who governs the powers of evil...[ENDK]"
+  },
+  {
+   "id": "OPEN_09",
+   "block": "OPEN",
+   "kind": "cutscene",
+   "snes": "$CA2177",
+   "entry_id": 9,
+   "param": 1,
+   "note": "entry = 00 id param text... FF (83=newline). Located by linear scan ($CE:49A7), no pointers.",
+   "en": "Now is the time to awaken[br]from your long slumber[br]and come before us.........[ENDK]"
+  },
+  {
+   "id": "OPEN_10",
+   "block": "OPEN",
+   "kind": "cutscene",
+   "snes": "$CA21B6",
+   "entry_id": 10,
+   "param": 1,
+   "note": "entry = 00 id param text... FF (83=newline). Located by linear scan ($CE:49A7), no pointers.",
+   "en": "Here and now...[br]the legendary powers of[br]Blue, Green and Crimson[br]become TRINEA......[ENDK]"
+  },
+  {
+   "id": "OPEN_11",
+   "block": "OPEN",
+   "kind": "cutscene",
+   "snes": "$CA220C",
+   "entry_id": 11,
+   "param": 1,
+   "note": "entry = 00 id param text... FF (83=newline). Located by linear scan ($CE:49A7), no pointers.",
+   "en": "By that power of revival,[br]answer our wish![ENDK]"
+  },
+  {
+   "id": "OPEN_12",
+   "block": "OPEN",
+   "kind": "cutscene",
+   "snes": "$CA2241",
+   "entry_id": 12,
+   "param": 1,
+   "note": "entry = 00 id param text... FF (83=newline). Located by linear scan ($CE:49A7), no pointers.",
+   "en": "Is it you?[ENDK]"
+  },
+  {
+   "id": "OPEN_13",
+   "block": "OPEN",
+   "kind": "cutscene",
+   "snes": "$CA225B",
+   "entry_id": 13,
+   "param": 1,
+   "note": "entry = 00 id param text... FF (83=newline). Located by linear scan ($CE:49A7), no pointers.",
+   "en": "You foolish ones...[br]who call me forth[br]from my long ages of sleep......[ENDK]"
+  },
+  {
+   "id": "OPEN_14",
+   "block": "OPEN",
+   "kind": "cutscene",
+   "snes": "$CA229D",
+   "entry_id": 14,
+   "param": 1,
+   "note": "entry = 00 id param text... FF (83=newline). Located by linear scan ($CE:49A7), no pointers.",
+   "en": "In the name of the Dark King[br]of Chaos who governs TRINEA...[br]we swear the ancient Oath, here and now!![ENDK]"
+  },
+  {
+   "id": "OPEN_15",
+   "block": "OPEN",
+   "kind": "cutscene",
+   "snes": "$CA22FB",
+   "entry_id": 15,
+   "param": 1,
+   "note": "entry = 00 id param text... FF (83=newline). Located by linear scan ($CE:49A7), no pointers.",
+   "en": "Ha ha ha......[br]Very well! What is your desire?[ENDK]"
+  },
+  {
+   "id": "OPEN_16",
+   "block": "OPEN",
+   "kind": "cutscene",
+   "snes": "$CA2336",
+   "entry_id": 16,
+   "param": 1,
+   "note": "entry = 00 id param text... FF (83=newline). Located by linear scan ($CE:49A7), no pointers.",
+   "en": "Grant us the power[br]to conquer every living thing[br]in all the world!![ENDK]"
+  },
+  {
+   "id": "OPEN_17",
+   "block": "OPEN",
+   "kind": "cutscene",
+   "snes": "$CA238E",
+   "entry_id": 17,
+   "param": 1,
+   "note": "entry = 00 id param text... FF (83=newline). Located by linear scan ($CE:49A7), no pointers.",
+   "en": "Ha ha ha!![br]Such a trifle is all you want?[ENDK]"
+  },
+  {
+   "id": "OPEN_18",
+   "block": "OPEN",
+   "kind": "cutscene",
+   "snes": "$CA23CB",
+   "entry_id": 18,
+   "param": 1,
+   "note": "entry = 00 id param text... FF (83=newline). Located by linear scan ($CE:49A7), no pointers.",
+   "en": "Then so be it...[br]Your wish has been heard!![br]Ha ha ha......[ENDK]"
+  },
+  {
+   "id": "OPEN_19",
+   "block": "OPEN",
+   "kind": "cutscene",
+   "snes": "$CA241D",
+   "entry_id": 19,
+   "param": 1,
+   "note": "entry = 00 id param text... FF (83=newline). Located by linear scan ($CE:49A7), no pointers.",
+   "en": "Grant us the power[br]to conquer every living thing[br]in all the world...............?![ENDK]"
+  },
+  {
+   "id": "OPEN_20",
+   "block": "OPEN",
+   "kind": "cutscene",
+   "snes": "$CA2475",
+   "entry_id": 20,
+   "param": 1,
+   "note": "entry = 00 id param text... FF (83=newline). Located by linear scan ($CE:49A7), no pointers.",
+   "en": "Hornisse:[br]Hold it![ENDK]"
+  },
+  {
+   "id": "OPEN_21",
+   "block": "OPEN",
+   "kind": "cutscene",
+   "snes": "$CA24A2",
+   "entry_id": 21,
+   "param": 1,
+   "note": "entry = 00 id param text... FF (83=newline). Located by linear scan ($CE:49A7), no pointers.",
+   "en": "Sara:[br]I won't let you do that![ENDK]"
+  },
+  {
+   "id": "OPEN_22",
+   "block": "OPEN",
+   "kind": "cutscene",
+   "snes": "$CA24D3",
+   "entry_id": 22,
+   "param": 1,
+   "note": "entry = 00 id param text... FF (83=newline). Located by linear scan ($CE:49A7), no pointers.",
+   "en": "Ryo:[br]That is far enough![ENDK]"
+  },
+  {
+   "id": "OPEN_23",
+   "block": "OPEN",
+   "kind": "cutscene",
+   "snes": "$CA2504",
+   "entry_id": 23,
+   "param": 1,
+   "note": "entry = 00 id param text... FF (83=newline). Located by linear scan ($CE:49A7), no pointers.",
+   "en": "Graf:[br]Who's there?[br]Hm? Oh, it's only you.[ENDK]"
+  },
+  {
+   "id": "OPEN_24",
+   "block": "OPEN",
+   "kind": "cutscene",
+   "snes": "$CA254C",
+   "entry_id": 24,
+   "param": 1,
+   "note": "entry = 00 id param text... FF (83=newline). Located by linear scan ($CE:49A7), no pointers.",
+   "en": "Hornisse:[br]Graf! What is the meaning of this?[br]I demand an explanation!![ENDK]"
+  },
+  {
+   "id": "OPEN_25",
+   "block": "OPEN",
+   "kind": "cutscene",
+   "snes": "$CA25A2",
+   "entry_id": 25,
+   "param": 1,
+   "note": "entry = 00 id param text... FF (83=newline). Located by linear scan ($CE:49A7), no pointers.",
+   "en": "Sara:[br]Graf...[br]What on earth is going on here?![ENDK]"
+  },
+  {
+   "id": "OPEN_26",
+   "block": "OPEN",
+   "kind": "cutscene",
+   "snes": "$CA25F0",
+   "entry_id": 26,
+   "param": 1,
+   "note": "entry = 00 id param text... FF (83=newline). Located by linear scan ($CE:49A7), no pointers.",
+   "en": "Ryo:[br]Graf![br]What is the meaning of this?[ENDK]"
+  },
+  {
+   "id": "OPEN_27",
+   "block": "OPEN",
+   "kind": "cutscene",
+   "snes": "$CA263A",
+   "entry_id": 27,
+   "param": 1,
+   "note": "entry = 00 id param text... FF (83=newline). Located by linear scan ($CE:49A7), no pointers.",
+   "en": "Graf:[br]Can't you see for yourself?[br]What's before you is all there is![ENDK]"
+  },
+  {
+   "id": "OPEN_28",
+   "block": "OPEN",
+   "kind": "cutscene",
+   "snes": "$CA2686",
+   "entry_id": 28,
+   "param": 1,
+   "note": "entry = 00 id param text... FF (83=newline). Located by linear scan ($CE:49A7), no pointers.",
+   "en": "Why that look?[br]You still don't understand?![br]Then allow me to explain......[ENDK]"
+  },
+  {
+   "id": "OPEN_29",
+   "block": "OPEN",
+   "kind": "cutscene",
+   "snes": "$CA26DA",
+   "entry_id": 29,
+   "param": 1,
+   "note": "entry = 00 id param text... FF (83=newline). Located by linear scan ($CE:49A7), no pointers.",
+   "en": "Everything you've done[br]was nothing more than...[br]helping the Dark King return![ENDK]"
+  },
+  {
+   "id": "OPEN_30",
+   "block": "OPEN",
+   "kind": "cutscene",
+   "snes": "$CA2734",
+   "entry_id": 30,
+   "param": 1,
+   "note": "entry = 00 id param text... FF (83=newline). Located by linear scan ($CE:49A7), no pointers.",
+   "en": "O Dark King, Penta Dragon......[br]Here stand fools who would[br]stand in the way of our Oath!![ENDK]"
+  },
+  {
+   "id": "OPEN_31",
+   "block": "OPEN",
+   "kind": "cutscene",
+   "snes": "$CA278E",
+   "entry_id": 31,
+   "param": 1,
+   "note": "entry = 00 id param text... FF (83=newline). Located by linear scan ($CE:49A7), no pointers.",
+   "en": "We offer up their lives to you now![ENDK]"
+  },
+  {
+   "id": "OPEN_32",
+   "block": "OPEN",
+   "kind": "cutscene",
+   "snes": "$CA27B2",
+   "entry_id": 32,
+   "param": 1,
+   "note": "entry = 00 id param text... FF (83=newline). Located by linear scan ($CE:49A7), no pointers.",
+   "en": "Hornisse:[br]I see! So this is what[br]Forfahren was afraid of![ENDK]"
+  },
+  {
+   "id": "OPEN_33",
+   "block": "OPEN",
+   "kind": "cutscene",
+   "snes": "$CA2808",
+   "entry_id": 33,
+   "param": 1,
+   "note": "entry = 00 id param text... FF (83=newline). Located by linear scan ($CE:49A7), no pointers.",
+   "en": "Sara:[br]You weren't stopping the revival...[br]you were bringing it about![ENDK]"
+  },
+  {
+   "id": "OPEN_34",
+   "block": "OPEN",
+   "kind": "cutscene",
+   "snes": "$CA285A",
+   "entry_id": 34,
+   "param": 1,
+   "note": "entry = 00 id param text... FF (83=newline). Located by linear scan ($CE:49A7), no pointers.",
+   "en": "Ryo:[br]You slew Forfahren[br]and deceived me, did you not?![ENDK]"
+  },
+  {
+   "id": "OPEN_35",
+   "block": "OPEN",
+   "kind": "cutscene",
+   "snes": "$CA28AE",
+   "entry_id": 35,
+   "param": 1,
+   "note": "entry = 00 id param text... FF (83=newline). Located by linear scan ($CE:49A7), no pointers.",
+   "en": "Ha ha ha......[br]To think you would defy me...[br]What utter fools......[ENDK]"
+  },
+  {
+   "id": "OPEN_36",
+   "block": "OPEN",
+   "kind": "cutscene",
+   "snes": "$CA2902",
+   "entry_id": 36,
+   "param": 1,
+   "note": "entry = 00 id param text... FF (83=newline). Located by linear scan ($CE:49A7), no pointers.",
+   "en": "Learn the depth of your folly.[br]Be swallowed by terror...[br]and rot away before us!![ENDK]"
+  },
+  {
+   "id": "OPEN_37",
+   "block": "OPEN",
+   "kind": "cutscene",
+   "snes": "$CA295E",
+   "entry_id": 37,
+   "param": 1,
+   "note": "entry = 00 id param text... FF (83=newline). Located by linear scan ($CE:49A7), no pointers.",
+   "en": "Hornisse:[br]Hmph![br]I won't fall after coming this far!![ENDK]"
+  },
+  {
+   "id": "OPEN_38",
+   "block": "OPEN",
+   "kind": "cutscene",
+   "snes": "$CA29AC",
+   "entry_id": 38,
+   "param": 1,
+   "note": "entry = 00 id param text... FF (83=newline). Located by linear scan ($CE:49A7), no pointers.",
+   "en": "Sara:[br]What are you trying to do?![ENDK]"
+  },
+  {
+   "id": "OPEN_39",
+   "block": "OPEN",
+   "kind": "cutscene",
+   "snes": "$CA29E1",
+   "entry_id": 39,
+   "param": 1,
+   "note": "entry = 00 id param text... FF (83=newline). Located by linear scan ($CE:49A7), no pointers.",
+   "en": "Ryo:[br]What was that?! Bring it on!![ENDK]"
+  },
+  {
+   "id": "OPEN_40",
+   "block": "OPEN",
+   "kind": "cutscene",
+   "snes": "$CA2A18",
+   "entry_id": 40,
+   "param": 1,
+   "note": "entry = 00 id param text... FF (83=newline). Located by linear scan ($CE:49A7), no pointers.",
+   "en": "Graf:[br]You aided the revival yourselves.[br]Don't hold it against me...[ENDK]"
+  },
+  {
+   "id": "OPEN_41",
+   "block": "OPEN",
+   "kind": "cutscene",
+   "snes": "$CA2A6E",
+   "entry_id": 41,
+   "param": 1,
+   "note": "entry = 00 id param text... FF (83=newline). Located by linear scan ($CE:49A7), no pointers.",
+   "en": "Hornisse:[br]Lisa...[br]There's one last thing I must say...[ENDK]"
+  },
+  {
+   "id": "OPEN_42",
+   "block": "OPEN",
+   "kind": "cutscene",
+   "snes": "$CA2ABA",
+   "entry_id": 42,
+   "param": 1,
+   "note": "entry = 00 id param text... FF (83=newline). Located by linear scan ($CE:49A7), no pointers.",
+   "en": "Sara:[br]Funny, what comes back at a time like this...[br]Something Lillie told me long ago.[ENDK]"
+  },
+  {
+   "id": "OPEN_43",
+   "block": "OPEN",
+   "kind": "cutscene",
+   "snes": "$CA2B12",
+   "entry_id": 43,
+   "param": 1,
+   "note": "entry = 00 id param text... FF (83=newline). Located by linear scan ($CE:49A7), no pointers.",
+   "en": "Ryo:[br]Midori......[br]I shall see this through!![ENDK]"
+  },
+  {
+   "id": "OPEN_44",
+   "block": "OPEN",
+   "kind": "cutscene",
+   "snes": "$CA2B5A",
+   "entry_id": 44,
+   "param": 1,
+   "note": "entry = 00 id param text... FF (83=newline). Located by linear scan ($CE:49A7), no pointers.",
+   "en": "If I make it home alive......[br]I mean to name our child[br]\"Sara\"![ENDK]"
+  },
+  {
+   "id": "OPEN_45",
+   "block": "OPEN",
+   "kind": "cutscene",
+   "snes": "$CA2BB2",
+   "entry_id": 45,
+   "param": 1,
+   "note": "entry = 00 id param text... FF (83=newline). Located by linear scan ($CE:49A7), no pointers.",
+   "en": "That my father was a legendary hero.[br]So his blood flows in me too......[br]I can't lose here![ENDK]"
+  },
+  {
+   "id": "OPEN_46",
+   "block": "OPEN",
+   "kind": "cutscene",
+   "snes": "$CA2C12",
+   "entry_id": 46,
+   "param": 1,
+   "note": "entry = 00 id param text... FF (83=newline). Located by linear scan ($CE:49A7), no pointers.",
+   "en": "No matter what.........[br]I will come back to you alive.[br]I promise! Wait for me!![ENDK]"
+  },
+  {
+   "id": "OPEN_49",
+   "block": "OPEN",
+   "kind": "cutscene",
+   "snes": "$CA2C68",
+   "entry_id": 49,
+   "param": 1,
+   "note": "entry = 00 id param text... FF (83=newline). Located by linear scan ($CE:49A7), no pointers.",
+   "en": "And so the Oath is fulfilled.[br]Darkness, terror and suffering[br]upon the world!! Kneel before me![ENDK]"
+  }
+ ]
+}

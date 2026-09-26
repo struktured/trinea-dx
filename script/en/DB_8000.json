@@ -1,0 +1,1382 @@
+{
+ "info": {
+  "block": "DB_8000",
+  "start": "0x1B8000",
+  "end": "0x1BF3A6",
+  "size": 29606,
+  "ptr_fmt": "fixed start $DB:8000",
+  "ptr_loc": null,
+  "en_translated": 157,
+  "messages": 157
+ },
+ "messages": [
+  {
+   "id": "DB_8000_0000",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 224,
+   "snes": "$DB8026",
+   "en": "[hl]Book of Chronicles[hl]: I open the Door of Time![wait][END]"
+  },
+  {
+   "id": "DB_8000_0001",
+   "block": "DB_8000",
+   "kind": "choice3",
+   "label": 224,
+   "snes": "$DB8059",
+   "en": "Chronicle 1[ENDK]"
+  },
+  {
+   "id": "DB_8000_0002",
+   "block": "DB_8000",
+   "kind": "choice3",
+   "label": 224,
+   "snes": "$DB8064",
+   "en": "Chronicle 2[ENDK]"
+  },
+  {
+   "id": "DB_8000_0003",
+   "block": "DB_8000",
+   "kind": "choice3",
+   "label": 224,
+   "snes": "$DB806F",
+   "en": "Chronicle 3[ENDK]"
+  },
+  {
+   "id": "DB_8000_0004",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 225,
+   "snes": "$DB807F",
+   "en": "Chronicle 1: The Door of Time is open![wait][ENDK]"
+  },
+  {
+   "id": "DB_8000_0005",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 226,
+   "snes": "$DB80B2",
+   "en": "Chronicle 2: The Door of Time is open![wait][ENDK]"
+  },
+  {
+   "id": "DB_8000_0006",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 198,
+   "snes": "$DB80E5",
+   "en": "Chronicle 3: The Door of Time is open![wait][ENDK]"
+  },
+  {
+   "id": "DB_8000_0007",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 3,
+   "snes": "$DB8123",
+   "en": "[hl]Book of Chronicles[hl]: I record the passage of time![wait][END]"
+  },
+  {
+   "id": "DB_8000_0008",
+   "block": "DB_8000",
+   "kind": "choice3",
+   "label": 3,
+   "snes": "$DB8154",
+   "en": "Chronicle 1[ENDK]",
+   "en_from": "DB_8000_0001"
+  },
+  {
+   "id": "DB_8000_0009",
+   "block": "DB_8000",
+   "kind": "choice3",
+   "label": 3,
+   "snes": "$DB815F",
+   "en": "Chronicle 2[ENDK]",
+   "en_from": "DB_8000_0002"
+  },
+  {
+   "id": "DB_8000_0010",
+   "block": "DB_8000",
+   "kind": "choice3",
+   "label": 3,
+   "snes": "$DB816A",
+   "en": "Chronicle 3[ENDK]",
+   "en_from": "DB_8000_0003"
+  },
+  {
+   "id": "DB_8000_0011",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 141,
+   "snes": "$DB81AC",
+   "en": "[hl]Book of Chronicles[hl]: I record the passage of time![wait][END]",
+   "en_from": "DB_8000_0007"
+  },
+  {
+   "id": "DB_8000_0012",
+   "block": "DB_8000",
+   "kind": "choice3",
+   "label": 141,
+   "snes": "$DB81DD",
+   "en": "Chronicle 1[ENDK]",
+   "en_from": "DB_8000_0001"
+  },
+  {
+   "id": "DB_8000_0013",
+   "block": "DB_8000",
+   "kind": "choice3",
+   "label": 141,
+   "snes": "$DB81E8",
+   "en": "Chronicle 2[ENDK]",
+   "en_from": "DB_8000_0002"
+  },
+  {
+   "id": "DB_8000_0014",
+   "block": "DB_8000",
+   "kind": "choice3",
+   "label": 141,
+   "snes": "$DB81F3",
+   "en": "Chronicle 3[ENDK]",
+   "en_from": "DB_8000_0003"
+  },
+  {
+   "id": "DB_8000_0015",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 144,
+   "snes": "$DB8235",
+   "en": "[hl]Book of Chronicles[hl]: I record the passage of time![wait][END]",
+   "en_from": "DB_8000_0007"
+  },
+  {
+   "id": "DB_8000_0016",
+   "block": "DB_8000",
+   "kind": "choice3",
+   "label": 144,
+   "snes": "$DB8266",
+   "en": "Chronicle 1[ENDK]",
+   "en_from": "DB_8000_0001"
+  },
+  {
+   "id": "DB_8000_0017",
+   "block": "DB_8000",
+   "kind": "choice3",
+   "label": 144,
+   "snes": "$DB8271",
+   "en": "Chronicle 2[ENDK]",
+   "en_from": "DB_8000_0002"
+  },
+  {
+   "id": "DB_8000_0018",
+   "block": "DB_8000",
+   "kind": "choice3",
+   "label": 144,
+   "snes": "$DB827C",
+   "en": "Chronicle 3[ENDK]",
+   "en_from": "DB_8000_0003"
+  },
+  {
+   "id": "DB_8000_0019",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 228,
+   "snes": "$DB828E",
+   "en": "Chronicle 1: Time has been recorded!![wait][ENDK]"
+  },
+  {
+   "id": "DB_8000_0020",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 229,
+   "snes": "$DB82BB",
+   "en": "Chronicle 2: Time has been recorded!![wait][ENDK]"
+  },
+  {
+   "id": "DB_8000_0021",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 199,
+   "snes": "$DB82E8",
+   "en": "Chronicle 3: Time has been recorded!![wait][ENDK]"
+  },
+  {
+   "id": "DB_8000_0022",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 35,
+   "snes": "$DB8386",
+   "en": "<Select a year>[ENDK]"
+  },
+  {
+   "id": "DB_8000_0023",
+   "block": "DB_8000",
+   "kind": "choice",
+   "label": 35,
+   "snes": "$DB83A0",
+   "choice_jump_label": 252,
+   "en": "NEA 2115[ENDK]"
+  },
+  {
+   "id": "DB_8000_0024",
+   "block": "DB_8000",
+   "kind": "choice",
+   "label": 35,
+   "snes": "$DB83B4",
+   "choice_jump_label": 253,
+   "en": "NEA 1444[ENDK]"
+  },
+  {
+   "id": "DB_8000_0025",
+   "block": "DB_8000",
+   "kind": "choice",
+   "label": 35,
+   "snes": "$DB83C8",
+   "choice_jump_label": 68,
+   "en": "-[ENDK]",
+   "en_from": "C2_s01_0014"
+  },
+  {
+   "id": "DB_8000_0026",
+   "block": "DB_8000",
+   "kind": "choice",
+   "label": 35,
+   "snes": "$DB83CC",
+   "choice_jump_label": 72,
+   "en": "-[ENDK]",
+   "en_from": "C2_s01_0014"
+  },
+  {
+   "id": "DB_8000_0027",
+   "block": "DB_8000",
+   "kind": "choice",
+   "label": 35,
+   "snes": "$DB83D0",
+   "choice_jump_label": 68,
+   "en": "-[ENDK]",
+   "en_from": "C2_s01_0014"
+  },
+  {
+   "id": "DB_8000_0028",
+   "block": "DB_8000",
+   "kind": "choice",
+   "label": 35,
+   "snes": "$DB83D4",
+   "choice_jump_label": 72,
+   "en": "-[ENDK]",
+   "en_from": "C2_s01_0014"
+  },
+  {
+   "id": "DB_8000_0029",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 33,
+   "snes": "$DB844C",
+   "en": "<Select a year>[ENDK]",
+   "en_from": "DB_8000_0022"
+  },
+  {
+   "id": "DB_8000_0030",
+   "block": "DB_8000",
+   "kind": "choice",
+   "label": 33,
+   "snes": "$DB8466",
+   "choice_jump_label": 48,
+   "en": "-[ENDK]",
+   "en_from": "C2_s01_0014"
+  },
+  {
+   "id": "DB_8000_0031",
+   "block": "DB_8000",
+   "kind": "choice",
+   "label": 33,
+   "snes": "$DB846A",
+   "choice_jump_label": 52,
+   "en": "-[ENDK]",
+   "en_from": "C2_s01_0014"
+  },
+  {
+   "id": "DB_8000_0032",
+   "block": "DB_8000",
+   "kind": "choice",
+   "label": 33,
+   "snes": "$DB846E",
+   "choice_jump_label": 248,
+   "en": "NEA 2115[ENDK]",
+   "en_from": "DB_8000_0023"
+  },
+  {
+   "id": "DB_8000_0033",
+   "block": "DB_8000",
+   "kind": "choice",
+   "label": 33,
+   "snes": "$DB8482",
+   "choice_jump_label": 250,
+   "en": "NEA 1426[ENDK]"
+  },
+  {
+   "id": "DB_8000_0034",
+   "block": "DB_8000",
+   "kind": "choice",
+   "label": 33,
+   "snes": "$DB8496",
+   "choice_jump_label": 48,
+   "en": "-[ENDK]",
+   "en_from": "C2_s01_0014"
+  },
+  {
+   "id": "DB_8000_0035",
+   "block": "DB_8000",
+   "kind": "choice",
+   "label": 33,
+   "snes": "$DB849A",
+   "choice_jump_label": 52,
+   "en": "-[ENDK]",
+   "en_from": "C2_s01_0014"
+  },
+  {
+   "id": "DB_8000_0036",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 37,
+   "snes": "$DB8512",
+   "en": "<Select a year>[ENDK]",
+   "en_from": "DB_8000_0022"
+  },
+  {
+   "id": "DB_8000_0037",
+   "block": "DB_8000",
+   "kind": "choice",
+   "label": 37,
+   "snes": "$DB852C",
+   "choice_jump_label": 92,
+   "en": "-[ENDK]",
+   "en_from": "C2_s01_0014"
+  },
+  {
+   "id": "DB_8000_0038",
+   "block": "DB_8000",
+   "kind": "choice",
+   "label": 37,
+   "snes": "$DB8530",
+   "choice_jump_label": 88,
+   "en": "-[ENDK]",
+   "en_from": "C2_s01_0014"
+  },
+  {
+   "id": "DB_8000_0039",
+   "block": "DB_8000",
+   "kind": "choice",
+   "label": 37,
+   "snes": "$DB8534",
+   "choice_jump_label": 92,
+   "en": "-[ENDK]",
+   "en_from": "C2_s01_0014"
+  },
+  {
+   "id": "DB_8000_0040",
+   "block": "DB_8000",
+   "kind": "choice",
+   "label": 37,
+   "snes": "$DB8538",
+   "choice_jump_label": 88,
+   "en": "-[ENDK]",
+   "en_from": "C2_s01_0014"
+  },
+  {
+   "id": "DB_8000_0041",
+   "block": "DB_8000",
+   "kind": "choice",
+   "label": 37,
+   "snes": "$DB853C",
+   "choice_jump_label": 28,
+   "en": "NEA 1426[ENDK]",
+   "en_from": "DB_8000_0033"
+  },
+  {
+   "id": "DB_8000_0042",
+   "block": "DB_8000",
+   "kind": "choice",
+   "label": 37,
+   "snes": "$DB8550",
+   "choice_jump_label": 29,
+   "en": "NEA 1444[ENDK]",
+   "en_from": "DB_8000_0024"
+  },
+  {
+   "id": "DB_8000_0043",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 105,
+   "snes": "$DB85DA",
+   "en": "<Select a year>[ENDK]",
+   "en_from": "DB_8000_0022"
+  },
+  {
+   "id": "DB_8000_0044",
+   "block": "DB_8000",
+   "kind": "choice",
+   "label": 105,
+   "snes": "$DB85F4",
+   "choice_jump_label": 155,
+   "en": "NEA 2115[ENDK]",
+   "en_from": "DB_8000_0023"
+  },
+  {
+   "id": "DB_8000_0045",
+   "block": "DB_8000",
+   "kind": "choice",
+   "label": 105,
+   "snes": "$DB8608",
+   "choice_jump_label": 156,
+   "en": "NEA 1444[ENDK]",
+   "en_from": "DB_8000_0024"
+  },
+  {
+   "id": "DB_8000_0046",
+   "block": "DB_8000",
+   "kind": "choice",
+   "label": 105,
+   "snes": "$DB861C",
+   "choice_jump_label": 134,
+   "en": "-[ENDK]",
+   "en_from": "C2_s01_0014"
+  },
+  {
+   "id": "DB_8000_0047",
+   "block": "DB_8000",
+   "kind": "choice",
+   "label": 105,
+   "snes": "$DB8620",
+   "choice_jump_label": 138,
+   "en": "-[ENDK]",
+   "en_from": "C2_s01_0014"
+  },
+  {
+   "id": "DB_8000_0048",
+   "block": "DB_8000",
+   "kind": "choice",
+   "label": 105,
+   "snes": "$DB8624",
+   "choice_jump_label": 134,
+   "en": "-[ENDK]",
+   "en_from": "C2_s01_0014"
+  },
+  {
+   "id": "DB_8000_0049",
+   "block": "DB_8000",
+   "kind": "choice",
+   "label": 105,
+   "snes": "$DB8628",
+   "choice_jump_label": 138,
+   "en": "-[ENDK]",
+   "en_from": "C2_s01_0014"
+  },
+  {
+   "id": "DB_8000_0050",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 103,
+   "snes": "$DB86A1",
+   "en": "<Select a year>[ENDK]",
+   "en_from": "DB_8000_0022"
+  },
+  {
+   "id": "DB_8000_0051",
+   "block": "DB_8000",
+   "kind": "choice",
+   "label": 103,
+   "snes": "$DB86BB",
+   "choice_jump_label": 114,
+   "en": "-[ENDK]",
+   "en_from": "C2_s01_0014"
+  },
+  {
+   "id": "DB_8000_0052",
+   "block": "DB_8000",
+   "kind": "choice",
+   "label": 103,
+   "snes": "$DB86BF",
+   "choice_jump_label": 118,
+   "en": "-[ENDK]",
+   "en_from": "C2_s01_0014"
+  },
+  {
+   "id": "DB_8000_0053",
+   "block": "DB_8000",
+   "kind": "choice",
+   "label": 103,
+   "snes": "$DB86C3",
+   "choice_jump_label": 151,
+   "en": "NEA 2115[ENDK]",
+   "en_from": "DB_8000_0023"
+  },
+  {
+   "id": "DB_8000_0054",
+   "block": "DB_8000",
+   "kind": "choice",
+   "label": 103,
+   "snes": "$DB86D7",
+   "choice_jump_label": 153,
+   "en": "NEA 1426[ENDK]",
+   "en_from": "DB_8000_0033"
+  },
+  {
+   "id": "DB_8000_0055",
+   "block": "DB_8000",
+   "kind": "choice",
+   "label": 103,
+   "snes": "$DB86EB",
+   "choice_jump_label": 114,
+   "en": "-[ENDK]",
+   "en_from": "C2_s01_0014"
+  },
+  {
+   "id": "DB_8000_0056",
+   "block": "DB_8000",
+   "kind": "choice",
+   "label": 103,
+   "snes": "$DB86EF",
+   "choice_jump_label": 118,
+   "en": "-[ENDK]",
+   "en_from": "C2_s01_0014"
+  },
+  {
+   "id": "DB_8000_0057",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 107,
+   "snes": "$DB8768",
+   "en": "<Select a year>[ENDK]",
+   "en_from": "DB_8000_0022"
+  },
+  {
+   "id": "DB_8000_0058",
+   "block": "DB_8000",
+   "kind": "choice",
+   "label": 107,
+   "snes": "$DB8782",
+   "choice_jump_label": 118,
+   "en": "-[ENDK]",
+   "en_from": "C2_s01_0014"
+  },
+  {
+   "id": "DB_8000_0059",
+   "block": "DB_8000",
+   "kind": "choice",
+   "label": 107,
+   "snes": "$DB8786",
+   "choice_jump_label": 114,
+   "en": "-[ENDK]",
+   "en_from": "C2_s01_0014"
+  },
+  {
+   "id": "DB_8000_0060",
+   "block": "DB_8000",
+   "kind": "choice",
+   "label": 107,
+   "snes": "$DB878A",
+   "choice_jump_label": 118,
+   "en": "-[ENDK]",
+   "en_from": "C2_s01_0014"
+  },
+  {
+   "id": "DB_8000_0061",
+   "block": "DB_8000",
+   "kind": "choice",
+   "label": 107,
+   "snes": "$DB878E",
+   "choice_jump_label": 114,
+   "en": "-[ENDK]",
+   "en_from": "C2_s01_0014"
+  },
+  {
+   "id": "DB_8000_0062",
+   "block": "DB_8000",
+   "kind": "choice",
+   "label": 107,
+   "snes": "$DB8792",
+   "choice_jump_label": 148,
+   "en": "NEA 1426[ENDK]",
+   "en_from": "DB_8000_0033"
+  },
+  {
+   "id": "DB_8000_0063",
+   "block": "DB_8000",
+   "kind": "choice",
+   "label": 107,
+   "snes": "$DB87A6",
+   "choice_jump_label": 149,
+   "en": "NEA 1444[ENDK]",
+   "en_from": "DB_8000_0024"
+  },
+  {
+   "id": "DB_8000_0064",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 7,
+   "snes": "$DB88B7",
+   "en": "Clad in a crimson cape and a suit of armor,[wait][page]greatsword in hand, the legendary man faced every battle.[wait][page]That hero's name was...[wait] [81][hl]Hornisse[hl].[wait][page]Hornisse, the hero who kept the peace of the Kingdom of Weathard.[wait][page]Everyone in the land knew his name.[wait][page]But that heroic name was not his real one, merely an [hl]alias[hl].[wait][page]Few had ever seen the face beneath his mask...[wait][page]and so taciturn was he that only a handful could call him a friend.[wait][page][hl]\"A world at peace...... I've had enough of needless killing!\"[hl][wait][page]It is said he would often confide this to his closest friends......[wait][page]Other nations feared his order of knights... and never dared to attack.[wait][page]The King wished to make him a royal guard...[wait] but it came to nothing.[wait][page]He himself declined, saying he was not fit for it.[wait][page]And then...... time passed.[wait][page]As the peace went on... he vanished from sight without a trace......[wait][page]Some said he had died on the battlefield......[wait][page]Others said he was living quietly, deep in the mountains...[wait][page]But none of it was true. It was nothing but idle rumor......[wait][page]And so he was forgotten... remembered only as a hero of legend......[wait][page]But... the days of peace did not last long......[wait][page]And now...... the legendary hero has returned......[wait][END]"
+  },
+  {
+   "id": "DB_8000_0065",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 10,
+   "snes": "$DB8CEA",
+   "en": "[hl]Lisa[hl]: So you're going after all...[wait][page][hl]Hornisse[hl]: Lisa.........[wait][page][hl]Lisa[hl]: The world is in chaos again... just like [hl]back then[hl]...[wait][page][hl]Hornisse[hl]: Yes... history repeats itself.[wait] The world needs men like me.[wait][page][hl]Lisa[hl]: Yes... I suppose it does.[wait][page][hl]Hornisse[hl]: Count Vampierre's Guard is attacking the town...[wait][page]If I don't go now... it will be too late.[wait][page][hl]Lisa[hl]: I know......[wait][page]For the people... and for peace... I'll be waiting.[wait][page][hl]Hornisse[hl]: I'm truly sorry...[wait][END]"
+  },
+  {
+   "id": "DB_8000_0066",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 249,
+   "snes": "$DB8F03",
+   "en": "[hl]Hornisse[hl]: Right, I must hurry![wait][END]"
+  },
+  {
+   "id": "DB_8000_0067",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 6,
+   "snes": "$DB8F41",
+   "en": "[hl]Forfahren[hl]: This is... the year NEA 1444.[wait][page]The Penta Dragon's evil claws already reach this far.[wait][page]In Count Vampierre's place, a mysterious [hl]Man in Black[hl] now holds the castle and does evil![wait][page]Save the people of this era from their terror![wait][END]"
+  },
+  {
+   "id": "DB_8000_0068",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 251,
+   "snes": "$DB9029",
+   "en": "[hl]Hornisse[hl]: Right, I must hurry![wait][END]",
+   "en_from": "DB_8000_0066"
+  },
+  {
+   "id": "DB_8000_0069",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 2,
+   "snes": "$DB9067",
+   "en": "[hl]Forfahren[hl]: This is... the year NEA 2115.[wait][page]In this world, the people of the Resistance will help you.[wait][page]Go and pay them a visit! Ho ho ho...[wait][END]"
+  },
+  {
+   "id": "DB_8000_0070",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 2,
+   "snes": "$DB910A",
+   "en": "[hl]Hornisse[hl]: Are you the Resistance?[wait][page][hl]Resistance[hl]: And you are?[wait][page][hl]Hornisse[hl]: Hmm......[wait][page]Someone who has taken up arms to defeat the Penta Dragon...[wait][page][hl]Resistance[hl]: What? How do you know about the Penta Dragon?[wait][page]We should be the only ones who know about that...[wait][page][hl]Hornisse[hl]: This is no longer a matter for this era alone![wait][page][hl]Resistance[hl]: I see.........[wait][page]Then let me tell you about Neo Edo.[wait][page]It was 15 years ago...[wait][page]Echigoya, servant of the Penta Dragon, was defeated...[wait][page]barely... by [hl]Tetsuya \"Ryo\" Mifune[hl] of the Heaven Clan.[wait][page]But his only daughter, [hl]Yayoi[hl], is now helping to conquer Neo Edo![wait][page]It's shameful to admit...[wait] but we no longer have the strength to do anything......[wait][page][hl]Hornisse[hl]: I see...[wait][page]And are the people here all the members you have left?[wait][page][hl]Resistance[hl]: No...[wait][page]Our leaders stormed Echigoya's place......[wait] but they haven't come back, and we've been worried.[wait][page][hl]Hornisse[hl]: Very well! I'll take this on![wait][page]I will crush Echigoya's ambitions, without fail!![wait][END]"
+  },
+  {
+   "id": "DB_8000_0071",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 188,
+   "snes": "$DB94BD",
+   "en": "[hl]Hornisse[hl]: All right, let's go![wait][END]"
+  },
+  {
+   "id": "DB_8000_0072",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 9,
+   "snes": "$DB94F6",
+   "en": "[ENDK]",
+   "en_from": "C2_s01_0078"
+  },
+  {
+   "id": "DB_8000_0073",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 9,
+   "snes": "$DB94FA",
+   "en": "[hl]Forfahren[hl]: What's that? Yayoi got away?[wait][page]Well, never mind. Leave it to me! I'll find her for sure.[wait][END]"
+  },
+  {
+   "id": "DB_8000_0074",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 9,
+   "snes": "$DB9572",
+   "en": "More importantly, we have trouble![wait][END]"
+  },
+  {
+   "id": "DB_8000_0075",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 179,
+   "snes": "$DB958F",
+   "en": "Something terrible is happening in NEA 1426!![wait][page]Rumor has it Count Vampierre has been revived! It's not certain, though.[wait][page]Go there at once and look into it![wait][END]"
+  },
+  {
+   "id": "DB_8000_0076",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 189,
+   "snes": "$DB9627",
+   "en": "[hl]Hornisse[hl]: Right, I must hurry![wait][END]"
+  },
+  {
+   "id": "DB_8000_0077",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 11,
+   "snes": "$DB9665",
+   "en": "[hl]Forfahren[hl]: This is... the year NEA 2403.[wait][page]It seems Yayoi has fled into this era![wait][page]What's more, here they commit murder openly, before a crowd![wait][page]Save the people from the evil in their hearts!![wait][END]"
+  },
+  {
+   "id": "DB_8000_0078",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 51,
+   "snes": "$DB9744",
+   "en": "[hl]Hornisse[hl]: Hmm, how careless of me...[wait][END]"
+  },
+  {
+   "id": "DB_8000_0079",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 204,
+   "snes": "$DB9784",
+   "en": "[hl]Graf[hl]: This is... the year NEA 403.[wait][page]The Penta Dragon's shadow reaches even to Attempt, the world where the gods dwell.[wait][page]But in truth, the key to stopping the Penta Dragon's revival lies here![wait][page]That key is... the [hl]Blue Orb[hl]![wait][page]Please, find it and bring it back! I'm counting on you.[wait][END]"
+  },
+  {
+   "id": "DB_8000_0080",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 204,
+   "snes": "$DB98A6",
+   "en": "[hl]Hornisse[hl]: Hm? Who are you?[wait][page][hl]Lysis[hl]: I am Lysis.[wait][page]Wife of Heyce, King of Attempt.[wait][page][hl]Hornisse[hl]: .........[wait][page][hl]Lysis[hl]: I beg of you!! Please, help us.[wait][page][hl]Hornisse[hl]: What do you mean?[wait][page][hl]Lysis[hl]: Well...[wait][page]The truth is, this kingdom has fallen into Seto's hands.[wait][page]King Heyce and even our soldiers have been taken prisoner.[wait][page]Won't you please rescue them?[wait][page][hl]Hornisse[hl]: .........[wait][page]Let me ask you one thing... Do you know of something called the [hl]Blue Orb[hl]?[wait][page][hl]Lysis[hl]: Yes...[wait][page]You mean the legendary orb handed down since ancient times.[wait][page]King Heyce should have it...[wait][page][hl]Hornisse[hl]: I see...[wait][page]It seems...... I have no choice but to rescue the King.[wait][page][hl]Lysis[hl]: Then...[wait][page]Thank you so much. Please... we're counting on you.[wait][END]"
+  },
+  {
+   "id": "DB_8000_0081",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 129,
+   "snes": "$DB9BE7",
+   "en": "[hl]Hornisse[hl]: Hmm, the [hl]Blue Orb[hl], is it?[wait][END]"
+  },
+  {
+   "id": "DB_8000_0082",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 22,
+   "snes": "$DB9C2E",
+   "en": "[hl]Graf[hl]: Oh, well done! That's the [hl]Blue Orb[hl]![wait][page]Thank goodness you got it before it fell into his hands!![wait][page][hl]Hornisse[hl]: \"His\"? Who do you mean?[wait][page][hl]Graf[hl]: Oh, never mind me. Oh, but before that...[wait][page]This is... the year NEA 2115.[wait][page]In this world, the people of the Resistance will help you.[wait][page]Go and pay them a visit![wait][END]"
+  },
+  {
+   "id": "DB_8000_0083",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 22,
+   "snes": "$DB9D76",
+   "en": "[hl]Hornisse[hl]: Are you the Resistance?[wait][page][hl]Resistance[hl]: And you are?[wait][page][hl]Hornisse[hl]: Hmm......[wait][page]Someone who has taken up arms to defeat the Penta Dragon...[wait][page][hl]Resistance[hl]: What? How do you know about the Penta Dragon?[wait][page]We should be the only ones who know about that...[wait][page][hl]Hornisse[hl]: This is no longer a matter for this era alone![wait][page][hl]Resistance[hl]: I see.........[wait][page]Then let me tell you about Neo Edo.[wait][page]It was 15 years ago...[wait][page]Echigoya, servant of the Penta Dragon, was defeated...[wait][page]barely... by [hl]Tetsuya \"Ryo\" Mifune[hl] of the Heaven Clan.[wait][page]But his only daughter, [hl]Yayoi[hl], is now helping to conquer Neo Edo![wait][page]It's shameful to admit...[wait] but we no longer have the strength to do anything......[wait][page][hl]Hornisse[hl]: I see...[wait][page]And are the people here all the members you have left?[wait][page][hl]Resistance[hl]: No...[wait][page]Our leaders stormed Echigoya's place......[wait] but they haven't come back, and we've been worried.[wait][page][hl]Hornisse[hl]: Very well! I'll take this on![wait][page]I will crush Echigoya's ambitions, without fail!![wait][END]",
+   "en_from": "DB_8000_0070"
+  },
+  {
+   "id": "DB_8000_0084",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 108,
+   "snes": "$DBA12E",
+   "en": "[hl]Graf[hl]: This is... the year NEA 2115.[wait][page]In this world, the people of the Resistance will help you.[wait][page]Go and pay them a visit![wait][END]"
+  },
+  {
+   "id": "DB_8000_0085",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 108,
+   "snes": "$DBA1B5",
+   "en": "[hl]Hornisse[hl]: Are you the Resistance?[wait][page][hl]Resistance[hl]: And you are?[wait][page][hl]Hornisse[hl]: Hmm......[wait][page]Someone who has taken up arms to defeat the Penta Dragon...[wait][page][hl]Resistance[hl]: What? How do you know about the Penta Dragon?[wait][page]We should be the only ones who know about that...[wait][page][hl]Hornisse[hl]: This is no longer a matter for this era alone![wait][page][hl]Resistance[hl]: I see.........[wait][page]Then let me tell you about Neo Edo.[wait][page]It was 15 years ago...[wait][page]Echigoya, servant of the Penta Dragon, was defeated...[wait][page]barely... by [hl]Tetsuya \"Ryo\" Mifune[hl] of the Heaven Clan.[wait][page]But his only daughter, [hl]Yayoi[hl], is now helping to conquer Neo Edo![wait][page]It's shameful to admit...[wait] but we no longer have the strength to do anything......[wait][page][hl]Hornisse[hl]: I see...[wait][page]And are the people here all the members you have left?[wait][page][hl]Resistance[hl]: No...[wait][page]Our leaders stormed Echigoya's place......[wait] but they haven't come back, and we've been worried.[wait][page][hl]Hornisse[hl]: Very well! I'll take this on![wait][page]I will crush Echigoya's ambitions, without fail!![wait][END]",
+   "en_from": "DB_8000_0070"
+  },
+  {
+   "id": "DB_8000_0086",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 21,
+   "snes": "$DBA56E",
+   "en": "[ENDK]",
+   "en_from": "C2_s01_0078"
+  },
+  {
+   "id": "DB_8000_0087",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 21,
+   "snes": "$DBA572",
+   "en": "[hl]Graf[hl]: What!? Yayoi got away?[wait][page]Well, never mind. Leave it to me! I'll find her for sure.[wait][END]"
+  },
+  {
+   "id": "DB_8000_0088",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 21,
+   "snes": "$DBA5E0",
+   "en": "More importantly, we have trouble![wait][END]",
+   "en_from": "DB_8000_0074"
+  },
+  {
+   "id": "DB_8000_0089",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 23,
+   "snes": "$DBA605",
+   "en": "[hl]Graf[hl]: Oh, well done! That's the [hl]Blue Orb[hl]![wait][page]Thank goodness you got it before it fell into his hands!![wait][page][hl]Hornisse[hl]: \"His\"? Who do you mean?[wait][page][hl]Graf[hl]: Oh, never mind me. Oh, but before that...[wait][page]This is... the year NEA 1444.[wait][page]The Penta Dragon's evil claws already reach this far.[wait][page]In Count Vampierre's place, a mysterious [hl]Man in Black[hl] now holds the castle and does evil![wait][page]Save the people of this era from their terror![wait][END]"
+  },
+  {
+   "id": "DB_8000_0090",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 109,
+   "snes": "$DBA7AD",
+   "en": "[hl]Graf[hl]: This is... the year NEA 1444.[wait][page]The Penta Dragon's evil claws already reach this far.[wait][page]In Count Vampierre's place, a mysterious [hl]Man in Black[hl] now holds the castle and does evil![wait][page]Save the people of this era from their terror![wait][END]"
+  },
+  {
+   "id": "DB_8000_0091",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 8,
+   "snes": "$DBA894",
+   "en": "[hl]Forfahren[hl]: This is... the year NEA 403.[wait][page]The Penta Dragon's shadow reaches even to Attempt, the world where the gods dwell.[wait][page]But in truth, the key to stopping the Penta Dragon's revival lies here![wait][page]That key is... the [hl]Blue Orb[hl]![wait][page]Please, find it and bring it back![wait][page]If I don't get my hands on it first, something terrible will happen...... I'm counting on you.[wait][END]"
+  },
+  {
+   "id": "DB_8000_0092",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 8,
+   "snes": "$DBA9EB",
+   "en": "[hl]Hornisse[hl]: Hm? Who are you?[wait][page][hl]Lysis[hl]: I am Lysis.[wait][page]Wife of Heyce, King of Attempt.[wait][page][hl]Hornisse[hl]: .........[wait][page][hl]Lysis[hl]: I beg of you!! Please, help us.[wait][page][hl]Hornisse[hl]: What do you mean?[wait][page][hl]Lysis[hl]: Well...[wait][page]The truth is, this kingdom has fallen into Seto's hands.[wait][page]King Heyce and even our soldiers have been taken prisoner.[wait][page]Won't you please rescue them?[wait][page][hl]Hornisse[hl]: .........[wait][page]Let me ask you one thing... Do you know of something called the [hl]Blue Orb[hl]?[wait][page][hl]Lysis[hl]: Yes...[wait][page]You mean the legendary orb handed down since ancient times.[wait][page]King Heyce should have it...[wait][page][hl]Hornisse[hl]: I see...[wait][page]It seems...... I have no choice but to rescue the King.[wait][page][hl]Lysis[hl]: Then...[wait][page]Thank you so much. Please... we're counting on you.[wait][END]",
+   "en_from": "DB_8000_0080"
+  },
+  {
+   "id": "DB_8000_0093",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 99,
+   "snes": "$DBAD31",
+   "en": "[hl]Forfahren[hl]: Oh, how wonderful! That's the [hl]Blue Orb[hl]![wait][page]Thank goodness you got it before it fell into Graf's hands!![wait][page][hl]Hornisse[hl]: Who is this Graf?[wait][page][hl]Forfahren[hl]: It's a long story. Oh, but before that...[wait][page]This is... the year NEA 2403.[wait][page]Here, they commit murder openly, before a crowd![wait][page]I want you to save the people from the evil in their hearts!![wait][page]After that, I'll tell you everything. I'm counting on you![wait][END]"
+  },
+  {
+   "id": "DB_8000_0094",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 12,
+   "snes": "$DBAECA",
+   "en": "Deep within the forest...[wait][page]far, far within, stood a quiet house that seemed to be one with the woods.[wait][page]There, a girl with [hl]wings[hl] lived peacefully with her father.[wait][page]The girl's name was... [hl]Sara Weathers[hl].[wait][page]But Sara secretly carried three worries...[wait][page]The first... was that her father had caught the [hl]plague[hl].[wait][page]The second... was that she had [hl]wings[hl].[wait][page]And the last... was a strange [hl]dream[hl] she'd been having lately.[wait][page]In that [hl]dream[hl]...[wait][page]a dazzling light wrapped itself around her......[wait][page]and from within that light, a Red Dragon appeared, calling out to her......[wait][page]That was her [hl]dream[hl].[wait][page]Then, one day...[wait][page]Sara set off for town as usual, to buy medicine for her father.[wait][END]"
+  },
+  {
+   "id": "DB_8000_0095",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 12,
+   "snes": "$DBB131",
+   "en": "[hl]Sara[hl]: Not forgetting anything...... Okay![wait][page][hl]Sara's Father[hl]: Be careful out there. I can't help but worry......[wait][page][hl]Sara[hl]: Oh, come on... I'm not a kid anymore![wait][END]"
+  },
+  {
+   "id": "DB_8000_0096",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 12,
+   "snes": "$DBB1E1",
+   "en": "[hl]Lillie[hl]: Wait, Sara...... Please do be careful.[wait][END]"
+  },
+  {
+   "id": "DB_8000_0097",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 12,
+   "snes": "$DBB225",
+   "en": "[hl]Sara[hl]: Oh, not you too, Lillie...[wait][page]More importantly, take good care of Dad for me.[wait][END]"
+  },
+  {
+   "id": "DB_8000_0098",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 247,
+   "snes": "$DBB2A8",
+   "en": "[hl]Sara[hl]: Well, time to do my best.[wait][END]"
+  },
+  {
+   "id": "DB_8000_0099",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 233,
+   "snes": "$DBB2E7",
+   "en": "[hl]Forfahren[hl]: This is terrible!![wait] It seems Count Vampierre has been revived in NEA 1426![wait][page]Go there at once and look into it! Be careful, now.[wait][END]"
+  },
+  {
+   "id": "DB_8000_0100",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 246,
+   "snes": "$DBB398",
+   "en": "[hl]Sara[hl]: Right...... No time to dawdle![wait][END]"
+  },
+  {
+   "id": "DB_8000_0101",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 232,
+   "snes": "$DBB3E1",
+   "en": "[hl]Forfahren[hl]: This is... the year NEA 2115.[wait][page]The hand of evil reaches here too...[wait][page]Fortunately, the people of the Resistance should be able to help you![wait][page]Go and pay them a visit! Ho ho ho...[wait][END]"
+  },
+  {
+   "id": "DB_8000_0102",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 232,
+   "snes": "$DBB4A8",
+   "en": "[hl]Sara[hl]: Are you the people of the Resistance?[wait][page][hl]Resistance[hl]: And you are?[wait][page][hl]Sara[hl]: Um......[wait][page]Well, for certain reasons, I'm fighting to defeat the Penta Dragon.[wait][page][hl]Resistance[hl]: What? How do you know about the Penta Dragon?[wait][page][hl]Sara[hl]: This isn't just your problem anymore.[wait][page][hl]Resistance[hl]: I see.........[wait][page]Then let me tell you about Neo Edo.[wait][page]It was 15 years ago...[wait][page]Echigoya, servant of the Penta Dragon, was defeated...[wait][page]barely... by [hl]Tetsuya \"Ryo\" Mifune[hl] of the Heaven Clan.[wait][page]But his only daughter, [hl]Yayoi[hl], has taken over his evil schemes...[wait][page]It's shameful to admit...[wait][page]but we no longer have the strength to do anything......[wait][page][hl]Sara[hl]: I see...[wait][page]Are the people here all the members you have?[wait][page][hl]Resistance[hl]: No...[wait][page]Our leaders stormed Echigoya's place......[wait] but they haven't come back, and we've been worried.[wait][page][hl]Sara[hl]: Got it! Leave it to me![wait][page]I won't let Echigoya have things his way!![wait][END]"
+  },
+  {
+   "id": "DB_8000_0103",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 121,
+   "snes": "$DBB839",
+   "en": "[hl]Sara[hl]: Now... where is Echigoya's Yayoi![wait][END]"
+  },
+  {
+   "id": "DB_8000_0104",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 231,
+   "snes": "$DBB883",
+   "en": "[hl]Forfahren[hl]: .........[wait][page]This is the year NEA 1444.[wait] For you, it is a very...... painful and sad era.[wait][page][hl]Sara[hl]: ??? What do you mean?[wait][END]"
+  },
+  {
+   "id": "DB_8000_0105",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 120,
+   "snes": "$DBB935",
+   "en": "[hl]Sara[hl]: Right...... I've got to do my best![wait][END]"
+  },
+  {
+   "id": "DB_8000_0106",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 230,
+   "snes": "$DBB97A",
+   "en": "[hl]Forfahren[hl]: This is... the year NEA 2403.[wait][page]It seems Yayoi has fled into this era![wait][page]What's more, here they commit murder openly, before a crowd![wait][page]Save the people from the evil in their hearts!![wait][END]",
+   "en_from": "DB_8000_0077"
+  },
+  {
+   "id": "DB_8000_0107",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 50,
+   "snes": "$DBBA59",
+   "en": "[hl]Sara[hl]: All right...... let's do this![wait][END]"
+  },
+  {
+   "id": "DB_8000_0108",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 241,
+   "snes": "$DBBA93",
+   "en": "[hl]Graf[hl]: This is... the year NEA 403.[wait][page]The Penta Dragon's shadow reaches even to Attempt, the world where the gods dwell.[wait][page]But in truth, the key to stopping the Penta Dragon's revival lies here![wait][page]That key is... the [hl]Green Orb[hl]![wait][page]Please, find it and bring it back! I'm counting on you.[wait][END]"
+  },
+  {
+   "id": "DB_8000_0109",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 241,
+   "snes": "$DBBBB5",
+   "en": "[hl]Sara[hl]: Huh? Who are you?[wait][page][hl]Lysis[hl]: I am Lysis.[wait][page]Wife of Heyce, King of Attempt.[wait][page][hl]Sara[hl]: .........[wait][page][hl]Lysis[hl]: I beg of you!! Please, help us.[wait][page][hl]Sara[hl]: What do you mean?[wait][page][hl]Lysis[hl]: Well...[wait][page]The truth is, this kingdom has fallen into Seto's hands.[wait][page]King Heyce and even our soldiers have been taken prisoner.[wait][page]Won't you please rescue them?[wait][page][hl]Sara[hl]: .........[wait][page]Can I ask you one thing? Do you know of something called the [hl]Green Orb[hl]?[wait][page][hl]Lysis[hl]: Yes...[wait][page]You mean the legendary orb handed down since ancient times.[wait][page]King Heyce should have it...[wait][page][hl]Sara[hl]: I see...[wait][page]In that case...... it looks like I have to rescue the King.[wait][page][hl]Lysis[hl]: Then... you'll help us?[wait][page]I truly don't know how to thank you... Thank you so much.[wait][page]Please... we're counting on you.[wait][END]"
+  },
+  {
+   "id": "DB_8000_0110",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 119,
+   "snes": "$DBBF28",
+   "en": "[hl]Sara[hl]: The [hl]Green Orb[hl], huh? Okay, I'll do my best![wait][END]"
+  },
+  {
+   "id": "DB_8000_0111",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 240,
+   "snes": "$DBBF7A",
+   "en": "[hl]Graf[hl]: Oh, well done! That's the [hl]Green Orb[hl]![wait][page]Thank goodness you got it before it fell into his hands!![wait][page][hl]Sara[hl]: \"His\"? Who on earth do you mean?[wait][page][hl]Graf[hl]: It's a long story. Oh, more importantly...[wait][END]"
+  },
+  {
+   "id": "DB_8000_0112",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 240,
+   "snes": "$DBC04E",
+   "en": "Something terrible has happened!![wait] It seems Count Vampierre has been revived in NEA 1426![wait][page]Go there at once and look into it! Be careful, now.[wait][END]"
+  },
+  {
+   "id": "DB_8000_0113",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 111,
+   "snes": "$DBC0E5",
+   "en": "[hl]Graf[hl]: Something terrible has happened!![wait] It seems Count Vampierre has been revived in NEA 1426![wait][page]Go there at once and look into it! Be careful, now.[wait][END]"
+  },
+  {
+   "id": "DB_8000_0114",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 239,
+   "snes": "$DBC192",
+   "en": "[hl]Graf[hl]: Oh, well done! That's the [hl]Green Orb[hl]![wait][page]Thank goodness you got it before it fell into his hands!![wait][page][hl]Sara[hl]: \"His\"? Who on earth do you mean?[wait][page][hl]Graf[hl]: It's a long story. Oh, but before that...[wait][page]This is... the year NEA 2115.[wait][page]The hand of evil reaches here too...[wait][page]Fortunately, the people of the Resistance should be able to help you![wait][page]Go and pay them a visit![wait][END]"
+  },
+  {
+   "id": "DB_8000_0115",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 239,
+   "snes": "$DBC2FD",
+   "en": "[hl]Sara[hl]: Are you the people of the Resistance?[wait][page][hl]Resistance[hl]: And you are?[wait][page][hl]Sara[hl]: Um......[wait][page]Well, for certain reasons, I'm fighting to defeat the Penta Dragon.[wait][page][hl]Resistance[hl]: What? How do you know about the Penta Dragon?[wait][page][hl]Sara[hl]: This isn't just your problem anymore.[wait][page][hl]Resistance[hl]: I see.........[wait][page]Then let me tell you about Neo Edo.[wait][page]It was 15 years ago...[wait][page]Echigoya, servant of the Penta Dragon, was defeated...[wait][page]barely... by [hl]Tetsuya \"Ryo\" Mifune[hl] of the Heaven Clan.[wait][page]But his only daughter, [hl]Yayoi[hl], has taken over his evil schemes...[wait][page]It's shameful to admit...[wait][page]but we no longer have the strength to do anything......[wait][page][hl]Sara[hl]: I see...[wait][page]Are the people here all the members you have?[wait][page][hl]Resistance[hl]: No...[wait][page]Our leaders stormed Echigoya's place......[wait] but they haven't come back, and we've been worried.[wait][page][hl]Sara[hl]: Got it! Leave it to me![wait][page]I won't let Echigoya have things his way!![wait][END]",
+   "en_from": "DB_8000_0102"
+  },
+  {
+   "id": "DB_8000_0116",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 112,
+   "snes": "$DBC693",
+   "en": "[hl]Graf[hl]: This is... the year NEA 2115.[wait][page]The hand of evil reaches here too...[wait][page]Fortunately, the people of the Resistance should be able to help you![wait][page]Go and pay them a visit![wait][END]"
+  },
+  {
+   "id": "DB_8000_0117",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 112,
+   "snes": "$DBC743",
+   "en": "[hl]Sara[hl]: Are you the people of the Resistance?[wait][page][hl]Resistance[hl]: And you are?[wait][page][hl]Sara[hl]: Um......[wait][page]Well, for certain reasons, I'm fighting to defeat the Penta Dragon.[wait][page][hl]Resistance[hl]: What? How do you know about the Penta Dragon?[wait][page][hl]Sara[hl]: This isn't just your problem anymore.[wait][page][hl]Resistance[hl]: I see.........[wait][page]Then let me tell you about Neo Edo.[wait][page]It was 15 years ago...[wait][page]Echigoya, servant of the Penta Dragon, was defeated...[wait][page]barely... by [hl]Tetsuya \"Ryo\" Mifune[hl] of the Heaven Clan.[wait][page]But his only daughter, [hl]Yayoi[hl], has taken over his evil schemes...[wait][page]It's shameful to admit...[wait][page]but we no longer have the strength to do anything......[wait][page][hl]Sara[hl]: I see...[wait][page]Are the people here all the members you have?[wait][page][hl]Resistance[hl]: No...[wait][page]Our leaders stormed Echigoya's place......[wait] but they haven't come back, and we've been worried.[wait][page][hl]Sara[hl]: Got it! Leave it to me![wait][page]I won't let Echigoya have things his way!![wait][END]",
+   "en_from": "DB_8000_0102"
+  },
+  {
+   "id": "DB_8000_0118",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 238,
+   "snes": "$DBCADC",
+   "en": "[hl]Graf[hl]: .........[wait][page]This is the year NEA 1444.[wait] For you, it is a very...... painful and sad era.[wait][page][hl]Sara[hl]: ??? What do you mean?[wait][END]"
+  },
+  {
+   "id": "DB_8000_0119",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 98,
+   "snes": "$DBCB8D",
+   "en": "[hl]Forfahren[hl]: This is... the year NEA 403.[wait][page]The Penta Dragon's shadow reaches even to Attempt, the world where the gods dwell.[wait][page]But in truth, the key to stopping the Penta Dragon's revival lies here![wait][page]That key is... the [hl]Green Orb[hl]![wait][page]Please, find it and bring it back![wait][page]If I don't get my hands on it first, something terrible will happen...... I'm counting on you.[wait][END]"
+  },
+  {
+   "id": "DB_8000_0120",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 98,
+   "snes": "$DBCCE4",
+   "en": "[hl]Sara[hl]: Huh? Who are you?[wait][page][hl]Lysis[hl]: I am Lysis.[wait][page]Wife of Heyce, King of Attempt.[wait][page][hl]Sara[hl]: .........[wait][page][hl]Lysis[hl]: I beg of you!! Please, help us.[wait][page][hl]Sara[hl]: What do you mean?[wait][page][hl]Lysis[hl]: Well...[wait][page]The truth is, this kingdom has fallen into Seto's hands.[wait][page]King Heyce and even our soldiers have been taken prisoner.[wait][page]Won't you please rescue them?[wait][page][hl]Sara[hl]: .........[wait][page]Can I ask you one thing? Do you know of something called the [hl]Green Orb[hl]?[wait][page][hl]Lysis[hl]: Yes...[wait][page]You mean the legendary orb handed down since ancient times.[wait][page]King Heyce should have it...[wait][page][hl]Sara[hl]: I see...[wait][page]In that case...... it looks like I have to rescue the King.[wait][page][hl]Lysis[hl]: Then... you'll help us?[wait][page]I truly don't know how to thank you... Thank you so much.[wait][page]Please... we're counting on you.[wait][END]",
+   "en_from": "DB_8000_0109"
+  },
+  {
+   "id": "DB_8000_0121",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 97,
+   "snes": "$DBD05C",
+   "en": "[hl]Forfahren[hl]: Oh, how wonderful! That's the [hl]Green Orb[hl]![wait][page]Thank goodness you got it before it fell into Graf's hands!![wait][page][hl]Sara[hl]: Who on earth is Graf?[wait][page][hl]Forfahren[hl]: It's a long story. Oh, but before that...[wait][page]This is... the year NEA 2403.[wait][page]Here, they commit murder openly, before a crowd![wait][page]I want you to save the people from the evil in their hearts!![wait][page]After that, I'll tell you everything. I'm counting on you![wait][END]"
+  },
+  {
+   "id": "DB_8000_0122",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 18,
+   "snes": "$DBD1F2",
+   "en": "Today was the long-awaited day his ninja kusarigama would be finished......[wait][page][hl]Tetsuya \"Ryo\" Mifune[hl]... that was his name.[wait] Those who knew him simply called him Ryo......[wait][page]Neo Ningyocho, heart of the 808 districts of Neo Great Edo...[wait] now stood in grave peril.[wait][page]The giant karakuri war machine [hl]YAGURA-1[hl] and a heavily armored samurai army had appeared[wait][page]and launched an attack on the town![wait][page]To resist them, the Neo Edo government sent......[wait][page]Neo Great Edo's strongest unit, [hl]E.S.P. 8[hl]...[wait] Neo Great Edo Defense Special Unit 8.[wait][page]Without [hl]Ryo[hl] of the Heaven Clan,[wait][page]the three ninja [hl]Baku[hl] (Earth), [hl]Kurenai[hl] (Divine) and [hl]Shin[hl] (Wind) fought back......[wait][page]but, unthinkably, they were [hl]wiped out[hl]......[wait][page]Ryo was alone......[wait][page]Before the armored samurai army that had conquered Ningyocho, he was powerless.[wait][END]"
+  },
+  {
+   "id": "DB_8000_0123",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 19,
+   "snes": "$DBD4AA",
+   "en": "　[88]　[88]　[88]　[88][END]",
+   "en_from": "copy"
+  },
+  {
+   "id": "DB_8000_0124",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 19,
+   "snes": "$DBD4BD",
+   "en": "[hl]Mysterious Man[hl]: Ryo of the Heaven Clan![wait][page]No... now that E.S.P. 8 is no more......[wait][page]you're just a plain ninja named Ryo. How does that feel? Ha ha ha!![wait][page][hl]Ryo[hl]: Who are you?[wait][page][hl]Mysterious Man[hl]: I am Hachibei Echigoya, of the house of Echigoya.[wait][page]To be frank, I have great need of your talents.[wait][page][hl]Ryo[hl]: Fool!![wait][page]Did you truly think I would lend a hand to your evil deeds?![wait][page][hl]Echigoya[hl]: No, no... Heavens, no![wait][page]I never thought any such thing. It's just......[wait][page]I rather think you'll have no choice but to accept...[wait][page][hl]Ryo[hl]: !?[wait] What do you mean?[wait][page][hl]Echigoya[hl]: Well, you see... that was...[wait][page]Miss [hl]Ruria Midori Lucia[hl], was it? What a lovely lady.[wait][page]She called your name, again and again...[wait][END]"
+  },
+  {
+   "id": "DB_8000_0125",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 20,
+   "snes": "$DBD7A7",
+   "en": "[hl]Ryo[hl]: !?[wait] What have you done to Midori?[wait][page][hl]Echigoya[hl]: My, my... Such a fierce look.[wait][page]But you needn't worry. The woman is my trump card! I haven't laid a finger on her.[wait][page]That is, so long as I have your cooperation.[wait][page][hl]Ryo[hl]: You dirty dog, Echigoya![wait][page]But......[wait] my answer is [hl]NO[hl]!![wait][page][hl]Echigoya[hl]: I thought you'd say that...[wait][page]I'll await your answer until midnight tomorrow.[wait][page]I look forward to a favorable reply. Ha ha ha......[wait][END]"
+  },
+  {
+   "id": "DB_8000_0126",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 20,
+   "snes": "$DBD972",
+   "en": "　[88]　[88]　[88]　[88][END]",
+   "en_from": "copy"
+  },
+  {
+   "id": "DB_8000_0127",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 16,
+   "snes": "$DBD9AB",
+   "en": "[hl]Ryo[hl]: Wait!![wait][page].........[wait][page]But there is only one answer! To defeat you, Echigoya, and take Midori back![wait][page]For the peace and tranquility of Neo Edo......[wait] I'll do it![ENDK]"
+  },
+  {
+   "id": "DB_8000_0128",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 16,
+   "snes": "$DBDA51",
+   "en": "[wait][END]",
+   "en_from": "C2_s01_0036"
+  },
+  {
+   "id": "DB_8000_0129",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 17,
+   "snes": "$DBDA61",
+   "en": "[hl]Ryo[hl]: All right! Bring it on![ENDK]"
+  },
+  {
+   "id": "DB_8000_0130",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 17,
+   "snes": "$DBDA8E",
+   "en": "[wait][END]",
+   "en_from": "C2_s01_0036"
+  },
+  {
+   "id": "DB_8000_0131",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 237,
+   "snes": "$DBDAA3",
+   "en": "[hl]Forfahren[hl]: This is... the year NEA 1426.[wait][page]A servant of the Penta Dragon lives in the castle and torments the townspeople.[wait][page]Go and lend them your strength![wait][END]"
+  },
+  {
+   "id": "DB_8000_0132",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 164,
+   "snes": "$DBDB3F",
+   "en": "[hl]Ryo[hl]: All right! Bring it on![ENDK]",
+   "en_from": "DB_8000_0129"
+  },
+  {
+   "id": "DB_8000_0133",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 164,
+   "snes": "$DBDB6C",
+   "en": "[wait][END]",
+   "en_from": "C2_s01_0036"
+  },
+  {
+   "id": "DB_8000_0134",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 236,
+   "snes": "$DBDB81",
+   "en": "[hl]Forfahren[hl]: This is... the year NEA 1444.[wait][page]In Count Vampierre's place, a mysterious [hl]Man in Black[hl] now holds the castle and does evil![wait][page]Save the people of this era from their terror![wait][END]"
+  },
+  {
+   "id": "DB_8000_0135",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 165,
+   "snes": "$DBDC3A",
+   "en": "[hl]Ryo[hl]: All right! Bring it on![ENDK]",
+   "en_from": "DB_8000_0129"
+  },
+  {
+   "id": "DB_8000_0136",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 165,
+   "snes": "$DBDC67",
+   "en": "[wait][END]",
+   "en_from": "C2_s01_0036"
+  },
+  {
+   "id": "DB_8000_0137",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 235,
+   "snes": "$DBDC7F",
+   "en": "[hl]Forfahren[hl]: This is... the year NEA 2115.[wait][page]We have trouble!! It seems Echigoya's evil power has returned![wait][page]Fortunately, the people of the Resistance should be able to help you![wait][page]Go and pay them a visit! Ho ho ho...[wait][END]"
+  },
+  {
+   "id": "DB_8000_0138",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 235,
+   "snes": "$DBDD5B",
+   "en": "[hl]Ryo[hl]: Are you the Resistance?[wait][page][hl]Resistance[hl]: !? Mr. Ryo![wait][page][hl]Ryo[hl]: How did it come to this?[wait][page][hl]Resistance[hl]: Well...[wait][page]Let me tell you about Neo Edo as it is now.[wait][page]After you defeated Echigoya, his only daughter, [hl]Yayoi[hl], took over his evil schemes...[wait][page]It's shameful to admit... but we no longer have the strength to do anything......[wait][page][hl]Ryo[hl]: I see... So Yayoi, of all people...[wait][page]And are the people here all the members you have?[wait][page][hl]Resistance[hl]: No...[wait][page]Our leaders stormed Echigoya's place......[wait] but they haven't come back, and we've been worried.[wait][page][hl]Ryo[hl]: Very well, leave it to me![wait][page]I shall not let Yayoi have her way![wait][END]"
+  },
+  {
+   "id": "DB_8000_0139",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 167,
+   "snes": "$DBDFF2",
+   "en": "[hl]Ryo[hl]: All right! Bring it on![ENDK]",
+   "en_from": "DB_8000_0129"
+  },
+  {
+   "id": "DB_8000_0140",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 167,
+   "snes": "$DBE01F",
+   "en": "[wait][END]",
+   "en_from": "C2_s01_0036"
+  },
+  {
+   "id": "DB_8000_0141",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 234,
+   "snes": "$DBE034",
+   "en": "[hl]Forfahren[hl]: This is... the year NEA 2403.[wait][page]It seems Yayoi has fled into this era![wait][page]What's more, here they commit murder openly, before a crowd![wait][page]Save the people from the evil in their hearts!![wait][END]",
+   "en_from": "DB_8000_0077"
+  },
+  {
+   "id": "DB_8000_0142",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 49,
+   "snes": "$DBE113",
+   "en": "[hl]Ryo[hl]: All right! Bring it on![ENDK]",
+   "en_from": "DB_8000_0129"
+  },
+  {
+   "id": "DB_8000_0143",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 49,
+   "snes": "$DBE140",
+   "en": "[wait][END]",
+   "en_from": "C2_s01_0036"
+  },
+  {
+   "id": "DB_8000_0144",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 245,
+   "snes": "$DBE155",
+   "en": "[hl]Graf[hl]: This is... the year NEA 403.[wait][page]The Penta Dragon's shadow reaches even to Attempt, the world where the gods dwell.[wait][page]But in truth, the key to stopping the Penta Dragon's revival lies here![wait][page]That key is... the [hl]Crimson Orb[hl]![wait][page]Please, find it and bring it back! I'm counting on you.[wait][END]"
+  },
+  {
+   "id": "DB_8000_0145",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 245,
+   "snes": "$DBE277",
+   "en": "[hl]Ryo[hl]: Hm? Who are you?[wait][page][hl]Lysis[hl]: I am Lysis.[wait][page]Wife of Heyce, King of Attempt.[wait][page][hl]Ryo[hl]: .........[wait][page][hl]Lysis[hl]: I beg of you!! Please, help us.[wait][page][hl]Ryo[hl]: What do you mean?[wait][page][hl]Lysis[hl]: Well...[wait][page]The truth is, this kingdom has fallen into Seto's hands.[wait][page]King Heyce and even our soldiers have been taken prisoner.[wait][page]Won't you please rescue them?[wait][page][hl]Ryo[hl]: ......... Let me ask you one thing...[wait][page]Do you know of something called the [hl]Crimson Orb[hl]?[wait][page][hl]Lysis[hl]: Yes...[wait][page]You mean the legendary orb handed down since ancient times.[wait][page]King Heyce should have it...[wait][page][hl]Ryo[hl]: I see...[wait][page]It seems...... I have no choice but to rescue the King.[wait][page][hl]Lysis[hl]: Then...[wait][page]Thank you so much. Please... we're counting on you.[wait][END]"
+  },
+  {
+   "id": "DB_8000_0146",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 117,
+   "snes": "$DBE5BF",
+   "en": "[hl]Ryo[hl]: The [hl]Crimson Orb[hl], is it? All right, bring it on![ENDK]"
+  },
+  {
+   "id": "DB_8000_0147",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 117,
+   "snes": "$DBE5FF",
+   "en": "[wait][END]",
+   "en_from": "C2_s01_0036"
+  },
+  {
+   "id": "DB_8000_0148",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 244,
+   "snes": "$DBE617",
+   "en": "[hl]Graf[hl]: Oh, well done! That's the [hl]Crimson Orb[hl]![wait][page]Thank goodness you got it before it fell into his hands!![wait][page][hl]Ryo[hl]: \"His\"? Who do you mean?[wait][page][hl]Graf[hl]: It's a long story. Oh, but before that...[wait][page]This is... the year NEA 1426.[wait][page]A servant of the Penta Dragon lives in the castle and torments the townspeople.[wait][page]Go and lend them your strength![wait][END]"
+  },
+  {
+   "id": "DB_8000_0149",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 135,
+   "snes": "$DBE771",
+   "en": "[hl]Graf[hl]: This is... the year NEA 1426.[wait][page]A servant of the Penta Dragon lives in the castle and torments the townspeople.[wait][page]Go and lend them your strength![wait][END]"
+  },
+  {
+   "id": "DB_8000_0150",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 243,
+   "snes": "$DBE80F",
+   "en": "[hl]Graf[hl]: Oh, well done! That's the [hl]Crimson Orb[hl]![wait][page]Thank goodness you got it before it fell into his hands!![wait][page][hl]Ryo[hl]: \"His\"? Who do you mean?[wait][page][hl]Graf[hl]: It's a long story. Oh, but before that...[wait][page]This is... the year NEA 1444.[wait][page]A mysterious [hl]Man in Black[hl] lives in the castle, and he is up to no good![wait][page]Save the people of this era from their terror![wait][END]"
+  },
+  {
+   "id": "DB_8000_0151",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 137,
+   "snes": "$DBE96D",
+   "en": "[hl]Graf[hl]: This is... the year NEA 1444.[wait][page]A mysterious [hl]Man in Black[hl] lives in the castle, and he is up to no good![wait][page]Save the people of this era from their terror![wait][END]"
+  },
+  {
+   "id": "DB_8000_0152",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 242,
+   "snes": "$DBEA0F",
+   "en": "[hl]Graf[hl]: This is... the year NEA 2115.[wait][page]We have trouble!! It seems Echigoya's evil power has returned![wait][page]Fortunately, the people of the Resistance should be able to help you![wait][page]Go and pay them a visit.[wait][END]"
+  },
+  {
+   "id": "DB_8000_0153",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 242,
+   "snes": "$DBEAD4",
+   "en": "[hl]Ryo[hl]: Are you the Resistance?[wait][page][hl]Resistance[hl]: !? Mr. Ryo![wait][page][hl]Ryo[hl]: How did it come to this?[wait][page][hl]Resistance[hl]: Well...[wait][page]Let me tell you about Neo Edo as it is now.[wait][page]After you defeated Echigoya, his only daughter, [hl]Yayoi[hl], took over his evil schemes...[wait][page]It's shameful to admit... but we no longer have the strength to do anything......[wait][page][hl]Ryo[hl]: I see... So Yayoi, of all people...[wait][page]And are the people here all the members you have?[wait][page][hl]Resistance[hl]: No...[wait][page]Our leaders stormed Echigoya's place......[wait] but they haven't come back, and we've been worried.[wait][page][hl]Ryo[hl]: Very well, leave it to me![wait][page]I shall not let Yayoi have her way![wait][END]",
+   "en_from": "DB_8000_0138"
+  },
+  {
+   "id": "DB_8000_0154",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 95,
+   "snes": "$DBED70",
+   "en": "[hl]Forfahren[hl]: This is... the year NEA 403.[wait][page]The Penta Dragon's shadow reaches even to Attempt, the world where the gods dwell.[wait][page]But in truth, the key to stopping the Penta Dragon's revival lies here![wait][page]That key is... the [hl]Crimson Orb[hl]![wait][page]Please, find it and bring it back![wait][page]If I don't get my hands on it first, something terrible will happen...... I'm counting on you.[wait][END]"
+  },
+  {
+   "id": "DB_8000_0155",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 95,
+   "snes": "$DBEEC7",
+   "en": "[hl]Ryo[hl]: Hm? Who are you?[wait][page][hl]Lysis[hl]: I am Lysis.[wait][page]Wife of Heyce, King of Attempt.[wait][page][hl]Ryo[hl]: .........[wait][page][hl]Lysis[hl]: I beg of you!! Please, help us.[wait][page][hl]Ryo[hl]: What do you mean?[wait][page][hl]Lysis[hl]: Well...[wait][page]The truth is, this kingdom has fallen into Seto's hands.[wait][page]King Heyce and even our soldiers have been taken prisoner.[wait][page]Won't you please rescue them?[wait][page][hl]Ryo[hl]: ......... Let me ask you one thing...[wait][page]Do you know of something called the [hl]Crimson Orb[hl]?[wait][page][hl]Lysis[hl]: Yes...[wait][page]You mean the legendary orb handed down since ancient times.[wait][page]King Heyce should have it...[wait][page][hl]Ryo[hl]: I see...[wait][page]It seems...... I have no choice but to rescue the King.[wait][page][hl]Lysis[hl]: Then...[wait][page]Thank you so much. Please... we're counting on you.[wait][END]",
+   "en_from": "DB_8000_0145"
+  },
+  {
+   "id": "DB_8000_0156",
+   "block": "DB_8000",
+   "kind": "dialogue",
+   "label": 94,
+   "snes": "$DBF214",
+   "en": "[hl]Forfahren[hl]: Oh, how wonderful! That's the [hl]Crimson Orb[hl]![wait][page]Thank goodness you got it before it fell into Graf's hands!![wait][page][hl]Ryo[hl]: Who is this Graf?[wait][page][hl]Forfahren[hl]: It's a long story. Oh, but before that...[wait][page]This is... the year NEA 2403.[wait][page]Here, they commit murder openly, before a crowd![wait][page]I want you to save the people from the evil in their hearts!![wait][page]After that, I'll tell you everything. I'm counting on you![wait][END]"
+  }
+ ]
+}

@@ -1,0 +1,22 @@
+{
+ "info": {
+  "block": "C2_s09",
+  "start": "0x02F7AD",
+  "end": "0x02F7D9",
+  "size": 44,
+  "ptr_fmt": "16-bit LE offset within bank $C2 (table $C2:0000, index=script id)",
+  "ptr_loc": "0x020012",
+  "en_translated": 1,
+  "messages": 1
+ },
+ "messages": [
+  {
+   "id": "C2_s09_0000",
+   "block": "C2_s09",
+   "kind": "dialogue",
+   "label": 1,
+   "snes": "$C2F7B0",
+   "en": "[page][hl]TRINEA[br]VER 0.1[hl][wait][page][END]"
+  }
+ ]
+}

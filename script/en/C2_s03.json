@@ -1,0 +1,667 @@
+{
+ "info": {
+  "block": "C2_s03",
+  "start": "0x0223E0",
+  "end": "0x0241D7",
+  "size": 7671,
+  "ptr_fmt": "16-bit LE offset within bank $C2 (table $C2:0000, index=script id)",
+  "ptr_loc": "0x020006",
+  "en_translated": 74,
+  "messages": 74
+ },
+ "messages": [
+  {
+   "id": "C2_s03_0000",
+   "block": "C2_s03",
+   "kind": "dialogue",
+   "label": 1,
+   "snes": "$C223E3",
+   "en": "[page][hl]TRINEA[br]VER 0.1[hl][wait][page][END]",
+   "en_from": "C2_s09_0000"
+  },
+  {
+   "id": "C2_s03_0001",
+   "block": "C2_s03",
+   "kind": "dialogue",
+   "label": 199,
+   "snes": "$C224D3",
+   "en": "[END]",
+   "en_from": "C2_s01_0001"
+  },
+  {
+   "id": "C2_s03_0002",
+   "block": "C2_s03",
+   "kind": "dialogue",
+   "label": 98,
+   "snes": "$C224DA",
+   "en": "[hl]Sara[hl]: Oh!? W-what's this...!?[wait][page][hl]Special move uses increased by 1!![hl][ENDK]"
+  },
+  {
+   "id": "C2_s03_0003",
+   "block": "C2_s03",
+   "kind": "dialogue",
+   "label": 98,
+   "snes": "$C2253A",
+   "en": "[wait][page][hl]Sara[hl]: Lucky me![ENDK]"
+  },
+  {
+   "id": "C2_s03_0004",
+   "block": "C2_s03",
+   "kind": "dialogue",
+   "label": 98,
+   "snes": "$C22563",
+   "en": "[wait][END]",
+   "en_from": "C2_s01_0036"
+  },
+  {
+   "id": "C2_s03_0005",
+   "block": "C2_s03",
+   "kind": "dialogue",
+   "label": 99,
+   "snes": "$C2256E",
+   "en": "[hl]Sara[hl]: How awful!! It's burned to the ground...[wait][END]"
+  },
+  {
+   "id": "C2_s03_0006",
+   "block": "C2_s03",
+   "kind": "dialogue",
+   "label": 100,
+   "snes": "$C225A9",
+   "en": "[hl]Sara[hl]: Oh? W-what's this...!?[wait][page]Hmph... just junk.[wait][END]"
+  },
+  {
+   "id": "C2_s03_0007",
+   "block": "C2_s03",
+   "kind": "dialogue",
+   "label": 155,
+   "snes": "$C225F0",
+   "en": "[END]",
+   "en_from": "C2_s01_0001"
+  },
+  {
+   "id": "C2_s03_0008",
+   "block": "C2_s03",
+   "kind": "dialogue",
+   "label": 193,
+   "snes": "$C22614",
+   "en": "[hl]Sara's Father[hl]: What is it? Forget something?[wait][page][hl]LIFE restored![hl][ENDK]"
+  },
+  {
+   "id": "C2_s03_0009",
+   "block": "C2_s03",
+   "kind": "dialogue",
+   "label": 193,
+   "snes": "$C2265C",
+   "en": "[wait][page][hl]Sara's Father[hl]: Be careful![wait][END]"
+  },
+  {
+   "id": "C2_s03_0010",
+   "block": "C2_s03",
+   "kind": "dialogue",
+   "label": 171,
+   "snes": "$C2268A",
+   "en": "[hl]Sara[hl]: Oh, the town...?![wait][END]"
+  },
+  {
+   "id": "C2_s03_0011",
+   "block": "C2_s03",
+   "kind": "dialogue",
+   "label": 220,
+   "snes": "$C226B2",
+   "en": "[hl]Sara[hl]: This is terrible! I'm worried about home![wait][page]I have to hurry back to Dad![wait][END]"
+  },
+  {
+   "id": "C2_s03_0012",
+   "block": "C2_s03",
+   "kind": "dialogue",
+   "label": 194,
+   "snes": "$C22726",
+   "en": "[hl]Lillie[hl]: Sara, it's terrible! Y-your father.........[wait][page]has been kidnapped by Count Vampierre![wait][page][hl]Sara[hl]: !?[wait][page]What??? Why would they take Father.........?[wait][page][hl]Lillie[hl]: I don't know......[wait][page]But we have to do something.........[wait][page][hl]Sara[hl]: All right![wait][page]I'll do it! Somehow, I'll rescue Dad![wait][page]Miss Lillie... wait here![wait][END]"
+  },
+  {
+   "id": "C2_s03_0013",
+   "block": "C2_s03",
+   "kind": "dialogue",
+   "label": 182,
+   "snes": "$C228A0",
+   "en": "[hl]Sara[hl]: Dad, I'm coming! I'll save you, I promise![wait][END]"
+  },
+  {
+   "id": "C2_s03_0014",
+   "block": "C2_s03",
+   "kind": "dialogue",
+   "label": 184,
+   "snes": "$C228EB",
+   "en": "[hl]Sara[hl]: I'd better hurry home.[wait][END]"
+  },
+  {
+   "id": "C2_s03_0015",
+   "block": "C2_s03",
+   "kind": "dialogue",
+   "label": 239,
+   "snes": "$C22921",
+   "en": "[hl]Lillie[hl]: Did you find anything out?[wait][page]I see... nothing? Well, keep at it![wait][page][hl]LIFE restored![hl][ENDK]"
+  },
+  {
+   "id": "C2_s03_0016",
+   "block": "C2_s03",
+   "kind": "dialogue",
+   "label": 239,
+   "snes": "$C22988",
+   "en": "[wait][END]",
+   "en_from": "C2_s01_0036"
+  },
+  {
+   "id": "C2_s03_0017",
+   "block": "C2_s03",
+   "kind": "dialogue",
+   "label": 120,
+   "snes": "$C2298F",
+   "en": "A voice... echoed inside my head.[wait][page][hl]Rose Castle is a little further east![hl][wait][END]"
+  },
+  {
+   "id": "C2_s03_0018",
+   "block": "C2_s03",
+   "kind": "dialogue",
+   "label": 46,
+   "snes": "$C229DE",
+   "en": "<It doesn't seem to open.>[wait][END]"
+  },
+  {
+   "id": "C2_s03_0019",
+   "block": "C2_s03",
+   "kind": "dialogue",
+   "label": 148,
+   "snes": "$C229F9",
+   "en": "<It doesn't seem to open.>[wait][END]",
+   "en_from": "C2_s03_0018"
+  },
+  {
+   "id": "C2_s03_0020",
+   "block": "C2_s03",
+   "kind": "dialogue",
+   "label": 72,
+   "snes": "$C22A1C",
+   "en": "[hl]Sara[hl]: Hm? Something's written here.[wait][page]\"I am now in my bedchamber. Callers, please come through to the back.[wait] -[hl]Vampierre the Beautiful[hl]\"[wait][END]"
+  },
+  {
+   "id": "C2_s03_0021",
+   "block": "C2_s03",
+   "kind": "dialogue",
+   "label": 74,
+   "snes": "$C22A9F",
+   "en": "[hl]Sara[hl]: Hm? Something's written here.[wait][page]\"I am now in my bedchamber. Callers, please come through to the back.[wait] -[hl]Vampierre the Beautiful[hl]\"[wait][END]",
+   "en_from": "C2_s03_0020"
+  },
+  {
+   "id": "C2_s03_0022",
+   "block": "C2_s03",
+   "kind": "dialogue",
+   "label": 73,
+   "snes": "$C22B1D",
+   "en": "[hl]Sara[hl]: Oh? What's this?[wait][page][hl]LIFE restored![hl][ENDK]"
+  },
+  {
+   "id": "C2_s03_0023",
+   "block": "C2_s03",
+   "kind": "dialogue",
+   "label": 73,
+   "snes": "$C22B68",
+   "en": "[wait][page][hl]Sara[hl]: Yay!![wait][END]"
+  },
+  {
+   "id": "C2_s03_0024",
+   "block": "C2_s03",
+   "kind": "dialogue",
+   "label": 90,
+   "snes": "$C22BE6",
+   "en": "[hl]Flashy Gentleman[hl]: Oh my...[wait][page]Today's guest is quite the adorable one.[wait][page][hl]Sara[hl]: What's that supposed to mean?[wait][page]Is that a compliment? Or are you making fun of me?[wait][page][hl]Flashy Gentleman[hl]: Pardon me. It seems I've offended you...[wait][page]Then... might I ask the lady's name?[wait][page][hl]Sara[hl]: I don't need to tell you! You already know![wait][page]Don't play dumb! Now give my father back![wait][page][hl]Count Vampierre[hl]: Hmm? Whatever are you talking about?[wait][page][hl]Sara[hl]: I guess words won't get through to you......[wait][page][hl]Count Vampierre[hl]: My, how frightening.[wait][page]But I rather like it...[wait][page][hl]Sara[hl]: That's it, I've had enough! [hl]Prepare yourself[hl]![wait][page][hl]Count Vampierre[hl]: Very well.[wait][page]I do so adore the blood of a lovely lady.[wait][page]I wonder how yours will taste? I'm so looking forward to it! Ha ha ha......[wait][END]"
+  },
+  {
+   "id": "C2_s03_0025",
+   "block": "C2_s03",
+   "kind": "dialogue",
+   "label": 238,
+   "snes": "$C22F1F",
+   "en": "[hl]Count Vampierre[hl]: Th-this can't be!? Not beautiful me...[ENDK]"
+  },
+  {
+   "id": "C2_s03_0026",
+   "block": "C2_s03",
+   "kind": "dialogue",
+   "label": 238,
+   "snes": "$C22F65",
+   "en": "[wait][END]",
+   "en_from": "C2_s01_0036"
+  },
+  {
+   "id": "C2_s03_0027",
+   "block": "C2_s03",
+   "kind": "dialogue",
+   "label": 237,
+   "snes": "$C22F75",
+   "en": "　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88][END]"
+  },
+  {
+   "id": "C2_s03_0028",
+   "block": "C2_s03",
+   "kind": "dialogue",
+   "label": 237,
+   "snes": "$C22F9B",
+   "en": "[hl]Sara[hl]: Dad, I won![ENDK]"
+  },
+  {
+   "id": "C2_s03_0029",
+   "block": "C2_s03",
+   "kind": "dialogue",
+   "label": 237,
+   "snes": "$C22FC4",
+   "en": "[wait][page]......Huh? Dad, where are you? Where did you go?[wait][page]......Eh? Wh-what!?[wait][END]"
+  },
+  {
+   "id": "C2_s03_0030",
+   "block": "C2_s03",
+   "kind": "dialogue",
+   "label": 42,
+   "snes": "$C2301C",
+   "en": "[hl]Sara[hl]: Hm? This coffin seems to be the Count's bedroom.[wait][END]"
+  },
+  {
+   "id": "C2_s03_0031",
+   "block": "C2_s03",
+   "kind": "dialogue",
+   "label": 2,
+   "snes": "$C23063",
+   "en": "[ENDK]",
+   "en_from": "C2_s01_0078"
+  },
+  {
+   "id": "C2_s03_0032",
+   "block": "C2_s03",
+   "kind": "dialogue",
+   "label": 3,
+   "snes": "$C23071",
+   "en": "[hl]Sara[hl]: Where am I!?[wait][page][hl]Mysterious Old Man[hl]: Sorry to drag you out to a place like this, Sara.[wait][page]This is... the year NEA 1403.[wait][page]In other words... some 40 years before your own time.[wait][page][hl]Sara[hl]: Who are you? Where's my father?[wait][page][hl]Mysterious Old Man[hl]: My name is[wait] [hl]Forfahren[hl].[wait][page]And... you needn't worry about Jiltania.[wait][page][hl]Sara[hl]: What? How do you know Dad's name? Who are you???[wait][page][hl]Forfahren[hl]: Now listen... first, hear what I have to say![wait][END]"
+  },
+  {
+   "id": "C2_s03_0033",
+   "block": "C2_s03",
+   "kind": "dialogue",
+   "label": 7,
+   "snes": "$C23253",
+   "en": "[hl]Sara[hl]: .........[wait][page][hl]Forfahren[hl]: Do you know of the legendary demon dragon, the Penta Dragon?[wait][page][hl]Sara[hl]: .........? No, I've never heard of it.[wait][page][hl]Forfahren[hl]: Among the tales handed down from ancient times, there is this legend:[wait][page]\"A demon dragon born of the darkness wrought by five lights...[wait][page]One who leads to ruin by the power of chaos......[wait][page]Through [hl]TRINEA[hl] it shall return to this world.\"[wait] So it goes.[wait][page][hl]Sara[hl]: TRINEA? What's that?[wait][page][hl]Forfahren[hl]: That's just it... Even I don't know.[wait][page]The holy book that records the legend tells not only of the Penta Dragon...[wait][page]but also of a girl with wings.[wait][page]That old book must still hold many more secrets![wait][page][hl]Sara[hl]: A girl with wings... Could that be me?[wait][page][hl]Forfahren[hl]: Well now...... I really couldn't say.[wait][page]Either way, don't you want to find out?[wait][END]"
+  },
+  {
+   "id": "C2_s03_0034",
+   "block": "C2_s03",
+   "kind": "dialogue",
+   "label": 9,
+   "snes": "$C23571",
+   "en": "[hl]Sara[hl]: But how?[wait][page][hl]Forfahren[hl]: What do you say? Won't you lend me your strength?[wait][page]<What will you do?>[ENDK]"
+  },
+  {
+   "id": "C2_s03_0035",
+   "block": "C2_s03",
+   "kind": "choice",
+   "label": 9,
+   "snes": "$C235F2",
+   "choice_jump_label": 8,
+   "en": "-[ENDK]",
+   "en_from": "C2_s01_0014"
+  },
+  {
+   "id": "C2_s03_0036",
+   "block": "C2_s03",
+   "kind": "choice",
+   "label": 9,
+   "snes": "$C235F6",
+   "choice_jump_label": 8,
+   "en": "-[ENDK]",
+   "en_from": "C2_s01_0014"
+  },
+  {
+   "id": "C2_s03_0037",
+   "block": "C2_s03",
+   "kind": "choice",
+   "label": 9,
+   "snes": "$C235FA",
+   "choice_jump_label": 8,
+   "en": "Lend a hand![ENDK]",
+   "en_from": "C2_s01_0094"
+  },
+  {
+   "id": "C2_s03_0038",
+   "block": "C2_s03",
+   "kind": "choice",
+   "label": 9,
+   "snes": "$C23606",
+   "choice_jump_label": 236,
+   "en": "No thanks[ENDK]",
+   "en_from": "C2_s01_0083"
+  },
+  {
+   "id": "C2_s03_0039",
+   "block": "C2_s03",
+   "kind": "choice",
+   "label": 9,
+   "snes": "$C23610",
+   "choice_jump_label": 8,
+   "en": "-[ENDK]",
+   "en_from": "C2_s01_0014"
+  },
+  {
+   "id": "C2_s03_0040",
+   "block": "C2_s03",
+   "kind": "choice",
+   "label": 9,
+   "snes": "$C23614",
+   "choice_jump_label": 8,
+   "en": "-[ENDK]",
+   "en_from": "C2_s01_0014"
+  },
+  {
+   "id": "C2_s03_0041",
+   "block": "C2_s03",
+   "kind": "dialogue",
+   "label": 236,
+   "snes": "$C2361B",
+   "en": "[hl]Forfahren[hl]: Oh, come now! What do you say?[wait][page]<What will you do?>[ENDK]"
+  },
+  {
+   "id": "C2_s03_0042",
+   "block": "C2_s03",
+   "kind": "choice",
+   "label": 236,
+   "snes": "$C23667",
+   "choice_jump_label": 8,
+   "en": "-[ENDK]",
+   "en_from": "C2_s01_0014"
+  },
+  {
+   "id": "C2_s03_0043",
+   "block": "C2_s03",
+   "kind": "choice",
+   "label": 236,
+   "snes": "$C2366B",
+   "choice_jump_label": 8,
+   "en": "-[ENDK]",
+   "en_from": "C2_s01_0014"
+  },
+  {
+   "id": "C2_s03_0044",
+   "block": "C2_s03",
+   "kind": "choice",
+   "label": 236,
+   "snes": "$C2366F",
+   "choice_jump_label": 8,
+   "en": "Lend a hand![ENDK]",
+   "en_from": "C2_s01_0094"
+  },
+  {
+   "id": "C2_s03_0045",
+   "block": "C2_s03",
+   "kind": "choice",
+   "label": 236,
+   "snes": "$C2367B",
+   "choice_jump_label": 236,
+   "en": "No thanks[ENDK]",
+   "en_from": "C2_s01_0083"
+  },
+  {
+   "id": "C2_s03_0046",
+   "block": "C2_s03",
+   "kind": "choice",
+   "label": 236,
+   "snes": "$C23685",
+   "choice_jump_label": 8,
+   "en": "-[ENDK]",
+   "en_from": "C2_s01_0014"
+  },
+  {
+   "id": "C2_s03_0047",
+   "block": "C2_s03",
+   "kind": "choice",
+   "label": 236,
+   "snes": "$C23689",
+   "choice_jump_label": 8,
+   "en": "-[ENDK]",
+   "en_from": "C2_s01_0014"
+  },
+  {
+   "id": "C2_s03_0048",
+   "block": "C2_s03",
+   "kind": "dialogue",
+   "label": 8,
+   "snes": "$C23690",
+   "en": "[hl]Forfahren[hl]: Sara... you're a strong girl.[wait][page]But before that... you'd best go and see Jiltania.[wait][page]He should be home by now! Hurry along.[wait][page][hl]Sara[hl]: Huh!? Dad's at home?[wait][page]Could it be...... it was you? Thank you so much![wait][page][hl]Forfahren[hl]: Well then... I'll come for you later.[wait][END]"
+  },
+  {
+   "id": "C2_s03_0049",
+   "block": "C2_s03",
+   "kind": "dialogue",
+   "label": 10,
+   "snes": "$C237FD",
+   "en": "[hl]Sara[hl]: Dad!![wait][END]"
+  },
+  {
+   "id": "C2_s03_0050",
+   "block": "C2_s03",
+   "kind": "dialogue",
+   "label": 10,
+   "snes": "$C2381F",
+   "en": "[hl]Jiltania[hl]: Ah... I'm sorry I worried you.[wait][page][hl]Sara[hl]: No... as long as you're safe, Dad...[wait][page]I'm just so glad.[wait][page][hl]Lillie[hl]: A strange wizard brought your father back.........[wait][page][hl]Sara[hl]: Um... Miss Lillie, about that...[wait][ENDK]"
+  },
+  {
+   "id": "C2_s03_0051",
+   "block": "C2_s03",
+   "kind": "dialogue",
+   "label": 10,
+   "snes": "$C2390D",
+   "en": "[END]",
+   "en_from": "C2_s01_0001"
+  },
+  {
+   "id": "C2_s03_0052",
+   "block": "C2_s03",
+   "kind": "dialogue",
+   "label": 10,
+   "snes": "$C23915",
+   "en": "[hl]Lillie[hl]: ..........[wait][page]I see... So what will you do?[wait][page][hl]Sara[hl]: ......[wait][page][hl]Lillie[hl]: I thought so... .........All right.[wait][page]Leave your father to me.[wait][page][hl]Sara[hl]: I'm sorry.[wait][page]But I want to know anything I can about these wings. Just this once.........ah[wait][END]"
+  },
+  {
+   "id": "C2_s03_0053",
+   "block": "C2_s03",
+   "kind": "dialogue",
+   "label": 10,
+   "snes": "$C23A34",
+   "en": "[hl]Forfahren[hl]: I heard everything.[wait][page]About Jiltania...... are you truly all right with this?[wait][END]"
+  },
+  {
+   "id": "C2_s03_0054",
+   "block": "C2_s03",
+   "kind": "dialogue",
+   "label": 14,
+   "snes": "$C23AA2",
+   "en": "[hl]Sara[hl]: .........[wait][page][hl]Forfahren[hl]: I see... Then let's be off![wait][page][hl]Lillie[hl]: Sara... don't push yourself too hard.[wait][page][hl]Sara[hl]: I know! Well, I'm off![wait][END]"
+  },
+  {
+   "id": "C2_s03_0055",
+   "block": "C2_s03",
+   "kind": "dialogue",
+   "label": 4,
+   "snes": "$C23B6A",
+   "en": "[hl]Sara[hl]: .........Where am I?[wait][page][hl]Mysterious Old Man[hl]: Sorry to drag you off to a place like this so suddenly.[wait][page]Sara...[wait] This is... the year NEA 1403.[wait][page]In other words... some 40 years before your own time.[wait][page][hl]Sara[hl]: Who are you?[wait][page][hl]Mysterious Old Man[hl]: Me? Ho ho ho.........[wait][page]My name is... [hl]Graf[hl].[wait][page][hl]Sara[hl]: ......Graf? So what do you want?[wait][END]"
+  },
+  {
+   "id": "C2_s03_0056",
+   "block": "C2_s03",
+   "kind": "dialogue",
+   "label": 159,
+   "snes": "$C23CD9",
+   "en": "[hl]Graf[hl]: Well now...... I have two wishes.[wait][page]The first... is to stop the revival of the Penta Dragon.[wait][page]The second... is to stop the misdeeds of an evil wizard, who is also my friend![wait][page][hl]Sara[hl]: .........[wait][page]And what does that have to do with me?[wait][page][hl]Graf[hl]: I'm glad you asked! But there's only one answer.[wait][page]The only one who can save this world is you...... Sara![wait][page]That's all there is to it. Won't you understand?[wait][page][hl]Sara[hl]: But......[wait][page]You spring that on me so suddenly... I don't know what to do......[wait][page][hl]Graf[hl]: Now, now, don't say that.[wait][page]So how about it...... Won't you lend me your strength, no questions asked?[wait][page]<What will you do?>[ENDK]"
+  },
+  {
+   "id": "C2_s03_0057",
+   "block": "C2_s03",
+   "kind": "choice",
+   "label": 159,
+   "snes": "$C23F15",
+   "choice_jump_label": 163,
+   "en": "-[ENDK]",
+   "en_from": "C2_s01_0014"
+  },
+  {
+   "id": "C2_s03_0058",
+   "block": "C2_s03",
+   "kind": "choice",
+   "label": 159,
+   "snes": "$C23F19",
+   "choice_jump_label": 162,
+   "en": "-[ENDK]",
+   "en_from": "C2_s01_0014"
+  },
+  {
+   "id": "C2_s03_0059",
+   "block": "C2_s03",
+   "kind": "choice",
+   "label": 159,
+   "snes": "$C23F1D",
+   "choice_jump_label": 163,
+   "en": "Lend a hand![ENDK]",
+   "en_from": "C2_s01_0094"
+  },
+  {
+   "id": "C2_s03_0060",
+   "block": "C2_s03",
+   "kind": "choice",
+   "label": 159,
+   "snes": "$C23F29",
+   "choice_jump_label": 162,
+   "en": "No thanks[ENDK]",
+   "en_from": "C2_s01_0083"
+  },
+  {
+   "id": "C2_s03_0061",
+   "block": "C2_s03",
+   "kind": "choice",
+   "label": 159,
+   "snes": "$C23F33",
+   "choice_jump_label": 163,
+   "en": "-[ENDK]",
+   "en_from": "C2_s01_0014"
+  },
+  {
+   "id": "C2_s03_0062",
+   "block": "C2_s03",
+   "kind": "choice",
+   "label": 159,
+   "snes": "$C23F37",
+   "choice_jump_label": 162,
+   "en": "-[ENDK]",
+   "en_from": "C2_s01_0014"
+  },
+  {
+   "id": "C2_s03_0063",
+   "block": "C2_s03",
+   "kind": "dialogue",
+   "label": 162,
+   "snes": "$C23F3E",
+   "en": "[hl]Graf[hl]: Oh, don't say that. Won't you do this for me?[wait][page]<What will you do?>[ENDK]",
+   "en_from": "C2_s01_0100"
+  },
+  {
+   "id": "C2_s03_0064",
+   "block": "C2_s03",
+   "kind": "choice",
+   "label": 162,
+   "snes": "$C23F90",
+   "choice_jump_label": 163,
+   "en": "-[ENDK]",
+   "en_from": "C2_s01_0014"
+  },
+  {
+   "id": "C2_s03_0065",
+   "block": "C2_s03",
+   "kind": "choice",
+   "label": 162,
+   "snes": "$C23F94",
+   "choice_jump_label": 162,
+   "en": "-[ENDK]",
+   "en_from": "C2_s01_0014"
+  },
+  {
+   "id": "C2_s03_0066",
+   "block": "C2_s03",
+   "kind": "choice",
+   "label": 162,
+   "snes": "$C23F98",
+   "choice_jump_label": 163,
+   "en": "Lend a hand![ENDK]",
+   "en_from": "C2_s01_0094"
+  },
+  {
+   "id": "C2_s03_0067",
+   "block": "C2_s03",
+   "kind": "choice",
+   "label": 162,
+   "snes": "$C23FA4",
+   "choice_jump_label": 162,
+   "en": "No thanks[ENDK]",
+   "en_from": "C2_s01_0083"
+  },
+  {
+   "id": "C2_s03_0068",
+   "block": "C2_s03",
+   "kind": "choice",
+   "label": 162,
+   "snes": "$C23FAE",
+   "choice_jump_label": 163,
+   "en": "-[ENDK]",
+   "en_from": "C2_s01_0014"
+  },
+  {
+   "id": "C2_s03_0069",
+   "block": "C2_s03",
+   "kind": "choice",
+   "label": 162,
+   "snes": "$C23FB2",
+   "choice_jump_label": 162,
+   "en": "-[ENDK]",
+   "en_from": "C2_s01_0014"
+  },
+  {
+   "id": "C2_s03_0070",
+   "block": "C2_s03",
+   "kind": "dialogue",
+   "label": 163,
+   "snes": "$C23FB9",
+   "en": "[hl]Graf[hl]: Oh, you will! I'm truly grateful!![wait][page]Now, first of all...[wait][page]Oops, that's right. Before we talk, there's this![wait][END]",
+   "en_from": "C2_s01_0107"
+  },
+  {
+   "id": "C2_s03_0071",
+   "block": "C2_s03",
+   "kind": "dialogue",
+   "label": 179,
+   "snes": "$C24060",
+   "en": "　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[br]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[br]　[88]　[88]　[88]　[88][END]",
+   "en_from": "copy"
+  },
+  {
+   "id": "C2_s03_0072",
+   "block": "C2_s03",
+   "kind": "dialogue",
+   "label": 6,
+   "snes": "$C240C7",
+   "en": "[hl]Lillie[hl]: When I found you lying there, collapsed......[wait][page]I thought my heart would break![wait][page][hl]Sara[hl]: Hehe... I guess I overdid it a little?[wait][page][hl]LIFE restored![hl][ENDK]"
+  },
+  {
+   "id": "C2_s03_0073",
+   "block": "C2_s03",
+   "kind": "dialogue",
+   "label": 6,
+   "snes": "$C24181",
+   "en": "[wait][page][hl]Lillie[hl]: From now on... please, be very careful. Stay safe...[wait][END]"
+  }
+ ]
+}

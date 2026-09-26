@@ -1,0 +1,86 @@
+{
+ "_note": "Layout/strings for pre-rendered system text (shop, character select, money label), used by tools/py/sysgfx.py. English only.",
+ "money_label": {
+  "text": "Money",
+  "cells": 3
+ },
+ "shop_messages": [
+  {
+   "id": 0,
+   "lines": [
+    "Raises max LIFE by 5."
+   ]
+  },
+  {
+   "id": 1,
+   "lines": [
+    "Raises attack power."
+   ]
+  },
+  {
+   "id": 2,
+   "lines": [
+    "Adds 1 special move use."
+   ]
+  },
+  {
+   "id": 3,
+   "lines": [
+    "Return to the game."
+   ]
+  },
+  {
+   "id": 4,
+   "lines": [
+    "Not enough money!!"
+   ]
+  },
+  {
+   "id": 5,
+   "lines": [
+    "Sold out."
+   ]
+  },
+  {
+   "id": 6,
+   "lines": [
+    "Max LIFE increased by 5!"
+   ]
+  },
+  {
+   "id": 7,
+   "lines": [
+    "Attack power increased!"
+   ]
+  },
+  {
+   "id": 8,
+   "lines": [
+    "Special move uses increased by 1!!"
+   ]
+  }
+ ],
+ "charselect": [
+  {
+   "text": "Name",
+   "cells": 2
+  },
+  {
+   "text": "Please choose a character.",
+   "cells": 14,
+   "align": "center"
+  },
+  {
+   "text": "<Hornisse>",
+   "cells": 7
+  },
+  {
+   "text": "<Sara Weathers>",
+   "cells": 10
+  },
+  {
+   "text": "<Tetsuya \"Ryo\" Mifune>",
+   "cells": 9
+  }
+ ]
+}

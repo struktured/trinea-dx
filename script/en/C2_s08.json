@@ -1,0 +1,647 @@
+{
+ "info": {
+  "block": "C2_s08",
+  "start": "0x02A945",
+  "end": "0x02D513",
+  "size": 11214,
+  "ptr_fmt": "16-bit LE offset within bank $C2 (table $C2:0000, index=script id)",
+  "ptr_loc": "0x020010",
+  "en_translated": 75,
+  "messages": 75
+ },
+ "messages": [
+  {
+   "id": "C2_s08_0000",
+   "block": "C2_s08",
+   "kind": "dialogue",
+   "label": 1,
+   "snes": "$C2A948",
+   "en": "[page][hl]TRINEA[br]VER 0.1[hl][wait][page][END]",
+   "en_from": "C2_s09_0000"
+  },
+  {
+   "id": "C2_s08_0001",
+   "block": "C2_s08",
+   "kind": "dialogue",
+   "label": 159,
+   "snes": "$C2A972",
+   "en": "[END]",
+   "en_from": "C2_s01_0001"
+  },
+  {
+   "id": "C2_s08_0002",
+   "block": "C2_s08",
+   "kind": "dialogue",
+   "label": 146,
+   "snes": "$C2A993",
+   "en": "[hl]Hornisse[hl]: Oh!? W-what's this...!?[wait][page][hl]LIFE restored![hl][ENDK]",
+   "en_from": "C2_s01_0008"
+  },
+  {
+   "id": "C2_s08_0003",
+   "block": "C2_s08",
+   "kind": "dialogue",
+   "label": 146,
+   "snes": "$C2A9E4",
+   "en": "[wait][END]",
+   "en_from": "C2_s01_0036"
+  },
+  {
+   "id": "C2_s08_0004",
+   "block": "C2_s08",
+   "kind": "dialogue",
+   "label": 146,
+   "snes": "$C2A9F6",
+   "en": "[hl]Hornisse[hl]: All right![ENDK]"
+  },
+  {
+   "id": "C2_s08_0005",
+   "block": "C2_s08",
+   "kind": "dialogue",
+   "label": 146,
+   "snes": "$C2AA15",
+   "en": "Let's go!![wait][END]",
+   "en_from": "C2_s01_0005"
+  },
+  {
+   "id": "C2_s08_0006",
+   "block": "C2_s08",
+   "kind": "dialogue",
+   "label": 147,
+   "snes": "$C2AA3A",
+   "en": "[hl]Sara[hl]: Oh? What's this?[wait][page][hl]LIFE restored![hl][ENDK]",
+   "en_from": "C2_s03_0022"
+  },
+  {
+   "id": "C2_s08_0007",
+   "block": "C2_s08",
+   "kind": "dialogue",
+   "label": 147,
+   "snes": "$C2AA85",
+   "en": "[wait][END]",
+   "en_from": "C2_s01_0036"
+  },
+  {
+   "id": "C2_s08_0008",
+   "block": "C2_s08",
+   "kind": "dialogue",
+   "label": 147,
+   "snes": "$C2AA97",
+   "en": "[hl]Sara[hl]: Yay!![wait][END]"
+  },
+  {
+   "id": "C2_s08_0009",
+   "block": "C2_s08",
+   "kind": "dialogue",
+   "label": 148,
+   "snes": "$C2AACF",
+   "en": "[hl]Ryo[hl]: Ah!? What is this!?[wait][page][hl]LIFE restored![hl][ENDK]"
+  },
+  {
+   "id": "C2_s08_0010",
+   "block": "C2_s08",
+   "kind": "dialogue",
+   "label": 148,
+   "snes": "$C2AB17",
+   "en": "[wait][END]",
+   "en_from": "C2_s01_0036"
+  },
+  {
+   "id": "C2_s08_0011",
+   "block": "C2_s08",
+   "kind": "dialogue",
+   "label": 148,
+   "snes": "$C2AB29",
+   "en": "[hl]Ryo[hl]: All right! Let's go!![ENDK]"
+  },
+  {
+   "id": "C2_s08_0012",
+   "block": "C2_s08",
+   "kind": "dialogue",
+   "label": 148,
+   "snes": "$C2AB52",
+   "en": "[wait][END]",
+   "en_from": "C2_s01_0036"
+  },
+  {
+   "id": "C2_s08_0013",
+   "block": "C2_s08",
+   "kind": "dialogue",
+   "label": 2,
+   "snes": "$C2AB68",
+   "en": "　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[br]　[88]　[88]　[88]　[END]",
+   "en_from": "copy"
+  },
+  {
+   "id": "C2_s08_0014",
+   "block": "C2_s08",
+   "kind": "dialogue",
+   "label": 3,
+   "snes": "$C2ABA7",
+   "en": "[hl]Hornisse[hl]: Y-you!?[wait][page][hl]Yayoi[hl]: Oh-ho-ho-ho![ENDK]"
+  },
+  {
+   "id": "C2_s08_0015",
+   "block": "C2_s08",
+   "kind": "dialogue",
+   "label": 3,
+   "snes": "$C2ABF5",
+   "en": "We meet again, it seems.[wait][page][hl]Hornisse[hl]: You just won't die! I'll finish you off this time![wait][page][hl]Yayoi[hl]: Oh-ho-ho-ho![ENDK]"
+  },
+  {
+   "id": "C2_s08_0016",
+   "block": "C2_s08",
+   "kind": "dialogue",
+   "label": 3,
+   "snes": "$C2AC6F",
+   "en": "[wait][page]How amusing. Try it, if you think you can![wait][page]But first, allow me to introduce my darling subordinates![wait][page][hl]Robat[hl], get rid of them![wait][END]"
+  },
+  {
+   "id": "C2_s08_0017",
+   "block": "C2_s08",
+   "kind": "dialogue",
+   "label": 110,
+   "snes": "$C2AD03",
+   "en": "[hl]Yayoi[hl]: Oh-ho-ho-ho![ENDK]",
+   "en_from": "C2_s06_0038"
+  },
+  {
+   "id": "C2_s08_0018",
+   "block": "C2_s08",
+   "kind": "dialogue",
+   "label": 110,
+   "snes": "$C2AD2A",
+   "en": "How do you do?[wait][page]Allow me to introduce my darling subordinates![wait][page][hl]Robat[hl], get rid of them![wait][END]"
+  },
+  {
+   "id": "C2_s08_0019",
+   "block": "C2_s08",
+   "kind": "dialogue",
+   "label": 4,
+   "snes": "$C2AD8E",
+   "en": "[hl]Sara[hl]: Y-Yayoi!?[wait][page][hl]Yayoi[hl]: Oh-ho-ho-ho![ENDK]"
+  },
+  {
+   "id": "C2_s08_0020",
+   "block": "C2_s08",
+   "kind": "dialogue",
+   "label": 4,
+   "snes": "$C2ADD8",
+   "en": "We meet again, it seems.[wait][page][hl]Sara[hl]: This time I'll finish you for good![wait][page][hl]Yayoi[hl]: Oh-ho-ho-ho![ENDK]"
+  },
+  {
+   "id": "C2_s08_0021",
+   "block": "C2_s08",
+   "kind": "dialogue",
+   "label": 4,
+   "snes": "$C2AE44",
+   "en": "[wait][page]How amusing. Try it, if you think you can![wait][page]But first, allow me to introduce my darling subordinates![wait][page][hl]Robat[hl], get rid of them![wait][END]",
+   "en_from": "C2_s08_0016"
+  },
+  {
+   "id": "C2_s08_0022",
+   "block": "C2_s08",
+   "kind": "dialogue",
+   "label": 111,
+   "snes": "$C2AED8",
+   "en": "[hl]Yayoi[hl]: Oh-ho-ho-ho![ENDK]",
+   "en_from": "C2_s06_0038"
+  },
+  {
+   "id": "C2_s08_0023",
+   "block": "C2_s08",
+   "kind": "dialogue",
+   "label": 111,
+   "snes": "$C2AEFF",
+   "en": "How do you do?[wait][page]Allow me to introduce my darling subordinates![wait][page][hl]Robat[hl], get rid of them![wait][END]",
+   "en_from": "C2_s08_0018"
+  },
+  {
+   "id": "C2_s08_0024",
+   "block": "C2_s08",
+   "kind": "dialogue",
+   "label": 5,
+   "snes": "$C2AF63",
+   "en": "[hl]Ryo[hl]: Wh-why, you!?[wait][page][hl]Yayoi[hl]: Oh-ho-ho-ho![ENDK]"
+  },
+  {
+   "id": "C2_s08_0025",
+   "block": "C2_s08",
+   "kind": "dialogue",
+   "label": 5,
+   "snes": "$C2AFAF",
+   "en": "We meet again, it seems.[wait][page][hl]Ryo[hl]: Hmm, once more, then! Prepare yourself!![wait][page][hl]Yayoi[hl]: Oh-ho-ho-ho![ENDK]"
+  },
+  {
+   "id": "C2_s08_0026",
+   "block": "C2_s08",
+   "kind": "dialogue",
+   "label": 5,
+   "snes": "$C2B021",
+   "en": "[wait][page]How amusing. Try it, if you think you can![wait][page]But first, allow me to introduce my darling subordinates![wait][page][hl]Robat[hl], get rid of them![wait][END]",
+   "en_from": "C2_s08_0016"
+  },
+  {
+   "id": "C2_s08_0027",
+   "block": "C2_s08",
+   "kind": "dialogue",
+   "label": 112,
+   "snes": "$C2B0B5",
+   "en": "[hl]Yayoi[hl]: Oh-ho-ho-ho![ENDK]",
+   "en_from": "C2_s06_0038"
+  },
+  {
+   "id": "C2_s08_0028",
+   "block": "C2_s08",
+   "kind": "dialogue",
+   "label": 112,
+   "snes": "$C2B0DC",
+   "en": "How do you do?[wait][page]Allow me to introduce my darling subordinates![wait][page][hl]Robat[hl], get rid of them![wait][END]",
+   "en_from": "C2_s08_0018"
+  },
+  {
+   "id": "C2_s08_0029",
+   "block": "C2_s08",
+   "kind": "dialogue",
+   "label": 7,
+   "snes": "$C2B145",
+   "en": "[hl]Robat[hl]: Meee!![ENDK]"
+  },
+  {
+   "id": "C2_s08_0030",
+   "block": "C2_s08",
+   "kind": "dialogue",
+   "label": 7,
+   "snes": "$C2B164",
+   "en": "[wait][END]",
+   "en_from": "C2_s01_0036"
+  },
+  {
+   "id": "C2_s08_0031",
+   "block": "C2_s08",
+   "kind": "dialogue",
+   "label": 9,
+   "snes": "$C2B17E",
+   "en": "　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[br]　[88]　[88]　[88]　[page][hl]Yayoi[hl]: Not bad at all. But the real fight starts now![wait][page][hl]THE 8[hl], defeat this one![wait][END]"
+  },
+  {
+   "id": "C2_s08_0032",
+   "block": "C2_s08",
+   "kind": "dialogue",
+   "label": 10,
+   "snes": "$C2B224",
+   "en": "[hl]THE 8[hl]: LEAVE IT TO ME![ENDK]"
+  },
+  {
+   "id": "C2_s08_0033",
+   "block": "C2_s08",
+   "kind": "dialogue",
+   "label": 10,
+   "snes": "$C2B24F",
+   "en": "[wait][END]",
+   "en_from": "C2_s01_0036"
+  },
+  {
+   "id": "C2_s08_0034",
+   "block": "C2_s08",
+   "kind": "dialogue",
+   "label": 12,
+   "snes": "$C2B269",
+   "en": "　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[br]　[88]　[88]　[88]　[page][hl]Yayoi[hl]: .........[wait][page]It seems... I'll have to get serious.[wait][page][hl]Apple[hl], go on, do it!![wait][END]"
+  },
+  {
+   "id": "C2_s08_0035",
+   "block": "C2_s08",
+   "kind": "dialogue",
+   "label": 13,
+   "snes": "$C2B312",
+   "en": "[hl]Apple[hl]: Ha ha ha! No need to worry.[ENDK]"
+  },
+  {
+   "id": "C2_s08_0036",
+   "block": "C2_s08",
+   "kind": "dialogue",
+   "label": 13,
+   "snes": "$C2B352",
+   "en": "[wait][END]",
+   "en_from": "C2_s01_0036"
+  },
+  {
+   "id": "C2_s08_0037",
+   "block": "C2_s08",
+   "kind": "dialogue",
+   "label": 15,
+   "snes": "$C2B36C",
+   "en": "　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[br]　[88]　[88]　[88]　[page][hl]Yayoi[hl]: .........I can't believe it![wait][page]In that case, [hl]Powered Suit[hl], you're my only hope!![wait][END]"
+  },
+  {
+   "id": "C2_s08_0038",
+   "block": "C2_s08",
+   "kind": "dialogue",
+   "label": 16,
+   "snes": "$C2B40E",
+   "en": "[hl]Powered Suit[hl]: .........[ENDK]"
+  },
+  {
+   "id": "C2_s08_0039",
+   "block": "C2_s08",
+   "kind": "dialogue",
+   "label": 16,
+   "snes": "$C2B431",
+   "en": "[wait][END]",
+   "en_from": "C2_s01_0036"
+  },
+  {
+   "id": "C2_s08_0040",
+   "block": "C2_s08",
+   "kind": "dialogue",
+   "label": 18,
+   "snes": "$C2B452",
+   "en": "　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[br]　[88]　[88]　[88]　[page][hl]Yayoi[hl]: .........So in the end, I have no choice but to fight.[wait][page][hl]Hornisse[hl]: That's right![wait][page][hl]Yayoi[hl]: My, aren't you confident.[wait][page]But can you really beat me? Oh-ho-ho-ho![ENDK]"
+  },
+  {
+   "id": "C2_s08_0041",
+   "block": "C2_s08",
+   "kind": "dialogue",
+   "label": 18,
+   "snes": "$C2B546",
+   "en": "[wait][END]",
+   "en_from": "C2_s01_0036"
+  },
+  {
+   "id": "C2_s08_0042",
+   "block": "C2_s08",
+   "kind": "dialogue",
+   "label": 19,
+   "snes": "$C2B550",
+   "en": "　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[br]　[88]　[88]　[88]　[page][hl]Yayoi[hl]: .........So in the end, I have no choice but to fight.[wait][page][hl]Sara[hl]: Quit your yapping and get ready![wait][page][hl]Yayoi[hl]: My, quite the confidence.[wait][page]Do take care you don't end up in tears later...... darling![ENDK]"
+  },
+  {
+   "id": "C2_s08_0043",
+   "block": "C2_s08",
+   "kind": "dialogue",
+   "label": 19,
+   "snes": "$C2B661",
+   "en": "[wait][END]",
+   "en_from": "C2_s01_0036"
+  },
+  {
+   "id": "C2_s08_0044",
+   "block": "C2_s08",
+   "kind": "dialogue",
+   "label": 20,
+   "snes": "$C2B66B",
+   "en": "　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[br]　[88]　[88]　[88]　[page][hl]Yayoi[hl]: .........So in the end, I have no choice but to fight.[wait][page][hl]Ryo[hl]: I shall put you out of your misery![wait][page][hl]Yayoi[hl]: My, so full of confidence, lover boy.[wait][page]You really are a shame to kill......[wait][page]But die you must. Don't take it personally. Oh-ho-ho-ho![ENDK]"
+  },
+  {
+   "id": "C2_s08_0045",
+   "block": "C2_s08",
+   "kind": "dialogue",
+   "label": 20,
+   "snes": "$C2B7A0",
+   "en": "[wait][END]",
+   "en_from": "C2_s01_0036"
+  },
+  {
+   "id": "C2_s08_0046",
+   "block": "C2_s08",
+   "kind": "dialogue",
+   "label": 22,
+   "snes": "$C2B7BB",
+   "en": "　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88][br]　[88]　[88]　[88]　[END]",
+   "en_from": "copy"
+  },
+  {
+   "id": "C2_s08_0047",
+   "block": "C2_s08",
+   "kind": "dialogue",
+   "label": 23,
+   "snes": "$C2B835",
+   "en": "[hl]Hornisse[hl]: !? Yayoi......[wait][page][hl]Yayoi[hl]: I was...... being controlled... by Penta...[wait][page]I'm... so... sorry... I never... meant... any harm.[wait][page][hl]Hornisse[hl]: Yayoi......[wait][page][hl]Yayoi[hl]: But... now... at last...[wait][page][hl]Hornisse[hl]: Hang in there!![wait][page][hl]Yayoi[hl]: I'm... so... happy...[wait][page]But... this is... my... fate...... Don't... worry... about it...[wait][page][hl]Hornisse[hl]: Y-Yayoi!![wait][page][hl]Yayoi[hl]: You... can...[wait][page]stop... the Penta Dragon's... revival.[wait][page]Use... this... [hl]Orb[hl]......[wait] Give it... to the... wizard... you know......[wait][page][hl]Hornisse[hl]: .........Yayoi, you......[wait][page][hl]Yayoi[hl]: Thank... you... Good...bye......[wait][END]"
+  },
+  {
+   "id": "C2_s08_0048",
+   "block": "C2_s08",
+   "kind": "dialogue",
+   "label": 24,
+   "snes": "$C2BAD4",
+   "en": "[hl]Sara[hl]: !? Yayoi......[wait][page][hl]Yayoi[hl]: I was...... being controlled... by Penta...[wait][page]I'm... so... sorry... I never... meant... any harm.[wait][page][hl]Sara[hl]: Yayoi......[wait][page][hl]Yayoi[hl]: But... now... at last...[wait][page][hl]Sara[hl]: Hang in there!![wait][page][hl]Yayoi[hl]: I'm... so... happy...[wait][page]But... this is... my... fate...... Don't... worry... about it...[wait][page][hl]Sara[hl]: Y-Yayoi!![wait][page][hl]Yayoi[hl]: You... can...[wait][page]stop... the Penta Dragon's... revival.[wait][page]Use... this... [hl]Orb[hl]......[wait] Give it... to the... wizard... you know......[wait][page][hl]Sara[hl]: .........Yayoi, you......[wait][page][hl]Yayoi[hl]: Thank... you... Good...bye......[wait][END]"
+  },
+  {
+   "id": "C2_s08_0049",
+   "block": "C2_s08",
+   "kind": "dialogue",
+   "label": 25,
+   "snes": "$C2BD69",
+   "en": "[hl]Ryo[hl]: !? Lady Yayoi......[wait][page][hl]Yayoi[hl]: I was...... being controlled... by Penta...[wait][page]I'm... so... sorry... I never... meant... any harm.[wait][page][hl]Ryo[hl]: Lady Yayoi......[wait][page][hl]Yayoi[hl]: But... now... at last...[wait][page][hl]Ryo[hl]: Stay with me!![wait][page][hl]Yayoi[hl]: I'm... so... happy...[wait][page]But... this is... my... fate...... Don't... worry... about it...[wait][page][hl]Ryo[hl]: L-Lady Yayoiii!![wait][page][hl]Yayoi[hl]: You... can...[wait][page]stop... the Penta Dragon's... revival.[wait][page]Use... this... [hl]Orb[hl]......[wait] Give it... to the... wizard... you know......[wait][page][hl]Ryo[hl]: .........Lady Yayoi, you......[wait][page][hl]Yayoi[hl]: Thank... you... Good...bye......[wait][END]"
+  },
+  {
+   "id": "C2_s08_0050",
+   "block": "C2_s08",
+   "kind": "dialogue",
+   "label": 31,
+   "snes": "$C2C01D",
+   "en": "　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[br]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[br]　[88]　[88]　[88]　[88][END]",
+   "en_from": "copy"
+  },
+  {
+   "id": "C2_s08_0051",
+   "block": "C2_s08",
+   "kind": "dialogue",
+   "label": 36,
+   "snes": "$C2C09B",
+   "en": "　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[br]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[88]　[br]　[88]　[88]　[88]　[88][END]",
+   "en_from": "copy"
+  },
+  {
+   "id": "C2_s08_0052",
+   "block": "C2_s08",
+   "kind": "dialogue",
+   "label": 6,
+   "snes": "$C2C11F",
+   "en": "[hl]Yayoi[hl]: Is that all the strength you have?[wait][page][hl]LIFE restored![hl][ENDK]"
+  },
+  {
+   "id": "C2_s08_0053",
+   "block": "C2_s08",
+   "kind": "dialogue",
+   "label": 6,
+   "snes": "$C2C170",
+   "en": "[wait][page][hl]Yayoi[hl]: Well, do try your best......[wait][END]"
+  },
+  {
+   "id": "C2_s08_0054",
+   "block": "C2_s08",
+   "kind": "dialogue",
+   "label": 160,
+   "snes": "$C2C1B7",
+   "en": "[hl]Forfahren[hl]: ......... You finally did it.[wait][page][hl]Hornisse[hl]: Yes, I somehow managed to beat her.[wait][page]And... Yayoi gave me this.[wait][page][hl]Forfahren[hl]: Good... That makes two [hl]Orbs[hl].[wait][page]Only one left![wait][page][hl]Hornisse[hl]: And then what?[wait][page][hl]Forfahren[hl]: Hmm...... I suppose I can tell you now.[wait][page]The truth is... the [hl]Blue, Green and Crimson Orbs[hl] together become TRINEA.[wait][page]And that power will release the \"Five Lights\" and the Penta Dragon's revival...[wait][page][hl]Hornisse[hl]: ...can be stopped?[wait][page][hl]Mysterious Old Man[hl]: Exactly!![wait][END]"
+  },
+  {
+   "id": "C2_s08_0055",
+   "block": "C2_s08",
+   "kind": "dialogue",
+   "label": 160,
+   "snes": "$C2C3DC",
+   "en": "　[88]　[88]　[88]　[88]　[88]　[END]",
+   "en_from": "copy"
+  },
+  {
+   "id": "C2_s08_0056",
+   "block": "C2_s08",
+   "kind": "dialogue",
+   "label": 160,
+   "snes": "$C2C3F0",
+   "en": "[hl]Hornisse[hl]: !? Who's there?[wait][page][hl]Forfahren[hl]: Graf!! Why are you here???[wait][page][hl]Graf[hl]: What a fool you are... Forfahren.[wait][page]Among us, betrayal is not forgiven! Now you'll learn your lesson![wait][page][hl]Forfahren[hl]: Graf, what are you doing? Have you lost your mind!?[wait][END]"
+  },
+  {
+   "id": "C2_s08_0057",
+   "block": "C2_s08",
+   "kind": "dialogue",
+   "label": 161,
+   "snes": "$C2C53B",
+   "en": "[hl]Graf[hl]: I am Graf.[wait][page]First... allow me to thank you, Hornisse my boy.[wait][page][hl]Hornisse[hl]: What do you mean?[wait][page][hl]Graf[hl]: You did well to gather two of the [hl]Orbs[hl].[wait][page]The last one is in my possession.[wait][page]Forfahren very nearly put them to evil use![wait][page]But all is well now! I will stop the Penta Dragon's revival!![wait][page][hl]Hornisse[hl]: .........[wait][page][hl]Graf[hl]: Well then, I'll be taking my leave......[wait][page][hl]Hornisse[hl]: Wait!![wait][END]"
+  },
+  {
+   "id": "C2_s08_0058",
+   "block": "C2_s08",
+   "kind": "dialogue",
+   "label": 161,
+   "snes": "$C2C71D",
+   "en": "　[88]　[88]　[88]　[88]　[88]　[END]",
+   "en_from": "copy"
+  },
+  {
+   "id": "C2_s08_0059",
+   "block": "C2_s08",
+   "kind": "dialogue",
+   "label": 162,
+   "snes": "$C2C735",
+   "en": "[hl]Hornisse[hl]: !?[wait][END]"
+  },
+  {
+   "id": "C2_s08_0060",
+   "block": "C2_s08",
+   "kind": "dialogue",
+   "label": 162,
+   "snes": "$C2C758",
+   "en": "[hl]Forfahren[hl]: Ngh...... hurry... go... after him![wait][page][hl]Hornisse[hl]: What? What do you mean?[wait][page]Forfahren!![wait][END]"
+  },
+  {
+   "id": "C2_s08_0061",
+   "block": "C2_s08",
+   "kind": "dialogue",
+   "label": 163,
+   "snes": "$C2C7F1",
+   "en": "[hl]Forfahren[hl]: ......... You finally did it.[wait][page][hl]Sara[hl]: Yes, I somehow managed to beat her.[wait][page]And... Yayoi gave me this.[wait][page][hl]Forfahren[hl]: Good... That makes two [hl]Orbs[hl].[wait][page]Only one left![wait][page][hl]Sara[hl]: But what will we do with them?[wait][page][hl]Forfahren[hl]: Hmm...... I suppose I can tell you now.[wait][page]The truth is... the [hl]Blue, Green and Crimson Orbs[hl] together become TRINEA.[wait][page]And that power will release the \"Five Lights\" and the Penta Dragon's revival...[wait][page][hl]Sara[hl]: ...can be stopped?[wait][page][hl]Mysterious Old Man[hl]: Exactly!![wait][END]"
+  },
+  {
+   "id": "C2_s08_0062",
+   "block": "C2_s08",
+   "kind": "dialogue",
+   "label": 163,
+   "snes": "$C2CA10",
+   "en": "　[88]　[88]　[88]　[88]　[88]　[END]",
+   "en_from": "copy"
+  },
+  {
+   "id": "C2_s08_0063",
+   "block": "C2_s08",
+   "kind": "dialogue",
+   "label": 163,
+   "snes": "$C2CA24",
+   "en": "[hl]Sara[hl]: !? Who are you?[wait][page][hl]Forfahren[hl]: Graf!! Why are you here???[wait][page][hl]Graf[hl]: What a fool you are... Forfahren.[wait][page]Among us, betrayal is not forgiven! Now you'll learn your lesson![wait][page][hl]Forfahren[hl]: Graf, what are you doing? Have you lost your mind!?[wait][END]"
+  },
+  {
+   "id": "C2_s08_0064",
+   "block": "C2_s08",
+   "kind": "dialogue",
+   "label": 164,
+   "snes": "$C2CB6D",
+   "en": "[hl]Graf[hl]: I am Graf.[wait][page]First... allow me to thank you, Sara...[wait][page][hl]Sara[hl]: Huh? What do you mean?[wait][page][hl]Graf[hl]: You did well to gather two of the [hl]Orbs[hl].[wait][page]The last one is in my possession.[wait][page]Forfahren very nearly put them to evil use![wait][page]But all is well now! I will stop the Penta Dragon's revival!![wait][page][hl]Sara[hl]: .........[wait][page][hl]Graf[hl]: Well then, I'll be taking my leave......[wait][page][hl]Sara[hl]: Hey, wait a minute!![wait][END]"
+  },
+  {
+   "id": "C2_s08_0065",
+   "block": "C2_s08",
+   "kind": "dialogue",
+   "label": 164,
+   "snes": "$C2CD4B",
+   "en": "　[88]　[88]　[88]　[88]　[88]　[END]",
+   "en_from": "copy"
+  },
+  {
+   "id": "C2_s08_0066",
+   "block": "C2_s08",
+   "kind": "dialogue",
+   "label": 165,
+   "snes": "$C2CD63",
+   "en": "[hl]Sara[hl]: !?[wait][END]"
+  },
+  {
+   "id": "C2_s08_0067",
+   "block": "C2_s08",
+   "kind": "dialogue",
+   "label": 165,
+   "snes": "$C2CD82",
+   "en": "[hl]Forfahren[hl]: Ngh...... hurry... go... after him![wait][page][hl]Sara[hl]: What? What do you mean?[wait][page]What's going on? Forfahren!![wait][END]"
+  },
+  {
+   "id": "C2_s08_0068",
+   "block": "C2_s08",
+   "kind": "dialogue",
+   "label": 166,
+   "snes": "$C2CE2A",
+   "en": "[hl]Forfahren[hl]: ......... You finally did it.[wait][page][hl]Ryo[hl]: That much was nothing![wait][page]And... Lady Yayoi gave me this.[wait][page][hl]Forfahren[hl]: Good... That makes two [hl]Orbs[hl].[wait][page]Only one left![wait][page][hl]Ryo[hl]: And what then?[wait][page][hl]Forfahren[hl]: Hmm...... I suppose I can tell you now.[wait][page]The truth is... the [hl]Blue, Green and Crimson Orbs[hl] together become TRINEA.[wait][page]And that power will release the \"Five Lights\" and the Penta Dragon's revival...[wait][page][hl]Ryo[hl]: ...can be stopped, then?[wait][page][hl]Mysterious Old Man[hl]: Exactly!![wait][END]"
+  },
+  {
+   "id": "C2_s08_0069",
+   "block": "C2_s08",
+   "kind": "dialogue",
+   "label": 166,
+   "snes": "$C2D052",
+   "en": "　[88]　[88]　[88]　[88]　[88]　[END]",
+   "en_from": "copy"
+  },
+  {
+   "id": "C2_s08_0070",
+   "block": "C2_s08",
+   "kind": "dialogue",
+   "label": 166,
+   "snes": "$C2D066",
+   "en": "[hl]Ryo[hl]: !? An intruder?[wait][page][hl]Forfahren[hl]: Graf!! Why are you here???[wait][page][hl]Graf[hl]: What a fool you are... Forfahren.[wait][page]Among us, betrayal is not forgiven! Now you'll learn your lesson![wait][page][hl]Forfahren[hl]: Graf, what are you doing? Have you lost your mind!?[wait][END]"
+  },
+  {
+   "id": "C2_s08_0071",
+   "block": "C2_s08",
+   "kind": "dialogue",
+   "label": 167,
+   "snes": "$C2D1AD",
+   "en": "[hl]Graf[hl]: I am Graf.[wait][page]First... allow me to thank you, Ryo my boy.[wait][page][hl]Ryo[hl]: What do you mean?[wait][page][hl]Graf[hl]: You did well to gather two of the [hl]Orbs[hl].[wait][page]The last one is in my possession.[wait][page]Forfahren very nearly put them to evil use![wait][page]But all is well now! I myself will stop the Penta Dragon's revival!![wait][page][hl]Ryo[hl]: .........[wait][page][hl]Graf[hl]: Well then, I'll be taking my leave......[wait][page][hl]Ryo[hl]: Wait!![wait][END]"
+  },
+  {
+   "id": "C2_s08_0072",
+   "block": "C2_s08",
+   "kind": "dialogue",
+   "label": 167,
+   "snes": "$C2D389",
+   "en": "　[88]　[88]　[88]　[88]　[88]　[END]",
+   "en_from": "copy"
+  },
+  {
+   "id": "C2_s08_0073",
+   "block": "C2_s08",
+   "kind": "dialogue",
+   "label": 168,
+   "snes": "$C2D3A1",
+   "en": "[hl]Ryo[hl]: !?[wait][END]"
+  },
+  {
+   "id": "C2_s08_0074",
+   "block": "C2_s08",
+   "kind": "dialogue",
+   "label": 168,
+   "snes": "$C2D3C0",
+   "en": "[hl]Forfahren[hl]: Ngh...... hurry... go... after him![wait][page][hl]Ryo[hl]: What? What do you mean?[wait][page]Forfahren!![wait][END]"
+  }
+ ]
+}
