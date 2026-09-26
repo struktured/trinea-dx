@@ -1,0 +1,18 @@
+# generated at build time from your own ROM / from sources
+/build/
+/tools/bin/
+/tools/src/
+__pycache__/
+*.pyc
+# never commit ROMs, patched ROMs or savestates
+/rom/
+*.sfc
+*.smc
+*.swc
+*.fig
+*.mss
+*.srm
+*.state
+*.st[0-9]
+# release zip is attached to the GitHub Release instead
+/release/*.zip
