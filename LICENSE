@@ -1,0 +1,25 @@
+Trinea English Translation: licensing overview
+===============================================
+
+This repository contains two kinds of material under two licenses.
+
+1. Translation, text, fonts and tables: Creative Commons Attribution-NonCommercial-ShareAlike 4.0
+   International (CC BY-NC-SA 4.0). Full text: LICENSE-CC-BY-NC-SA-4.0.txt
+     script/**                 English script, translator sources, system-text layout, glossary, notes
+     font/**                   English font glyph sources drawn for this project
+     tables/**                 character tables (based on eadmaster's RetroSubs tables, CC BY-NC-SA 4.0)
+     release/readme.txt, README.md, CREDITS.md, docs/*.md (prose)
+   Copyright (c) 2026 struktured labs (Carmelo Piccione).
+   Portions adapted from RetroSubs by eadmaster (https://github.com/eadmaster/RetroSubs), CC BY-NC-SA 4.0.
+   The CC BY-NC-SA 4.0 license is required because this translation adapts that work.
+
+2. Code: MIT License. Full text: LICENSE-MIT.txt
+     asm/**                    65816 patch sources (asar)
+     tools/**                  build scripts and Python tools
+
+Distributed patch (release/*.ips): it combines both, so distribute it under CC BY-NC-SA 4.0.
+
+Not covered by either license: Trinea itself and all of its program code, graphics, music and original Japanese
+text (c) 1993 Yanoman / Japan Art Media. None of it is contained in this repository. The screenshots in
+docs/screenshots/ depict the original game and are included only to illustrate the translation. Third-party tools
+fetched by tools/get_tools.sh (asar: LGPL-3.0; Flips: GPL-3.0) keep their own licenses.
