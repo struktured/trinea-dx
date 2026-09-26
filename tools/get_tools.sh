@@ -14,7 +14,7 @@ JOBS=$(nproc 2>/dev/null || echo 2)
 
 if [ ! -x bin/asar ]; then
   [ -d src/asar ] || git clone --depth 1 --branch "$ASAR_TAG" https://github.com/RPGHacker/asar.git src/asar
-  cmake -S src/asar/src -B src/asar/build -DCMAKE_BUILD_TYPE=Release -DASAR_GEN_DLL=OFF -DASAR_GEN_LIB=OFF >/dev/null
+  cmake -S src/asar/src -B src/asar/build -DCMAKE_BUILD_TYPE=Release >/dev/null
   cmake --build src/asar/build --target asar-standalone -j"$JOBS" >/dev/null
   cp "$(find src/asar/build -type f -name asar -perm -u+x | head -1)" bin/asar
 fi
