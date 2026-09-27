@@ -1,4 +1,4 @@
-# Submission draft: Trinea English Translation v1.0
+# Submission draft: Trinea DX v1.0 (English translation)
 
 Draft text for the romhacking database sites. Nothing has been submitted yet.
 
@@ -10,7 +10,7 @@ Draft text for the romhacking database sites. Nothing has been submitted yet.
 | **[ROMhacking.net (RHDN)](https://www.romhacking.net/submissions/)** | Read-only/news-only since 1 Aug 2024 ([announcement](https://www.romhacking.net/news/3074/)). Submissions **quietly reopened** in early 2025 and new translation entries were still appearing in 2026. | Still the largest audience and archive. The submission page asks you to **host the download yourself** (GitHub Release link is ideal). Its long-term direction is uncertain. **Recommended secondary venue** (link to the GitHub Release). |
 | **[RomHack Plaza](https://romhackplaza.org/)** | Active, with a moderated submission queue ([tutorial](https://romhackplaza.org/submit-tutorial/)). | Popular with players. Entries show No-Intro hashes. Good third listing. |
 | **[Data Crystal](https://datacrystal.tcrf.net/)** | Active wiki (TCRF family). **Not a patch host.** | Trinea is on its [SNES translation request list](https://datacrystal.tcrf.net/wiki/Translations_Request_List/Super_Nintendo_-_Super_Famicom_-_Satellaview_-_Sufami_Turbo). Mark it done with a link, and optionally add a Trinea ROM map / TBL page from `docs/TECHNICAL.md` and `tables/`. |
-| GitHub Releases | The canonical download: `github.com/struktured/trinea-english/releases` | Attach `Trinea_English_v1.0.zip`. Every site above links here. |
+| GitHub Releases | The canonical download: `github.com/struktured/trinea-dx/releases` | Attach `Trinea_English_v1.0.zip`. Every site above links here. |
 
 Also worth a short announcement: the RHDN forum thread (topic 40638, where 4ph helped), and the
 [TCRF Trinea page](https://tcrf.net/Trinea) talk page if relevant.
@@ -20,14 +20,14 @@ Also worth a short announcement: the RHDN forum thread (topic 40638, where 4ph h
 
 ## Entry fields
 
-- **Title:** Trinea English Translation
+- **Title:** Trinea English Translation (Trinea DX v1.0)
 - **Game:** Trinea (トリネア), Super Nintendo / Super Famicom, 1993, Yanoman / Japan Art Media (JAM)
 - **Category / type:** Translation. Language: English. Status: Complete. Genre: Action RPG.
 - **Version / release date:** 1.0 / 2026-09-26
 - **Author / group:** struktured labs (Carmelo Piccione)
 - **Patch format:** IPS (`Trinea (Japan) [T-En by struktured labs v1.0].ips`, 112,968 bytes) in `Trinea_English_v1.0.zip` with `readme.txt`
 - **License:** CC BY-NC-SA 4.0 (translation); MIT (tools/asm source)
-- **Source code:** https://github.com/struktured/trinea-english
+- **Source code:** https://github.com/struktured/trinea-dx
 
 ### Hashes (No-Intro: Trinea (Japan))
 

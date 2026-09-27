@@ -1,11 +1,15 @@
-# Trinea: English Translation (SNES)
+# Trinea DX (SNES)
 
-A complete English fan translation of **Trinea** (トリネア), the 1993 Super Famicom action RPG by
-Yanoman / Japan Art Media (JAM). It was released only in Japan.
+**Trinea DX** is an enhancement project for **Trinea** (トリネア), the 1993 Super Famicom action RPG by
+Yanoman / Japan Art Media (JAM). The game was released only in Japan.
 
-This repository has the **source** of the translation: the English script, the English fonts, the 65816 patches and
-the Python build tools. It also has a ready-made IPS patch in [`release/`](release/). **No ROM data is included.**
-Everything derived from the game is regenerated at build time from your own legally dumped cartridge.
+The first release, **v1.0**, is the **complete English translation**. Speed/feel improvements and 2-player co-op
+are planned next (see [Roadmap](#roadmap)).
+
+This repository has the **source**: the English script, the English fonts, the 65816 patches and the Python build
+tools. It also has a ready-made IPS patch in [`release/`](release/) and on the
+[Releases page](https://github.com/struktured/trinea-dx/releases). **No ROM data is included.** Everything derived
+from the game is regenerated at build time from your own legally dumped cartridge.
 
 | | |
 |---|---|
@@ -53,8 +57,8 @@ Requirements: Linux, macOS or WSL with `bash`, `python3` (plus `numpy` and `Pill
 and a C/C++ compiler. The compiler is only needed the first time, to build the assembler and patcher.
 
 ```sh
-git clone https://github.com/struktured/trinea-english.git
-cd trinea-english
+git clone https://github.com/struktured/trinea-dx.git
+cd trinea-dx
 pip install numpy pillow          # if not already installed
 tools/build.sh "/path/to/Trinea (Japan).sfc"
 # -> build/trinea_en.ips   (md5 17e056d09cb45e4b96bc7bdd650e021f for v1.0)
@@ -93,9 +97,11 @@ Editing the translation:
 
 ## Roadmap
 
-- **Speed tweak:** an optional add-on patch to reduce the sluggish movement and slowdown.
-- **2P co-op:** investigate a two-player simultaneous mode.
-- Bug-fix releases based on playtest reports (please open an issue with a screenshot and the message location).
+- **v1.0 (released):** complete English translation.
+- **Planned: speed/feel improvements.** Optional tweaks for the sluggish movement and the slowdown.
+- **Planned: 2-player co-op.** A two-player simultaneous mode.
+- Bug-fix releases based on playtest reports. Please open an [issue](https://github.com/struktured/trinea-dx/issues)
+  with a screenshot and the message location.
 
 ## Credits
 

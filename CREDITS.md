@@ -1,6 +1,6 @@
 # Credits
 
-## Trinea English Translation v1.0 (2026-09-26)
+## Trinea DX v1.0: English translation (2026-09-26)
 
 | Who | What |
 |---|---|

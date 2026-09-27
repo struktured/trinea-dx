@@ -1,5 +1,5 @@
 ===============================================================================
-                    TRINEA - English Translation v1.0
+               TRINEA DX v1.0 - English Translation
                           by struktured labs
 ===============================================================================
 
@@ -10,7 +10,8 @@ Original:      Yanoman / Japan Art Media (JAM), 1993 (Japan only)
 Patch version: 1.0
 Release date:  2026-09-26
 Status:        Complete
-Source:        https://github.com/struktured/trinea-english
+Project:       Trinea DX (enhancement project; v1.0 = English translation)
+Source:        https://github.com/struktured/trinea-dx
 
 -------------------------------------------------------------------------------
  CONTENTS
@@ -87,7 +88,7 @@ soft-patching. The patched game is a plain 32 Mbit HiROM with no special chips.
  - The game's existing English graphics (title, LIFE/ATTACK/SPEED, staff
    credits) are unchanged.
 
-Bug reports: https://github.com/struktured/trinea-english/issues
+Bug reports: https://github.com/struktured/trinea-dx/issues
 
 -------------------------------------------------------------------------------
  5. CREDITS
