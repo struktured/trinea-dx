@@ -3,7 +3,7 @@
 **Trinea DX** is an enhancement project for **Trinea** (トリネア), the 1993 Super Famicom action RPG by
 Yanoman / Japan Art Media (JAM). The game was released only in Japan.
 
-The first release, **v1.0**, is the **complete English translation**. Speed/feel improvements and 2-player co-op
+The first release, **v1.0** (now **v1.0.1**), is the **complete English translation**. Speed/feel improvements and 2-player co-op
 are planned next (see [Roadmap](#roadmap)).
 
 This repository has the **source**: the English script, the English fonts, the 65816 patches and the Python build
@@ -38,7 +38,7 @@ You need the original Japanese cartridge dump:
 | CRC32 | `C20419EC` |
 | SHA-1 | `ba4866a599c9dc380c11f0cb3c1f8e0374d35dff` |
 
-1. Download `Trinea (Japan) [T-En by struktured labs v1.0].ips` from [`release/`](release/) or from the GitHub
+1. Download `Trinea (Japan) [T-En by struktured labs v1.0.1].ips` from [`release/`](release/) or from the GitHub
    Release page.
 2. Apply it with any IPS patcher, for example [Flips](https://github.com/Alcaro/Flips), the web-based
    [ROM Patcher JS](https://www.marcrobledo.com/RomPatcher.js/), or Lunar IPS.
@@ -61,7 +61,7 @@ git clone https://github.com/struktured/trinea-dx.git
 cd trinea-dx
 pip install numpy pillow          # if not already installed
 tools/build.sh "/path/to/Trinea (Japan).sfc"
-# -> build/trinea_en.ips   (md5 17e056d09cb45e4b96bc7bdd650e021f for v1.0)
+# -> build/trinea_en.ips   (md5 8fd7fd117a2fc701c21137c4eef92f26 for v1.0.1)
 ```
 
 `tools/build.sh` does the following:
@@ -97,7 +97,9 @@ Editing the translation:
 
 ## Roadmap
 
-- **v1.0 (released):** complete English translation.
+- **v1.0.1 (latest):** fixes dialogue text corrupting the stage collision map (getting stuck in walls / walking
+  through them, e.g. after a boss victory). Please use v1.0.1 instead of v1.0.
+- **v1.0:** complete English translation.
 - **Planned: speed/feel improvements.** Optional tweaks for the sluggish movement and the slowdown.
 - **Planned: 2-player co-op.** A two-player simultaneous mode.
 - Bug-fix releases based on playtest reports. Please open an [issue](https://github.com/struktured/trinea-dx/issues)

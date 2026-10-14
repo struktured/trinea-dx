@@ -1,5 +1,5 @@
 ===============================================================================
-               TRINEA DX v1.0 - English Translation
+               TRINEA DX v1.0.1 - English Translation
                           by struktured labs
 ===============================================================================
 
@@ -7,8 +7,8 @@ Game:          Trinea
 Platform:      Super Nintendo / Super Famicom
 Genre:         Action RPG
 Original:      Yanoman / Japan Art Media (JAM), 1993 (Japan only)
-Patch version: 1.0
-Release date:  2026-09-26
+Patch version: 1.0.1
+Release date:  2026-10-13
 Status:        Complete
 Project:       Trinea DX (enhancement project; v1.0 = English translation)
 Source:        https://github.com/struktured/trinea-dx
@@ -63,7 +63,7 @@ After patching:
  1. Make a backup copy of your ROM and check it against the hashes above.
     If your file is 2,097,664 bytes, it has a copier header. Remove the
     header first.
- 2. Apply "Trinea (Japan) [T-En by struktured labs v1.0].ips" with an IPS
+ 2. Apply "Trinea (Japan) [T-En by struktured labs v1.0.1].ips" with an IPS
     patcher, for example:
       - Floating IPS (Flips)   https://github.com/Alcaro/Flips
       - ROM Patcher JS (web)   https://www.marcrobledo.com/RomPatcher.js/
@@ -124,6 +124,10 @@ holders.
 -------------------------------------------------------------------------------
  7. CHANGELOG
 -------------------------------------------------------------------------------
+ v1.0.1 (2026-10-13)
+   - Fixed: dialogue text corrupted the stage collision map, so after
+     talking you could get stuck in walls or walk through them (e.g. after
+     a boss victory). Text now uses RAM the game never touches.
  v1.0 (2026-09-26)
    - First public release. Complete English translation.
 ===============================================================================

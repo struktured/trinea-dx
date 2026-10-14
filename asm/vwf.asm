@@ -11,29 +11,29 @@
 ;;  * opening/ending cutscene text ($CE:4879): whole entry rendered into $7E:6000 (4 lines x $800).
 ;; JP 2-byte glyphs (00/01 xx) and control bytes 80..FF keep the original code paths.
 ;; ---------------------------------------------------------------------------------------------
-!BUF   = $7FD000        ; dialogue line buffer: 12 cells * 128 bytes = $600 ($7FD000-$7FD6FF verified unused: work/ramtest2.py)
-!PEN   = $7FD600
-!CHR   = $7FD602
-!WID   = $7FD604
-!SRC   = $7FD606
-!COL   = $7FD608
-!SH    = $7FD60A
-!TMP   = $7FD60C
-!K0    = $7FD60E
-!K1    = $7FD610
-!OFFA  = $7FD612
-!OFFB  = $7FD614
-!CNT   = $7FD616
-!LASTCOL = $7FD618
-!LASTLN  = $7FD61A
-!BASE  = $7FD61C        ; 16-bit buffer base (in bank !BANK)
-!BANK  = $7FD61E        ; 8-bit
-!HL    = $7FD61F        ; 8-bit highlight flag
-!MAXPX = $7FD660        ; 16-bit line width in px
-!NCOL  = $7FD662        ; 16-bit number of 8px columns in a line
-!LINE  = $7FD664
-!TA    = $7FD620        ; 32 bytes (col c,   16 rows x p0,p1)
-!TB    = $7FD640        ; 32 bytes (col c+1)
+!BUF   = $7EC800        ; dialogue line buffer: 12 cells * 128 bytes = $600 ($7EC800-$7ECEFF verified unused: work/ramtest2.py)
+!PEN   = $7ECE00
+!CHR   = $7ECE02
+!WID   = $7ECE04
+!SRC   = $7ECE06
+!COL   = $7ECE08
+!SH    = $7ECE0A
+!TMP   = $7ECE0C
+!K0    = $7ECE0E
+!K1    = $7ECE10
+!OFFA  = $7ECE12
+!OFFB  = $7ECE14
+!CNT   = $7ECE16
+!LASTCOL = $7ECE18
+!LASTLN  = $7ECE1A
+!BASE  = $7ECE1C        ; 16-bit buffer base (in bank !BANK)
+!BANK  = $7ECE1E        ; 8-bit
+!HL    = $7ECE1F        ; 8-bit highlight flag
+!MAXPX = $7ECE60        ; 16-bit line width in px
+!NCOL  = $7ECE62        ; 16-bit number of 8px columns in a line
+!LINE  = $7ECE64
+!TA    = $7ECE20        ; 32 bytes (col c,   16 rows x p0,p1)
+!TB    = $7ECE40        ; 32 bytes (col c+1)
 
 org $C016E0
     JSR vwf_tramp           ; was JSR $17EB
@@ -62,7 +62,7 @@ vwf_char:                   ; in: A8=char, Y=script ptr, DP=$0400, DB=$00, X16. 
     LDA #$00C0 : STA.l !MAXPX       ; 192 px
     LDA #$0018 : STA.l !NCOL        ; 24 columns
     SEP #$20
-    LDA #$7F : STA.l !BANK
+    LDA #$7E : STA.l !BANK
     LDA.l $000409 : STA.l !HL
     REP #$20
     LDA.l $00040A : AND #$00FF : BNE .notnew
@@ -101,7 +101,7 @@ vwf_char:                   ; in: A8=char, Y=script ptr, DP=$0400, DB=$00, X16. 
     SEP #$20
     LDA #$01 : STA.l $000BB4
     LDA #$18 : STA.l $000BB5
-    LDA #$7F : STA.l $000BB8
+    LDA #$7E : STA.l $000BB8
     LDA #$06 : STA.l $000084
 -   LDA.l $000084 : BNE -
     REP #$20
