@@ -8,3 +8,11 @@
   - It then blanks the screen, clears VRAM, CGRAM, the window registers and DMA channel 0, and jumps to Trinea's original reset at C00087.
   - The only change to existing code is the reset jump at C0FF03. Code and data are in bank E8.
 - **Screenshots:** `docs/screenshots/splash.png` (hold), `splash_reveal.png`, `splash_handoff.png` (Trinea's JAM logo after handoff).
+
+## Logo SFX (ported from RCR's ident)
+- **Source:** `asm/splash/splash-ident-spc.bin` is RCR's own tiny S-SMP program (`tools/build_ident_spc.py`, echo on). It contains no samples or driver copied from another game.
+- **Curve:** `splash-ident-curve.bin` is RCR's production 240-frame curve (`tools/build_sub_wub_trial.curve()`).
+- **Start:** the program is uploaded via the IPL before the reveal. One curve step (pitch, volume, sequence) is sent each VBlank from the first reveal frame, as in RCR 4305e.
+- **Hold:** 200 frames, so the 240-frame ident finishes.
+- **Handoff (full play or Start skip):** writes `$FF` to `$2142`. The ident mutes the DSP, disables echo writes and jumps back to IPL ($FFC0). The splash then waits for `AA/BB` before Trinea's reset runs, so Trinea's own driver upload handshake still works.
+- **Timeouts:** every wait is bounded. If the APU never answers, the splash runs silently and skips the key-off.

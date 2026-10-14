@@ -5,6 +5,9 @@
 ; and Trinea's reset then initialises everything itself.
 hirom
 !SPL_EDGE = $1FF1
+!SPL_SND = $1FF2   ; curve frames sent
+!SPL_SEQ = $1FF3
+!SPL_ERR = $1FF4   ; 0 ok, EE upload failed, ED IPL not back (game reset clears WRAM)
 
 org $C0FF03
     jml splash_entry          ; was JML $C00087 (after SEI/CLC/XCE)
@@ -41,10 +44,16 @@ splash_entry:
     lda #$01 : sta $420B
     lda #$01 : sta $4200      ; auto-joypad only (no NMI) so Start can skip
     stz !SPL_EDGE
+    stz !SPL_SND : stz !SPL_SEQ : stz !SPL_ERR
+    jsr spl_upload             ; ident SPC program; C set = no APU response
+    bcc +
+    lda #$EE : sta !SPL_ERR
++   ldx #$0000                 ; X = curve offset for the whole splash
     jsr spl_vblank
     lda #$0F : sta $2100
 .reveal:
     jsr spl_vblank
+    jsr spl_send
     jsr spl_start : bne .done
     lda !SPL_EDGE : cmp #$FC : beq .hold
     clc : adc #$04
@@ -52,13 +61,20 @@ splash_entry:
     bra .reveal
 .hold:
     lda #$FF : sta $2127
-    ldx.w #180                 ; 3 s at 60 Hz
+    ldy.w #200                 ; ~3.3 s at 60 Hz (ident curve is 240 frames from reveal start)
 .hf:
     jsr spl_vblank
+    jsr spl_send
     jsr spl_start : bne .done
-    dex : bne .hf
+    dey : bne .hf
 .done:
     lda #$80 : sta $2100
+    lda !SPL_ERR : bne .noapu  ; never uploaded: APU is still at IPL
+    lda #$FF : sta $2142       ; key off, mute, SPC jumps back to IPL ($FFC0)
+    jsr spl_wait_ipl
+    bcc .noapu
+    lda #$ED : sta !SPL_ERR
+.noapu:
     stz $4200
     stz $212C : stz $212D : stz $2123 : stz $212E : stz $212F
     stz $2126 : stz $2127
@@ -78,7 +94,7 @@ splash_entry:
     lda #$01 : sta $420B
     ldx #$0000
 .cd: stz $4300,x : inx : cpx #$0010 : bne .cd
-    stz !SPL_EDGE
+    stz !SPL_EDGE : stz !SPL_SND : stz !SPL_SEQ
     jml $C00087               ; Trinea's original reset (CLC/XCE again is harmless)
 
 spl_vblank:
@@ -96,7 +112,51 @@ spl_dma:
     stx $4302 : sty $4305
     lda #$01 : sta $420B
     rts
+spl_send:                     ; one curve step per VBlank (pitch lo/hi, volume), sequence last
+    lda !SPL_ERR : bne .r
+    lda !SPL_SND : cmp #240 : bcs .r
+    lda.l spl_curve,x : sta $2140
+    lda.l spl_curve+1,x : sta $2141
+    lda.l spl_curve+2,x : sta $2143
+    inc !SPL_SEQ : lda !SPL_SEQ : sta $2142
+    inx : inx : inx
+    inc !SPL_SND
+.r: rts
+spl_wait_port0:               ; wait until $2140 == A (bounded)
+    ldy #$FFFF
+.p: cmp $2140 : beq .ok
+    dey : bne .p
+    sec : rts
+.ok: clc : rts
+spl_wait_ipl:
+    ldy #$FFFF
+.p: lda $2140 : cmp #$AA : bne .n
+    lda $2141 : cmp #$BB : beq .ok
+.n: dey : bne .p
+    sec : rts
+.ok: clc : rts
+spl_upload:                   ; standard IPL transfer to $0200, then execute it
+    jsr spl_wait_ipl : bcs .ret
+    ldx #$0200 : stx $2142
+    lda #$01 : sta $2141
+    lda #$CC : sta $2140
+    jsr spl_wait_port0 : bcs .ret
+    ldx #$0000
+.s: lda.l spl_spc,x : sta $2141
+    txa : sta $2140
+    jsr spl_wait_port0 : bcs .ret
+    inx : cpx.w #spl_spc_end-spl_spc : bne .s
+    stz $2141
+    ldy #$0200 : sty $2142
+    inx : inx
+    txa : sta $2140
+    lda #$55                   ; (RCR waits for the ident program's ready ack)
+    jsr spl_wait_port0
+.ret: rts
 spl_zero: db $00
+spl_curve: incbin "splash/splash-ident-curve.bin"
+spl_spc: incbin "splash/splash-ident-spc.bin"
+spl_spc_end:
 spl_pal: incbin "splash/splash-palette.bin"
 spl_map: incbin "splash/splash-map.bin"
 spl_tiles: incbin "splash/splash-tiles.bin"
