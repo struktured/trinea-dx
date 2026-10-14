@@ -13,7 +13,7 @@
 ;; Envelopes are per-frame level lists (tapered, short); a new event replaces the running one when its rank is
 ;; >= the running one's.
 
-!R      = $7FDF00           ; state in WRAM never used by the game (sentinel-tested $7F:D000-$7F:F007; VWF uses D000-D665)
+!R      = $7ECF00           ; 16 bytes; $7F:D000+ is the game's collision map (was wrongly used before)
 !R_POS  = !R+0              ; offset of the next level in rum_env (0 = idle)
 !R_RANK = !R+1              ; rank (= event id) of the running pulse
 !R_OFF  = !R+2              ; off packets still to send
