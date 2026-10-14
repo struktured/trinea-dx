@@ -5,11 +5,16 @@
 # Pipeline: verify ROM -> font binaries from text sources -> English script blobs (inserter reads your ROM for
 # script structure) -> pre-rendered system text -> asar patches on a copy of your ROM (32 Mbit HiROM) -> IPS.
 # Output: build/trinea_en.ips (and build/trinea_en.sfc, the patched ROM, for testing; never distribute it).
+# Options: --rumble   also build the optional RumbleShock rumble variant (asm/main_rumble.asm):
+#                     build/trinea_dx_rumble.ips / .sfc. The standard build/trinea_en.ips is unaffected.
 set -euo pipefail
 cd "$(dirname "$0")/.."
 
 ROM="${TRINEA_ROM:-rom/Trinea (Japan).sfc}"
 if [ $# -gt 0 ] && [ -f "$1" ]; then ROM="$1"; shift; fi
+RUMBLE=0; ARGS=()
+for a in "$@"; do if [ "$a" = "--rumble" ]; then RUMBLE=1; else ARGS+=("$a"); fi; done
+set -- ${ARGS[@]+"${ARGS[@]}"}
 [ -f "$ROM" ] || { echo "ROM not found: $ROM"; echo "usage: tools/build.sh \"/path/to/Trinea (Japan).sfc\""; exit 1; }
 export TRINEA_ROM="$(cd "$(dirname "$ROM")" && pwd)/$(basename "$ROM")"
 
@@ -52,3 +57,18 @@ P
 rm -f build/trinea_en.ips
 "$FLIPS" --create --ips "$TRINEA_ROM" build/trinea_en.sfc build/trinea_en.ips >/dev/null
 md5sum build/trinea_en.ips build/trinea_en.sfc
+
+# 6. optional rumble variant
+if [ "$RUMBLE" = 1 ]; then
+  cp "$TRINEA_ROM" build/trinea_dx_rumble.sfc
+  "$ASAR" --fix-checksum=on asm/main_rumble.asm build/trinea_dx_rumble.sfc
+  python3 -c "
+R=open('build/trinea_dx_rumble.sfc','rb').read()
+assert len(R)==0x400000
+c=sum(R)&0xFFFF; hc=R[0xFFDE]|R[0xFFDF]<<8; ic=R[0xFFDC]|R[0xFFDD]<<8
+assert c==hc and (c^0xFFFF)==ic
+print('rumble ROM ok: checksum %04X'%c)"
+  rm -f build/trinea_dx_rumble.ips
+  "$FLIPS" --create --ips "$TRINEA_ROM" build/trinea_dx_rumble.sfc build/trinea_dx_rumble.ips >/dev/null
+  md5sum build/trinea_dx_rumble.ips build/trinea_dx_rumble.sfc
+fi
