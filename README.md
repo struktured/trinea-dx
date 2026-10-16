@@ -95,6 +95,17 @@ Editing the translation:
   error in the year gaps that the translation corrects). See `script/TRANSLATION_NOTES.md`.
 - The original game's English graphics (title logo, LIFE/ATTACK/SPEED, credits) are unchanged.
 
+## Trinea DX all-in build (branch `dx-allin`)
+
+`tools/build.sh "<Trinea (Japan).sfc>"` always produces both:
+- `build/trinea_en.ips`: the plain translation.
+- `build/trinea_dx.ips` / `.sfc`: the all-in build, which includes:
+  - the translation
+  - the struktured labs boot splash with sound (`asm/splash.asm`, bank E8)
+  - RumbleShock rumble (`asm/rumble.asm`, bank E7)
+  - the perf patch (`asm/perf.asm`, FE:0000)
+  - runtime options (`asm/options.asm`, FE:0200, SRAM $30:6300). In the field, hold L+R, then tap X = turbo, Y = Sara speed, A = faster monsters.
+
 ## Roadmap
 
 - **v1.0.1 (latest):** fixes dialogue text corrupting the stage collision map (getting stuck in walls / walking

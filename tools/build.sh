@@ -7,8 +7,9 @@
 # Output: build/trinea_en.ips (and build/trinea_en.sfc, the patched ROM, for testing; never distribute it).
 # Options: --rumble   also build the optional RumbleShock rumble variant (asm/main_rumble.asm):
 #                     build/trinea_dx_rumble.ips / .sfc. The standard build/trinea_en.ips is unaffected.
-#          --dx       also build the full DX variant (rumble + struktured labs boot splash,
-#                     asm/main_dx.asm): build/trinea_dx.ips / .sfc.
+#          (always)   build/trinea_en.ips/.sfc = plain translation, and build/trinea_dx.ips/.sfc =
+#                     all-in Trinea DX (asm/main_dx.asm: translation + rumble + splash/sound + perf + options).
+#          --dx       accepted for compatibility (no-op).
 set -euo pipefail
 cd "$(dirname "$0")/.."
 
@@ -75,4 +76,4 @@ print('$2 ROM ok: checksum %04X'%c)"
   md5sum build/$2.ips build/$2.sfc
 }
 if [ "$RUMBLE" = 1 ]; then variant main_rumble.asm trinea_dx_rumble; fi
-if [ "$DX" = 1 ]; then variant main_dx.asm trinea_dx; fi
+variant main_dx.asm trinea_dx   # always: the all-in Trinea DX ROM
