@@ -114,7 +114,7 @@
    "kind": "dialogue",
    "label": 119,
    "snes": "$C2DC01",
-   "en": "This is just a small token of thanks.[wait][page][hl]Special move uses increased by 1!![hl][ENDK]"
+   "en": "This is just a small token of thanks.[wait][page][hl]X Special uses +1!![hl][ENDK]"
   },
   {
    "id": "C2_s07_0013",

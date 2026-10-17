@@ -104,7 +104,16 @@ Editing the translation:
   - the struktured labs boot splash with sound (`asm/splash.asm`, bank E8)
   - RumbleShock rumble (`asm/rumble.asm`, bank E7)
   - the perf patch (`asm/perf.asm`, FE:0000)
-  - runtime options (`asm/options.asm`, FE:0200, SRAM $30:6300). In the field, hold L+R, then tap X = turbo, Y = Sara speed, A = faster monsters.
+  - runtime options (`asm/options.asm`, FE:0200, SRAM $30:6300). In the field, hold L+R, then tap X = turbo, Y = Sara speed, A = faster monsters, B = rumble off.
+
+## Moves (quick reference; full list in [docs/MOVES.md](docs/MOVES.md))
+- **X special:** only X spends it. You start with 1 and can hold up to 5. Pickups and the shop add 1 each.
+- **Rotate moves** cost 10% of your gold (min 10G). **A+B moves** are free.
+- **Hornisse:** A/B/Y normals; mash B for the sword frenzy; A+B morning star; rotate the D-pad then A for lightning ("Electric Buffalo").
+- **Sara:** rotate then B for Dragon Fire; B+Y; A+B homing flame.
+- **Ryo:** rotate (slower) then Y for shadow clones; B+Y; A+B bombs.
+- **Toggles:** L+R+X turbo, L+R+Y Sara speed, L+R+A faster monsters, L+R+B rumble off. Two blinks = on, one = off. All default to off.
+- **Boss tip:** the contraption boss is easy from the side.
 
 ## Roadmap
 

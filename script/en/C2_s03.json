@@ -34,7 +34,7 @@
    "kind": "dialogue",
    "label": 98,
    "snes": "$C224DA",
-   "en": "[hl]Sara[hl]: Oh!? W-what's this...!?[wait][page][hl]Special move uses increased by 1!![hl][ENDK]"
+   "en": "[hl]Sara[hl]: Oh!? W-what's this...!?[wait][page][hl]X Special uses +1!![hl][ENDK]"
   },
   {
    "id": "C2_s03_0003",

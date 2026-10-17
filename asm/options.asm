@@ -1,7 +1,8 @@
 hirom
 ; ===== Trinea DX options (beta): runtime toggles stored in unused SRAM tail =====
 ; SRAM $30:6300 'T', $6301 'D', $6302 opts, $6303 opts^$A5   (invalid -> all OFF = original)
-;   opts bit0 turbo (20 Hz logic), bits1-2 Sara speed (0 orig, 1 = 5px-equiv, 2 = 6px-equiv), bit3 faster monsters
+;   opts bit0 turbo (20 Hz logic), bits1-2 Sara speed (0 orig, 1 = 5px-equiv, 2 = 6px-equiv), bit3 faster monsters,
+;   bit4 rumble off (read by asm/rumble.asm rum_muted)
 ; $6304 prev buttons, $6305 feedback ticks, $6306 saved mosaic ($00B4)
 !S = $306300
 
@@ -130,11 +131,11 @@ mon:
     SEC              ; exact original exit flags: REP #$20 / CMP #$0000 leaves C=1
     RTL
 
-; --- L+R held, then X = turbo, Y = Sara speed, A = monsters. Feedback: mosaic blinks (setting value + 1 blinks)
+; --- L+R held, then X = turbo, Y = Sara speed, A = monsters, B = rumble off. Feedback: mosaic blinks (setting value + 1 blinks)
 combo:
     PHP
     SEP #$20
-    ; current relevant buttons (only while L+R held): bit7 A, bit6 X, bit5 Y
+    ; current relevant buttons (only while L+R held): bit7 A, bit6 X, bit5 Y, bit4 B
     LDA.l !S+10
     AND #$30
     CMP #$30
@@ -144,6 +145,13 @@ combo:
 +   LDA.l !S+11
     AND #$40
     LSR
+    STA.l !S+8
+    LDA.l !S+11      ; B -> bit4 (rumble off)
+    AND #$80
+    LSR
+    LSR
+    LSR
+    ORA.l !S+8
     STA.l !S+8
     LDA.l !S+10
     AND #$C0
@@ -218,10 +226,23 @@ combo:
     BRA .set
 +   LDA.l !S+8
     BIT #$80
-    BEQ .fb
+    BEQ .bchk
     LDA.l !S+9
     EOR #$08
     STA.l !S+9
+    LSR
+    LSR
+    LSR
+    AND #$01
+    BRA .set
+.bchk:
+    LDA.l !S+8
+    BIT #$10
+    BEQ .fb
+    LDA.l !S+9
+    EOR #$10
+    STA.l !S+9
+    LSR
     LSR
     LSR
     LSR

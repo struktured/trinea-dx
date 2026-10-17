@@ -22,6 +22,7 @@
 !R_EV   = !R+6              ; last event started (tests)
 !R_LAST = !R+7              ; level of the last packet sent (tests)
 !R_BIGX = !R+8              ; 2 bytes, object of the last big enemy (boss) hit
+                            ; !R+10 = rum_limit scratch
 !BIG_HP = 33                ; enemies with >= this HP count as bosses (normal enemies have <= 32)
 !WRIO   = $004201
 !JOY0   = $004016
@@ -148,7 +149,9 @@ rum_tick:                   ; A8 X8
     jsr rum_check
     beq +
     jmp rum_init
-+   lda.l !R_POS
++   jsr rum_muted           ; L+R+B option: rumble off (cancel any pulse, finish with off packets)
+    bne .idle
+    lda.l !R_POS
     tax
     lda.l rum_env,x
     beq .idle
@@ -156,6 +159,7 @@ rum_tick:                   ; A8 X8
     txa
     sta.l !R_POS
     lda.l rum_env-1,x
+    jsr rum_limit
     jsr send_pkt
     lda #2
     sta.l !R_OFF
@@ -171,6 +175,52 @@ rum_tick:                   ; A8 X8
     lda #0
     jmp send_pkt
 .done:
+    rts
+
+;; Real-hardware power budget (SNES Jr freeze hypothesis, issue #4): the pad's motors run off the console's
+;; controller-port +5 V, shared with an EverDrive on a SNES Jr's small regulator. Cap the levels and soft-start
+;; every pulse (half level on the first packet after silence) so motor inrush never hits the rail at full strength.
+!RUM_MAXS = $A0             ; strong motor max (high nibble)
+!RUM_MAXW = $08             ; weak motor max (low nibble)
+rum_limit:                  ; A8 = $SW level -> capped/ramped level; uses X
+    pha
+    and #$0F
+    cmp #!RUM_MAXW+1
+    bcc +
+    lda #!RUM_MAXW
++   sta.l !R+10             ; scratch: weak
+    pla
+    and #$F0
+    cmp #!RUM_MAXS+$10
+    bcc +
+    lda #!RUM_MAXS
++   ora.l !R+10
+    tax
+    lda.l !R_LAST
+    bne +
+    txa                     ; soft start: halve both nibbles
+    lsr
+    and #$77
+    rts
++   txa
+    rts
+
+rum_muted:                  ; A8: Z clear = muted by the options block (SRAM $30:6300 'T','D',opts,opts^$A5; bit4)
+    lda.l $306300
+    cmp #$54
+    bne .no
+    lda.l $306301
+    cmp #$44
+    bne .no
+    lda.l $306302
+    eor #$A5
+    cmp.l $306303
+    bne .no
+    lda.l $306302
+    and #$10
+    rts
+.no:
+    lda #0
     rts
 
 send_pkt:                   ; A = level

@@ -41,7 +41,7 @@
    "kind": "dialogue",
    "label": 95,
    "snes": "$C20105",
-   "en": "[hl]Hornisse[hl]: Oh!? W-what's this...!?[wait][page][hl]Special move uses increased by 1!![hl][ENDK]"
+   "en": "[hl]Hornisse[hl]: Oh!? W-what's this...!?[wait][page][hl]X Special uses +1!![hl][ENDK]"
   },
   {
    "id": "C2_s01_0004",

@@ -20,7 +20,7 @@
   {
    "id": 2,
    "lines": [
-    "Adds 1 special move use."
+    "Adds 1 use of the X special."
    ]
   },
   {
@@ -56,7 +56,7 @@
   {
    "id": 8,
    "lines": [
-    "Special move uses increased by 1!!"
+    "X Special uses +1!!"
    ]
   }
  ],

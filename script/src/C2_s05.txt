@@ -1,7 +1,7 @@
 C2_s05_0002 [hl]Ryo[hl]: I shall call on you once I have dealt with the culprit![wait][END]
 C2_s05_0003 [hl]Ryo[hl]: !?[ENDK]
 C2_s05_0004 [wait][page]Ah!?[wait] Forgive my intrusion.[wait][END]
-C2_s05_0005 [hl]Ryo[hl]: Ah!? Wh-what is this?[wait][page][hl]Special move uses increased by 1!![hl][ENDK]
+C2_s05_0005 [hl]Ryo[hl]: Ah!? Wh-what is this?[wait][page][hl]X Special uses +1!![hl][ENDK]
 C2_s05_0006 [wait][page][hl]Ryo[hl]: All right! Let's go!![ENDK]
 C2_s05_0008 [hl]Ryo[hl]: There is nothing more here![ENDK]
 C2_s05_0010 [hl]Ryo[hl]: .........Curse that Echigoya! Such a cowardly trick......[wait][page][hl]LIFE restored![hl][ENDK]

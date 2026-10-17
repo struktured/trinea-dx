@@ -1,4 +1,4 @@
-C2_s03_0002 [hl]Sara[hl]: Oh!? W-what's this...!?[wait][page][hl]Special move uses increased by 1!![hl][ENDK]
+C2_s03_0002 [hl]Sara[hl]: Oh!? W-what's this...!?[wait][page][hl]X Special uses +1!![hl][ENDK]
 C2_s03_0003 [wait][page][hl]Sara[hl]: Lucky me![ENDK]
 C2_s03_0005 [hl]Sara[hl]: How awful!! It's burned to the ground...[wait][END]
 C2_s03_0006 [hl]Sara[hl]: Oh? W-what's this...!?[wait][page]Hmph... just junk.[wait][END]

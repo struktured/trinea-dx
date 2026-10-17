@@ -20,7 +20,7 @@
    "kind": "system",
    "snes": "$C07600",
    "note": "shop strings (LE words); boundaries fixed in code",
-   "en": "G | Raises max LIFE by 5. | Raises attack power. | Adds 1 special move use. | Return to the game. | Not enough | money!! | Sold out. | Increased! | Increased!!"
+   "en": "G | Raises max LIFE by 5. | Raises attack power. | Adds 1 use of the X special. | Return to the game. | Not enough | money!! | Sold out. | Increased! | Increased!!"
   }
  ]
 }
