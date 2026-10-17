@@ -16,3 +16,4 @@ __pycache__/
 *.st[0-9]
 # release zip is attached to the GitHub Release instead
 /release/*.zip
+build/tests/
