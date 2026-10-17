@@ -373,16 +373,20 @@ h_bkill_c8:
 
 ;; ================= envelope table: tune here =================
 ;; One byte per frame (60 Hz): $SW = strong motor S (0-15), weak motor W (0-15). A $00 byte ends the pulse.
+;; Hardware tuning (2026-10-16): pulses follow the River City Ransom SNES rumble that was
+;; felt on real pads (RCR docs/RUMBLE.md: 8-40 frame pulses at flat levels 6-15). Motors need
+;; ~50-100 ms and a level of about 4 or more to spin up, so the old 2-16 frame tapered envelopes
+;; (many levels 1-3) were mostly below what a real motor reacts to. Weak (low nibble) is on/off on DualShock.
 rum_env:
     db $00                                              ; idle
-.ehit:   db $04,$03,$00                                 ; light tap, weak motor only
-.magic:  db $13,$24,$35,$46,$57,$57,$57,$46,$35,$24,$13,$12,$00  ; swell and fade
-.ekill:  db $64,$53,$42,$31,$00                         ; short tapered thump
-.hurt:   db $96,$85,$63,$42,$21,$00                     ; jolt
-.hurt2:  db $C8,$B7,$96,$74,$53,$32,$21,$00             ; heavy jolt
-.bhit:   db $75,$64,$43,$22,$00                         ; boss hit
-.bkill:  db $FF,$FF,$EE,$DD,$CC,$BB,$AA,$99,$88,$77,$66,$55,$44,$33,$22,$11,$00   ; boss destroyed
-.death:  db $FC,$EB,$DA,$C9,$B8,$A7,$96,$85,$74,$63,$52,$41,$31,$21,$11,$00       ; player down
+.ehit: db $46,$46,$46,$46,$46,$46,$34,$34,$00   ; 8 frames
+.magic: db $46,$46,$46,$46,$68,$68,$68,$68,$8A,$8A,$8A,$8A,$8A,$8A,$8A,$8A,$68,$68,$68,$68,$46,$46,$46,$46,$00   ; 24 frames
+.ekill: db $CA,$CA,$CA,$CA,$CA,$CA,$CA,$CA,$CA,$CA,$CA,$CA,$96,$96,$96,$96,$64,$64,$64,$64,$00   ; 20 frames
+.hurt: db $88,$88,$88,$88,$88,$88,$88,$88,$88,$88,$66,$66,$66,$66,$66,$66,$00   ; 16 frames
+.hurt2: db $CA,$CA,$CA,$CA,$CA,$CA,$CA,$CA,$CA,$CA,$CA,$CA,$CA,$CA,$97,$97,$97,$97,$97,$97,$64,$64,$64,$64,$00   ; 24 frames
+.bhit: db $AA,$AA,$AA,$AA,$AA,$AA,$AA,$AA,$AA,$AA,$77,$77,$77,$77,$77,$77,$00   ; 16 frames
+.bkill: db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF,$CC,$CC,$CC,$CC,$CC,$CC,$CC,$CC,$88,$88,$88,$88,$88,$88,$88,$88,$00   ; 40 frames
+.death: db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF,$DD,$DD,$DD,$DD,$DD,$DD,$DD,$DD,$AA,$AA,$AA,$AA,$AA,$AA,$77,$77,$77,$77,$77,$77,$00   ; 40 frames
 rum_start_tbl:
     db 0
     db rum_env_ehit-rum_env, rum_env_magic-rum_env, rum_env_ekill-rum_env, rum_env_hurt-rum_env
