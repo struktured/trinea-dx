@@ -127,6 +127,7 @@ mon:
     PLA
     PLP
     REP #$20
+    SEC              ; exact original exit flags: REP #$20 / CMP #$0000 leaves C=1
     RTL
 
 ; --- L+R held, then X = turbo, Y = Sara speed, A = monsters. Feedback: mosaic blinks (setting value + 1 blinks)
@@ -262,9 +263,9 @@ combo:
 joy:
     PHP
     SEP #$20
--   LDA $4212
-    LSR
-    BCS -
+-   LDA $4212        ; hardware-safety fix: wait for VBlank END like the original game (not just auto-joypad
+    BMI -            ; busy): keeps the original NMI timing (main thread never runs inside VBlank, rumble's
+                     ; manual $4016 clocking never overlaps auto-joypad) - suspected cause of real-hw freezes
     LDA $4219
     STA.l !S+11
     STA $0082

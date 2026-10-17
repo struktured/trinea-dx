@@ -176,6 +176,9 @@ rum_tick:                   ; A8 X8
 send_pkt:                   ; A = level
     sta.l !R_LAST
     pha
+-   lda.l $004212           ; never clock $4016 while auto-joypad is still reading (real-hw bus contention;
+    lsr                     ; RCR lesson: VBlank before auto-read starts is not "done")
+    bcs -
     lda #$72
     jsr send8
     pla
