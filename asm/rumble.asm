@@ -177,38 +177,40 @@ rum_tick:                   ; A8 X8
 .done:
     rts
 
-;; Real-hardware power budget (SNES Jr freeze hypothesis, issue #4): the pad's motors run off the console's
-;; controller-port +5 V, shared with an EverDrive on a SNES Jr's small regulator. Cap the levels and soft-start
-;; every pulse (half level on the first packet after silence) so motor inrush never hits the rail at full strength.
-!RUM_MAXS = $A0             ; strong motor max (high nibble)
-!RUM_MAXW = $08             ; weak motor max (low nibble)
-rum_limit:                  ; A8 = $SW level -> capped/ramped level; uses X
+;; Level shaping (issue #4 follow-up, 2026-10-18). 222499a9 capped strong<=$A / weak<=8 AND soft-started every pulse
+;; (first packet halved): the common enemy-hit pulse went out as $23 then $46 (strong 2-4/15), below the duty a RumbleShock
+;; motor needs to break stall, so rumble felt weak or absent on the Jr. Now: no soft start (a motor needs a kick, not a ramp),
+;; every non-zero frame gets a floor of strong 8 / weak 6 (RCR's felt-on-hardware hits are 8-15), and the cap is
+;; strong 12 / weak 10 - still well under the old harsh $FF/$CA peaks.
+!RUM_MAXS = $C0             ; strong motor max (high nibble)
+!RUM_MAXW = $0A             ; weak motor max (low nibble)
+!RUM_MINS = $80             ; strong motor floor for any non-zero level
+!RUM_MINW = $06             ; weak motor floor for any non-zero level
+rum_limit:                  ; A8 = $SW level (non-zero) -> floored/capped level
     pha
     and #$0F
     cmp #!RUM_MAXW+1
     bcc +
     lda #!RUM_MAXW
++   cmp #!RUM_MINW
+    bcs +
+    lda #!RUM_MINW
 +   sta.l !R+10             ; scratch: weak
     pla
     and #$F0
     cmp #!RUM_MAXS+$10
     bcc +
     lda #!RUM_MAXS
++   cmp #!RUM_MINS
+    bcs +
+    lda #!RUM_MINS
 +   ora.l !R+10
-    tax
-    lda.l !R_LAST
-    bne +
-    txa                     ; soft start: halve both nibbles
-    lsr
-    and #$77
-    rts
-+   txa
     rts
 
 rum_muted:                  ; A8: Z clear = muted by the options block (bit4)
 if defined("HAS_OPTS")
     jsl getopt              ; WRAM-cached opts: no per-frame SRAM access (issue #4 hardening)
-    and #$10
+    and #$10                ; bit4 = off; an invalid/blank options block reads as opts 0 = rumble ON (default)
     rts
 else
     lda.l $306300           ; no options module: read the block directly
@@ -438,14 +440,14 @@ h_bkill_c8:
 ;; (many levels 1-3) were mostly below what a real motor reacts to. Weak (low nibble) is on/off on DualShock.
 rum_env:
     db $00                                              ; idle
-.ehit: db $46,$46,$46,$46,$46,$46,$34,$34,$00   ; 8 frames
-.magic: db $46,$46,$46,$46,$68,$68,$68,$68,$8A,$8A,$8A,$8A,$8A,$8A,$8A,$8A,$68,$68,$68,$68,$46,$46,$46,$46,$00   ; 24 frames
-.ekill: db $CA,$CA,$CA,$CA,$CA,$CA,$CA,$CA,$CA,$CA,$CA,$CA,$96,$96,$96,$96,$64,$64,$64,$64,$00   ; 20 frames
-.hurt: db $88,$88,$88,$88,$88,$88,$88,$88,$88,$88,$66,$66,$66,$66,$66,$66,$00   ; 16 frames
-.hurt2: db $CA,$CA,$CA,$CA,$CA,$CA,$CA,$CA,$CA,$CA,$CA,$CA,$CA,$CA,$97,$97,$97,$97,$97,$97,$64,$64,$64,$64,$00   ; 24 frames
-.bhit: db $AA,$AA,$AA,$AA,$AA,$AA,$AA,$AA,$AA,$AA,$77,$77,$77,$77,$77,$77,$00   ; 16 frames
-.bkill: db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF,$CC,$CC,$CC,$CC,$CC,$CC,$CC,$CC,$88,$88,$88,$88,$88,$88,$88,$88,$00   ; 40 frames
-.death: db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF,$DD,$DD,$DD,$DD,$DD,$DD,$DD,$DD,$AA,$AA,$AA,$AA,$AA,$AA,$77,$77,$77,$77,$77,$77,$00   ; 40 frames
+.ehit: db $86,$86,$86,$86,$86,$86,$86,$86,$86,$86,$00   ; 10 frames
+.magic: db $96,$96,$96,$96,$96,$96,$A8,$A8,$A8,$A8,$A8,$A8,$A8,$A8,$A8,$A8,$A8,$A8,$86,$86,$86,$86,$86,$86,$00   ; 24 frames
+.ekill: db $C8,$C8,$C8,$C8,$C8,$C8,$C8,$C8,$C8,$C8,$C8,$C8,$A8,$A8,$A8,$A8,$A8,$A8,$86,$86,$86,$86,$00   ; 22 frames
+.hurt: db $A8,$A8,$A8,$A8,$A8,$A8,$A8,$A8,$A8,$A8,$86,$86,$86,$86,$86,$86,$00   ; 16 frames
+.hurt2: db $C8,$C8,$C8,$C8,$C8,$C8,$C8,$C8,$C8,$C8,$C8,$C8,$C8,$C8,$A8,$A8,$A8,$A8,$A8,$A8,$86,$86,$86,$86,$00   ; 24 frames
+.bhit: db $B8,$B8,$B8,$B8,$B8,$B8,$B8,$B8,$B8,$B8,$96,$96,$96,$96,$96,$96,$00   ; 16 frames
+.bkill: db $CA,$CA,$CA,$CA,$CA,$CA,$CA,$CA,$CA,$CA,$CA,$CA,$CA,$CA,$CA,$CA,$CA,$CA,$CA,$CA,$CA,$CA,$CA,$CA,$A8,$A8,$A8,$A8,$A8,$A8,$A8,$A8,$86,$86,$86,$86,$86,$86,$86,$86,$00   ; 40 frames
+.death: db $CA,$CA,$CA,$CA,$CA,$CA,$CA,$CA,$CA,$CA,$CA,$CA,$CA,$CA,$CA,$CA,$CA,$CA,$CA,$CA,$A8,$A8,$A8,$A8,$A8,$A8,$A8,$A8,$A8,$A8,$A8,$A8,$86,$86,$86,$86,$86,$86,$86,$86,$00   ; 40 frames
 rum_start_tbl:
     db 0
     db rum_env_ehit-rum_env, rum_env_magic-rum_env, rum_env_ekill-rum_env, rum_env_hurt-rum_env
