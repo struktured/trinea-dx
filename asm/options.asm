@@ -3,8 +3,10 @@ hirom
 ; SRAM $30:6300 'T', $6301 'D', $6302 opts, $6303 opts^$A5   (invalid -> all OFF = original)
 ;   opts bit0 turbo (20 Hz logic), bits1-2 Sara speed (0 orig, 1 = 5px-equiv, 2 = 6px-equiv), bit3 faster monsters,
 ;   bit4 rumble off (read by asm/rumble.asm rum_muted)
-; $6304 prev buttons, $6305 feedback ticks, $6306 saved mosaic ($00B4)
+; scratch (prev buttons, feedback ticks, saved mosaic, raw pad) lives in WRAM !W+4..+11, not SRAM: SRAM is only read when
+; the WRAM cache is invalid and only written when a toggle changes (issue #4 real-hardware hardening)
 !S = $306300
+!W = $7ECF10      ; WRAM cache/scratch (hw fix #4): +0 $A5 = cache valid, +1 opts, +2 sig valid, +4..+11 pad/feedback scratch
 
 ; --- main-loop tick wait (both copies): LDA $082C : CMP #$04 -> JSL turbo : NOP
 org $C00268
@@ -47,7 +49,13 @@ org $C031B7
     NOP #6
 
 org $FE0200
-getopt:            ; A8 in/out: A = opts (0 if signature invalid)
+getopt:            ; A8 in/out: A = opts (0 if signature invalid). SRAM is read only when the WRAM cache is invalid
+    LDA.l !W
+    CMP #$A5
+    BNE .load
+    LDA.l !W+1
+    RTL
+.load:
     LDA.l !S
     CMP #$54
     BNE .z
@@ -59,8 +67,16 @@ getopt:            ; A8 in/out: A = opts (0 if signature invalid)
     CMP.l !S+3
     BNE .z
     LDA.l !S+2
-    RTL
+    STA.l !W+1
+    LDA #$01
+    BRA .fin
 .z: LDA #$00
+    STA.l !W+1
+.fin:
+    STA.l !W+2
+    LDA #$A5
+    STA.l !W
+    LDA.l !W+1
     RTL
 
 turbo:             ; A8; returns carry = ($082C >= threshold)
@@ -136,40 +152,32 @@ combo:
     PHP
     SEP #$20
     ; current relevant buttons (only while L+R held): bit7 A, bit6 X, bit5 Y, bit4 B
-    LDA.l !S+10
+    LDA.l !W+10
     AND #$30
     CMP #$30
     BEQ +
     LDA #$00
     BRA ++
-+   LDA.l !S+11
++   LDA.l !W+11
     AND #$40
     LSR
-    STA.l !S+8
-    LDA.l !S+11      ; B -> bit4 (rumble off)
+    STA.l !W+8
+    LDA.l !W+11      ; B -> bit4 (rumble off)
     AND #$80
     LSR
     LSR
     LSR
-    ORA.l !S+8
-    STA.l !S+8
-    LDA.l !S+10
+    ORA.l !W+8
+    STA.l !W+8
+    LDA.l !W+10
     AND #$C0
-    ORA.l !S+8
+    ORA.l !W+8
 ++  PHA
     JSL getopt
-    STA.l !S+9
-    ; signature valid? if not and no new press, nothing else to do
-    LDA.l !S
-    CMP #$54
-    BNE .nosig
-    LDA.l !S+1
-    CMP #$44
-    BNE .nosig
-    LDA.l !S+2
-    EOR #$A5
-    CMP.l !S+3
-    BEQ .sig
+    STA.l !W+9
+    ; signature valid? (cached by getopt above) if not and no new press, nothing else to do
+    LDA.l !W+2
+    BNE .sig
 .nosig:
     PLA
     PHA
@@ -183,32 +191,33 @@ combo:
     STA.l !S+1
     LDA #$00
     STA.l !S+2
-    STA.l !S+4
-    STA.l !S+5
+    STA.l !W+4
+    STA.l !W+5
     LDA #$A5
     STA.l !S+3
     LDA #$00
-    STA.l !S+9
+    STA.l !W+9
+    STA.l !W          ; invalidate cache
 .sig:
     PLA
     PHA
-    EOR.l !S+4        ; new presses = cur & ~prev
+    EOR.l !W+4        ; new presses = cur & ~prev
     AND $01,s
-    STA.l !S+8
+    STA.l !W+8
     PLA
-    STA.l !S+4
-    LDA.l !S+8
+    STA.l !W+4
+    LDA.l !W+8
     BIT #$40
     BEQ +
-    LDA.l !S+9
+    LDA.l !W+9
     EOR #$01
-    STA.l !S+9
+    STA.l !W+9
     AND #$01
     BRA .set
-+   LDA.l !S+8
++   LDA.l !W+8
     BIT #$20
     BEQ +
-    LDA.l !S+9
+    LDA.l !W+9
     LSR
     AND #$03
     INC
@@ -217,31 +226,31 @@ combo:
     LDA #$00
 ++  PHA
     ASL
-    STA.l !S+8
-    LDA.l !S+9
+    STA.l !W+8
+    LDA.l !W+9
     AND #$F9
-    ORA.l !S+8
-    STA.l !S+9
+    ORA.l !W+8
+    STA.l !W+9
     PLA
     BRA .set
-+   LDA.l !S+8
++   LDA.l !W+8
     BIT #$80
     BEQ .bchk
-    LDA.l !S+9
+    LDA.l !W+9
     EOR #$08
-    STA.l !S+9
+    STA.l !W+9
     LSR
     LSR
     LSR
     AND #$01
     BRA .set
 .bchk:
-    LDA.l !S+8
+    LDA.l !W+8
     BIT #$10
     BEQ .fb
-    LDA.l !S+9
+    LDA.l !W+9
     EOR #$10
-    STA.l !S+9
+    STA.l !W+9
     LSR
     LSR
     LSR
@@ -253,21 +262,23 @@ combo:
     ASL
     ASL             ; blinks*8 ticks
     PHA
-    LDA.l !S+5
+    LDA.l !W+5
     BNE +
     LDA $00B4
-    STA.l !S+6
+    STA.l !W+6
 +   PLA
-    STA.l !S+5
-    LDA.l !S+9
+    STA.l !W+5
+    LDA.l !W+9
     STA.l !S+2
     EOR #$A5
     STA.l !S+3
+    LDA #$00
+    STA.l !W          ; invalidate cache (re-read SRAM once)
 .fb:                ; feedback mosaic
-    LDA.l !S+5
+    LDA.l !W+5
     BEQ .done
     DEC
-    STA.l !S+5
+    STA.l !W+5
     BEQ .rest
     AND #$04
     BEQ .rest
@@ -275,7 +286,7 @@ combo:
     STA $00B4
     BRA .done
 .rest:
-    LDA.l !S+6
+    LDA.l !W+6
     STA $00B4
 .done:
     PLP
@@ -288,10 +299,10 @@ joy:
     BMI -            ; busy): keeps the original NMI timing (main thread never runs inside VBlank, rumble's
                      ; manual $4016 clocking never overlaps auto-joypad) - suspected cause of real-hw freezes
     LDA $4219
-    STA.l !S+11
+    STA.l !W+11
     STA $0082
     LDA $4218
-    STA.l !S+10
+    STA.l !W+10
     STA $0083
     AND #$30
     CMP #$30

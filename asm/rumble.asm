@@ -205,8 +205,13 @@ rum_limit:                  ; A8 = $SW level -> capped/ramped level; uses X
 +   txa
     rts
 
-rum_muted:                  ; A8: Z clear = muted by the options block (SRAM $30:6300 'T','D',opts,opts^$A5; bit4)
-    lda.l $306300
+rum_muted:                  ; A8: Z clear = muted by the options block (bit4)
+if defined("HAS_OPTS")
+    jsl getopt              ; WRAM-cached opts: no per-frame SRAM access (issue #4 hardening)
+    and #$10
+    rts
+else
+    lda.l $306300           ; no options module: read the block directly
     cmp #$54
     bne .no
     lda.l $306301
@@ -222,6 +227,7 @@ rum_muted:                  ; A8: Z clear = muted by the options block (SRAM $30
 .no:
     lda #0
     rts
+endif
 
 send_pkt:                   ; A = level
     sta.l !R_LAST
