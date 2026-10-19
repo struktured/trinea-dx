@@ -210,7 +210,7 @@ rum_limit:                  ; A8 = $SW level (non-zero) -> floored/capped level
 rum_muted:                  ; A8: Z clear = muted by the options block (bit4)
 if defined("HAS_OPTS")
     jsl getopt              ; WRAM-cached opts: no per-frame SRAM access (issue #4 hardening)
-    and #$10                ; bit4 = off; an invalid/blank options block reads as opts 0 = rumble ON (default)
+    and #$20                ; bit5 = off (bit4 = retired old flag, ignored); invalid/blank block = opts 0 = rumble ON
     rts
 else
     lda.l $306300           ; no options module: read the block directly
@@ -224,7 +224,7 @@ else
     cmp.l $306303
     bne .no
     lda.l $306302
-    and #$10
+    and #$20
     rts
 .no:
     lda #0
@@ -237,6 +237,18 @@ send_pkt:                   ; A = level
 -   lda.l $004212           ; never clock $4016 while auto-joypad is still reading (real-hw bus contention;
     lsr                     ; RCR lesson: VBlank before auto-read starts is not "done")
     bcs -
+    lda #$01                ; fresh manual latch + 16 read clocks, then the packet, exactly like LRG player.a and
+    sta.l !JOY0             ; RCR: the packet is sent ~35 lines after the auto-read latch (pad read waits for VBlank
+    nop                     ; end since 6cb019c), so re-latch to put it right after a latch on any pad firmware.
+    nop                     ; The game already copied $4218/$4219; auto-joypad is idle (wait above).
+    lda #$00
+    sta.l !JOY0
+    nop
+    nop
+    ldy #16
+--  lda.l !JOY0
+    dey
+    bne --
     lda #$72
     jsr send8
     pla

@@ -40,7 +40,7 @@ Hold L+R in the field, then tap a button. The screen gives a mosaic blink to con
 | L+R+X | turbo (faster game logic) |
 | L+R+Y | Sara speed. Cycles off / fast / faster, shown as 1 / 2 / 3 blinks |
 | L+R+A | faster monsters |
-| L+R+B | rumble off. Use it for testing on real hardware, or when using a pad without rumble motors |
+| L+R+B | rumble off. Use it for testing on real hardware, or when using a pad without rumble motors. Stored in opts bit5 since 2026-10-19; the old bit4 flag (afb92e1a/2339e2b8) is ignored, so those saves get rumble back |
 
 ## Tips
 - The contraption boss is easy if you attack it from the side.

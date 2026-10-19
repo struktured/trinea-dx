@@ -2,11 +2,12 @@ hirom
 ; ===== Trinea DX options (beta): runtime toggles stored in unused SRAM tail =====
 ; SRAM $30:6300 'T', $6301 'D', $6302 opts, $6303 opts^$A5   (invalid -> all OFF = original)
 ;   opts bit0 turbo (20 Hz logic), bits1-2 Sara speed (0 orig, 1 = 5px-equiv, 2 = 6px-equiv), bit3 faster monsters,
-;   bit4 rumble off (read by asm/rumble.asm rum_muted)
+;   bit4 RETIRED (was rumble off in afb92e1a/2339e2b8; ignored so saves that toggled it get rumble back),
+;   bit5 rumble off (read by asm/rumble.asm rum_muted)
 ; scratch (prev buttons, feedback ticks, saved mosaic, raw pad) lives in WRAM !W+4..+11, not SRAM: SRAM is only read when
 ; the WRAM cache is invalid and only written when a toggle changes (issue #4 real-hardware hardening)
 !S = $306300
-!W = $7ECF10      ; WRAM cache/scratch (hw fix #4): +0 $A5 = cache valid, +1 opts, +2 sig valid, +4..+11 pad/feedback scratch
+!W = $7ECF10      ; WRAM cache/scratch (hw fix #4): +0 $A5 = cache valid, +1 opts, +2 sig valid, +3 opts^$5A (cache check), +4..+11 pad/feedback scratch
 
 ; --- main-loop tick wait (both copies): LDA $082C : CMP #$04 -> JSL turbo : NOP
 org $C00268
@@ -50,8 +51,12 @@ org $C031B7
 
 org $FE0200
 getopt:            ; A8 in/out: A = opts (0 if signature invalid). SRAM is read only when the WRAM cache is invalid
-    LDA.l !W
-    CMP #$A5
+    LDA.l !W         ; cache valid only if +0 = $A5 AND +3 = opts^$5A: power-on WRAM is not zeroed on real
+    CMP #$A5         ; hardware (MiSTer fills a pattern), so a lone $A5 marker could accept garbage opts
+    BNE .load
+    LDA.l !W+1
+    EOR #$5A
+    CMP.l !W+3
     BNE .load
     LDA.l !W+1
     RTL
@@ -74,6 +79,9 @@ getopt:            ; A8 in/out: A = opts (0 if signature invalid). SRAM is read 
     STA.l !W+1
 .fin:
     STA.l !W+2
+    LDA.l !W+1
+    EOR #$5A
+    STA.l !W+3
     LDA #$A5
     STA.l !W
     LDA.l !W+1
@@ -249,8 +257,10 @@ combo:
     BIT #$10
     BEQ .fb
     LDA.l !W+9
-    EOR #$10
+    AND #$EF          ; drop the retired bit4 (old rumble-off) on any rumble toggle
+    EOR #$20          ; rumble off is bit5 now
     STA.l !W+9
+    LSR
     LSR
     LSR
     LSR
