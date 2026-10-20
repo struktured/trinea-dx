@@ -44,6 +44,7 @@ python3 tools/py/build_font.py
 python3 tools/py/build_small.py
 python3 tools/py/insert_script.py "$@"
 python3 tools/py/sysgfx.py
+python3 tools/py/credits.py
 
 # 4. assemble onto a copy of the original
 cp "$TRINEA_ROM" build/trinea_en.sfc
