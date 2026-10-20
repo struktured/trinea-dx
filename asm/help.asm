@@ -141,6 +141,8 @@ help_show:
     LDA #$0001
 +   ASL
     TAX
+    ASL : ASL : ASL
+    TAY                 ; Y = character * 16 = offset of that character's palette
     LDA.l help_maps,x
     STA $4372
     SEP #$20
@@ -148,10 +150,11 @@ help_show:
     LDX #$0700 : STX $4375
     LDA #$80 : STA $420B
     STZ $2121
-    LDX #$0000
+    TYX
+    LDY #$0010
 -   LDA.l help_pal,x : STA $2122
     INX
-    CPX #$0010
+    DEY
     BNE -
     ; PPU setup (registers now, shadows so the NMI keeps them)
     LDA #$09 : STA $2105      ; mode 1, BG3 priority
@@ -267,7 +270,10 @@ h_rel:                  ; A8: wait until Select and Start are both up
     RTS
 
 help_maps: dw help_map, help_map+$700, help_map+$E00
-help_pal:  dw $2840, $7FFF, $0000, $5294, $2840, $13FF, $0000, $0C63   ; 0 navy, 1 white, 2 black, 3 grey | 5 yellow
+help_pal:  ; per character: 0 background, 1 white, 2 black, 3 grey | 5 yellow (palette 1, same background)
+    dw $3461, $7FFF, $0000, $5294, $3461, $13FF, $0000, $0C63   ; Hornisse: deep blue
+    dw $1C2D, $7FFF, $0000, $5294, $1C2D, $13FF, $0000, $0C63   ; Sara: deep crimson-magenta
+    dw $1121, $7FFF, $0000, $5294, $1121, $13FF, $0000, $0C63   ; Ryo: dark green
 help_chr:  incbin "../build/gen/help_chr.bin"
 help_map:  incbin "../build/gen/help_map.bin"
 assert (help_map&$FF0000) == ((help_map+$14FF)&$FF0000), "help data crosses a bank"

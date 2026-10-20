@@ -63,7 +63,7 @@ def page(name,moves,btn):
 P={0:('HORNISSE',[('A+B','Morning star'),('Mash B','Sword frenzy'),('Spin D-pad','then A: Lightning'),('','(costs 1/10 of gold)'),('X','X special (uses 1)')],
       {'B':'Stab','A':'Slash','Y':'Slash'}),
    1:('SARA',[('A+B','Homing flame'),('B+Y','Star fall'),('Spin D-pad','then B: Dragon Fire'),('','(costs 1/10 of gold)'),('X','X special (uses 1)')],
-      {'B':'Fire shot','A':'Spark shot','Y':'Kick'}),
+      {'B':'Fire shot','A':'Spark shot','Y':'Wing spin'}),
    2:('RYO',[('A+B','Bombs'),('B+Y','Wall of fire'),('Spin D-pad','(slow) then Y:'),('','Shadow clones'),('','(costs 1/10 of gold)'),('X','X special (uses 1)')],
       {'B':'Sickle','A':'Chain sickle','Y':'Throw blade'})}
 tiles={bytes(16):0}; chr_=bytearray(16); maps=bytearray(); prev=[]

@@ -27,7 +27,7 @@ Button tables: C0:894B (Hornisse), C0:88FE (Sara), C0:8998 (Ryo). Each maps a bu
 | rotate the D-pad, then B | Dragon Fire | 10% gold (min 10G) |
 | B | fire shot (sparks fly forward) | free |
 | A | spark shot (small magic bolt) | free |
-| Y | kick (close range) | free |
+| Y | wing spin (she turns a full circle with her wings spread; close range, no projectile) | free |
 | B+Y | star fall (Sara glows gold, then a huge star crashes down) | free |
 | A+B | homing flame | free |
 | X | X special | 1 X-special use |
