@@ -3,7 +3,7 @@ hirom
 ; SRAM $30:6300 'T', $6301 'D', $6302 opts, $6303 opts^$A5   (invalid -> all OFF = original)
 ;   opts bit0 turbo (20 Hz logic), bits1-2 Sara speed (0 orig, 1 = 5px-equiv, 2 = 6px-equiv), bit3 faster monsters,
 ;   bit4 RETIRED (was rumble off in afb92e1a/2339e2b8; ignored so saves that toggled it get rumble back),
-;   bit5 rumble off (read by asm/rumble.asm rum_muted)
+;   bit5 rumble off (read by asm/rumble.asm rum_muted), bit6 Start-skips-dialogue off (asm/skip.asm)
 ; scratch (prev buttons, feedback ticks, saved mosaic, raw pad) lives in WRAM !W+4..+11, not SRAM: SRAM is only read when
 ; the WRAM cache is invalid and only written when a toggle changes (issue #4 real-hardware hardening)
 !S = $306300
@@ -159,6 +159,9 @@ mon:
 combo:
     PHP
     SEP #$20
+if defined("HAS_SKIP")
+    JSL sk_field            ; field tick: no script running -> skip mode off, Start edge tracker synced
+endif
     ; current relevant buttons (only while L+R held): bit7 A, bit6 X, bit5 Y, bit4 B
     LDA.l !W+10
     AND #$30
@@ -173,6 +176,12 @@ combo:
     LDA.l !W+11      ; B -> bit4 (rumble off)
     AND #$80
     LSR
+    LSR
+    LSR
+    ORA.l !W+8
+    STA.l !W+8
+    LDA.l !W+11      ; Select -> bit3 (dialogue skip off)
+    AND #$20
     LSR
     LSR
     ORA.l !W+8
@@ -255,7 +264,7 @@ combo:
 .bchk:
     LDA.l !W+8
     BIT #$10
-    BEQ .fb
+    BEQ .schk
     LDA.l !W+9
     AND #$EF          ; drop the retired bit4 (old rumble-off) on any rumble toggle
     EOR #$20          ; rumble off is bit5 now
@@ -266,6 +275,18 @@ combo:
     LSR
     LSR
     AND #$01
+    BRA .set
+.schk:
+    LDA.l !W+8
+    BIT #$08
+    BEQ .fb
+    LDA.l !W+9
+    EOR #$40          ; bit6 = Start-skips-dialogue OFF
+    STA.l !W+9
+    ASL
+    ASL
+    LDA #$00
+    ROL               ; A = bit6
 .set:               ; A = displayed value (0..2)
     INC
     ASL

@@ -23,6 +23,8 @@
 !R_LAST = !R+7              ; level of the last packet sent (tests)
 !R_BIGX = !R+8              ; 2 bytes, object of the last big enemy (boss) hit
                             ; !R+10 = rum_limit scratch
+!R_ZAP  = !R+11             ; Vampierre zap: frames left (0 = off; set/cleared by asm/skip.asm op-39 hook)
+!R_ZAPI = !R+12             ; zap pattern index
 !BIG_HP = 33                ; enemies with >= this HP count as bosses (normal enemies have <= 32)
 !WRIO   = $004201
 !JOY0   = $004016
@@ -131,6 +133,8 @@ rum_init:
     sta.l !R_LAST
     sta.l !R_BIGX
     sta.l !R_BIGX+1
+    sta.l !R_ZAP
+    sta.l !R_ZAPI
     lda #$A5
     sta.l !R_SIG
     lda #$5A
@@ -151,7 +155,21 @@ rum_tick:                   ; A8 X8
     jmp rum_init
 +   jsr rum_muted           ; L+R+B option: rumble off (cancel any pulse, finish with off packets)
     bne .idle
-    lda.l !R_POS
+    lda.l !R_ZAP            ; Vampierre zap cutscene: crackly strong pulses for as long as the animation runs
+    beq +
+    dec
+    sta.l !R_ZAP
+    lda.l !R_ZAPI
+    inc
+    sta.l !R_ZAPI
+    and #$07
+    tax
+    lda.l zap_pat,x
+    jsr send_pkt
+    lda #2
+    sta.l !R_OFF
+    rts
++   lda.l !R_POS
     tax
     lda.l rum_env,x
     beq .idle
@@ -450,6 +468,7 @@ h_bkill_c8:
 ;; felt on real pads (RCR docs/RUMBLE.md: 8-40 frame pulses at flat levels 6-15). Motors need
 ;; ~50-100 ms and a level of about 4 or more to spin up, so the old 2-16 frame tapered envelopes
 ;; (many levels 1-3) were mostly below what a real motor reacts to. Weak (low nibble) is on/off on DualShock.
+zap_pat: db $CA,$CA,$86,$CA,$A8,$86,$CA,$96   ; crackle (within caps: strong 8-12, weak 6-10)
 rum_env:
     db $00                                              ; idle
 .ehit: db $86,$86,$86,$86,$86,$86,$86,$86,$86,$86,$00   ; 10 frames
