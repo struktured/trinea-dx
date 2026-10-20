@@ -9,6 +9,13 @@ import numpy as np
 from PIL import Image
 R=open(os.environ['TRINEA_ROM'],'rb').read()
 SM=json.load(open(FONT+'/small_map.json'))['map']; ADD=open(FONT+'/small_add.bin','rb').read(); FIRST=0x9E
+def _g(rows): return np.array([[{'.':0,'#':1,'+':2}[ch] for ch in r] for r in rows],np.uint8)
+# The 8x8 font's p/g/q/y have no room for descenders, so they sit on the baseline and read like capitals
+# ("SPecial", "helP"). Overlay-only versions with a short bowl and a visible tail:
+DESC={'p':_g(['........','........','#####+..','##+.##+.','#####+..','##+.....','##+.....','##+.....']),
+      'q':_g(['........','........','.#####+.','##+.##+.','.#####+.','....##+.','....##+.','....##+.']),
+      'g':_g(['........','........','.#####+.','##+.##+.','.#####+.','....##+.','##+.##+.','.####+..']),
+      'y':_g(['........','........','##+.##+.','##+.##+.','.#####+.','....##+.','##+.##+.','.####+..'])}
 def dec(b):
     t=np.zeros((8,8),np.uint8)
     for y in range(8):
@@ -21,6 +28,7 @@ def glyph(c):
     elif 'A'<=c<='Z': t=0x79+ord(c)-65
     elif c=='?': t=0x96
     elif c=='!': t=0x97
+    elif c in DESC: return DESC[c]
     elif c in SM: return dec(ADD[(SM[c]-FIRST)*16:(SM[c]-FIRST)*16+16])
     else: raise SystemExit('helpgfx: no glyph for %r'%c)
     return dec(R[0x37000+t*16:0x37000+t*16+16])
@@ -33,7 +41,7 @@ def page(name,moves,btn):
     def ctext(row,s,p=0): text((32-len(s))//2,row,s,p)
     ctext(1,'CONTROLS - '+name,1)
     # --- SNES pad, tiles x 2..17, y 3..10 (128 x 64 px)
-    ox,oy=16,24
+    ox,oy=8,24          # pad at x 8..135: a full tile (8 px+) of space before the labels at column 18
     pad=Image.new('P',(128,64),0); from PIL import ImageDraw; d=ImageDraw.Draw(pad)
     d.rounded_rectangle((10,0,42,10),radius=4,fill=2); d.rounded_rectangle((85,0,117,10),radius=4,fill=2)   # L, R
     d.rounded_rectangle((0,6,127,63),radius=26,fill=2); d.rounded_rectangle((2,8,125,61),radius=24,fill=3)   # body
@@ -50,8 +58,9 @@ def page(name,moves,btn):
     img[oy:oy+64,ox:ox+128]=a
     # labels right of the pad (x tiles 18..31) at the button heights
     text(18,3,'X Special',0); text(18,5,'A '+btn['A'],0); text(18,7,'Y '+btn['Y'],0); text(18,9,'B '+btn['B'],0)
-    text(1,12,'D-pad: move',0); text(17,12,'START: pause',0)
-    text(1,14,'SELECT: this help',0); text(1,15,'Hold L+R+button: DX options',0)
+    # SELECT and START share one row, mirrored about the screen centre (same order as on the pad: Select left, Start right)
+    text(3,12,'SELECT: help',0); text(17,12,'START: pause',0)
+    text(3,14,'D-pad: move',0); text(3,15,'L+R+button: DX options',0)
     ctext(17,name+"'S MOVES",1)
     for i,(k,v) in enumerate(moves):
         text(1,18+i,k,1 if k else 0); text(12,18+i,v,0) if len(k)<=10 else None
