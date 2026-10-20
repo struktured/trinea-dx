@@ -41,7 +41,11 @@ Hold L+R in the field, then tap a button. The screen gives a mosaic blink to con
 | L+R+Y | Sara speed. Cycles off / fast / faster, shown as 1 / 2 / 3 blinks |
 | L+R+A | faster monsters |
 | L+R+B | rumble off. Use it for testing on real hardware, or when using a pad without rumble motors. Stored in opts bit5 since 2026-10-19; the old bit4 flag (afb92e1a/2339e2b8) is ignored, so those saves get rumble back |
+| L+R+Start | Select controls help overlay (default **on**; two blinks = on) |
 | L+R+Select | Start skips dialogue (default **on**; tapping turns it off, two blinks = on) |
+
+## Select: controls help
+Press **Select** in the field or a stage (anywhere Start would pause) to freeze the game and show a full-screen page: an SNES pad with what each button does, plus the current character's moves from this file. **Select or Start** closes it and the screen comes back exactly as it was (the music keeps playing). It never opens in menus, shops, dialogue, cutscenes or the attract demo. L+R+Start turns it off. In the original game Select does nothing in play (it is only read on the title screen and by an unreachable debug menu), so nothing is taken away. Screenshots: `docs/screenshots/help_overlay_*.png`.
 
 ## Start skips dialogue
 While a message is printing or waiting for A, press **Start** to skip the rest of the current scene's text. The script still runs every non-text command (story flags, map moves, items, LIFE, character branches, battles), so nothing is missed; only the text is hidden and [wait] prompts are passed. Choice prompts and menus still appear and wait for you. Start = pause in gameplay is unchanged (skip only acts while a script is running). L+R+Select turns it off.

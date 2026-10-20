@@ -113,7 +113,8 @@ Editing the translation:
 - **Hornisse:** A/B/Y normals; mash B for the sword frenzy; A+B morning star; rotate the D-pad then A for lightning ("Electric Buffalo").
 - **Sara:** rotate then B for Dragon Fire; B+Y; A+B homing flame.
 - **Ryo:** rotate (slower) then Y for shadow clones; B+Y; A+B bombs.
-- **Toggles:** L+R+X turbo, L+R+Y Sara speed, L+R+A faster monsters, L+R+B rumble off, L+R+Select dialogue skip. Two blinks = on, one = off. All default to off except dialogue skip.
+- **Toggles:** L+R+X turbo, L+R+Y Sara speed, L+R+A faster monsters, L+R+B rumble off, L+R+Select dialogue skip, L+R+Start Select help overlay. Two blinks = on, one = off. All default to off except dialogue skip and the help overlay.
+- **Select = controls help:** in the field or a stage, Select shows a pad diagram with button actions and the character's moves; Select or Start closes it (see docs/MOVES.md).
 - **Start skips dialogue:** press Start while text is showing to skip the rest of the scene's text; flags, map moves and battles still happen.
 - **Boss tip:** the contraption boss is easy from the side.
 

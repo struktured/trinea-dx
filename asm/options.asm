@@ -3,7 +3,8 @@ hirom
 ; SRAM $30:6300 'T', $6301 'D', $6302 opts, $6303 opts^$A5   (invalid -> all OFF = original)
 ;   opts bit0 turbo (20 Hz logic), bits1-2 Sara speed (0 orig, 1 = 5px-equiv, 2 = 6px-equiv), bit3 faster monsters,
 ;   bit4 RETIRED (was rumble off in afb92e1a/2339e2b8; ignored so saves that toggled it get rumble back),
-;   bit5 rumble off (read by asm/rumble.asm rum_muted), bit6 Start-skips-dialogue off (asm/skip.asm)
+;   bit5 rumble off (read by asm/rumble.asm rum_muted), bit6 Start-skips-dialogue off (asm/skip.asm),
+;   bit7 Select help overlay off (asm/help.asm; L+R+Start)
 ; scratch (prev buttons, feedback ticks, saved mosaic, raw pad) lives in WRAM !W+4..+11, not SRAM: SRAM is only read when
 ; the WRAM cache is invalid and only written when a toggle changes (issue #4 real-hardware hardening)
 !S = $306300
@@ -186,6 +187,12 @@ endif
     LSR
     ORA.l !W+8
     STA.l !W+8
+    LDA.l !W+11      ; Start -> bit2 (help overlay off, asm/help.asm)
+    AND #$10
+    LSR
+    LSR
+    ORA.l !W+8
+    STA.l !W+8
     LDA.l !W+10
     AND #$C0
     ORA.l !W+8
@@ -230,7 +237,7 @@ endif
     EOR #$01
     STA.l !W+9
     AND #$01
-    BRA .set
+    BRL .set
 +   LDA.l !W+8
     BIT #$20
     BEQ +
@@ -279,7 +286,7 @@ endif
 .schk:
     LDA.l !W+8
     BIT #$08
-    BEQ .fb
+    BEQ .hchk
     LDA.l !W+9
     EOR #$40          ; bit6 = Start-skips-dialogue OFF
     STA.l !W+9
@@ -287,6 +294,18 @@ endif
     ASL
     LDA #$00
     ROL               ; A = bit6
+    BRA .set
+.hchk:
+    LDA.l !W+8
+    BIT #$04
+    BEQ .fb
+    LDA.l !W+9
+    EOR #$80          ; bit7 = Select help overlay OFF
+    STA.l !W+9
+    ASL
+    LDA #$00
+    ROL
+    EOR #$01          ; displayed 1 (two blinks) = help on
 .set:               ; A = displayed value (0..2)
     INC
     ASL
