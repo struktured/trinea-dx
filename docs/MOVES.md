@@ -7,10 +7,15 @@ These moves were checked in play and in the game code.
 - **Gold:** each rotate move costs 10% of your current gold, with a minimum of 10G. You can't use one with less than 10G (C0:836C).
 - **A+B moves are free.**
 
+Button tables: C0:894B (Hornisse), C0:88FE (Sara), C0:8998 (Ryo). Each maps a button or combo to an action, and the first match wins. Move names come from watching each move in Mesen.
+
 ## Hornisse
 | Input | Move | Cost |
 |---|---|---|
-| A / B / Y | normal attacks | free |
+| B | stab | free |
+| A | slash (overhead) | free |
+| Y | slash (low sweep) | free |
+| B+Y | no move of its own: his table has no B+Y entry, so it is the B stab | free |
 | mash B (4 quick taps, about 5-10 taps/s) | sword frenzy | free |
 | A+B | morning star | free |
 | rotate the D-pad, then A | lightning ("Electric Buffalo") | 10% gold (min 10G) |
@@ -20,7 +25,10 @@ These moves were checked in play and in the game code.
 | Input | Move | Cost |
 |---|---|---|
 | rotate the D-pad, then B | Dragon Fire | 10% gold (min 10G) |
-| B+Y | B+Y attack | free |
+| B | fire shot (sparks fly forward) | free |
+| A | spark shot (small magic bolt) | free |
+| Y | kick (close range) | free |
+| B+Y | star fall (Sara glows gold, then a huge star crashes down) | free |
 | A+B | homing flame | free |
 | X | X special | 1 X-special use |
 
@@ -28,7 +36,10 @@ These moves were checked in play and in the game code.
 | Input | Move | Cost |
 |---|---|---|
 | rotate the D-pad (slower rotation), then Y | shadow clones | 10% gold (min 10G) |
-| B+Y | B+Y attack | free |
+| B | sickle (close range) | free |
+| A | chain sickle (thrown on a chain) | free |
+| Y | throwing blade | free |
+| B+Y | wall of fire (a column of flames in front of him) | free |
 | A+B | bombs | free |
 | X | X special | 1 X-special use |
 

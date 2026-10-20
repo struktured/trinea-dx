@@ -25,7 +25,7 @@ def glyph(c):
     else: raise SystemExit('helpgfx: no glyph for %r'%c)
     return dec(R[0x37000+t*16:0x37000+t*16+16])
 W,H=256,224
-def page(name,moves):
+def page(name,moves,btn):
     img=np.zeros((H,W),np.uint8); pal=np.zeros((H//8,W//8),np.uint8)   # per-tile palette
     def text(col,row,s,p=0):
         for i,c in enumerate(s):
@@ -49,7 +49,7 @@ def page(name,moves):
     for ch,cx,cy in (('X',104,22),('Y',91,34),('A',117,34),('B',104,46),('L',26,4),('R',101,4)): letter(ch,cx,cy)
     img[oy:oy+64,ox:ox+128]=a
     # labels right of the pad (x tiles 18..31) at the button heights
-    text(18,3,'X Special',0); text(18,5,'A Attack',0); text(18,7,'Y Attack',0); text(18,9,'B Attack',0)
+    text(18,3,'X Special',0); text(18,5,'A '+btn['A'],0); text(18,7,'Y '+btn['Y'],0); text(18,9,'B '+btn['B'],0)
     text(1,12,'D-pad: move',0); text(17,12,'START: pause',0)
     text(1,14,'SELECT: this help',0); text(1,15,'Hold L+R+button: DX options',0)
     ctext(17,name+"'S MOVES",1)
@@ -57,9 +57,15 @@ def page(name,moves):
         text(1,18+i,k,1 if k else 0); text(12,18+i,v,0) if len(k)<=10 else None
     ctext(26,'SELECT or START: back',1)
     return img,pal
-P={0:('HORNISSE',[('A+B','Morning star'),('Mash B','Sword frenzy'),('Spin D-pad','then A: Lightning'),('','(costs 1/10 of gold)'),('X','X special (uses 1)')]),
-   2:('RYO',[('A+B','Bombs'),('B+Y','B+Y attack'),('Spin D-pad','(slow) then Y:'),('','Shadow clones'),('','(costs 1/10 of gold)'),('X','X special (uses 1)')]),
-   1:('SARA',[('A+B','Homing flame'),('B+Y','B+Y attack'),('Spin D-pad','then B: Dragon Fire'),('','(costs 1/10 of gold)'),('X','X special (uses 1)')])}
+# Button styles per character: the pad tables at C0:894B (Hornisse) / C0:88FE (Sara) / C0:8998 (Ryo) map each
+# button/combo to an action, names from watching each one in Mesen. B+Y exists only for Sara (star fall) and
+# Ryo (wall of fire); Hornisse's table has no B+Y entry, so B+Y is just his B stab.
+P={0:('HORNISSE',[('A+B','Morning star'),('Mash B','Sword frenzy'),('Spin D-pad','then A: Lightning'),('','(costs 1/10 of gold)'),('X','X special (uses 1)')],
+      {'B':'Stab','A':'Slash','Y':'Slash'}),
+   1:('SARA',[('A+B','Homing flame'),('B+Y','Star fall'),('Spin D-pad','then B: Dragon Fire'),('','(costs 1/10 of gold)'),('X','X special (uses 1)')],
+      {'B':'Fire shot','A':'Spark shot','Y':'Kick'}),
+   2:('RYO',[('A+B','Bombs'),('B+Y','Wall of fire'),('Spin D-pad','(slow) then Y:'),('','Shadow clones'),('','(costs 1/10 of gold)'),('X','X special (uses 1)')],
+      {'B':'Sickle','A':'Chain sickle','Y':'Throw blade'})}
 tiles={bytes(16):0}; chr_=bytearray(16); maps=bytearray(); prev=[]
 for k in (0,1,2):
     img,pal=page(*P[k])
