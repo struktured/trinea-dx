@@ -67,7 +67,7 @@ def page(name,moves,btn):
             text(col,row,c,1 if gold else 0); col+=1
     ctext(1,'CONTROLS - '+name,1)
     # --- SNES pad, tiles x 2..17, y 3..10 (128 x 64 px)
-    ox,oy=8,24          # pad at x 8..135: a full tile (8 px+) of space before the labels at column 18
+    ox,oy=8,24          # pad at x 8..135, y 24..87: a full tile (8 px+) of space before the labels at column 18
     pad=Image.new('P',(128,64),0); from PIL import ImageDraw; d=ImageDraw.Draw(pad)
     d.rounded_rectangle((10,0,42,10),radius=4,fill=2); d.rounded_rectangle((85,0,117,10),radius=4,fill=2)   # L, R
     d.rounded_rectangle((0,6,127,63),radius=26,fill=2); d.rounded_rectangle((2,8,125,61),radius=24,fill=3)   # body
@@ -89,13 +89,20 @@ def page(name,moves,btn):
     # straight down out of the pad, then out to the first letter of its label (Select left, Start right).
     rich(1,12,'{SELECT}: help'); rich(16,12,'{START}: pause')   # drops at x 12 / 132: 60 px either side of x 72
     for bx,lx in ((ox+SELX,1*8+4),(ox+STAX,16*8+4)):
-        img[oy+47:oy+68+1,bx]=1                       # down from the button to y 92 (row 11)
+        img[oy+47:92+1,bx]=1                           # down from the button to y 92 (row 11)
         img[92,min(bx,lx):max(bx,lx)+1]=1              # across
-        img[92:95,lx]=1                                # down to just above the label
-    rich(1,14,'{D-pad}: move'); rich(1,15,'{L+R+button}: DX options')
-    ctext(17,name+"'S MOVES",1)
-    for i,(k,v) in enumerate(moves):
-        text(1,18+i,k,1 if k else 0); rich(12,18+i,v)
+        img[92:95,lx]=1                                # down to just above the label (row 12)
+    # rows 12-14 are one block of controls; ordered so no p/g/q/y tail lands on ink (help/pause/options tails
+    # fall into blank columns of the next row, D-pad's into the blank row 15 above the heading)
+    rich(1,13,'{L+R+button}: DX options'); rich(1,14,'{D-pad}: move')
+    ctext(16,name+"'S MOVES",1)
+    # one blank row between entries (a continuation line has an empty key and stays with its entry), so every
+    # descender has a clear row under it; Ryo's 4 entries / 6 lines end on row 25, just above 'back' (no tails there)
+    r=15   # first entry right under the heading (row 17)
+    for k,v in moves:
+        r+=2 if k else 1
+        text(1,r,k,1 if k else 0); rich(12,r,v)
+    assert r<=25,(name,r)
     ctext(26,'SELECT or START: back',1)
     put_tails()
     return img,pal
