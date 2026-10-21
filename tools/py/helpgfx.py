@@ -11,11 +11,13 @@ R=open(os.environ['TRINEA_ROM'],'rb').read()
 SM=json.load(open(FONT+'/small_map.json'))['map']; ADD=open(FONT+'/small_add.bin','rb').read(); FIRST=0x9E
 def _g(rows): return np.array([[{'.':0,'#':1,'+':2}[ch] for ch in r] for r in rows],np.uint8)
 # The 8x8 font's p/g/q/y have no room for descenders, so they sit on the baseline and read like capitals
-# ("SPecial", "helP"). Overlay-only versions with a short bowl and a visible tail:
-DESC={'p':_g(['........','........','#####+..','##+.##+.','#####+..','##+.....','##+.....','##+.....']),
-      'q':_g(['........','........','.#####+.','##+.##+.','.#####+.','....##+.','....##+.','....##+.']),
-      'g':_g(['........','........','.#####+.','##+.##+.','.#####+.','....##+.','##+.##+.','.####+..']),
-      'y':_g(['........','........','##+.##+.','##+.##+.','.#####+.','....##+.','##+.##+.','.####+..'])}
+# ("SPecial", "helP"). Overlay-only versions: the top lines up with the x-height of o/n/a (row 3), the bowl is
+# 4 rows like the font's o, and the stem/tail drops one row below the baseline into row 0 of the tile below
+# (every glyph leaves row 0 blank, so it can never collide; text() still checks).
+DESC={'p':_g(['........','........','........','#####+..','##+.##+.','##+.##+.','#####+..','##+.....','##+.....']),
+      'q':_g(['........','........','........','.#####+.','##+.##+.','##+.##+.','.#####+.','....##+.','....##+.']),
+      'g':_g(['........','........','........','.#####+.','##+.##+.','##+.##+.','.#####+.','....##+.','.####+..']),
+      'y':_g(['........','........','........','##+.##+.','##+.##+.','##+.##+.','.#####+.','....##+.','.####+..'])}
 def dec(b):
     t=np.zeros((8,8),np.uint8)
     for y in range(8):
@@ -28,7 +30,7 @@ def glyph(c):
     elif 'A'<=c<='Z': t=0x79+ord(c)-65
     elif c=='?': t=0x96
     elif c=='!': t=0x97
-    elif c in DESC: return DESC[c]
+    elif c in DESC: return DESC[c][:8]
     elif c in SM: return dec(ADD[(SM[c]-FIRST)*16:(SM[c]-FIRST)*16+16])
     else: raise SystemExit('helpgfx: no glyph for %r'%c)
     return dec(R[0x37000+t*16:0x37000+t*16+16])
@@ -38,6 +40,15 @@ def page(name,moves,btn):
     def text(col,row,s,p=0):
         for i,c in enumerate(s):
             img[row*8:row*8+8,(col+i)*8:(col+i)*8+8]=glyph(c); pal[row,col+i]=p
+            if c in DESC: tails.append((row,col+i,c))
+    tails=[]
+    def put_tails():   # after all text: descenders go into the top rows of the tile below, onto blank pixels only
+        for row,col,c in tails:
+            t=DESC[c][8:]; y,x=row*8+8,col*8; cur=img[y:y+1,x:x+8]
+            if (cur[t>0]).any(): raise SystemExit('helpgfx: descender of %r at %d,%d hits ink'%(c,col,row))
+            if not img[y:y+8,x:x+8].any(): pal[row+1,col]=pal[row,col]
+            elif pal[row+1,col]!=pal[row,col]: raise SystemExit('helpgfx: descender of %r at %d,%d changes palette'%(c,col,row))
+            img[y:y+1,x:x+8]=np.where(t>0,t,cur)
     def ctext(row,s,p=0): text((32-len(s))//2,row,s,p)
     ctext(1,'CONTROLS - '+name,1)
     # --- SNES pad, tiles x 2..17, y 3..10 (128 x 64 px)
@@ -65,6 +76,7 @@ def page(name,moves,btn):
     for i,(k,v) in enumerate(moves):
         text(1,18+i,k,1 if k else 0); text(12,18+i,v,0) if len(k)<=10 else None
     ctext(26,'SELECT or START: back',1)
+    put_tails()
     return img,pal
 # Button styles per character: the pad tables at C0:894B (Hornisse) / C0:88FE (Sara) / C0:8998 (Ryo) map each
 # button/combo to an action, names from watching each one in Mesen. B+Y exists only for Sara (star fall) and
