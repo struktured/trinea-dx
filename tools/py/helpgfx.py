@@ -18,6 +18,8 @@ DESC={'p':_g(['........','........','........','#####+..','##+.##+.','##+.##+.',
       'q':_g(['........','........','........','.#####+.','##+.##+.','##+.##+.','.#####+.','....##+.','....##+.']),
       'g':_g(['........','........','........','.#####+.','##+.##+.','##+.##+.','.#####+.','....##+.','.####+..']),
       'y':_g(['........','........','........','##+.##+.','##+.##+.','##+.##+.','.#####+.','....##+.','.####+..'])}
+# '%' is not in the font: overlay-only, digit height (rows 1-7) with the font's 1-px right/bottom shadow style
+EXTRA={'%':_g(['........','##+..##+','##+.##+.','...##+..','..##+...','.##+.##+','##+..##+','........'])}
 def dec(b):
     t=np.zeros((8,8),np.uint8)
     for y in range(8):
@@ -31,6 +33,7 @@ def glyph(c):
     elif c=='?': t=0x96
     elif c=='!': t=0x97
     elif c in DESC: return DESC[c][:8]
+    elif c in EXTRA: return EXTRA[c]
     elif c in SM: return dec(ADD[(SM[c]-FIRST)*16:(SM[c]-FIRST)*16+16])
     else: raise SystemExit('helpgfx: no glyph for %r'%c)
     return dec(R[0x37000+t*16:0x37000+t*16+16])
@@ -94,11 +97,11 @@ def page(name,moves,btn):
 # Button styles per character: the pad tables at C0:894B (Hornisse) / C0:88FE (Sara) / C0:8998 (Ryo) map each
 # button/combo to an action, names from watching each one in Mesen. B+Y exists only for Sara (star fall) and
 # Ryo (wall of fire); Hornisse's table has no B+Y entry, so B+Y is just his B stab.
-P={0:('HORNISSE',[('A+B','Morning star'),('Mash B','Sword frenzy'),('Spin D-pad','then {A}: Lightning'),('','(costs 1/10 of gold)'),('X','Shock wave (uses 1)')],
+P={0:('HORNISSE',[('A+B','Morning star'),('Mash B','Sword frenzy'),('Spin D-pad','then {A}: Lightning'),('','(costs 10% of gold)'),('X','Shock wave (uses 1)')],
       {'X':'Shock wave','B':'Stab','A':'Slash','Y':'Slash'}),
-   1:('SARA',[('A+B','Homing flame'),('B+Y','Star fall'),('Spin D-pad','then {B}: Dragon Fire'),('','(costs 1/10 of gold)'),('X','Giant star (uses 1)')],
+   1:('SARA',[('A+B','Homing flame'),('B+Y','Star fall'),('Spin D-pad','then {B}: Dragon Fire'),('','(costs 10% of gold)'),('X','Giant star (uses 1)')],
       {'X':'Giant star','B':'Fire shot','A':'Spark shot','Y':'Wing spin'}),
-   2:('RYO',[('A+B','Bombs'),('B+Y','Wall of fire'),('Spin D-pad','(slow) then {Y}:'),('','Shadow clones'),('','(costs 1/10 of gold)'),('X','Petal storm (uses 1)')],
+   2:('RYO',[('A+B','Bombs'),('B+Y','Wall of fire'),('Spin D-pad','(slow) then {Y}:'),('','Shadow clones'),('','(costs 10% of gold)'),('X','Petal storm (uses 1)')],
       {'X':'Petal storm','B':'Sickle','A':'Chain sickle','Y':'Throw blade'})}
 tiles={bytes(16):0}; chr_=bytearray(16); maps=bytearray(); prev=[]
 for k in (0,1,2):
