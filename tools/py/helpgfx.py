@@ -19,6 +19,10 @@ DESC={'p':_g(['........','........','........','#####+..','##+.##+.','##+.##+.',
       'g':_g(['........','........','........','.#####+.','##+.##+.','##+.##+.','.#####+.','....##+.','.####+..']),
       'y':_g(['........','........','........','##+.##+.','##+.##+.','##+.##+.','.#####+.','....##+.','.####+..'])}
 # '%' is not in the font: overlay-only, digit height (rows 1-7) with the font's 1-px right/bottom shadow style
+# Overlay-only capitals (picked by Carmelo from docs/screenshots/sara_YA_grid.png): the ROM's A leans (only its
+# left side steps out) and its Y reads like a lowercase y. A1: pointed apex, middle crossbar; Y4: blocky symmetric.
+CAPS={'A':_g(['........','..###+..','.##+##+.','##+..##+','##+..##+','#######+','##+..##+','##+..##+']),
+      'Y':_g(['........','##+.##+.','##+.##+.','.####+..','..##+...','..##+...','..##+...','..##+...'])}
 EXTRA={'%':_g(['........','##+..##+','##+.##+.','...##+..','..##+...','.##+.##+','##+..##+','........'])}
 def dec(b):
     t=np.zeros((8,8),np.uint8)
@@ -28,6 +32,7 @@ def dec(b):
     return t
 def glyph(c):
     if c==' ': return np.zeros((8,8),np.uint8)
+    if c in CAPS: return CAPS[c]
     if c.isdigit(): t=0x6F+int(c)
     elif 'A'<=c<='Z': t=0x79+ord(c)-65
     elif c=='?': t=0x96
