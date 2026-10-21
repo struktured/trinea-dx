@@ -19,7 +19,7 @@ Button tables: C0:894B (Hornisse), C0:88FE (Sara), C0:8998 (Ryo). Each maps a bu
 | mash B (4 quick taps, about 5-10 taps/s) | sword frenzy | free |
 | A+B | morning star | free |
 | rotate the D-pad, then A | lightning ("Electric Buffalo") | 10% gold (min 10G) |
-| X | X special | 1 X-special use |
+| X | shock wave (he raises his sword, the screen pulses blue with a dark ring at his feet, then every enemy on screen explodes) | 1 X-special use |
 
 ## Sara
 | Input | Move | Cost |
@@ -30,7 +30,7 @@ Button tables: C0:894B (Hornisse), C0:88FE (Sara), C0:8998 (Ryo). Each maps a bu
 | Y | wing spin (she turns a full circle with her wings spread; close range, no projectile) | free |
 | B+Y | star fall (Sara glows gold, then a huge star crashes down) | free |
 | A+B | homing flame | free |
-| X | X special | 1 X-special use |
+| X | giant star (the screen pulses red and a huge purple star-field star grows over the whole screen, hitting every enemy) | 1 X-special use |
 
 ## Ryo
 | Input | Move | Cost |
@@ -41,7 +41,7 @@ Button tables: C0:894B (Hornisse), C0:88FE (Sara), C0:8998 (Ryo). Each maps a bu
 | Y | throwing blade | free |
 | B+Y | wall of fire (a column of flames in front of him) | free |
 | A+B | bombs | free |
-| X | X special | 1 X-special use |
+| X | petal storm (the screen turns magenta and three-lobed petals swirl across it, then every enemy on screen explodes) | 1 X-special use |
 
 ## In-game toggles (DX options)
 Hold L+R in the field, then tap a button. The screen gives a mosaic blink to confirm: **two blinks = on, one blink = off**. Every toggle defaults to **off**, except dialogue skip (on). Settings are kept in battery SRAM ($30:6300).

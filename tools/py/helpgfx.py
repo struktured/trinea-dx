@@ -35,6 +35,7 @@ def glyph(c):
     else: raise SystemExit('helpgfx: no glyph for %r'%c)
     return dec(R[0x37000+t*16:0x37000+t*16+16])
 W,H=256,224
+SELX,STAX=56,72   # pad-local centres of SELECT / START
 def page(name,moves,btn):
     img=np.zeros((H,W),np.uint8); pal=np.zeros((H//8,W//8),np.uint8)   # per-tile palette
     def text(col,row,s,p=0):
@@ -50,6 +51,12 @@ def page(name,moves,btn):
             elif pal[row+1,col]!=pal[row,col]: raise SystemExit('helpgfx: descender of %r at %d,%d changes palette'%(c,col,row))
             img[y:y+1,x:x+8]=np.where(t>0,t,cur)
     def ctext(row,s,p=0): text((32-len(s))//2,row,s,p)
+    def rich(col,row,s):   # {...} = a button name, drawn gold (palette 1); everything else white
+        gold=False
+        for c in s:
+            if c=='{': gold=True; continue
+            if c=='}': gold=False; continue
+            text(col,row,c,1 if gold else 0); col+=1
     ctext(1,'CONTROLS - '+name,1)
     # --- SNES pad, tiles x 2..17, y 3..10 (128 x 64 px)
     ox,oy=8,24          # pad at x 8..135: a full tile (8 px+) of space before the labels at column 18
@@ -57,7 +64,8 @@ def page(name,moves,btn):
     d.rounded_rectangle((10,0,42,10),radius=4,fill=2); d.rounded_rectangle((85,0,117,10),radius=4,fill=2)   # L, R
     d.rounded_rectangle((0,6,127,63),radius=26,fill=2); d.rounded_rectangle((2,8,125,61),radius=24,fill=3)   # body
     d.rectangle((24,22,33,49),fill=2); d.rectangle((15,31,42,40),fill=2)                                     # D-pad
-    d.rounded_rectangle((50,38,61,43),radius=2,fill=2); d.rounded_rectangle((66,38,77,43),radius=2,fill=2)   # SELECT START
+    for cx in (SELX,STAX):   # SELECT, START: small capsules slanted up to the right, as on the real pad
+        d.line([(cx-4,44),(cx+4,38)],fill=2,width=5); d.ellipse((cx-7,41,cx-2,46),fill=2); d.ellipse((cx+2,35,cx+7,40),fill=2)
     for cx,cy in ((104,22),(91,34),(117,34),(104,46)): d.ellipse((cx-7,cy-7,cx+7,cy+7),fill=2)            # X Y A B
     a=np.array(pad,np.uint8)
     def letter(ch,cx,cy):   # stroke only (white) centred on a button
@@ -68,25 +76,30 @@ def page(name,moves,btn):
     for ch,cx,cy in (('X',104,22),('Y',91,34),('A',117,34),('B',104,46),('L',26,4),('R',101,4)): letter(ch,cx,cy)
     img[oy:oy+64,ox:ox+128]=a
     # labels right of the pad (x tiles 18..31) at the button heights
-    text(18,3,'X Special',0); text(18,5,'A '+btn['A'],0); text(18,7,'Y '+btn['Y'],0); text(18,9,'B '+btn['B'],0)
-    # SELECT and START share one row, mirrored about the screen centre (same order as on the pad: Select left, Start right)
-    text(3,12,'SELECT: help',0); text(17,12,'START: pause',0)
-    text(3,14,'D-pad: move',0); text(3,15,'L+R+button: DX options',0)
+    for r,b in ((3,'X'),(5,'A'),(7,'Y'),(9,'B')): rich(18,r,'{%s} %s'%(b,btn[b]))
+    # SELECT and START: one row, labels mirrored about the pad centre (x 72); a white leader runs from each button
+    # straight down out of the pad, then out to the first letter of its label (Select left, Start right).
+    rich(1,12,'{SELECT}: help'); rich(16,12,'{START}: pause')   # drops at x 12 / 132: 60 px either side of x 72
+    for bx,lx in ((ox+SELX,1*8+4),(ox+STAX,16*8+4)):
+        img[oy+47:oy+68+1,bx]=1                       # down from the button to y 92 (row 11)
+        img[92,min(bx,lx):max(bx,lx)+1]=1              # across
+        img[92:95,lx]=1                                # down to just above the label
+    rich(1,14,'{D-pad}: move'); rich(1,15,'{L+R+button}: DX options')
     ctext(17,name+"'S MOVES",1)
     for i,(k,v) in enumerate(moves):
-        text(1,18+i,k,1 if k else 0); text(12,18+i,v,0) if len(k)<=10 else None
+        text(1,18+i,k,1 if k else 0); rich(12,18+i,v)
     ctext(26,'SELECT or START: back',1)
     put_tails()
     return img,pal
 # Button styles per character: the pad tables at C0:894B (Hornisse) / C0:88FE (Sara) / C0:8998 (Ryo) map each
 # button/combo to an action, names from watching each one in Mesen. B+Y exists only for Sara (star fall) and
 # Ryo (wall of fire); Hornisse's table has no B+Y entry, so B+Y is just his B stab.
-P={0:('HORNISSE',[('A+B','Morning star'),('Mash B','Sword frenzy'),('Spin D-pad','then A: Lightning'),('','(costs 1/10 of gold)'),('X','X special (uses 1)')],
-      {'B':'Stab','A':'Slash','Y':'Slash'}),
-   1:('SARA',[('A+B','Homing flame'),('B+Y','Star fall'),('Spin D-pad','then B: Dragon Fire'),('','(costs 1/10 of gold)'),('X','X special (uses 1)')],
-      {'B':'Fire shot','A':'Spark shot','Y':'Wing spin'}),
-   2:('RYO',[('A+B','Bombs'),('B+Y','Wall of fire'),('Spin D-pad','(slow) then Y:'),('','Shadow clones'),('','(costs 1/10 of gold)'),('X','X special (uses 1)')],
-      {'B':'Sickle','A':'Chain sickle','Y':'Throw blade'})}
+P={0:('HORNISSE',[('A+B','Morning star'),('Mash B','Sword frenzy'),('Spin D-pad','then {A}: Lightning'),('','(costs 1/10 of gold)'),('X','Shock wave (uses 1)')],
+      {'X':'Shock wave','B':'Stab','A':'Slash','Y':'Slash'}),
+   1:('SARA',[('A+B','Homing flame'),('B+Y','Star fall'),('Spin D-pad','then {B}: Dragon Fire'),('','(costs 1/10 of gold)'),('X','Giant star (uses 1)')],
+      {'X':'Giant star','B':'Fire shot','A':'Spark shot','Y':'Wing spin'}),
+   2:('RYO',[('A+B','Bombs'),('B+Y','Wall of fire'),('Spin D-pad','(slow) then {Y}:'),('','Shadow clones'),('','(costs 1/10 of gold)'),('X','Petal storm (uses 1)')],
+      {'X':'Petal storm','B':'Sickle','A':'Chain sickle','Y':'Throw blade'})}
 tiles={bytes(16):0}; chr_=bytearray(16); maps=bytearray(); prev=[]
 for k in (0,1,2):
     img,pal=page(*P[k])
