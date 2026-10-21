@@ -9,7 +9,7 @@
 ;  - Before drawing, the VRAM it overwrites (chr at word $7000, tilemap at word $7800) is DMA-read into WRAM
 ;    $7E:8000-8FFF, a 4 KB block the game clears every tick and never reads in stages (asm/perf.asm perf_clr).
 ;    If that block is not all zero the overlay is skipped. On close it is written back and re-zeroed.
-;  - CGRAM 0-7, DMA channel 7, HDMA ($0831), mosaic, TM/TS/colour-math and BG3 scroll shadows are saved/restored.
+;  - CGRAM 0-7, DMA channels 6+7, HDMA ($0831), mosaic, TM/TS/colour-math and BG3 scroll shadows are saved/restored.
 ;  - BGMODE/BG3SC/BG34NBA/W34SEL ($2105/$2109/$210C/$2124) are write-only and the game has no shadows for them,
 ;    so every write site the game has gets a tiny trampoline that also stores the value in SRAM (see bottom).
 !H   = $7ECF30   ; WRAM: +0 prev Select, +10.. state saved while the overlay is open
@@ -90,8 +90,9 @@ help_show:
     INX
     CPX #$0004
     BNE -
-    LDX #$0000          ; DMA channel 7
+    LDX #$0000          ; DMA channels 7 (general DMA) and 6 (our HDMA on BG3 scroll)
 -   LDA $4370,x : STA.l !H+43,x
+    LDA $4360,x : STA.l !H+54,x
     INX
     CPX #$000B
     BNE -
@@ -173,7 +174,24 @@ help_show:
     STZ $085B : STZ $212D
     STZ $085C : STZ $2131
     STZ $00B4
-    STZ $0831 : STZ $420C
+    ; HDMA channel 6 -> BG3VOFS ($2112, mode 2 = one register written twice): spaces the moves list out at
+    ; pixel level (table per character, 64 bytes each, built by helpgfx.py). The NMI writes $420C from $0831.
+    LDA #$02 : STA $4360
+    LDA #$12 : STA $4361
+    REP #$20
+    LDA $1430
+    AND #$00FF
+    DEC
+    CMP #$0003
+    BCC +
+    LDA #$0001
++   ASL : ASL : ASL : ASL : ASL : ASL
+    CLC
+    ADC.w #help_hdma
+    STA $4362
+    SEP #$20
+    LDA.b #help_hdma>>16 : STA $4364
+    LDA #$40 : STA $0831 : STA $420C
     JSR h_on
     ; wait: Select/Start released, then pressed, then released
     JSR h_rel
@@ -227,6 +245,7 @@ help_show:
     LDA.l !H+11 : STA $0831
     LDX #$0000
 -   LDA.l !H+43,x : STA $4370,x
+    LDA.l !H+54,x : STA $4360,x
     INX
     CPX #$000B
     BNE -
@@ -276,6 +295,7 @@ help_pal:  ; per character: 0 background, 1 white, 2 black, 3 grey | 5 yellow (p
     dw $1121, $7FFF, $0000, $5294, $1121, $13FF, $0000, $0C63   ; Ryo: dark green
 help_chr:  incbin "../build/gen/help_chr.bin"
 help_map:  incbin "../build/gen/help_map.bin"
+help_hdma: incbin "../build/gen/help_hdma.bin"
 assert (help_map&$FF0000) == ((help_map+$14FF)&$FF0000), "help data crosses a bank"
 !hn = 0
 
