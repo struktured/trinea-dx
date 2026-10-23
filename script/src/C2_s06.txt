@@ -3,7 +3,7 @@ C2_s06_0002 [wait][page]This is all we can do for you now...... Please, we're co
 C2_s06_0003 [hl]Hornisse[hl]: [ENDK]
 C2_s06_0004 This is no time for that![wait][END]
 C2_s06_0005 [hl]Sara[hl]: .........*blush*[ENDK]
-C2_s06_0007 [hl]Ryo[hl]: "On the road I go~"...... Oops.[wait][page]This is no time for singing in the bath.[ENDK]
+C2_s06_0007 [hl]Ryo[hl]: "On the road I go~"...... Oops.[wait][page]This is no time for humming to myself.[ENDK]
 C2_s06_0010 My apologies![wait][END]
 C2_s06_0011 [hl]Sara[hl]: Nah...... No way Yayoi would be in here.[wait][END]
 C2_s06_0012 [hl]Ryo[hl]: [ENDK]
