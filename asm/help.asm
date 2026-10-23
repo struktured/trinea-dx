@@ -84,6 +84,10 @@ help_show:
     LDA $01CC : STA.l !H+10
     LDA $0831 : STA.l !H+11
     LDA $00B4 : STA.l !H+12
+    LDA.w $009F : STA.l !H+65 ; per-frame scroll/wave effect (NMI JMP ($8AC9,x)) and BG3 wave swapper (NMI DF2F):
+    LDA.w $00E0 : STA.l !H+66 ; parked while open so nothing in the NMI touches scroll / HDMA under the overlay
+    STZ $009F
+    STZ $00E0
     LDX #$0000
 -   LDA $085A,x : STA.l !H+13,x
     LDA $01A9,x : STA.l !H+17,x
@@ -195,15 +199,13 @@ help_show:
     JSR h_on
     ; wait: Select/Start released, then pressed, then released
     JSR h_rel
--   LDA #$38
-    JSL help_wait
+-   JSR h_wait
     LDA $0082
     AND #$30
     BEQ -
     JSR h_rel
     ; close
-    LDA #$38
-    JSL help_wait
+    JSR h_wait
     JSR h_off
     REP #$20
     LDA #!HCHR : STA $2116
@@ -243,6 +245,8 @@ help_show:
     LDA $085C : STA $2131
     LDA.l !H+12 : STA $00B4 : STA $2106
     LDA.l !H+11 : STA $0831
+    LDA.l !H+65 : STA.w $009F
+    LDA.l !H+66 : STA.w $00E0
     LDX #$0000
 -   LDA.l !H+43,x : STA $4370,x
     LDA.l !H+54,x : STA $4360,x
@@ -280,9 +284,13 @@ h_on:                   ; A8: brightness from the game's shadow, NMI back on ($8
     LDA $4210
     LDA #$81 : STA $4200
     RTS
+h_wait:                 ; A8: one frame while the overlay is up. Right after the NMI (still in vblank) force HDMA
+    LDA #$38            ; back to our channel 6 only: the NMI ORs effect channels into $0831 (e.g. C0:7E1C) and
+    JSL help_wait       ; writes $420C from it, which would run a stage's scroll wave under the overlay
+    LDA #$40 : STA $0831 : STA $420C
+    RTS
 h_rel:                  ; A8: wait until Select and Start are both up
--   LDA #$38
-    JSL help_wait
+-   JSR h_wait
     LDA $0082
     AND #$30
     BNE -
