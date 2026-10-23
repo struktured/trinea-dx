@@ -28,6 +28,14 @@
 !R_ON   = !R+13             ; consecutive frames with a non-zero (non-zap) packet
 !R_CD   = !R+14             ; cooldown frames after the hard cap: new events ignored
 !R_WD   = !R+15             ; NMI watchdog: frames since the last rum_tick
+;; Pulse-forever guard (2026-10-23, Sara run on rivalmage pulsing 60 on / 30 off without end): the cap's cooldown
+;; simply expired after 30 frames, so a condition that re-arms every frame (multi-hit shot / hazard / contact hit
+;; re-entering the hit routine each frame) restarted the cycle forever. Now (1) an event of the same rank no longer
+;; restarts a running pulse (one shot per event), (2) the cooldown is re-armed by every event that arrives during it,
+;; so it only ends once the triggering condition has been quiet for !RUM_CDN frames, and (3) a leaky bucket (+2 per
+;; rumbling frame, -1 per frame) trips the same suppression once rumble has been on for > ~2 s net in a short window.
+!R_ACC  = $7ECF1E           ; leaky bucket (free byte after the options scratch !W = $7ECF10..1B)
+!RUM_ACC = 240              ; bucket limit (= 120 frames net rumble)
 !RUM_CAP = 60               ; hard max continuous rumble (frames), except the scripted zap
 !RUM_CDN = 30               ; cooldown after the cap trips
 !BIG_HP = 33                ; enemies with >= this HP count as bosses (normal enemies have <= 32)
@@ -182,6 +190,7 @@ rum_init:
     sta.l !R_ON
     sta.l !R_CD
     sta.l !R_WD
+    sta.l !R_ACC
     lda #$A5
     sta.l !R_SIG
     lda #$5A
@@ -202,17 +211,23 @@ rum_tick:                   ; A8 X8
     jmp rum_init
 +   lda #0
     sta.l !R_WD
+    lda.l !R_ACC            ; bucket leak
+    beq +
+    dec
+    sta.l !R_ACC
++
    lda.l !R_CD             ; cooldown after the hard cap
     beq +
     dec
     sta.l !R_CD
 +   jsr rum_muted           ; L+R+B option: rumble off (cancel any pulse, finish with off packets)
-    bne .idle
-    jsr rum_demo            ; attract/title demo ($F0 != 0): no rumble at all
+    beq +
+    jmp .idle
++   jsr rum_demo            ; attract/title demo ($F0 != 0): no rumble at all
     beq +
     lda #0
     sta.l !R_ZAP
-    bra .idle
+    jmp .idle
 +
     lda.l !R_ZAP            ; Vampierre zap cutscene: crackly strong pulses for as long as the animation runs
     beq +
@@ -237,10 +252,15 @@ rum_tick:                   ; A8 X8
     sta.l !R_ON
     cmp #!RUM_CAP
     bcc +
-    lda #!RUM_CDN
-    sta.l !R_CD
-    bra .idle
-+   lda.l !R_POS
+    bra .trip
++   lda.l !R_ACC            ; leaky bucket: +2 now (the -1 runs every frame below)
+    clc
+    adc #2
+    bcs .trip
+    cmp #!RUM_ACC
+    bcs .trip
+    sta.l !R_ACC
+    lda.l !R_POS
     tax
     inx
     txa
@@ -251,6 +271,11 @@ rum_tick:                   ; A8 X8
     lda #2
     sta.l !R_OFF
     rts
+.trip:
+    lda #0
+    sta.l !R_ACC
+    lda #!RUM_CDN
+    sta.l !R_CD
 .idle:
     lda #0
     sta.l !R_ON
@@ -366,8 +391,10 @@ rum_start:                  ; A = event (A8 X8)
     pha
     jsr rum_demo            ; attract demo: never start a pulse
     bne ++
-    lda.l !R_CD             ; hard-cap cooldown: ignore
+    lda.l !R_CD             ; suppression: ignore, and keep it up while the condition keeps firing
     beq +
+    lda #!RUM_CDN
+    sta.l !R_CD
 ++  pla
     rts
 +
@@ -383,6 +410,7 @@ rum_start:                  ; A = event (A8 X8)
     tya
     cmp.l !R_RANK
     bcc .skip
+    beq .skip               ; same event already running: one shot, no restart
 .take:
     tya
     sta.l !R_RANK
