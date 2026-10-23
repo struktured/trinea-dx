@@ -155,6 +155,12 @@ rum_tick:                   ; A8 X8
     jmp rum_init
 +   jsr rum_muted           ; L+R+B option: rumble off (cancel any pulse, finish with off packets)
     bne .idle
+    jsr rum_demo            ; attract/title demo ($F0 != 0): no rumble at all
+    beq +
+    lda #0
+    sta.l !R_ZAP
+    bra .idle
++
     lda.l !R_ZAP            ; Vampierre zap cutscene: crackly strong pulses for as long as the animation runs
     beq +
     dec
@@ -288,8 +294,17 @@ send8:                      ; MSB first; WRIO bit 7 always 1
     bne -
     rts
 
+rum_demo:                   ; A8: Z clear = attract demo running (game demo flag $14F0 = DP $1400 + $F0, as tested by LDA $F0 at C0:F5BA; 1 while the title attract demo plays)
+    lda.l $0014F0
+    rts
+
 rum_start:                  ; A = event (A8 X8)
     pha
+    jsr rum_demo            ; attract demo: never start a pulse
+    beq +
+    pla
+    rts
++
     jsr rum_check
     beq +
     jsr rum_init
