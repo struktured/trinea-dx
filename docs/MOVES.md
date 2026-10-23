@@ -29,7 +29,7 @@ Button tables: C0:894B (Hornisse), C0:88FE (Sara), C0:8998 (Ryo). Each maps a bu
 | A | spark shot (small magic bolt) | free |
 | Y | wing spin (she turns a full circle with her wings spread; close range, no projectile) | free |
 | B+Y | star fall (Sara glows gold, then a huge star crashes down) | free |
-| A+B | homing flame | free |
+| A+B | homing flame (sparks steer into the nearest enemy; looks like B with no enemy on screen). A and B must go down on the same frame: the first button pressed locks in the move (A first = A, B first = B) | free |
 | X | giant star (the screen pulses red and a huge purple star-field star grows over the whole screen, hitting every enemy) | 1 X-special use |
 
 ## Ryo
