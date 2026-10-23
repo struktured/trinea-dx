@@ -21,7 +21,7 @@ C2_s05_0030 [hl]Ryo[hl]: Midori!! Where are you? Where?[wait][page][hl]Kappa Sam
 C2_s05_0031 [wait][page][hl]Kokin Hyakuseki[hl]: Now, now...... no need to panic.[wait][page]"Amid the battle / the samurai of the west / might it be myself?"[wait][page]Mm... You see, I simply adore composing waka poetry......[wait][page]Anyone who disturbs it cannot be allowed to live. Please don't take it personally.[ENDK]
 C2_s05_0033 [hl]Kokin Hyakuseki[hl]: "In defeat, alas / he who knows not where he goes / is the victor, hm"... Gwah.[ENDK]
 C2_s05_0036 [hl]Ryo[hl]: Hah! I win![ENDK]
-C2_s05_0038 [hl]Ryo[hl]: Hey! You there, culprit! Where is Midori!?[wait][page][hl]Armored Samurai SUKE[hl]: What was that!![wait][page]I've never cut down anyone in my life! Don't insult me![wait][page][hl]Armored Samurai KAKU[hl]: Who cares! Let's just cut this guy down![wait][page][hl]Ryo[hl]: What!? Bring it on![ENDK]
+C2_s05_0038 [hl]Ryo[hl]: Hey! You there, killer! Where is Midori!?[wait][page][hl]Armored Samurai SUKE[hl]: What was that!![wait][page]I've never cut down anyone in my life! Don't insult me![wait][page][hl]Armored Samurai KAKU[hl]: Who cares! Let's just cut this guy down![wait][page][hl]Ryo[hl]: What!? Bring it on![ENDK]
 C2_s05_0040 [hl]Armored Samurai SUKE[hl]: Beaten... by a... mere... ninja......[ENDK]
 C2_s05_0042 [hl]Armored Samurai KAKU[hl]: N-no way... We... got... beat...[ENDK]
 C2_s05_0045 [hl]Ryo[hl]: Midori! I won![ENDK]
