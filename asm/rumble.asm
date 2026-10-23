@@ -25,6 +25,11 @@
                             ; !R+10 = rum_limit scratch
 !R_ZAP  = !R+11             ; Vampierre zap: frames left (0 = off; set/cleared by asm/skip.asm op-39 hook)
 !R_ZAPI = !R+12             ; zap pattern index
+!R_ON   = !R+13             ; consecutive frames with a non-zero (non-zap) packet
+!R_CD   = !R+14             ; cooldown frames after the hard cap: new events ignored
+!R_WD   = !R+15             ; NMI watchdog: frames since the last rum_tick
+!RUM_CAP = 60               ; hard max continuous rumble (frames), except the scripted zap
+!RUM_CDN = 30               ; cooldown after the cap trips
 !BIG_HP = 33                ; enemies with >= this HP count as bosses (normal enemies have <= 32)
 !WRIO   = $004201
 !JOY0   = $004016
@@ -104,6 +109,13 @@ org $C8697A                 ; bank-C8 boss destroyed: STZ $0B00 / LDA #$0012
     jsl h_bkill_c8
     nop : nop
 
+;; NMI watchdog: the NMI handler runs every frame, the pad routine (and so rum_tick) does not - loading, scene
+;; changes, message/cutscene loops that read the pad themselves. A pulse cut by such a gap left the RumbleShock at
+;; its last level until the pad routine ran again (seen on MiSTer as 10s+ of rumble that stopped on Start).
+org $C003C7                 ; NMI: INC $01C9 / LDA #$0000 (A16), then TCD
+    jsl rum_nmi
+    nop : nop
+
 ;; ================= new code (bank $E7, free) =================
 org $E70000
 rum_frame:                  ; A16 here, X/Y width unknown; DB = game's
@@ -123,6 +135,38 @@ rum_frame:                  ; A16 here, X/Y width unknown; DB = game's
     plp                     ; the game's own PLP (replaced)
     jml $C00535             ; RTS
 
+rum_nmi:                    ; A16, X/Y unknown, DB/D = game's at NMI entry
+    inc $01C9               ; replaced
+    php
+    sep #$30
+    phx
+    phy
+    jsr rum_check
+    bne .out
+    lda.l !R_WD
+    cmp #3
+    bcs +
+    inc
+    sta.l !R_WD
+    bra .out
++   lda.l !R_LAST           ; pad routine skipped for 3+ frames: if the motor was left on, stop it now
+    ora.l !R_POS
+    ora.l !R_ZAP
+    beq .out
+    lda #0
+    sta.l !R_POS
+    sta.l !R_RANK
+    sta.l !R_ZAP
+    sta.l !R_ON
+    sta.l !R_OFF
+    jsr send_pkt            ; off packet (sets R_LAST = 0)
+.out:
+    ply
+    plx
+    plp
+    lda #$0000              ; replaced
+    rtl
+
 rum_init:
     lda #0
     sta.l !R_POS
@@ -135,6 +179,9 @@ rum_init:
     sta.l !R_BIGX+1
     sta.l !R_ZAP
     sta.l !R_ZAPI
+    sta.l !R_ON
+    sta.l !R_CD
+    sta.l !R_WD
     lda #$A5
     sta.l !R_SIG
     lda #$5A
@@ -153,6 +200,12 @@ rum_tick:                   ; A8 X8
     jsr rum_check
     beq +
     jmp rum_init
++   lda #0
+    sta.l !R_WD
+   lda.l !R_CD             ; cooldown after the hard cap
+    beq +
+    dec
+    sta.l !R_CD
 +   jsr rum_muted           ; L+R+B option: rumble off (cancel any pulse, finish with off packets)
     bne .idle
     jsr rum_demo            ; attract/title demo ($F0 != 0): no rumble at all
@@ -179,6 +232,16 @@ rum_tick:                   ; A8 X8
     tax
     lda.l rum_env,x
     beq .idle
+    lda.l !R_ON             ; hard cap: an event re-armed every frame (e.g. a lingering hit) must not
+    inc                     ; keep the motor on; stop, send off packets, ignore events for a while
+    sta.l !R_ON
+    cmp #!RUM_CAP
+    bcc +
+    lda #!RUM_CDN
+    sta.l !R_CD
+    bra .idle
++   lda.l !R_POS
+    tax
     inx
     txa
     sta.l !R_POS
@@ -190,6 +253,7 @@ rum_tick:                   ; A8 X8
     rts
 .idle:
     lda #0
+    sta.l !R_ON
     sta.l !R_POS
     sta.l !R_RANK
     lda.l !R_OFF
@@ -301,8 +365,10 @@ rum_demo:                   ; A8: Z clear = attract demo running (game demo flag
 rum_start:                  ; A = event (A8 X8)
     pha
     jsr rum_demo            ; attract demo: never start a pulse
+    bne ++
+    lda.l !R_CD             ; hard-cap cooldown: ignore
     beq +
-    pla
+++  pla
     rts
 +
     jsr rum_check
