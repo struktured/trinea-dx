@@ -93,7 +93,7 @@ Bug reports: https://github.com/struktured/trinea-dx/issues
 -------------------------------------------------------------------------------
  5. CREDITS
 -------------------------------------------------------------------------------
- struktured labs (Carmelo Piccione)
+ struktured labs (struktured)
      Project lead, translation, ROM hacking, fonts, tools, testing
  eadmaster
      RetroSubs English subtitles for Trinea and the table files, which

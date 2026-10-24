@@ -24,7 +24,7 @@ Also worth a short announcement: the RHDN forum thread (topic 40638, where 4ph h
 - **Game:** Trinea (トリネア), Super Nintendo / Super Famicom, 1993, Yanoman / Japan Art Media (JAM)
 - **Category / type:** Translation. Language: English. Status: Complete. Genre: Action RPG.
 - **Version / release date:** 1.0 / 2026-09-26
-- **Author / group:** struktured labs (Carmelo Piccione)
+- **Author / group:** struktured labs (struktured)
 - **Patch format:** IPS (`Trinea (Japan) [T-En by struktured labs v1.0].ips`, 112,968 bytes) in `Trinea_English_v1.0.zip` with `readme.txt`
 - **License:** CC BY-NC-SA 4.0 (translation); MIT (tools/asm source)
 - **Source code:** https://github.com/struktured/trinea-dx
@@ -72,7 +72,7 @@ Patched                                    4,194,304 bytes
 
 ### Credits
 
-- struktured labs (Carmelo Piccione): project lead, translation, hacking, fonts, tools
+- struktured labs (struktured): project lead, translation, hacking, fonts, tools
 - eadmaster: RetroSubs English subtitles and table files (https://github.com/eadmaster/RetroSubs)
 - 4ph: font table help (RHDN forum topic 40638)
 - Original game: Yanoman / Japan Art Media (JAM)

@@ -4,7 +4,7 @@
 
 | Who | What |
 |---|---|
-| **struktured labs (Carmelo Piccione)** | Project lead. Translation, script editing, ROM hacking (VWF, script relocation, 32 Mbit expansion, pre-rendered system text), English fonts, build tools, testing. |
+| **struktured labs (struktured)** | Project lead. Translation, script editing, ROM hacking (VWF, script relocation, 32 Mbit expansion, pre-rendered system text), English fonts, build tools, testing. |
 | **eadmaster** | [RetroSubs](https://github.com/eadmaster/RetroSubs) English subtitles for Trinea (v0.6.2, CC BY-NC-SA 4.0). They were the starting point, and parts of the Sara scenario and opening lines are adapted from them. Also the character table files (`tables/`) and the name list. |
 | **4ph** | Font table help: [romhacking.net forum topic 40638](https://www.romhacking.net/forum/index.php?topic=40638.0). |
 | **Yanoman / Japan Art Media (JAM)** | The original game, *Trinea* (Super Famicom, 1993). |

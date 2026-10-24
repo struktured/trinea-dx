@@ -21,13 +21,13 @@ def ins(r,anchor,text,after=True):
     j=i+len(anchor) if after else i
     r[j:j]=text
 # full roll (index 2, mixed case, names indented 2): after the Japan Art Media special thanks
-ins(rolls[2],b'  Orie Takahashi$$$',b'[ ENGLISH TRANSLATION ]$  struktured labs$  (Carmelo Piccione)$$$[ TRINEA DX ]$  struktured labs$$$'
+ins(rolls[2],b'  Orie Takahashi$$$',b'[ ENGLISH TRANSLATION ]$  struktured labs$  (struktured)$$$[ TRINEA DX ]$  struktured labs$$$'
     b'[ ENGLISH SUBTITLES ]$  eadmaster (RetroSubs)$  Sara scenario and opening$$$')
 # per-scenario rolls (indices 0/1, upper case, centred in 31 columns): before the closing TRINEA card
 def c(s,w=31): p=(w-len(s))//2; return (' '*p+s).encode()
 for k,anchor in ((0,b'$$$          [ TRINEA ]           $'),(1,b'$$$$$$$$          [ TRINEA ]$')):
     pad=k==0
-    lines=[c('[ ENGLISH TRANSLATION ]'),c('STRUKTURED LABS'),c('(CARMELO PICCIONE)'),b'',c('[ TRINEA DX ]'),c('STRUKTURED LABS'),b'',
+    lines=[c('[ ENGLISH TRANSLATION ]'),c('STRUKTURED LABS'),c('(STRUKTURED)'),b'',c('[ TRINEA DX ]'),c('STRUKTURED LABS'),b'',
            c('[ ENGLISH SUBTITLES ]'),c('EADMASTER (RETROSUBS)'),c('SARA SCENARIO AND OPENING'),b'']
     if pad: lines=[l.ljust(31) if l else l for l in lines]
     ins(rolls[k],anchor,b'$$'+b'$'.join(lines)+b'$',after=False)

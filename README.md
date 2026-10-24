@@ -130,7 +130,7 @@ Editing the translation:
 
 ## Credits
 
-- **struktured labs (Carmelo Piccione):** project lead, translation, hacking, font, tools.
+- **struktured labs (struktured):** project lead, translation, hacking, font, tools.
 - **eadmaster:** [RetroSubs](https://github.com/eadmaster/RetroSubs) English subtitles for Trinea and the character
   table files this project started from. Parts of the Sara scenario and the opening are adapted from RetroSubs.
 - **4ph:** font table help ([romhacking.net forum topic 40638](https://www.romhacking.net/forum/index.php?topic=40638.0)).
