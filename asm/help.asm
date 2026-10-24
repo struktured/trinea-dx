@@ -100,11 +100,11 @@ help_show:
     INX
     CPX #$000B
     BNE -
-    STZ $2121           ; CGRAM 0-7 (16 bytes)
+    STZ $2121           ; CGRAM 0-11 (24 bytes, saved at !H+75)
     LDX #$0000
--   LDA $213B : STA.l !H+27,x
+-   LDA $213B : STA.l !H+75,x
     INX
-    CPX #$0010
+    CPX #$0018          ; CGRAM 0-11: palettes 0-2
     BNE -
     ; VRAM -> buffer: chr then map
     LDA #$80 : STA $2115
@@ -146,8 +146,13 @@ help_show:
     LDA #$0001
 +   ASL
     TAX
-    ASL : ASL : ASL
-    TAY                 ; Y = character * 16 = offset of that character's palette
+    PHA
+    ASL
+    CLC
+    ADC $01,s           ; character * 6
+    PLX                 ; (X = character * 2 again)
+    ASL : ASL
+    TAY                 ; Y = character * 24 = offset of that character's palette
     LDA.l help_maps,x
     STA $4372
     STA.l !H+67         ; this character's map (to put the X/A/Y/B labels back after L+R)
@@ -157,7 +162,7 @@ help_show:
     LDA #$80 : STA $420B
     STZ $2121
     TYX
-    LDY #$0010
+    LDY #$0018
 -   LDA.l help_pal,x : STA $2122
     INX
     DEY
@@ -226,9 +231,9 @@ help_show:
     LDA #$80 : STA $420B
     STZ $2121
     LDX #$0000
--   LDA.l !H+27,x : STA $2122
+-   LDA.l !H+75,x : STA $2122
     INX
-    CPX #$0010
+    CPX #$0018          ; CGRAM 0-11: palettes 0-2
     BNE -
     LDA.l !HS+0 : STA $2105
     LDA.l !HS+2 : STA $2109
@@ -291,7 +296,7 @@ h_wait:                 ; A8: one frame while the overlay is up. Right after the
     JSL help_wait       ; writes $420C from it, which would run a stage's scroll wave under the overlay
     LDA #$40 : STA $0831 : STA $420C
     ; fall through: L+R held -> X/A/Y/B labels show the L+R+button DX options (help_lr), released -> back
-h_lr:                   ; A8 X16, DB 0. Map rows 3..9, columns 18..31 (7 x 14 words), only on a change, in the
+h_lr:                   ; A8 X16, DB 0. Map rows 2..9, columns 18..31 (8 x 14 words), only on a change, in the
     LDA $0083           ; next vblank (one NMI is skipped, like h_off). The game is frozen here, so L+R+button
     AND #$30            ; never reaches asm/options.asm combo; L+R also hide Select/Start, so the overlay can only
     CMP #$30            ; close with L+R released (combo then sees no held combo and syncs its prev)
@@ -320,11 +325,11 @@ h_lr:                   ; A8 X16, DB 0. Map rows 3..9, columns 18..31 (7 x 14 wo
     BRA ++
 +   LDA.l !H+67
     CLC
-    ADC.w #(3*64)+36
+    ADC.w #(2*64)+36
 ++  STA.l !H+71
-    LDA.w #!HMAP+(3*32)+18
+    LDA.w #!HMAP+(2*32)+18
     STA.l !H+73
-    LDY #$0007
+    LDY #$0008
 -   LDA.l !H+73 : STA $2116 : CLC : ADC #$0020 : STA.l !H+73
     LDA.l !H+71 : STA $4372 : CLC : ADC #$0040 : STA.l !H+71
     LDA #$001C : STA $4375
@@ -346,15 +351,15 @@ h_rel:                  ; A8: wait until Select and Start are both up
     RTS
 
 help_maps: dw help_map, help_map+$700, help_map+$E00
-help_pal:  ; per character: 0 background, 1 white, 2 black, 3 grey | 5 yellow (palette 1, same background)
-    dw $3461, $7FFF, $0000, $5294, $3461, $13FF, $0000, $0C63   ; Hornisse: deep blue
-    dw $1C2D, $7FFF, $0000, $5294, $1C2D, $13FF, $0000, $0C63   ; Sara: deep crimson-magenta
-    dw $1121, $7FFF, $0000, $5294, $1121, $13FF, $0000, $0C63   ; Ryo: dark green
+help_pal:  ; per character: 0 background, 1 white, 2 black, 3 grey | 5 yellow (palette 1) | 9 cyan (palette 2: L+R view)
+    dw $3461, $7FFF, $0000, $5294, $3461, $13FF, $0000, $0C63, $3461, $7FE0, $0000, $0C63   ; Hornisse: deep blue
+    dw $1C2D, $7FFF, $0000, $5294, $1C2D, $13FF, $0000, $0C63, $1C2D, $7FE0, $0000, $0C63   ; Sara: deep crimson-magenta
+    dw $1121, $7FFF, $0000, $5294, $1121, $13FF, $0000, $0C63, $1121, $7FE0, $0000, $0C63   ; Ryo: dark green
 help_chr:  incbin "../build/gen/help_chr.bin"
 help_map:  incbin "../build/gen/help_map.bin"
 help_hdma: incbin "../build/gen/help_hdma.bin"
-help_lr:   incbin "../build/gen/help_lr.bin"   ; L+R labels: 7 rows x 64 bytes (columns 18..31 used)
-assert (help_map&$FF0000) == ((help_lr+$1BF)&$FF0000), "help data crosses a bank"
+help_lr:   incbin "../build/gen/help_lr.bin"   ; L+R labels: 8 rows x 64 bytes (rows 2..9) (columns 18..31 used)
+assert (help_map&$FF0000) == ((help_lr+$1FF)&$FF0000), "help data crosses a bank"
 !hn = 0
 
 ; ----- shadows for write-only PPU regs: each "LDA #imm / STA $21xx" becomes "JSL tramp / NOP" -----

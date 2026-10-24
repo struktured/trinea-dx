@@ -44,7 +44,7 @@ def glyph(c):
     return dec(R[0x37000+t*16:0x37000+t*16+16])
 W,H=256,224
 SELX,STAX=56,72   # pad-local centres of SELECT / START
-def page(name,moves,btn):
+def page(name,moves,btn,lr=False):
     img=np.zeros((H,W),np.uint8); pal=np.zeros((H//8,W//8),np.uint8)   # per-tile palette
     def text(col,row,s,p=0):
         for i,c in enumerate(s):
@@ -59,12 +59,12 @@ def page(name,moves,btn):
             elif pal[row+1,col]!=pal[row,col]: raise SystemExit('helpgfx: descender of %r at %d,%d changes palette'%(c,col,row))
             img[y:y+1,x:x+8]=np.where(t>0,t,cur)
     def ctext(row,s,p=0): text((32-len(s))//2,row,s,p)
-    def rich(col,row,s):   # {...} = a button name, drawn gold (palette 1); everything else white
+    def rich(col,row,s,p=0):   # {...} = a button name, drawn gold (palette 1); everything else palette p (white)
         gold=False
         for c in s:
             if c=='{': gold=True; continue
             if c=='}': gold=False; continue
-            text(col,row,c,1 if gold else 0); col+=1
+            text(col,row,c,1 if gold else p); col+=1
     ctext(1,'CONTROLS - '+name,1)
     # --- SNES pad, tiles x 2..17, y 3..10 (128 x 64 px)
     ox,oy=8,24          # pad at x 8..135, y 24..87: a full tile (8 px+) of space before the labels at column 18
@@ -84,7 +84,10 @@ def page(name,moves,btn):
     for ch,cx,cy in (('X',104,22),('Y',91,34),('A',117,34),('B',104,46),('L',26,4),('R',101,4)): letter(ch,cx,cy)
     img[oy:oy+64,ox:ox+128]=a
     # labels right of the pad (x tiles 18..31) at the button heights
-    for r,b in ((3,'X'),(5,'A'),(7,'Y'),(9,'B')): rich(18,r,'{%s} %s'%(b,btn[b]))
+    for r,b in ((3,'X'),(5,'A'),(7,'Y'),(9,'B')): rich(18,r,'{%s} %s'%(b,btn[b]),2 if lr else 0)
+    # row 2 above the labels: hint in the normal view, a cyan header (palette 2) while L+R are held
+    if lr: text(18,2,'DX OPTIONS',2)
+    else: rich(18,2,'{L+R}: DX opts')
     # SELECT and START: one row, labels mirrored about the pad centre (x 72); a white leader runs from each button
     # straight down out of the pad, then out to the first letter of its label (Select left, Start right).
     rich(1,12,'{SELECT}: help'); rich(16,12,'{START}: pause')   # drops at x 12 / 132: 60 px either side of x 72
@@ -132,10 +135,10 @@ P={0:('HORNISSE',[('A+B','Morning star'),('Mash B','Sword frenzy'),('Spin D-pad'
       {'X':'Giant star','B':'Fire shot','A':'Spark shot','Y':'Wing spin'}),
    2:('RYO',[('A+B','Bombs'),('B+Y','Wall of fire'),('Spin D-pad','(slow) then {Y}:'),('','Shadow clones'),('','(costs 10% of gold)'),('X','Petal storm (uses 1)')],
       {'X':'Petal storm','B':'Sickle','A':'Chain sickle','Y':'Throw blade'})}
-# Held L+R while the overlay is open: the X/A/Y/B labels (map rows 3..9, columns 18..31, incl. descender rows)
+# Held L+R while the overlay is open: the X/A/Y/B labels (map rows 2..9 incl. the hint/header row, columns 18..31, incl. descender rows)
 # are swapped for the DX option each L+R+button toggles (asm/options.asm combo, docs/MOVES.md). Same for everyone.
 LR={'X':'Turbo','A':'Fast foes','Y':'Sara speed','B':'Rumble off'}
-LRR,LRC,LRH,LRW=3,18,7,14
+LRR,LRC,LRH,LRW=2,18,8,14
 tiles={bytes(16):0}; chr_=bytearray(16); maps=bytearray(); prev=[]; hdma=bytearray()
 def enc(img,pal,ty,tx):
     t=img[ty*8:ty*8+8,tx*8:tx*8+8]; b=bytearray(16)
@@ -150,7 +153,7 @@ for k in (0,1,2):
     img,pal,hd=page(*P[k]); hdma+=hd
     Image.fromarray((img*80).astype(np.uint8)).save(GEN+'/help_preview_%d.png'%k)
     if k==0:
-        aimg,apal,_=page(P[0][0],P[0][1],LR); lrmap=bytearray()
+        aimg,apal,_=page(P[0][0],P[0][1],LR,True); lrmap=bytearray()
         Image.fromarray((aimg*80).astype(np.uint8)).save(GEN+'/help_preview_lr.png')
         for ty in range(LRR,LRR+LRH):
             lrmap+=bytes(2*LRC)   # 64-byte rows like help_map, so help.asm uses one stride for both
