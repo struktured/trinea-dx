@@ -353,8 +353,8 @@ h_rel:                  ; A8: wait until Select and Start are both up
 help_maps: dw help_map, help_map+$700, help_map+$E00
 help_pal:  ; per character: 0 background, 1 white, 2 black, 3 grey | 5 yellow (palette 1) | 9 cyan (palette 2: L+R view)
     dw $3461, $7FFF, $0000, $5294, $3461, $13FF, $0000, $0C63, $3461, $7FE0, $0000, $0C63   ; Hornisse: deep blue
-    dw $1C2D, $7FFF, $0000, $5294, $1C2D, $13FF, $0000, $0C63, $1C2D, $7FE0, $0000, $0C63   ; Sara: deep crimson-magenta
-    dw $1121, $7FFF, $0000, $5294, $1121, $13FF, $0000, $0C63, $1121, $7FE0, $0000, $0C63   ; Ryo: dark green
+    dw $1121, $7FFF, $0000, $5294, $1121, $13FF, $0000, $0C63, $1121, $7FE0, $0000, $0C63   ; Sara: dark green (matches her green PENTA DRAGON ending logo)
+    dw $1C2D, $7FFF, $0000, $5294, $1C2D, $13FF, $0000, $0C63, $1C2D, $7FE0, $0000, $0C63   ; Ryo: deep crimson-magenta (matches his pink ending logo)
 help_chr:  incbin "../build/gen/help_chr.bin"
 help_map:  incbin "../build/gen/help_map.bin"
 help_hdma: incbin "../build/gen/help_hdma.bin"
