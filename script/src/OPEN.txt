@@ -25,7 +25,7 @@ OPEN_24 Hornisse:[br]Graf! What is the meaning of this?[br]I demand an explanati
 OPEN_25 Sara:[br]Graf...[br]What on earth is going on here?![ENDK]
 OPEN_26 Ryo:[br]Graf![br]What is the meaning of this?[ENDK]
 OPEN_27 Graf:[br]Can't you see for yourself?[br]What's before you is all there is![ENDK]
-OPEN_28 Why that look?[br]You still don't understand?![br]Then allow me to explain......[ENDK]
+OPEN_28 What's that look for?[br]You still don't understand?![br]Then allow me to explain......[ENDK]
 OPEN_29 Everything you've done[br]was nothing more than...[br]helping the Dark King return![ENDK]
 OPEN_30 O Dark King, Penta Dragon......[br]Here stand fools who would[br]stand in the way of our Oath!![ENDK]
 OPEN_31 We offer up their lives to you now![ENDK]

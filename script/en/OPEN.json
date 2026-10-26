@@ -287,7 +287,7 @@
    "entry_id": 28,
    "param": 1,
    "note": "entry = 00 id param text... FF (83=newline). Located by linear scan ($CE:49A7), no pointers.",
-   "en": "Why that look?[br]You still don't understand?![br]Then allow me to explain......[ENDK]"
+   "en": "What's that look for?[br]You still don't understand?![br]Then allow me to explain......[ENDK]"
   },
   {
    "id": "OPEN_29",
