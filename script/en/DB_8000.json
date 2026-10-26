@@ -735,7 +735,7 @@
    "kind": "dialogue",
    "label": 204,
    "snes": "$DB9784",
-   "en": "[hl]Graf[hl]: This is... the year NEA 403.[wait][page]The Penta Dragon's shadow reaches even to Attempt, the world where the gods dwell.[wait][page]But in truth, the key to stopping the Penta Dragon's revival lies here![wait][page]That key is... the [hl]Blue Orb[hl]![wait][page]Please, find it and bring it back! I'm counting on you.[wait][END]"
+   "en": "[hl]Graph[hl]: This is... the year NEA 403.[wait][page]The Penta Dragon's shadow reaches even to Attempt, the world where the gods dwell.[wait][page]But in truth, the key to stopping the Penta Dragon's revival lies here![wait][page]That key is... the [hl]Blue Orb[hl]![wait][page]Please, find it and bring it back! I'm counting on you.[wait][END]"
   },
   {
    "id": "DB_8000_0080",
@@ -759,7 +759,7 @@
    "kind": "dialogue",
    "label": 22,
    "snes": "$DB9C2E",
-   "en": "[hl]Graf[hl]: Oh, well done! That's the [hl]Blue Orb[hl]![wait][page]Thank goodness you got it before it fell into his hands!![wait][page][hl]Hornisse[hl]: \"His\"? Who do you mean?[wait][page][hl]Graf[hl]: Oh, never mind me. Oh, but before that...[wait][page]This is... the year NEA 2115.[wait][page]In this world, the people of the Resistance will help you.[wait][page]Go and pay them a visit![wait][END]"
+   "en": "[hl]Graph[hl]: Oh, well done! That's the [hl]Blue Orb[hl]![wait][page]Thank goodness you got it before it fell into his hands!![wait][page][hl]Hornisse[hl]: \"His\"? Who do you mean?[wait][page][hl]Graph[hl]: Oh, never mind me. Oh, but before that...[wait][page]This is... the year NEA 2115.[wait][page]In this world, the people of the Resistance will help you.[wait][page]Go and pay them a visit![wait][END]"
   },
   {
    "id": "DB_8000_0083",
@@ -776,7 +776,7 @@
    "kind": "dialogue",
    "label": 108,
    "snes": "$DBA12E",
-   "en": "[hl]Graf[hl]: This is... the year NEA 2115.[wait][page]In this world, the people of the Resistance will help you.[wait][page]Go and pay them a visit![wait][END]"
+   "en": "[hl]Graph[hl]: This is... the year NEA 2115.[wait][page]In this world, the people of the Resistance will help you.[wait][page]Go and pay them a visit![wait][END]"
   },
   {
    "id": "DB_8000_0085",
@@ -802,7 +802,7 @@
    "kind": "dialogue",
    "label": 21,
    "snes": "$DBA572",
-   "en": "[hl]Graf[hl]: What!? Yayoi got away?[wait][page]Well, never mind. Leave it to me! I'll find her for sure.[wait][END]"
+   "en": "[hl]Graph[hl]: What!? Yayoi got away?[wait][page]Well, never mind. Leave it to me! I'll find her for sure.[wait][END]"
   },
   {
    "id": "DB_8000_0088",
@@ -819,7 +819,7 @@
    "kind": "dialogue",
    "label": 23,
    "snes": "$DBA605",
-   "en": "[hl]Graf[hl]: Oh, well done! That's the [hl]Blue Orb[hl]![wait][page]Thank goodness you got it before it fell into his hands!![wait][page][hl]Hornisse[hl]: \"His\"? Who do you mean?[wait][page][hl]Graf[hl]: Oh, never mind me. Oh, but before that...[wait][page]This is... the year NEA 1444.[wait][page]The Penta Dragon's evil claws already reach this far.[wait][page]In Count Vampierre's place, a mysterious [hl]Man in Black[hl] now holds the castle and does evil![wait][page]Save the people of this era from their terror![wait][END]"
+   "en": "[hl]Graph[hl]: Oh, well done! That's the [hl]Blue Orb[hl]![wait][page]Thank goodness you got it before it fell into his hands!![wait][page][hl]Hornisse[hl]: \"His\"? Who do you mean?[wait][page][hl]Graph[hl]: Oh, never mind me. Oh, but before that...[wait][page]This is... the year NEA 1444.[wait][page]The Penta Dragon's evil claws already reach this far.[wait][page]In Count Vampierre's place, a mysterious [hl]Man in Black[hl] now holds the castle and does evil![wait][page]Save the people of this era from their terror![wait][END]"
   },
   {
    "id": "DB_8000_0090",
@@ -827,7 +827,7 @@
    "kind": "dialogue",
    "label": 109,
    "snes": "$DBA7AD",
-   "en": "[hl]Graf[hl]: This is... the year NEA 1444.[wait][page]The Penta Dragon's evil claws already reach this far.[wait][page]In Count Vampierre's place, a mysterious [hl]Man in Black[hl] now holds the castle and does evil![wait][page]Save the people of this era from their terror![wait][END]"
+   "en": "[hl]Graph[hl]: This is... the year NEA 1444.[wait][page]The Penta Dragon's evil claws already reach this far.[wait][page]In Count Vampierre's place, a mysterious [hl]Man in Black[hl] now holds the castle and does evil![wait][page]Save the people of this era from their terror![wait][END]"
   },
   {
    "id": "DB_8000_0091",
@@ -852,7 +852,7 @@
    "kind": "dialogue",
    "label": 99,
    "snes": "$DBAD31",
-   "en": "[hl]Forfahren[hl]: Oh, how wonderful! That's the [hl]Blue Orb[hl]![wait][page]Thank goodness you got it before it fell into Graf's hands!![wait][page][hl]Hornisse[hl]: Who is this Graf?[wait][page][hl]Forfahren[hl]: It's a long story. Oh, but before that...[wait][page]This is... the year NEA 2403.[wait][page]Here, they commit murder openly, before a crowd![wait][page]I want you to save the people from the evil in their hearts!![wait][page]After that, I'll tell you everything. I'm counting on you![wait][END]"
+   "en": "[hl]Forfahren[hl]: Oh, how wonderful! That's the [hl]Blue Orb[hl]![wait][page]Thank goodness you got it before it fell into Graph's hands!![wait][page][hl]Hornisse[hl]: Who is this Graph?[wait][page][hl]Forfahren[hl]: It's a long story. Oh, but before that...[wait][page]This is... the year NEA 2403.[wait][page]Here, they commit murder openly, before a crowd![wait][page]I want you to save the people from the evil in their hearts!![wait][page]After that, I'll tell you everything. I'm counting on you![wait][END]"
   },
   {
    "id": "DB_8000_0094",
@@ -973,7 +973,7 @@
    "kind": "dialogue",
    "label": 241,
    "snes": "$DBBA93",
-   "en": "[hl]Graf[hl]: This is... the year NEA 403.[wait][page]The Penta Dragon's shadow reaches even to Attempt, the world where the gods dwell.[wait][page]But in truth, the key to stopping the Penta Dragon's revival lies here![wait][page]That key is... the [hl]Green Orb[hl]![wait][page]Please, find it and bring it back! I'm counting on you.[wait][END]"
+   "en": "[hl]Graph[hl]: This is... the year NEA 403.[wait][page]The Penta Dragon's shadow reaches even to Attempt, the world where the gods dwell.[wait][page]But in truth, the key to stopping the Penta Dragon's revival lies here![wait][page]That key is... the [hl]Green Orb[hl]![wait][page]Please, find it and bring it back! I'm counting on you.[wait][END]"
   },
   {
    "id": "DB_8000_0109",
@@ -997,7 +997,7 @@
    "kind": "dialogue",
    "label": 240,
    "snes": "$DBBF7A",
-   "en": "[hl]Graf[hl]: Oh, well done! That's the [hl]Green Orb[hl]![wait][page]Thank goodness you got it before it fell into his hands!![wait][page][hl]Sara[hl]: \"His\"? Who on earth do you mean?[wait][page][hl]Graf[hl]: It's a long story. Oh, more importantly...[wait][END]"
+   "en": "[hl]Graph[hl]: Oh, well done! That's the [hl]Green Orb[hl]![wait][page]Thank goodness you got it before it fell into his hands!![wait][page][hl]Sara[hl]: \"His\"? Who on earth do you mean?[wait][page][hl]Graph[hl]: It's a long story. Oh, more importantly...[wait][END]"
   },
   {
    "id": "DB_8000_0112",
@@ -1013,7 +1013,7 @@
    "kind": "dialogue",
    "label": 111,
    "snes": "$DBC0E5",
-   "en": "[hl]Graf[hl]: Something terrible has happened!![wait] It seems Count Vampierre has been revived in NEA 1426![wait][page]Go there at once and look into it! Be careful, now.[wait][END]"
+   "en": "[hl]Graph[hl]: Something terrible has happened!![wait] It seems Count Vampierre has been revived in NEA 1426![wait][page]Go there at once and look into it! Be careful, now.[wait][END]"
   },
   {
    "id": "DB_8000_0114",
@@ -1021,7 +1021,7 @@
    "kind": "dialogue",
    "label": 239,
    "snes": "$DBC192",
-   "en": "[hl]Graf[hl]: Oh, well done! That's the [hl]Green Orb[hl]![wait][page]Thank goodness you got it before it fell into his hands!![wait][page][hl]Sara[hl]: \"His\"? Who on earth do you mean?[wait][page][hl]Graf[hl]: It's a long story. Oh, but before that...[wait][page]This is... the year NEA 2115.[wait][page]The hand of evil reaches here too...[wait][page]Fortunately, the people of the Resistance should be able to help you![wait][page]Go and pay them a visit![wait][END]"
+   "en": "[hl]Graph[hl]: Oh, well done! That's the [hl]Green Orb[hl]![wait][page]Thank goodness you got it before it fell into his hands!![wait][page][hl]Sara[hl]: \"His\"? Who on earth do you mean?[wait][page][hl]Graph[hl]: It's a long story. Oh, but before that...[wait][page]This is... the year NEA 2115.[wait][page]The hand of evil reaches here too...[wait][page]Fortunately, the people of the Resistance should be able to help you![wait][page]Go and pay them a visit![wait][END]"
   },
   {
    "id": "DB_8000_0115",
@@ -1038,7 +1038,7 @@
    "kind": "dialogue",
    "label": 112,
    "snes": "$DBC693",
-   "en": "[hl]Graf[hl]: This is... the year NEA 2115.[wait][page]The hand of evil reaches here too...[wait][page]Fortunately, the people of the Resistance should be able to help you![wait][page]Go and pay them a visit![wait][END]"
+   "en": "[hl]Graph[hl]: This is... the year NEA 2115.[wait][page]The hand of evil reaches here too...[wait][page]Fortunately, the people of the Resistance should be able to help you![wait][page]Go and pay them a visit![wait][END]"
   },
   {
    "id": "DB_8000_0117",
@@ -1055,7 +1055,7 @@
    "kind": "dialogue",
    "label": 238,
    "snes": "$DBCADC",
-   "en": "[hl]Graf[hl]: .........[wait][page]This is the year NEA 1444.[wait] For you, it is a very...... painful and sad era.[wait][page][hl]Sara[hl]: ??? What do you mean?[wait][END]"
+   "en": "[hl]Graph[hl]: .........[wait][page]This is the year NEA 1444.[wait] For you, it is a very...... painful and sad era.[wait][page][hl]Sara[hl]: ??? What do you mean?[wait][END]"
   },
   {
    "id": "DB_8000_0119",
@@ -1080,7 +1080,7 @@
    "kind": "dialogue",
    "label": 97,
    "snes": "$DBD05C",
-   "en": "[hl]Forfahren[hl]: Oh, how wonderful! That's the [hl]Green Orb[hl]![wait][page]Thank goodness you got it before it fell into Graf's hands!![wait][page][hl]Sara[hl]: Who on earth is Graf?[wait][page][hl]Forfahren[hl]: It's a long story. Oh, but before that...[wait][page]This is... the year NEA 2403.[wait][page]Here, they commit murder openly, before a crowd![wait][page]I want you to save the people from the evil in their hearts!![wait][page]After that, I'll tell you everything. I'm counting on you![wait][END]"
+   "en": "[hl]Forfahren[hl]: Oh, how wonderful! That's the [hl]Green Orb[hl]![wait][page]Thank goodness you got it before it fell into Graph's hands!![wait][page][hl]Sara[hl]: Who on earth is Graph?[wait][page][hl]Forfahren[hl]: It's a long story. Oh, but before that...[wait][page]This is... the year NEA 2403.[wait][page]Here, they commit murder openly, before a crowd![wait][page]I want you to save the people from the evil in their hearts!![wait][page]After that, I'll tell you everything. I'm counting on you![wait][END]"
   },
   {
    "id": "DB_8000_0122",
@@ -1277,7 +1277,7 @@
    "kind": "dialogue",
    "label": 245,
    "snes": "$DBE155",
-   "en": "[hl]Graf[hl]: This is... the year NEA 403.[wait][page]The Penta Dragon's shadow reaches even to Attempt, the world where the gods dwell.[wait][page]But in truth, the key to stopping the Penta Dragon's revival lies here![wait][page]That key is... the [hl]Crimson Orb[hl]![wait][page]Please, find it and bring it back! I'm counting on you.[wait][END]"
+   "en": "[hl]Graph[hl]: This is... the year NEA 403.[wait][page]The Penta Dragon's shadow reaches even to Attempt, the world where the gods dwell.[wait][page]But in truth, the key to stopping the Penta Dragon's revival lies here![wait][page]That key is... the [hl]Crimson Orb[hl]![wait][page]Please, find it and bring it back! I'm counting on you.[wait][END]"
   },
   {
    "id": "DB_8000_0145",
@@ -1310,7 +1310,7 @@
    "kind": "dialogue",
    "label": 244,
    "snes": "$DBE617",
-   "en": "[hl]Graf[hl]: Oh, well done! That's the [hl]Crimson Orb[hl]![wait][page]Thank goodness you got it before it fell into his hands!![wait][page][hl]Ryo[hl]: \"His\"? Who do you mean?[wait][page][hl]Graf[hl]: It's a long story. Oh, but before that...[wait][page]This is... the year NEA 1426.[wait][page]A servant of the Penta Dragon lives in the castle and torments the townspeople.[wait][page]Go and lend them your strength![wait][END]"
+   "en": "[hl]Graph[hl]: Oh, well done! That's the [hl]Crimson Orb[hl]![wait][page]Thank goodness you got it before it fell into his hands!![wait][page][hl]Ryo[hl]: \"His\"? Who do you mean?[wait][page][hl]Graph[hl]: It's a long story. Oh, but before that...[wait][page]This is... the year NEA 1426.[wait][page]A servant of the Penta Dragon lives in the castle and torments the townspeople.[wait][page]Go and lend them your strength![wait][END]"
   },
   {
    "id": "DB_8000_0149",
@@ -1318,7 +1318,7 @@
    "kind": "dialogue",
    "label": 135,
    "snes": "$DBE771",
-   "en": "[hl]Graf[hl]: This is... the year NEA 1426.[wait][page]A servant of the Penta Dragon lives in the castle and torments the townspeople.[wait][page]Go and lend them your strength![wait][END]"
+   "en": "[hl]Graph[hl]: This is... the year NEA 1426.[wait][page]A servant of the Penta Dragon lives in the castle and torments the townspeople.[wait][page]Go and lend them your strength![wait][END]"
   },
   {
    "id": "DB_8000_0150",
@@ -1326,7 +1326,7 @@
    "kind": "dialogue",
    "label": 243,
    "snes": "$DBE80F",
-   "en": "[hl]Graf[hl]: Oh, well done! That's the [hl]Crimson Orb[hl]![wait][page]Thank goodness you got it before it fell into his hands!![wait][page][hl]Ryo[hl]: \"His\"? Who do you mean?[wait][page][hl]Graf[hl]: It's a long story. Oh, but before that...[wait][page]This is... the year NEA 1444.[wait][page]A mysterious [hl]Man in Black[hl] lives in the castle, and he is up to no good![wait][page]Save the people of this era from their terror![wait][END]"
+   "en": "[hl]Graph[hl]: Oh, well done! That's the [hl]Crimson Orb[hl]![wait][page]Thank goodness you got it before it fell into his hands!![wait][page][hl]Ryo[hl]: \"His\"? Who do you mean?[wait][page][hl]Graph[hl]: It's a long story. Oh, but before that...[wait][page]This is... the year NEA 1444.[wait][page]A mysterious [hl]Man in Black[hl] lives in the castle, and he is up to no good![wait][page]Save the people of this era from their terror![wait][END]"
   },
   {
    "id": "DB_8000_0151",
@@ -1334,7 +1334,7 @@
    "kind": "dialogue",
    "label": 137,
    "snes": "$DBE96D",
-   "en": "[hl]Graf[hl]: This is... the year NEA 1444.[wait][page]A mysterious [hl]Man in Black[hl] lives in the castle, and he is up to no good![wait][page]Save the people of this era from their terror![wait][END]"
+   "en": "[hl]Graph[hl]: This is... the year NEA 1444.[wait][page]A mysterious [hl]Man in Black[hl] lives in the castle, and he is up to no good![wait][page]Save the people of this era from their terror![wait][END]"
   },
   {
    "id": "DB_8000_0152",
@@ -1342,7 +1342,7 @@
    "kind": "dialogue",
    "label": 242,
    "snes": "$DBEA0F",
-   "en": "[hl]Graf[hl]: This is... the year NEA 2115.[wait][page]We have trouble!! It seems Echigoya's evil power has returned![wait][page]Fortunately, the people of the Resistance should be able to help you![wait][page]Go and pay them a visit.[wait][END]"
+   "en": "[hl]Graph[hl]: This is... the year NEA 2115.[wait][page]We have trouble!! It seems Echigoya's evil power has returned![wait][page]Fortunately, the people of the Resistance should be able to help you![wait][page]Go and pay them a visit.[wait][END]"
   },
   {
    "id": "DB_8000_0153",
@@ -1376,7 +1376,7 @@
    "kind": "dialogue",
    "label": 94,
    "snes": "$DBF214",
-   "en": "[hl]Forfahren[hl]: Oh, how wonderful! That's the [hl]Crimson Orb[hl]![wait][page]Thank goodness you got it before it fell into Graf's hands!![wait][page][hl]Ryo[hl]: Who is this Graf?[wait][page][hl]Forfahren[hl]: It's a long story. Oh, but before that...[wait][page]This is... the year NEA 2403.[wait][page]Here, they commit murder openly, before a crowd![wait][page]I want you to save the people from the evil in their hearts!![wait][page]After that, I'll tell you everything. I'm counting on you![wait][END]"
+   "en": "[hl]Forfahren[hl]: Oh, how wonderful! That's the [hl]Crimson Orb[hl]![wait][page]Thank goodness you got it before it fell into Graph's hands!![wait][page][hl]Ryo[hl]: Who is this Graph?[wait][page][hl]Forfahren[hl]: It's a long story. Oh, but before that...[wait][page]This is... the year NEA 2403.[wait][page]Here, they commit murder openly, before a crowd![wait][page]I want you to save the people from the evil in their hearts!![wait][page]After that, I'll tell you everything. I'm counting on you![wait][END]"
   }
  ]
 }

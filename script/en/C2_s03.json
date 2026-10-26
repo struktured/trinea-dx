@@ -490,7 +490,7 @@
    "kind": "dialogue",
    "label": 4,
    "snes": "$C23B6A",
-   "en": "[hl]Sara[hl]: .........Where am I?[wait][page][hl]Mysterious Old Man[hl]: Sorry to drag you off to a place like this so suddenly.[wait][page]Sara...[wait] This is... the year NEA 1403.[wait][page]In other words... some 40 years before your own time.[wait][page][hl]Sara[hl]: Who are you?[wait][page][hl]Mysterious Old Man[hl]: Me? Ho ho ho.........[wait][page]My name is... [hl]Graf[hl].[wait][page][hl]Sara[hl]: ......Graf? So what do you want?[wait][END]"
+   "en": "[hl]Sara[hl]: .........Where am I?[wait][page][hl]Mysterious Old Man[hl]: Sorry to drag you off to a place like this so suddenly.[wait][page]Sara...[wait] This is... the year NEA 1403.[wait][page]In other words... some 40 years before your own time.[wait][page][hl]Sara[hl]: Who are you?[wait][page][hl]Mysterious Old Man[hl]: Me? Ho ho ho.........[wait][page]My name is... [hl]Graph[hl].[wait][page][hl]Sara[hl]: ......Graph? So what do you want?[wait][END]"
   },
   {
    "id": "C2_s03_0056",
@@ -498,7 +498,7 @@
    "kind": "dialogue",
    "label": 159,
    "snes": "$C23CD9",
-   "en": "[hl]Graf[hl]: Well now...... I have two wishes.[wait][page]The first... is to stop the revival of the Penta Dragon.[wait][page]The second... is to stop the misdeeds of an evil wizard, who is also my friend![wait][page][hl]Sara[hl]: .........[wait][page]And what does that have to do with me?[wait][page][hl]Graf[hl]: I'm glad you asked! But there's only one answer.[wait][page]The only one who can save this world is you...... Sara![wait][page]That's all there is to it. Won't you understand?[wait][page][hl]Sara[hl]: But......[wait][page]You spring that on me so suddenly... I don't know what to do......[wait][page][hl]Graf[hl]: Now, now, don't say that.[wait][page]So how about it...... Won't you lend me your strength, no questions asked?[wait][page]<What will you do?>[ENDK]"
+   "en": "[hl]Graph[hl]: Well now...... I have two wishes.[wait][page]The first... is to stop the revival of the Penta Dragon.[wait][page]The second... is to stop the misdeeds of an evil wizard, who is also my friend![wait][page][hl]Sara[hl]: .........[wait][page]And what does that have to do with me?[wait][page][hl]Graph[hl]: I'm glad you asked! But there's only one answer.[wait][page]The only one who can save this world is you...... Sara![wait][page]That's all there is to it. Won't you understand?[wait][page][hl]Sara[hl]: But......[wait][page]You spring that on me so suddenly... I don't know what to do......[wait][page][hl]Graph[hl]: Now, now, don't say that.[wait][page]So how about it...... Won't you lend me your strength, no questions asked?[wait][page]<What will you do?>[ENDK]"
   },
   {
    "id": "C2_s03_0057",
@@ -566,7 +566,7 @@
    "kind": "dialogue",
    "label": 162,
    "snes": "$C23F3E",
-   "en": "[hl]Graf[hl]: Oh, don't say that. Won't you do this for me?[wait][page]<What will you do?>[ENDK]",
+   "en": "[hl]Graph[hl]: Oh, don't say that. Won't you do this for me?[wait][page]<What will you do?>[ENDK]",
    "en_from": "C2_s01_0100"
   },
   {
@@ -635,7 +635,7 @@
    "kind": "dialogue",
    "label": 163,
    "snes": "$C23FB9",
-   "en": "[hl]Graf[hl]: Oh, you will! I'm truly grateful!![wait][page]Now, first of all...[wait][page]Oops, that's right. Before we talk, there's this![wait][END]",
+   "en": "[hl]Graph[hl]: Oh, you will! I'm truly grateful!![wait][page]Now, first of all...[wait][page]Oops, that's right. Before we talk, there's this![wait][END]",
    "en_from": "C2_s01_0107"
   },
   {

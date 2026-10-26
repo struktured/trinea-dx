@@ -812,7 +812,7 @@
    "kind": "dialogue",
    "label": 4,
    "snes": "$C21D38",
-   "en": "[hl]Hornisse[hl]: .........Where am I?[wait][page][hl]Mysterious Old Man[hl]: Sorry to drag you off to a place like this so suddenly.[wait][page]Hornisse, my boy...[wait] This is... the year NEA 1403.[wait][page]In other words... about 22 years before your own time.[wait][page][hl]Hornisse[hl]: Who are you!?[wait][page][hl]Mysterious Old Man[hl]: My name, you ask? Ho ho ho.........[wait][page]My name is... [hl]Graf[hl].[wait][page][hl]Hornisse[hl]: And? What do you want with me, Graf?[wait][END]"
+   "en": "[hl]Hornisse[hl]: .........Where am I?[wait][page][hl]Mysterious Old Man[hl]: Sorry to drag you off to a place like this so suddenly.[wait][page]Hornisse, my boy...[wait] This is... the year NEA 1403.[wait][page]In other words... about 22 years before your own time.[wait][page][hl]Hornisse[hl]: Who are you!?[wait][page][hl]Mysterious Old Man[hl]: My name, you ask? Ho ho ho.........[wait][page]My name is... [hl]Graph[hl].[wait][page][hl]Hornisse[hl]: And? What do you want with me, Graph?[wait][END]"
   },
   {
    "id": "C2_s01_0093",
@@ -820,7 +820,7 @@
    "kind": "dialogue",
    "label": 159,
    "snes": "$C21EBF",
-   "en": "[hl]Graf[hl]: Well now...... I have two wishes.[wait][page]The first... is to stop the revival of the Penta Dragon.[wait][page]The second... is to stop the misdeeds of an evil wizard, who is also my friend![wait][page][hl]Hornisse[hl]: .........[wait][page]And what does that have to do with me?[wait][page][hl]Graf[hl]: I'm glad you asked! But there's only one answer.[wait][page]The only one who can save this world is the legendary hero...... you![wait][page]That's all there is to it. Won't you understand?[wait][page][hl]Hornisse[hl]: \"Legendary hero,\" huh......[wait][page]Nothing good ever happens when I'm called that.[wait][page][hl]Graf[hl]: Now, now, don't say that.[wait][page]So how about it...... Won't you lend me your strength, no questions asked?[wait][page]<What will you do?>[ENDK]"
+   "en": "[hl]Graph[hl]: Well now...... I have two wishes.[wait][page]The first... is to stop the revival of the Penta Dragon.[wait][page]The second... is to stop the misdeeds of an evil wizard, who is also my friend![wait][page][hl]Hornisse[hl]: .........[wait][page]And what does that have to do with me?[wait][page][hl]Graph[hl]: I'm glad you asked! But there's only one answer.[wait][page]The only one who can save this world is the legendary hero...... you![wait][page]That's all there is to it. Won't you understand?[wait][page][hl]Hornisse[hl]: \"Legendary hero,\" huh......[wait][page]Nothing good ever happens when I'm called that.[wait][page][hl]Graph[hl]: Now, now, don't say that.[wait][page]So how about it...... Won't you lend me your strength, no questions asked?[wait][page]<What will you do?>[ENDK]"
   },
   {
    "id": "C2_s01_0094",
@@ -887,7 +887,7 @@
    "kind": "dialogue",
    "label": 162,
    "snes": "$C2213A",
-   "en": "[hl]Graf[hl]: Oh, don't say that. Won't you do this for me?[wait][page]<What will you do?>[ENDK]"
+   "en": "[hl]Graph[hl]: Oh, don't say that. Won't you do this for me?[wait][page]<What will you do?>[ENDK]"
   },
   {
    "id": "C2_s01_0101",
@@ -955,7 +955,7 @@
    "kind": "dialogue",
    "label": 163,
    "snes": "$C221B5",
-   "en": "[hl]Graf[hl]: Oh, you will! I'm truly grateful!![wait][page]Now, first of all...[wait][page]Oops, that's right. Before we talk, there's this![wait][END]"
+   "en": "[hl]Graph[hl]: Oh, you will! I'm truly grateful!![wait][page]Now, first of all...[wait][page]Oops, that's right. Before we talk, there's this![wait][END]"
   },
   {
    "id": "C2_s01_0108",

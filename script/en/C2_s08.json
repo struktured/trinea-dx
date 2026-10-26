@@ -492,7 +492,7 @@
    "kind": "dialogue",
    "label": 160,
    "snes": "$C2C3F0",
-   "en": "[hl]Hornisse[hl]: !? Who's there?[wait][page][hl]Forfahren[hl]: Graf!! Why are you here???[wait][page][hl]Graf[hl]: What a fool you are... Forfahren.[wait][page]Among us, betrayal is not forgiven! Now you'll learn your lesson![wait][page][hl]Forfahren[hl]: Graf, what are you doing? Have you lost your mind!?[wait][END]"
+   "en": "[hl]Hornisse[hl]: !? Who's there?[wait][page][hl]Forfahren[hl]: Graph!! Why are you here???[wait][page][hl]Graph[hl]: What a fool you are... Forfahren.[wait][page]Among us, betrayal is not forgiven! Now you'll learn your lesson![wait][page][hl]Forfahren[hl]: Graph, what are you doing? Have you lost your mind!?[wait][END]"
   },
   {
    "id": "C2_s08_0057",
@@ -500,7 +500,7 @@
    "kind": "dialogue",
    "label": 161,
    "snes": "$C2C53B",
-   "en": "[hl]Graf[hl]: I am Graf.[wait][page]First... allow me to thank you, Hornisse my boy.[wait][page][hl]Hornisse[hl]: What do you mean?[wait][page][hl]Graf[hl]: You did well to gather two of the [hl]Orbs[hl].[wait][page]The last one is in my possession.[wait][page]Forfahren very nearly put them to evil use![wait][page]But all is well now! I will stop the Penta Dragon's revival!![wait][page][hl]Hornisse[hl]: .........[wait][page][hl]Graf[hl]: Well then, I'll be taking my leave......[wait][page][hl]Hornisse[hl]: Wait!![wait][END]"
+   "en": "[hl]Graph[hl]: I am Graph.[wait][page]First... allow me to thank you, Hornisse my boy.[wait][page][hl]Hornisse[hl]: What do you mean?[wait][page][hl]Graph[hl]: You did well to gather two of the [hl]Orbs[hl].[wait][page]The last one is in my possession.[wait][page]Forfahren very nearly put them to evil use![wait][page]But all is well now! I will stop the Penta Dragon's revival!![wait][page][hl]Hornisse[hl]: .........[wait][page][hl]Graph[hl]: Well then, I'll be taking my leave......[wait][page][hl]Hornisse[hl]: Wait!![wait][END]"
   },
   {
    "id": "C2_s08_0058",
@@ -550,7 +550,7 @@
    "kind": "dialogue",
    "label": 163,
    "snes": "$C2CA24",
-   "en": "[hl]Sara[hl]: !? Who are you?[wait][page][hl]Forfahren[hl]: Graf!! Why are you here???[wait][page][hl]Graf[hl]: What a fool you are... Forfahren.[wait][page]Among us, betrayal is not forgiven! Now you'll learn your lesson![wait][page][hl]Forfahren[hl]: Graf, what are you doing? Have you lost your mind!?[wait][END]"
+   "en": "[hl]Sara[hl]: !? Who are you?[wait][page][hl]Forfahren[hl]: Graph!! Why are you here???[wait][page][hl]Graph[hl]: What a fool you are... Forfahren.[wait][page]Among us, betrayal is not forgiven! Now you'll learn your lesson![wait][page][hl]Forfahren[hl]: Graph, what are you doing? Have you lost your mind!?[wait][END]"
   },
   {
    "id": "C2_s08_0064",
@@ -558,7 +558,7 @@
    "kind": "dialogue",
    "label": 164,
    "snes": "$C2CB6D",
-   "en": "[hl]Graf[hl]: I am Graf.[wait][page]First... allow me to thank you, Sara...[wait][page][hl]Sara[hl]: Huh? What do you mean?[wait][page][hl]Graf[hl]: You did well to gather two of the [hl]Orbs[hl].[wait][page]The last one is in my possession.[wait][page]Forfahren very nearly put them to evil use![wait][page]But all is well now! I will stop the Penta Dragon's revival!![wait][page][hl]Sara[hl]: .........[wait][page][hl]Graf[hl]: Well then, I'll be taking my leave......[wait][page][hl]Sara[hl]: Hey, wait a minute!![wait][END]"
+   "en": "[hl]Graph[hl]: I am Graph.[wait][page]First... allow me to thank you, Sara...[wait][page][hl]Sara[hl]: Huh? What do you mean?[wait][page][hl]Graph[hl]: You did well to gather two of the [hl]Orbs[hl].[wait][page]The last one is in my possession.[wait][page]Forfahren very nearly put them to evil use![wait][page]But all is well now! I will stop the Penta Dragon's revival!![wait][page][hl]Sara[hl]: .........[wait][page][hl]Graph[hl]: Well then, I'll be taking my leave......[wait][page][hl]Sara[hl]: Hey, wait a minute!![wait][END]"
   },
   {
    "id": "C2_s08_0065",
@@ -608,7 +608,7 @@
    "kind": "dialogue",
    "label": 166,
    "snes": "$C2D066",
-   "en": "[hl]Ryo[hl]: !? An intruder?[wait][page][hl]Forfahren[hl]: Graf!! Why are you here???[wait][page][hl]Graf[hl]: What a fool you are... Forfahren.[wait][page]Among us, betrayal is not forgiven! Now you'll learn your lesson![wait][page][hl]Forfahren[hl]: Graf, what are you doing? Have you lost your mind!?[wait][END]"
+   "en": "[hl]Ryo[hl]: !? An intruder?[wait][page][hl]Forfahren[hl]: Graph!! Why are you here???[wait][page][hl]Graph[hl]: What a fool you are... Forfahren.[wait][page]Among us, betrayal is not forgiven! Now you'll learn your lesson![wait][page][hl]Forfahren[hl]: Graph, what are you doing? Have you lost your mind!?[wait][END]"
   },
   {
    "id": "C2_s08_0071",
@@ -616,7 +616,7 @@
    "kind": "dialogue",
    "label": 167,
    "snes": "$C2D1AD",
-   "en": "[hl]Graf[hl]: I am Graf.[wait][page]First... allow me to thank you, Ryo my boy.[wait][page][hl]Ryo[hl]: What do you mean?[wait][page][hl]Graf[hl]: You did well to gather two of the [hl]Orbs[hl].[wait][page]The last one is in my possession.[wait][page]Forfahren very nearly put them to evil use![wait][page]But all is well now! I myself will stop the Penta Dragon's revival!![wait][page][hl]Ryo[hl]: .........[wait][page][hl]Graf[hl]: Well then, I'll be taking my leave......[wait][page][hl]Ryo[hl]: Wait!![wait][END]"
+   "en": "[hl]Graph[hl]: I am Graph.[wait][page]First... allow me to thank you, Ryo my boy.[wait][page][hl]Ryo[hl]: What do you mean?[wait][page][hl]Graph[hl]: You did well to gather two of the [hl]Orbs[hl].[wait][page]The last one is in my possession.[wait][page]Forfahren very nearly put them to evil use![wait][page]But all is well now! I myself will stop the Penta Dragon's revival!![wait][page][hl]Ryo[hl]: .........[wait][page][hl]Graph[hl]: Well then, I'll be taking my leave......[wait][page][hl]Ryo[hl]: Wait!![wait][END]"
   },
   {
    "id": "C2_s08_0072",

@@ -31,7 +31,7 @@ The game's own menus and marketing call the third hero 御船哲也 (char-select
 | リーリエ | **Lillie** | Lisa's attendant, later Sara's guardian figure. Sara calls her リーリエさん = "Miss Lillie" at first, and just "Lillie" once they are close. (FAQ: "Leerie Spencer".) |
 | サラの父 | **Sara's Father** | Speaker tag for Jiltania in Sara's opening, before his name is revealed. |
 | フォアファーレン | **Forfahren** | The good wizard who recruits the heroes. From German *Vorfahren* = "ancestors"; the RetroSubs spelling is kept. First appears as 謎の老人. |
-| グラフ | **Graf** | The evil wizard, Forfahren's "friend", who kills him and tricks the heroes. German *Graf* = "count", which matches the game's German naming (Hornisse, Forfahren). The FAQ writes "Graph". Also appears as 謎の老人 in his own recruit scenes. |
+| グラフ | **Graph** | The evil wizard, Forfahren's "friend", who kills him and tricks the heroes. German *Graf* = "count", which matches the game's German naming (Hornisse, Forfahren). The FAQ writes "Graph". Also appears as 謎の老人 in his own recruit scenes. |
 | 謎の老人 | **Mysterious Old Man** | Speaker tag used before either wizard is named. |
 | ヴァンピエール伯爵 | **Count Vampierre** | Campy vampire lord of Rose Castle. Slips into feminine speech (〜わ, 〜のよ) when rattled, rendered with camp ("Ooh, how vexiiing!!"). Signs his notes 美しきヴァンピエール = "Vampierre the Beautiful". |
 | 中央のハデな紳士 | **Flashy Gentleman** | Literally "the flashy gentleman in the middle". Vampierre's tag before he introduces himself. |

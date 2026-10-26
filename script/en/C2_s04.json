@@ -90,7 +90,7 @@
    "kind": "dialogue",
    "label": 122,
    "snes": "$C24BCF",
-   "en": "Graf's voice... echoed inside my head.[wait][page][hl]Rose Castle is a little further east![hl][wait][END]"
+   "en": "Graph's voice... echoed inside my head.[wait][page][hl]Rose Castle is a little further east![hl][wait][END]"
   },
   {
    "id": "C2_s04_0010",
@@ -402,7 +402,7 @@
    "kind": "dialogue",
    "label": 4,
    "snes": "$C25BB3",
-   "en": "[hl]Graf[hl]: Hmm... Quite impressive.[wait][page]But... this is no time to celebrate! Before we talk......[wait][END]"
+   "en": "[hl]Graph[hl]: Hmm... Quite impressive.[wait][page]But... this is no time to celebrate! Before we talk......[wait][END]"
   },
   {
    "id": "C2_s04_0047",
