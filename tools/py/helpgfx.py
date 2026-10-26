@@ -130,7 +130,7 @@ def page(name,moves,btn,lr=False):
 # button/combo to an action, names from watching each one in Mesen. B+Y exists only for Sara (star fall) and
 # Ryo (wall of fire); Hornisse's table has no B+Y entry, so B+Y is just his B stab.
 P={0:('HORNISSE',[('A+B','Morning star'),('Mash B','Sword frenzy'),('Spin D-pad','then {A}: Lightning'),('','(costs 10% of gold)'),('X','Shock wave (uses 1)')],
-      {'X':'Shock wave','B':'Stab','A':'Slash','Y':'Slash'}),
+      {'X':'Shock wave','B':'Stab','A':'Overhead','Y':'Low sweep'}),
    1:('SARA',[('A+B','Homing flame'),('B+Y','Star fall'),('Spin D-pad','then {B}: Dragon Fire'),('','(costs 10% of gold)'),('X','Giant star (uses 1)')],
       {'X':'Giant star','B':'Fire shot','A':'Spark shot','Y':'Wing spin'}),
    2:('RYO',[('A+B','Bombs'),('B+Y','Wall of fire'),('Spin D-pad','(slow) then {Y}:'),('','Shadow clones'),('','(costs 10% of gold)'),('X','Petal storm (uses 1)')],

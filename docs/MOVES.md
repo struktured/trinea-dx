@@ -13,8 +13,8 @@ Button tables: C0:894B (Hornisse), C0:88FE (Sara), C0:8998 (Ryo). Each maps a bu
 | Input | Move | Cost |
 |---|---|---|
 | B | stab | free |
-| A | slash (overhead) | free |
-| Y | slash (low sweep) | free |
+| A | overhead slash ("Overhead" in the Select overlay) | free |
+| Y | low sweep ("Low sweep" in the Select overlay) | free |
 | B+Y | no move of its own: his table has no B+Y entry, so it is the B stab | free |
 | mash B (4 quick taps, about 5-10 taps/s) | sword frenzy | free |
 | A+B | morning star | free |
