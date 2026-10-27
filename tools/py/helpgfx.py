@@ -84,10 +84,10 @@ def page(name,moves,btn,lr=False):
     for ch,cx,cy in (('X',104,22),('Y',91,34),('A',117,34),('B',104,46),('L',26,4),('R',101,4)): letter(ch,cx,cy)
     img[oy:oy+64,ox:ox+128]=a
     # labels right of the pad (x tiles 18..31) at the button heights
-    for r,b in ((3,'X'),(5,'A'),(7,'Y'),(9,'B')): rich(18,r,'{%s} %s'%(b,btn[b]),2 if lr else 0)
-    # row 2 above the labels: hint in the normal view, a cyan header (palette 2) while L+R are held
-    if lr: text(18,2,'DX OPTIONS',2)
-    else: rich(18,2,'{L+R}: DX opts')
+    # Rows 4/6/8/10 (row 3 left blank): the row-2 hint/header used to sit directly on top of the X label at row 3.
+    for r,b in ((4,'X'),(6,'A'),(8,'Y'),(10,'B')): rich(18,r,'{%s} %s'%(b,btn[b]),2 if lr else 0)
+    # row 2 above the labels: the L+R hint
+    rich(18,2,'{L+R}: DX opts')   # both views (the L+R view swaps rows 3..10 only; the cyan labels are the options)
     # SELECT and START: one row, labels mirrored about the pad centre (x 72); a white leader runs from each button
     # straight down out of the pad, then out to the first letter of its label (Select left, Start right).
     rich(1,12,'{SELECT}: help'); rich(16,12,'{START}: pause')   # drops at x 12 / 132: 60 px either side of x 72
@@ -118,7 +118,9 @@ def page(name,moves,btn,lr=False):
         seg.append((8*n,8*m-y)); y+=8*n   # screen line y shows map line y+VOFS+1 (BG quirk), so this is map line 8m+1
         g=2 if i<len(ents)-1 else 208-y
         assert 0<g<=16,(name,g); seg.append((g,BL-y)); y+=g
-    assert y==208; seg.append((16,0))
+    # Last 16 lines: VOFS -1 so screen line y shows map line y. With VOFS 0 the BG quirk (+1) made line 223 show
+    # map row 28, outside the 28 rows the overlay uploads/restores (it holds stale game tiles: dotted line).
+    assert y==208; seg.append((16,-1))
     hd=bytearray()
     for n,v in seg:
         while n>0:
@@ -135,10 +137,10 @@ P={0:('HORNISSE',[('A+B','Morning star'),('Mash B','Sword frenzy'),('Spin D-pad'
       {'X':'Giant star','B':'Fire shot','A':'Spark shot','Y':'Wing spin'}),
    2:('RYO',[('A+B','Bombs'),('B+Y','Wall of fire'),('Spin D-pad','(slow) then {Y}:'),('','Shadow clones'),('','(costs 10% of gold)'),('X','Petal storm (uses 1)')],
       {'X':'Petal storm','B':'Sickle','A':'Chain sickle','Y':'Throw blade'})}
-# Held L+R while the overlay is open: the X/A/Y/B labels (map rows 2..9 incl. the hint/header row, columns 18..31, incl. descender rows)
+# Held L+R while the overlay is open: the X/A/Y/B labels (map rows 3..10 incl. the hint/header row, columns 18..31, incl. descender rows)
 # are swapped for the DX option each L+R+button toggles (asm/options.asm combo, docs/MOVES.md). Same for everyone.
 LR={'X':'Turbo','A':'Fast foes','Y':'Sara speed','B':'Rumble off'}
-LRR,LRC,LRH,LRW=2,18,8,14
+LRR,LRC,LRH,LRW=3,18,8,14
 tiles={bytes(16):0}; chr_=bytearray(16); maps=bytearray(); prev=[]; hdma=bytearray()
 def enc(img,pal,ty,tx):
     t=img[ty*8:ty*8+8,tx*8:tx*8+8]; b=bytearray(16)

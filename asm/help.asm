@@ -296,7 +296,7 @@ h_wait:                 ; A8: one frame while the overlay is up. Right after the
     JSL help_wait       ; writes $420C from it, which would run a stage's scroll wave under the overlay
     LDA #$40 : STA $0831 : STA $420C
     ; fall through: L+R held -> X/A/Y/B labels show the L+R+button DX options (help_lr), released -> back
-h_lr:                   ; A8 X16, DB 0. Map rows 2..9, columns 18..31 (8 x 14 words), only on a change, in the
+h_lr:                   ; A8 X16, DB 0. Map rows 3..10, columns 18..31 (8 x 14 words), only on a change, in the
     LDA $0083           ; next vblank (one NMI is skipped, like h_off). The game is frozen here, so L+R+button
     AND #$30            ; never reaches asm/options.asm combo; L+R also hide Select/Start, so the overlay can only
     CMP #$30            ; close with L+R released (combo then sees no held combo and syncs its prev)
@@ -325,9 +325,9 @@ h_lr:                   ; A8 X16, DB 0. Map rows 2..9, columns 18..31 (8 x 14 wo
     BRA ++
 +   LDA.l !H+67
     CLC
-    ADC.w #(2*64)+36
+    ADC.w #(3*64)+36
 ++  STA.l !H+71
-    LDA.w #!HMAP+(2*32)+18
+    LDA.w #!HMAP+(3*32)+18
     STA.l !H+73
     LDY #$0008
 -   LDA.l !H+73 : STA $2116 : CLC : ADC #$0020 : STA.l !H+73
@@ -358,7 +358,7 @@ help_pal:  ; per character: 0 background, 1 white, 2 black, 3 grey | 5 yellow (p
 help_chr:  incbin "../build/gen/help_chr.bin"
 help_map:  incbin "../build/gen/help_map.bin"
 help_hdma: incbin "../build/gen/help_hdma.bin"
-help_lr:   incbin "../build/gen/help_lr.bin"   ; L+R labels: 8 rows x 64 bytes (rows 2..9) (columns 18..31 used)
+help_lr:   incbin "../build/gen/help_lr.bin"   ; L+R labels: 8 rows x 64 bytes (rows 3..10) (columns 18..31 used)
 assert (help_map&$FF0000) == ((help_lr+$1FF)&$FF0000), "help data crosses a bank"
 !hn = 0
 
