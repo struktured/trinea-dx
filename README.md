@@ -120,10 +120,11 @@ Editing the translation:
 
 ## Roadmap
 
-- **v1.0.1 (latest):** fixes dialogue text corrupting the stage collision map (getting stuck in walls / walking
-  through them, e.g. after a boss victory). Please use v1.0.1 instead of v1.0.
+- **v1.1 (latest):** Trinea DX: speed improvements, L+R options menu, rumble, Select controls overlay,
+  Start skips dialogue, final-boss freeze fix, "Graph" spelling, opening-line fix. See [CHANGELOG.md](CHANGELOG.md).
+- **v1.0.1:** fixes dialogue text corrupting the stage collision map (getting stuck in walls / walking
+  through them, e.g. after a boss victory). 
 - **v1.0:** complete English translation.
-- **Planned: speed/feel improvements.** Optional tweaks for the sluggish movement and the slowdown.
 - **Planned: 2-player co-op.** A two-player simultaneous mode.
 - Bug-fix releases based on playtest reports. Please open an [issue](https://github.com/struktured/trinea-dx/issues)
   with a screenshot and the message location.
