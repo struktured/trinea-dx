@@ -62,8 +62,8 @@ Patched                                    4,194,304 bytes
 > - a new variable-width dialogue font with automatic word wrap, and lowercase letters for the profile font.
 >
 > The ROM is expanded to a plain 32 Mbit HiROM (no special chips) with a valid checksum. MiSTer and flash-cart
-> users should pre-patch the ROM on a PC. The script was translated by hand from the Japanese. It builds on eadmaster's
-> RetroSubs subtitles, keeps a consistent glossary, and gives each hero a distinct voice.
+> users should pre-patch the ROM on a PC. The script was translated by hand from the Japanese. Sara's story builds on eadmaster's
+> RetroSubs subtitles (Ryo's and Hornisse's stories and the menus were translated from scratch), keeps a consistent glossary, and gives each hero a distinct voice.
 >
 > The full source (script, fonts, asm, tools) is on GitHub and rebuilds the patch from your own ROM.
 >
@@ -74,7 +74,7 @@ Patched                                    4,194,304 bytes
 
 - struktured labs (struktured): project lead, translation, hacking, fonts, tools
 - eadmaster: RetroSubs English subtitles and table files (https://github.com/eadmaster/RetroSubs)
-- 4ph: font table help (RHDN forum topic 40638)
+- 4ph: character table help (byte-to-Japanese-character mapping) (RHDN forum topic 40638)
 - Original game: Yanoman / Japan Art Media (JAM)
 - Tools: asar, Flips, Mesen, bsnes-mercury
 

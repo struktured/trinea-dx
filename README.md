@@ -132,9 +132,9 @@ Editing the translation:
 ## Credits
 
 - **struktured labs (struktured):** project lead, translation, hacking, font, tools.
-- **eadmaster:** [RetroSubs](https://github.com/eadmaster/RetroSubs) English subtitles for Trinea and the character
-  table files this project started from. Parts of the Sara scenario and the opening are adapted from RetroSubs.
-- **4ph:** font table help ([romhacking.net forum topic 40638](https://www.romhacking.net/forum/index.php?topic=40638.0)).
+- **eadmaster:** [RetroSubs](https://github.com/eadmaster/RetroSubs) English subtitles for Trinea, the base for
+  Sara's story only, plus the character table files. Ryo's and Hornisse's stories and the menus were translated from scratch.
+- **4ph:** character table help (the byte-to-Japanese-character mapping) ([romhacking.net forum topic 40638](https://www.romhacking.net/forum/index.php?topic=40638.0)).
 - **Yanoman / Japan Art Media (JAM):** the original game (1993). All rights to Trinea belong to their respective owners.
 
 The full list, including the tools used, is in [CREDITS.md](CREDITS.md).
@@ -150,7 +150,7 @@ This repository is dual-licensed by content type:
 | Table files: `tables/` (based on eadmaster's RetroSubs tables) | [CC BY-NC-SA 4.0](LICENSE-CC-BY-NC-SA-4.0.txt) |
 | Code: `asm/`, `tools/` (build scripts and Python tools) | [MIT](LICENSE-MIT.txt) |
 
-The text has to be CC BY-NC-SA 4.0 because it builds on eadmaster's RetroSubs English translation, which is
+The text has to be CC BY-NC-SA 4.0 because Sara's story builds on eadmaster's RetroSubs English translation, which is
 CC BY-NC-SA 4.0. The IPS patch contains both the translation and the code, so distribute it under CC BY-NC-SA 4.0
 (non-commercial, with attribution, share-alike). Never distribute ROMs or pre-patched ROMs.
 
