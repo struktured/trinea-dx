@@ -24,7 +24,7 @@ The earlier "unused RAM" check (ramtest2) only sampled one moment where the regi
 
 ## Hornisse stuck in the top wall trim after a boss victory (real hardware)
 
-- **Reported by:** Carmelo, on real hardware, 2026-10-13.
+- **Reported by:** struktured, on real hardware, 2026-10-13.
 - **Where:** Hornisse's scenario, the throne room / bat-crest hall (the Vampierre castle hall).
 - **What happens:** the boss dies and Hornisse does the victory pose. Afterwards he is inside the top wall trim and can't move.
 - **Status:** not reproduced yet. Triage was time-boxed. In bsnes, the `w_vamp_end` state plays to the same hall with autofire and shows the victory sequence, but the stuck position did not happen in that short run.

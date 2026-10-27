@@ -2,7 +2,7 @@
 
 Chosen English terms used throughout `script/en/`. Sources: the dumped JP script, eadmaster's RetroSubs name list
 (https://github.com/eadmaster/RetroSubs, CC-BY-NC-SA 4.0), ritchie's GameFAQs walkthrough (faqs/36391), Japanese
-strategy pages (super-famicom.jp, retroxgame.com, sakuhindb) for move names, and Carmelo's stream notes
+strategy pages (super-famicom.jp, retroxgame.com, sakuhindb) for move names, and struktured's stream notes
 (private). If you change a term, grep `script/src/*.txt` and re-run `tools/py/merge_en.py`.
 
 ## Heroes
@@ -20,7 +20,7 @@ The game's own menus and marketing call the third hero 御船哲也 (char-select
 **What I chose:**
 - Speaker tags and dialogue use **Ryo** everywhere, as the game does. Switching to "Tetsuya" would mean overriding over a hundred credited lines, and would lose the in-world logic: Ryo is the name he fights under, while Midori, Echigoya, Graf and the Resistance all use the ninja name.
 - The full name **Tetsuya "Ryo" Mifune** (given name first, nickname in quotes) is used wherever the JP writes out 御船 椋 哲也: DB_8000_0070/0102/0122 and DB_0000_0007. It is also recommended for the char-select label, which is graphics/system text. If that label is too narrow, use "Ryo".
-- **Romanization is "Ryo", not "Ryou".** It matches the GameFAQs walkthrough ("Mifune 'Ryo' Tetsuya"), reads naturally in English, and saves a character on every speaker tag. If Carmelo prefers "Ryou", it is one global replace in `script/src/*.txt`: `\[hl\]Ryo\[hl\]`, `Ryo:`, `"Ryo"`, `Ryo!`, and so on.
+- **Romanization is "Ryo", not "Ryou".** It matches the GameFAQs walkthrough ("Mifune 'Ryo' Tetsuya"), reads naturally in English, and saves a character on every speaker tag. If struktured prefers "Ryou", it is one global replace in `script/src/*.txt`: `\[hl\]Ryo\[hl\]`, `Ryo:`, `"Ryo"`, `Ryo!`, and so on.
 - The RetroSubs profile header "Tetsuya Mifune (Untranslated)" is superseded.
 
 ## Supporting cast
@@ -35,7 +35,7 @@ The game's own menus and marketing call the third hero 御船哲也 (char-select
 | 謎の老人 | **Mysterious Old Man** | Speaker tag used before either wizard is named. |
 | ヴァンピエール伯爵 | **Count Vampierre** | Campy vampire lord of Rose Castle. Slips into feminine speech (〜わ, 〜のよ) when rattled, rendered with camp ("Ooh, how vexiiing!!"). Signs his notes 美しきヴァンピエール = "Vampierre the Beautiful". |
 | 中央のハデな紳士 | **Flashy Gentleman** | Literally "the flashy gentleman in the middle". Vampierre's tag before he introduces himself. |
-| 分身 ヴァンピエール | **Doppel Vampierre** | Boss form. Literally "Clone Vampierre"; "Doppel" keeps the German flavor. His call "名付けて…" = "I call it...", Carmelo's phrasing from the stream notes. |
+| 分身 ヴァンピエール | **Doppel Vampierre** | Boss form. Literally "Clone Vampierre"; "Doppel" keeps the German flavor. His call "名付けて…" = "I call it...", struktured's phrasing from the stream notes. |
 | 復活 ヴァンピエール | **Vampierre Reborn** | Final boss form in NEA 1426. |
 | サルニッセ | **Hornuisance** | Vampierre's deliberate mangling of Hornisse (JP: サル "monkey" + ニッセ). Replaced with an English pun. |
 | ゴステロ | **Gostelo** | Vampierre's butler and mad scientist (RetroSubs spelling). |

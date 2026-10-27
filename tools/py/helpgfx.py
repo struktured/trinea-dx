@@ -19,7 +19,7 @@ DESC={'p':_g(['........','........','........','#####+..','##+.##+.','##+.##+.',
       'g':_g(['........','........','........','.#####+.','##+.##+.','##+.##+.','.#####+.','....##+.','.####+..']),
       'y':_g(['........','........','........','##+.##+.','##+.##+.','##+.##+.','.#####+.','....##+.','.####+..'])}
 # '%' is not in the font: overlay-only, digit height (rows 1-7) with the font's 1-px right/bottom shadow style
-# Overlay-only capitals (picked by Carmelo from docs/screenshots/sara_YA_grid.png): the ROM's A leans (only its
+# Overlay-only capitals (picked by struktured from docs/screenshots/sara_YA_grid.png): the ROM's A leans (only its
 # left side steps out) and its Y reads like a lowercase y. A1: pointed apex, middle crossbar; Y4: blocky symmetric.
 CAPS={'A':_g(['........','..###+..','.##+##+.','##+..##+','##+..##+','#######+','##+..##+','##+..##+']),
       'Y':_g(['........','##+.##+.','##+.##+.','.####+..','..##+...','..##+...','..##+...','..##+...'])}

@@ -30,7 +30,7 @@ Categories come from `tools/py/coverage_en.py`: by block, or by which hero's spe
     hinting that *he* was the mysterious old man who left the gem. Now: "...that the mysterious old man was......!?" (see doubtful lines).
   - Sara says お父さん = "Dad" (RetroSubs mixed in "Father"), which keeps her voice young. Lillie and others say "your father".
   - "Tennin's clan" became "Heaven Clan" (天忍), with the parallel Earth / Divine / Wind clans.
-- **Carmelo's stream phrasing** was used where the same JP appears: DB_0000_0032 ("Enduring this humiliation... surviving this far...
+- **struktured's stream phrasing** was used where the same JP appears: DB_0000_0032 ("Enduring this humiliation... surviving this far...
   It was because I believed a day like this would come......", "That day is the day you perish!!"). "I call it..." (名付けて…) is used for
   Vampierre's form reveals. The Vampiume / Maris / "DIEEE!" lines in the project's early stream notes do **not** occur anywhere in the
   dumped script (grep finds no マリス, ヴァンピューム, 死ねー or おにく). They are probably graphics text, or come from Penta Dragon.
@@ -64,7 +64,7 @@ Categories come from `tools/py/coverage_en.py`: by block, or by which hero's spe
 | C2_s06_0001 | An extra `[wait]` was added mid-line (harmless). |
 
 ## Continuity corrections
-By Carmelo's decision, the English quietly fixes clear factual and date slips in the original script. Each fix is listed here.
+By struktured's decision, the English quietly fixes clear factual and date slips in the original script. Each fix is listed here.
 Era anchors used: Hornisse's home era is NEA 1425 (his "22 years" to 1403 is correct). Sara's home era is about 1444
 (Forfahren's "about 40 years" in C2_s03_0032; the NEA 1444 stage is "a painful and sad era" for her). Ryo's home era is NEA 2100
 (Forfahren's "about 700 years" in C2_s05_0061; the NEA 2115 Resistance's "15 years ago" is consistent).
