@@ -52,13 +52,19 @@
 !EV_BKILL = 7               ; boss (part) / big enemy destroyed
 !EV_DEATH = 8               ; player dies
 
+macro clrb()                ; B = 0, A kept (M8)
+    xba
+    lda #$00
+    xba
+endmacro
+
 macro rum(ev)
     php
     rep #$30
     pha
     phx
     phy
-    sep #$30
+    rep #$10 : sep #$20     ; X16 always: the game NMI inherits X width (C0:6BC3 LDX #$0002 -> BRK under X8)
     lda #<ev>
     jsr rum_start
     rep #$30
@@ -133,7 +139,7 @@ rum_frame:                  ; A16 here, X/Y width unknown; DB = game's
     pha
     phx
     phy
-    sep #$30
+    rep #$10 : sep #$20     ; X16 always: the game NMI inherits X width (C0:6BC3 LDX #$0002 -> BRK under X8)
     jsr rum_tick
     rep #$30
     ply
@@ -146,9 +152,11 @@ rum_frame:                  ; A16 here, X/Y width unknown; DB = game's
 rum_nmi:                    ; A16, X/Y unknown, DB/D = game's at NMI entry
     inc $01C9               ; replaced
     php
-    sep #$30
+    rep #$30
     phx
     phy
+    rep #$10 : sep #$20     ; X16 always: the game NMI inherits X width (C0:6BC3 LDX #$0002 -> BRK under X8)
+    %clrb()
     jsr rum_check
     bne .out
     lda.l !R_WD
@@ -167,8 +175,17 @@ rum_nmi:                    ; A16, X/Y unknown, DB/D = game's at NMI entry
     sta.l !R_ZAP
     sta.l !R_ON
     sta.l !R_OFF
+    ldx.w #$0020            ; MiSTer raises $4212.0 up to ~1 line after VBlank starts: wait for the auto-read
+                            ; to start (timeout: auto-joypad may be off), then send_pkt waits for it to end
+-   lda.l $004212
+    lsr
+    bcs +
+    dex
+    bne -
++   lda #$00
     jsr send_pkt            ; off packet (sets R_LAST = 0)
 .out:
+    rep #$30
     ply
     plx
     plp
@@ -205,7 +222,8 @@ rum_check:                  ; Z set = state valid
     cmp #$5A
 +   rts
 
-rum_tick:                   ; A8 X8
+rum_tick:                   ; A8 X16 (B cleared here: TAX/TAY copy B:A)
+    %clrb()
     jsr rum_check
     beq +
     jmp rum_init
@@ -358,7 +376,7 @@ send_pkt:                   ; A = level
     sta.l !JOY0
     nop
     nop
-    ldy #16
+    ldy.w #16
 --  lda.l !JOY0
     dey
     bne --
@@ -370,7 +388,7 @@ send_pkt:                   ; A = level
     sta.l !WRIO
     rts
 send8:                      ; MSB first; WRIO bit 7 always 1
-    ldy #8
+    ldy.w #8
 -   asl
     tax
     lda #$80
@@ -387,7 +405,8 @@ rum_demo:                   ; A8: Z clear = attract demo running (game demo flag
     lda.l $0014F0
     rts
 
-rum_start:                  ; A = event (A8 X8)
+rum_start:                  ; A = event (A8 X16)
+    %clrb()
     pha
     jsr rum_demo            ; attract demo: never start a pulse
     bne ++
@@ -476,11 +495,11 @@ h_ehit:                     ; A8 = enemy HP before the hit, X16 = enemy object
     bra .boss
 +   jsr is_big
     beq .boss
-    sep #$30
+    rep #$10 : sep #$20     ; X16 always: the game NMI inherits X width (C0:6BC3 LDX #$0002 -> BRK under X8)
     lda #!EV_EHIT
     bra .go
 .boss:
-    sep #$30
+    rep #$10 : sep #$20     ; X16 always: the game NMI inherits X width (C0:6BC3 LDX #$0002 -> BRK under X8)
     lda #!EV_BHIT
 .go:
     jsr rum_start
@@ -506,10 +525,10 @@ h_ekill:                    ; X16 = enemy object
     lda #0
     sta.l !R_BIGX
     sta.l !R_BIGX+1
-    sep #$30
+    rep #$10 : sep #$20     ; X16 always: the game NMI inherits X width (C0:6BC3 LDX #$0002 -> BRK under X8)
     lda #!EV_BKILL
     bra .go
-+   sep #$30
++   rep #$10 : sep #$20     ; X16 always: the game NMI inherits X width (C0:6BC3 LDX #$0002 -> BRK under X8)
     lda #!EV_EKILL
 .go:
     jsr rum_start
