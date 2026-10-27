@@ -9,7 +9,7 @@ This repository contains two kinds of material under two licenses.
      font/**                   English font glyph sources drawn for this project
      tables/**                 character tables (based on eadmaster's RetroSubs tables, CC BY-NC-SA 4.0)
      release/readme.txt, README.md, CREDITS.md, docs/*.md (prose)
-   Copyright (c) 2026 struktured labs (Carmelo Piccione).
+   Copyright (c) 2026 struktured labs (struktured).
    Portions adapted from RetroSubs by eadmaster (https://github.com/eadmaster/RetroSubs), CC BY-NC-SA 4.0.
    The CC BY-NC-SA 4.0 license is required because this translation adapts that work.
 
