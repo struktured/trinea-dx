@@ -86,8 +86,10 @@ help_show:
     LDA $00B4 : STA.l !H+12
     LDA.w $009F : STA.l !H+65 ; per-frame scroll/wave effect (NMI JMP ($8AC9,x)) and BG3 wave swapper (NMI DF2F):
     LDA.w $00E0 : STA.l !H+66 ; parked while open so nothing in the NMI touches scroll / HDMA under the overlay
-    STZ $009F
-    STZ $00E0
+    LDA.w $01B3 : STA.l !H+21 ; BG3 HOFS wave (NMI C0:1FBA, fog on Sara's stage 1 screen 2): when set, every NMI rebuilds
+    STZ $009F                 ; the wave table and EORs HDMA ch2 (BG3HOFS) into $0831 and $420C (C0:2039). h_wait only
+    STZ $00E0                 ; masks $420C after the NMI returns (line ~2), so ch2 already ran on lines 0-1 and left
+    STZ $01B3                 ; BG3HOFS at a wave value for the rest of the frame: the overlay swayed. Parked while open
     LDX #$0000
 -   LDA $085A,x : STA.l !H+13,x
     LDA $01A9,x : STA.l !H+17,x
@@ -254,6 +256,7 @@ help_show:
     LDA.l !H+11 : STA $0831
     LDA.l !H+65 : STA.w $009F
     LDA.l !H+66 : STA.w $00E0
+    LDA.l !H+21 : STA.w $01B3
     LDX #$0000
 -   LDA.l !H+43,x : STA $4370,x
     LDA.l !H+54,x : STA $4360,x

@@ -1,7 +1,7 @@
 hirom
 ; ===== Trinea DX options (beta): runtime toggles stored in unused SRAM tail =====
 ; SRAM $30:6300 'T', $6301 'D', $6302 opts, $6303 opts^$A5   (invalid -> all OFF = original)
-;   opts bit0 turbo (20 Hz logic), bits1-2 Sara speed (0 orig, 1 = 5px-equiv, 2 = 6px-equiv), bit3 faster monsters,
+;   opts bit0 turbo (20 Hz logic), bits1-2 hero speed (0 orig, 1 = 5px-equiv, 2 = 6px-equiv), bit3 faster monsters,
 ;   bit4 RETIRED (was rumble off in afb92e1a/2339e2b8; ignored so saves that toggled it get rumble back),
 ;   bit5 rumble off (read by asm/rumble.asm rum_muted), bit6 Start-skips-dialogue off (asm/skip.asm),
 ;   bit7 Select help overlay off (asm/help.asm; L+R+Start)
@@ -99,13 +99,17 @@ turbo:             ; A8; returns carry = ($082C >= threshold)
     CMP #$03
     RTL
 
-sarachk:           ; A8; carry set -> do extra 4px substep this tick
-    LDA $1430
-    CMP #$02
+sarachk:           ; A8; carry set -> do one extra step this tick. Any hero (was Sara only): step $0825 is 4 px
+    LDA $0825        ; (Sara, Hornisse) or 8 px (Ryo); the extra step is the hero's own step size, so the boost is the
+    CMP #$04         ; same +25/+50 % for everyone and the 4/8 px grid alignment and collision chain are unchanged
+    BEQ +
+    CMP #$08
     BNE .no
-    LDA $0825
-    CMP #$04
+    LDA $0069        ; Ryo (8 px step): a doubled 8 px step outruns the BG column streamer on scrolling maps
+    CMP.l !W+12      ; (garbled columns), so no extra step while the camera ($0069) moved since the last check
+    STA.l !W+12      ; ($7ECF1C, free; STA keeps Z)
     BNE .no
++
     LDA $0829
     BNE .no
     JSL getopt
@@ -156,7 +160,7 @@ mon:
     SEC              ; exact original exit flags: REP #$20 / CMP #$0000 leaves C=1
     RTL
 
-; --- L+R held, then X = turbo, Y = Sara speed, A = monsters, B = rumble off. Feedback: mosaic blinks (setting value + 1 blinks)
+; --- L+R held, then X = turbo, Y = hero speed, A = monsters, B = rumble off. Feedback: mosaic blinks (setting value + 1 blinks)
 combo:
     PHP
     SEP #$20

@@ -104,7 +104,7 @@ Editing the translation:
   - the struktured labs boot splash with sound (`asm/splash.asm`, bank E8)
   - RumbleShock rumble (`asm/rumble.asm`, bank E7)
   - the perf patch (`asm/perf.asm`, FE:0000)
-  - runtime options (`asm/options.asm`, FE:0200, SRAM $30:6300). In the field, hold L+R, then tap X = turbo, Y = Sara speed, A = faster monsters, B = rumble off, Select = dialogue skip off.
+  - runtime options (`asm/options.asm`, FE:0200, SRAM $30:6300). In the field, hold L+R, then tap X = turbo, Y = hero speed (any hero; mainly brings Sara up to her Game Boy speed), A = faster monsters, B = rumble off, Select = dialogue skip off.
   - Start-skips-dialogue (`asm/skip.asm`, E9:0000, default on) and the Count Vampierre zap rumble.
 
 ## Moves (quick reference; full list in [docs/MOVES.md](docs/MOVES.md))
@@ -113,7 +113,7 @@ Editing the translation:
 - **Hornisse:** A/B/Y normals; mash B for the sword frenzy; A+B morning star; rotate the D-pad then A for lightning ("Electric Buffalo").
 - **Sara:** rotate then B for Dragon Fire; B+Y star fall; A+B homing flame.
 - **Ryo:** rotate (slower) then Y for shadow clones; B+Y wall of fire; A+B bombs.
-- **Toggles:** L+R+X turbo, L+R+Y Sara speed, L+R+A faster monsters, L+R+B rumble off, L+R+Select dialogue skip, L+R+Start Select help overlay. Two blinks = on, one = off. All default to off except dialogue skip and the help overlay.
+- **Toggles:** L+R+X turbo, L+R+Y hero speed, L+R+A faster monsters, L+R+B rumble off, L+R+Select dialogue skip, L+R+Start Select help overlay. Two blinks = on, one = off. All default to off except dialogue skip and the help overlay.
 - **Select = controls help:** in the field or a stage, Select shows a pad diagram with button actions and the character's moves; Select or Start closes it (see docs/MOVES.md).
 - **Start skips dialogue:** press Start while text is showing to skip the rest of the scene's text; flags, map moves and battles still happen.
 - **Boss tip:** the contraption boss is easy from the side.

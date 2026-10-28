@@ -139,7 +139,7 @@ P={0:('HORNISSE',[('A+B','Morning star'),('Mash B','Sword frenzy'),('Spin D-pad'
       {'X':'Petal storm','B':'Sickle','A':'Chain sickle','Y':'Throw blade'})}
 # Held L+R while the overlay is open: the X/A/Y/B labels (map rows 3..10 incl. the hint/header row, columns 18..31, incl. descender rows)
 # are swapped for the DX option each L+R+button toggles (asm/options.asm combo, docs/MOVES.md). Same for everyone.
-LR={'X':'Turbo','A':'Fast foes','Y':'Sara speed','B':'Rumble off'}
+LR={'X':'Turbo','A':'Fast foes','Y':'Hero speed','B':'Rumble off'}
 LRR,LRC,LRH,LRW=3,18,8,14
 tiles={bytes(16):0}; chr_=bytearray(16); maps=bytearray(); prev=[]; hdma=bytearray()
 def enc(img,pal,ty,tx):

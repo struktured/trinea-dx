@@ -39,7 +39,7 @@ the entire game into English:
    money label.
  - A new variable-width dialogue font and additions to the 8x8 small font.
  - DX extras (v1.1): a performance patch, an L+R options menu (turbo,
-   faster monsters, Sara speed, rumble off, dialogue skip, help overlay),
+   faster monsters, hero speed, rumble off, dialogue skip, help overlay),
    RumbleShock rumble, a Select controls overlay, Start to skip dialogue,
    and a boot splash. Every DX extra can be switched off.
  - The ROM is expanded to 32 Mbit (4 MB HiROM) with a valid checksum.
@@ -58,9 +58,9 @@ Apply the patch to this ROM (No-Intro), headerless:
 After patching:
 
   Size:   4,194,304 bytes (32 Mbit)
-  CRC32:  BCE30B89
-  MD5:    7549C97C6FE47CECA857222E60DC0F41
-  SHA-1:  CCDEDC4343AE645EBDCB440E1D83AE64DFD0D8E5
+  CRC32:  600F507D
+  MD5:    C04250E577A9A97C80313453F1FD6F7D
+  SHA-1:  D9A64EEC4356A6281273075E8F4BEADD15DDAB0E
 
 -------------------------------------------------------------------------------
  3. HOW TO APPLY THE PATCH
@@ -94,7 +94,9 @@ soft-patching. The patched game is a plain 32 Mbit HiROM with no special chips.
 
  Options menu: in the field, hold L+R, then tap a button:
    X       Turbo                     (default off)
-   Y       Sara speed                (default off)
+   Y       Hero speed                (default off)
+           Works for any hero, but it is mainly there to bring
+           Sara up to the speed she had in the Game Boy version.
    A       Faster monsters           (default off)
    B       Rumble off                (rumble is on by default)
    Select  Start-skips-dialogue      (default on)
