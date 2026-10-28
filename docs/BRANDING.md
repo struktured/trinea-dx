@@ -16,3 +16,4 @@
 - **Hold:** 200 frames, so the 240-frame ident finishes.
 - **Handoff (full play or Start skip):** writes `$FF` to `$2142`. The ident mutes the DSP, disables echo writes and jumps back to IPL ($FFC0). The splash then waits for `AA/BB` before Trinea's reset runs, so Trinea's own driver upload handshake still works.
 - **Timeouts:** every wait is bounded. If the APU never answers, the splash runs silently and skips the key-off.
+- **Loudness (v1.1):** the ident was ~4.7 dB quieter than the Yanoman logo jingle that follows it (-24.3 vs -19.6 LUFS). The three BRR block headers in `splash-ident-spc.bin` ($0420, $0429, $0440) go up one range step (+6 dB) and every curve volume byte is scaled by 0.861 (-1.3 dB, peak 116 -> 100). Measured on a Mesen 2.1.1 WAV dump: splash -19.6 LUFS / -12.8 dBFS peak, Yanoman -19.6 LUFS / -3.8 dBFS (unchanged).

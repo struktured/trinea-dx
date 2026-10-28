@@ -58,9 +58,9 @@ Apply the patch to this ROM (No-Intro), headerless:
 After patching:
 
   Size:   4,194,304 bytes (32 Mbit)
-  CRC32:  600F507D
-  MD5:    C04250E577A9A97C80313453F1FD6F7D
-  SHA-1:  D9A64EEC4356A6281273075E8F4BEADD15DDAB0E
+  CRC32:  3985B0B3
+  MD5:    DC222F3AB2782F98EC890507C1E87F07
+  SHA-1:  96B74801D77BD204951B5BA1D103E8915CB2FA6F
 
 -------------------------------------------------------------------------------
  3. HOW TO APPLY THE PATCH
