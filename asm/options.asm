@@ -4,12 +4,10 @@ hirom
 ;   opts bit0 turbo (20 Hz logic), bits1-2 hero speed (0 orig, 1 = 5px-equiv, 2 = 6px-equiv), bit3 faster monsters,
 ;   bit4 RETIRED (was rumble off in afb92e1a/2339e2b8; ignored so saves that toggled it get rumble back),
 ;   bit5 rumble off (read by asm/rumble.asm rum_muted), bit6 Start-skips-dialogue off (asm/skip.asm),
-;   bit7 Select help overlay off (asm/help.asm; L+R+Start)
+;   bit7 RETIRED (was Select help overlay off via L+R+Start; ignored so saves that set it still get the overlay)
 ; scratch (prev buttons, feedback ticks, saved mosaic, raw pad) lives in WRAM !W+4..+11, not SRAM: SRAM is only read when
 ; the WRAM cache is invalid and only written when a toggle changes (issue #4 real-hardware hardening)
 !S = $306300
-!HOLD = $7ECF22   ; L+R+Start hold counter (ticks; free byte after asm/skip.asm !SK/!SKP)
-!HOLDN = 20
 !W = $7ECF10      ; WRAM cache/scratch (hw fix #4): +0 $A5 = cache valid, +1 opts, +2 sig valid, +3 opts^$5A (cache check), +4..+11 pad/feedback scratch
 
 ; --- main-loop tick wait (both copies): LDA $082C : CMP #$04 -> JSL turbo : NOP
@@ -26,7 +24,7 @@ org $C13A92
     NOP
 
 ; --- player collision chain + per-tick hook
-; --- joypad read (replaces perf_joy target): keep raw pad in SRAM scratch, hide face/Start/Select from the game while L+R held
+; --- joypad read (replaces perf_joy target): keep raw pad in SRAM scratch, hide face buttons/Select from the game while L+R held (Start passes through: L+R+Start = plain pause)
 org $C004F8
     JML joy
 
@@ -175,7 +173,6 @@ endif
     CMP #$30
     BEQ +
     LDA #$00
-    STA.l !HOLD
     BRA ++
 +   LDA.l !W+11
     AND #$40
@@ -194,22 +191,6 @@ endif
     LSR
     ORA.l !W+8
     STA.l !W+8
-    LDA.l !W+11      ; Start -> bit2 (help overlay off, asm/help.asm), only once L+R+Start has been HELD for
-    AND #$10         ; !HOLDN ticks (about a second): mashing L+R+buttons used to turn the overlay off by accident
-    BEQ +++          ; (real-hardware report: Select stopped opening it). bit2 is set on the one tick the count hits
-    LDA.l !HOLD      ; !HOLDN, so the new-press logic below toggles exactly once per hold
-    CMP #!HOLDN
-    BCS ++++
-    INC
-    STA.l !HOLD
-    CMP #!HOLDN
-    BNE ++++
-    LDA #$04
-    ORA.l !W+8
-    STA.l !W+8
-    BRA ++++
-+++ STA.l !HOLD      ; A = 0
-++++
     LDA.l !W+10
     AND #$C0
     ORA.l !W+8
@@ -303,7 +284,7 @@ endif
 .schk:
     LDA.l !W+8
     BIT #$08
-    BEQ .hchk
+    BEQ .fb
     LDA.l !W+9
     EOR #$40          ; bit6 = Start-skips-dialogue OFF
     STA.l !W+9
@@ -312,17 +293,6 @@ endif
     LDA #$00
     ROL               ; A = bit6
     BRA .set
-.hchk:
-    LDA.l !W+8
-    BIT #$04
-    BEQ .fb
-    LDA.l !W+9
-    EOR #$80          ; bit7 = Select help overlay OFF
-    STA.l !W+9
-    ASL
-    LDA #$00
-    ROL
-    EOR #$01          ; displayed 1 (two blinks) = help on
 .set:               ; A = displayed value (0..2)
     INC
     ASL
@@ -376,6 +346,6 @@ joy:
     BNE +
     STA $0083
     LDA $0082
-    AND #$0F
+    AND #$1F          ; keep Start (bit4) and the d-pad; hide B/Y/Select
     STA $0082
 +   JML $C0050C

@@ -1,4 +1,4 @@
-; ===== Trinea DX: Select = controls help overlay (on by default; L+R+Start toggles, opts bit7 = OFF) =====
+; ===== Trinea DX: Select = controls help overlay (always on; opts bit7 is retired and ignored) =====
 ; Press Select in the field or a stage (the same place Start pauses) and the game freezes like the pause screen
 ; and shows a full-screen BG3 page: an SNES pad with what each button does, plus the current character's
 ; special moves (docs/MOVES.md). Select or Start closes it and everything is put back exactly.
@@ -35,14 +35,12 @@ help_chk:
     SEP #$20
     LDA $F0
     BNE .out
-    LDA.l $000082      ; held pad (B Y Sel Start ...); Select hidden by asm/options.asm while L+R are held
+    LDA.l $000082      ; held pad (B Y Sel Start ...); Select hidden by asm/options.asm while L+R are held (Start is not)
     AND #$20
     PHA
     EOR.l !H
     AND $01,s          ; new press
     BEQ .nop
-    JSL getopt
-    BMI .nop           ; opts bit7 = help OFF
     JSL help_show
 .nop:
     PLA
@@ -301,7 +299,7 @@ h_wait:                 ; A8: one frame while the overlay is up. Right after the
     ; fall through: L+R held -> X/A/Y/B labels show the L+R+button DX options (help_lr), released -> back
 h_lr:                   ; A8 X16, DB 0. Map rows 3..10, columns 18..31 (8 x 14 words), only on a change, in the
     LDA $0083           ; next vblank (one NMI is skipped, like h_off). The game is frozen here, so L+R+button
-    AND #$30            ; never reaches asm/options.asm combo; L+R also hide Select/Start, so the overlay can only
+    AND #$30            ; never reaches asm/options.asm combo; L+R also hide Select (not Start), so Select can only
     CMP #$30            ; close with L+R released (combo then sees no held combo and syncs its prev)
     BEQ +
     LDA #$00
