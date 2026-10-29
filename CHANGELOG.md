@@ -1,5 +1,8 @@
 # Changelog
 
+## v1.1.1 (2026-10-28)
+- Removed the L+R+Select dialogue-skip toggle (undocumented in the game). Start always skips dialogue, including on saves that had it off (opts bit6 ignored, never written); L+R+Select does nothing.
+
 ## v1.1 (2026-10-27): Trinea DX
 - Speed improvements: perf patch plus optional turbo, faster monsters, and hero speed (any hero; mainly to bring Sara up to her Game Boy speed).
 - Options menu: hold L+R in the field, then X turbo / Y hero speed / A faster monsters / B rumble off / Select dialogue skip / Start help overlay. Saved in SRAM.

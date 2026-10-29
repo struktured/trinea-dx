@@ -104,8 +104,8 @@ Editing the translation:
   - the struktured labs boot splash with sound (`asm/splash.asm`, bank E8)
   - RumbleShock rumble (`asm/rumble.asm`, bank E7)
   - the perf patch (`asm/perf.asm`, FE:0000)
-  - runtime options (`asm/options.asm`, FE:0200, SRAM $30:6300). In the field, hold L+R, then tap X = turbo, Y = hero speed (any hero; mainly brings Sara up to her Game Boy speed), A = faster monsters, B = rumble off, Select = dialogue skip off.
-  - Start-skips-dialogue (`asm/skip.asm`, E9:0000, default on) and the Count Vampierre zap rumble.
+  - runtime options (`asm/options.asm`, FE:0200, SRAM $30:6300). In the field, hold L+R, then tap X = turbo, Y = hero speed (any hero; mainly brings Sara up to her Game Boy speed), A = faster monsters, B = rumble off. (L+R+Select does nothing since v1.1.1.)
+  - Start-skips-dialogue (`asm/skip.asm`, E9:0000, always on since v1.1.1; saved opts bit6 is ignored) and the Count Vampierre zap rumble.
 
 ## Moves (quick reference; full list in [docs/MOVES.md](docs/MOVES.md))
 - **X special:** only X spends it. You start with 1 and can hold up to 5. Pickups and the shop add 1 each.
@@ -113,14 +113,15 @@ Editing the translation:
 - **Hornisse:** A/B/Y normals; mash B for the sword frenzy; A+B morning star; rotate the D-pad then A for lightning ("Electric Buffalo").
 - **Sara:** rotate then B for Dragon Fire; B+Y star fall; A+B homing flame.
 - **Ryo:** rotate (slower) then Y for shadow clones; B+Y wall of fire; A+B bombs.
-- **Toggles:** L+R+X turbo, L+R+Y hero speed, L+R+A faster monsters, L+R+B rumble off, L+R+Select dialogue skip. Two blinks = on, one = off. All default to off except dialogue skip. L+R+Start is just Start (pause); the Select help overlay is always on.
+- **Toggles:** L+R+X turbo, L+R+Y hero speed, L+R+A faster monsters, L+R+B rumble off. Two blinks = on, one = off. All default to off except rumble (L+R+B turns it off). L+R+Select does nothing. L+R+Start is just Start (pause); the Select help overlay is always on.
 - **Select = controls help:** in the field or a stage, Select shows a pad diagram with button actions and the character's moves; Select or Start closes it (see docs/MOVES.md).
 - **Start skips dialogue:** press Start while text is showing to skip the rest of the scene's text; flags, map moves and battles still happen.
 - **Boss tip:** the contraption boss is easy from the side.
 
 ## Roadmap
 
-- **v1.1 (latest):** Trinea DX: speed improvements, L+R options menu, rumble, Select controls overlay,
+- **v1.1.1 (latest):** removed the L+R+Select dialogue-skip toggle; Start always skips dialogue.
+- **v1.1:** Trinea DX: speed improvements, L+R+button option toggles, rumble, Select controls overlay,
   Start skips dialogue, final-boss freeze fix, "Graph" spelling, opening-line fix. See [CHANGELOG.md](CHANGELOG.md).
 - **v1.0.1:** fixes dialogue text corrupting the stage collision map (getting stuck in walls / walking
   through them, e.g. after a boss victory). 

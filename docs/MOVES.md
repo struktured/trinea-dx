@@ -44,7 +44,7 @@ Button tables: C0:894B (Hornisse), C0:88FE (Sara), C0:8998 (Ryo). Each maps a bu
 | X | petal storm (the screen turns magenta and three-lobed petals swirl across it, then every enemy on screen explodes) | 1 X-special use |
 
 ## In-game toggles (DX options)
-Hold L+R in the field, then tap a button. The screen gives a mosaic blink to confirm: **two blinks = on, one blink = off**. Every toggle defaults to **off**, except dialogue skip (on). Settings are kept in battery SRAM ($30:6300).
+Hold L+R in the field, then tap a button. The screen gives a mosaic blink to confirm: **two blinks = on, one blink = off**. Every toggle defaults to **off** (rumble itself is on; L+R+B turns it off). Settings are kept in battery SRAM ($30:6300).
 
 | Combo | Toggle |
 |---|---|
@@ -53,13 +53,13 @@ Hold L+R in the field, then tap a button. The screen gives a mosaic blink to con
 | L+R+A | faster monsters |
 | L+R+B | rumble off. Use it for testing on real hardware, or when using a pad without rumble motors. Stored in opts bit5 since 2026-10-19; the old bit4 flag (afb92e1a/2339e2b8) is ignored, so those saves get rumble back |
 | L+R+Start | nothing special: plain Start (pause). The old help-overlay toggle was removed; saves that had it off get the overlay back |
-| L+R+Select | Start skips dialogue (default **on**; tapping turns it off, two blinks = on) |
+| L+R+Select | nothing (v1.1.1 removed the dialogue-skip toggle; saves that had skip off skip again) |
 
 ## Select: controls help
 Press **Select** in the field or a stage (anywhere Start would pause) to freeze the game and show a full-screen page: an SNES pad with what each button does, plus the current character's moves from this file. **Select or Start** closes it and the screen comes back exactly as it was (the music keeps playing). It never opens in menus, shops, dialogue, cutscenes or the attract demo. It is always available (there is no off switch; the old L+R+Start toggle was removed). While it is open, **hold L+R** and the X/A/Y/B labels change to the L+R+button DX options (Turbo, Fast foes, Hero speed, Rumble off), shown in cyan below the "L+R: DX opts" hint; let go and they change back. Pressing a button there does not toggle anything (the game is frozen; Select/Start close it only once L+R are released). Screenshots: `docs/screenshots/overlay_lr_*.png`. In the original game Select does nothing in play (it is only read on the title screen and by an unreachable debug menu), so nothing is taken away. Screenshots: `docs/screenshots/help_overlay_*.png`.
 
 ## Start skips dialogue
-While a message is printing or waiting for A, press **Start** to skip the rest of the current scene's text (a press while text is still printing takes effect at the next prompt, so menus such as the save list always draw in full). The script still runs every non-text command (story flags, map moves, items, LIFE, character branches, battles), so nothing is missed; only the text is hidden and [wait] prompts are passed. Choice prompts and menus still appear and wait for you. Start = pause in gameplay is unchanged (skip only acts while a script is running). L+R+Select turns it off.
+While a message is printing or waiting for A, press **Start** to skip the rest of the current scene's text (a press while text is still printing takes effect at the next prompt, so menus such as the save list always draw in full). The script still runs every non-text command (story flags, map moves, items, LIFE, character branches, battles), so nothing is missed; only the text is hidden and [wait] prompts are passed. Choice prompts and menus still appear and wait for you. Start = pause in gameplay is unchanged (skip only acts while a script is running). It is always available (no toggle since v1.1.1).
 
 ## Rumble: Count Vampierre's zap
 In the NEA 1426 revival scene, when the Count vaporizes Gostelo, a crackly strong pulse plays for exactly as long as the zap animation (script op 39 at $E2:1DD4). It does not play if you skipped the scene with Start.

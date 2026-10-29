@@ -1,5 +1,5 @@
 ===============================================================================
-                    TRINEA DX v1.1 - English Translation + DX
+                    TRINEA DX v1.1.1 - English Translation + DX
                           by struktured labs
 ===============================================================================
 
@@ -7,7 +7,7 @@ Game:          Trinea
 Platform:      Super Nintendo / Super Famicom
 Genre:         Action RPG
 Original:      Yanoman / Japan Art Media (JAM), 1993 (Japan only)
-Patch version: 1.1
+Patch version: 1.1.1
 Release date:  2026-10-28
 Status:        Complete
 Project:       Trinea DX (enhancement project; v1.0 = English translation)
@@ -38,11 +38,12 @@ the entire game into English:
  - The character select screen, shop descriptions and messages, and the
    money label.
  - A new variable-width dialogue font and additions to the 8x8 small font.
- - DX extras (v1.1): less of the original game's slowdown in some
+ - DX extras (v1.1.1): less of the original game's slowdown in some
    scenes, in-game L+R+button toggles (turbo, faster monsters, hero speed,
-   rumble off, dialogue skip off), RumbleShock rumble, a Select controls
-   overlay, Start to skip dialogue, and a boot splash. Every DX option can
-   be switched off; the overlay only appears when you press Select.
+   rumble off), RumbleShock rumble, a Select controls overlay, Start to
+   skip dialogue, and a boot splash. Every toggle can be switched off; the
+   overlay only appears when you press Select, and Start skips dialogue
+   only when you press it.
  - The ROM is expanded to 32 Mbit (4 MB HiROM) with a valid checksum.
 
 Tested with a full playthrough on MiSTer, and on a real SNES Jr.
@@ -61,9 +62,9 @@ Apply the patch to this ROM (No-Intro), headerless:
 After patching:
 
   Size:   4,194,304 bytes (32 Mbit)
-  CRC32:  9D3A203C
-  MD5:    AB71AF90F4E6DE05009EEB5EE453B418
-  SHA-1:  401B70D17D7811C7C5B868359F8F4AD85D1FCEF0
+  CRC32:  9202DAC8
+  MD5:    CFE336F51FB889C9224F9493C6115387
+  SHA-1:  EA0FF1FC752586EAE2A082D5CD8B12561B01D108
 
 -------------------------------------------------------------------------------
  3. HOW TO APPLY THE PATCH
@@ -71,7 +72,7 @@ After patching:
  1. Make a backup copy of your ROM and check it against the hashes above.
     If your file is 2,097,664 bytes, it has a copier header. Remove the
     header first.
- 2. Apply "Trinea (Japan) [T-En DX by struktured labs v1.1].ips" with an IPS
+ 2. Apply "Trinea (Japan) [T-En DX by struktured labs v1.1.1].ips" with an IPS
     patcher, for example:
       - Floating IPS (Flips)   https://github.com/Alcaro/Flips
       - ROM Patcher JS (web)   https://www.marcrobledo.com/RomPatcher.js/
@@ -93,7 +94,7 @@ soft-patching. The patched game is a plain 32 Mbit HiROM with no special chips.
           Press Select or Start to close it. Hold L+R while it is open to
           see the DX option buttons.
  Start    While text is showing, skips the rest of the scene's dialogue
-          from the next prompt on. L+R+Start is a plain Start (pause).
+          from the next prompt on, always. L+R+Start is a plain Start (pause).
           Story flags, map moves and battles still happen.
 
  Option toggles (no menu): in the field, hold L+R, then tap a button:
@@ -103,7 +104,6 @@ soft-patching. The patched game is a plain 32 Mbit HiROM with no special chips.
            Sara up to the speed she had in the Game Boy version.
    A       Faster monsters           (default off)
    B       Rumble off                (rumble is on by default)
-   Select  Start skips dialogue on/off
  Two blinks mean on, one blink means off. Settings are saved in SRAM.
 
  Moves (full list in docs/MOVES.md in the source repository):
@@ -164,6 +164,10 @@ holders.
 -------------------------------------------------------------------------------
  8. CHANGELOG
 -------------------------------------------------------------------------------
+ v1.1.1 (2026-10-28)
+   - Removed the L+R+Select dialogue-skip toggle (it was undocumented in
+     the game). Start always skips dialogue, also on saves that had it
+     off; L+R+Select now does nothing.
  v1.1 (2026-10-28)
    - Reduces some of the original game's slowdown; L+R+button option
      toggles, rumble, Select controls
