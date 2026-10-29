@@ -1,11 +1,11 @@
 hirom
-; ===== Trinea DX: Start skips the rest of the current script's dialogue (option, default ON) =====
+; ===== Trinea DX: Start skips the rest of the current script's dialogue (always on) =====
 ; Start (new press) while a message is printing or waiting at [wait] turns on skip mode (armed at the next [wait]). While it is on, the script
 ; interpreter keeps running every opcode as usual (flags, map moves, items, HP, character branches, battles); only the
 ; text is suppressed: glyphs are not drawn, [wait] (80) does not wait for A, 88 delays / 81 / 83 newlines are consumed.
 ; [page] (82) and [END] (FE) still clear the box. Skip mode ends when the script returns to the game ($C0:0DCF), at
 ; every choice/menu prompt (op 05, op 46: shown normally, the player picks) and on any field tick.
-; Toggle: L+R+Select in the field (opts bit6 = skip OFF; blank/old saves = ON).
+; Always on (v1.1.1): the L+R+Select toggle is gone and saved opts bit6 is ignored.
 !SK  = $7ECF20      ; $5C = skip mode on (anything else = off; power-on WRAM is random)
 !SKP = $7ECF21      ; last seen Start bit ($00/$10) for edge detection
 
@@ -105,9 +105,8 @@ sk_poll:                    ; A8, from w80; skip on? -> Z clear (A=$5C). Arms on
     CMP #$A3
     BNE .off
 .arm:
-    JSL getopt
-    AND #$40                ; bit6 = skip disabled
-    BNE .off
+    JSL getopt              ; (v1.1.1: opts bit6 ignored, Start always skips; NOPs keep the layout)
+    NOP : NOP : NOP : NOP
     LDA #$5C
     STA.l !SK
     RTL                     ; Z clear

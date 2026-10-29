@@ -3,7 +3,8 @@ hirom
 ; SRAM $30:6300 'T', $6301 'D', $6302 opts, $6303 opts^$A5   (invalid -> all OFF = original)
 ;   opts bit0 turbo (20 Hz logic), bits1-2 hero speed (0 orig, 1 = 5px-equiv, 2 = 6px-equiv), bit3 faster monsters,
 ;   bit4 RETIRED (was rumble off in afb92e1a/2339e2b8; ignored so saves that toggled it get rumble back),
-;   bit5 rumble off (read by asm/rumble.asm rum_muted), bit6 Start-skips-dialogue off (asm/skip.asm),
+;   bit5 rumble off (read by asm/rumble.asm rum_muted), bit6 RETIRED (was Start-skips-dialogue off via L+R+Select;
+;   ignored and never written by a toggle, so saves that set it still skip),
 ;   bit7 RETIRED (was Select help overlay off via L+R+Start; ignored so saves that set it still get the overlay)
 ; scratch (prev buttons, feedback ticks, saved mosaic, raw pad) lives in WRAM !W+4..+11, not SRAM: SRAM is only read when
 ; the WRAM cache is invalid and only written when a toggle changes (issue #4 real-hardware hardening)
@@ -185,12 +186,9 @@ endif
     LSR
     ORA.l !W+8
     STA.l !W+8
-    LDA.l !W+11      ; Select -> bit3 (dialogue skip off)
-    AND #$20
-    LSR
-    LSR
-    ORA.l !W+8
-    STA.l !W+8
+    ; (v1.1.1: L+R+Select toggle removed; Select stays hidden from the game while L+R is held. 16 NOPs keep the layout)
+    NOP : NOP : NOP : NOP : NOP : NOP : NOP : NOP
+    NOP : NOP : NOP : NOP : NOP : NOP : NOP : NOP
     LDA.l !W+10
     AND #$C0
     ORA.l !W+8
