@@ -38,12 +38,14 @@ the entire game into English:
  - The character select screen, shop descriptions and messages, and the
    money label.
  - A new variable-width dialogue font and additions to the 8x8 small font.
- - DX extras (v1.1): a performance patch, an L+R options menu (turbo,
-   faster monsters, hero speed, rumble off, dialogue skip), RumbleShock
-   rumble, a Select controls overlay, Start to skip dialogue, and a boot
-   splash. Every DX option can be switched off; the overlay only appears
-   when you press Select.
+ - DX extras (v1.1): less of the original game's slowdown in some
+   scenes, in-game L+R+button toggles (turbo, faster monsters, hero speed,
+   rumble off, dialogue skip off), RumbleShock rumble, a Select controls
+   overlay, Start to skip dialogue, and a boot splash. Every DX option can
+   be switched off; the overlay only appears when you press Select.
  - The ROM is expanded to 32 Mbit (4 MB HiROM) with a valid checksum.
+
+Tested with a full playthrough on MiSTer, and on a real SNES Jr.
 
 -------------------------------------------------------------------------------
  2. ROM INFORMATION
@@ -94,14 +96,14 @@ soft-patching. The patched game is a plain 32 Mbit HiROM with no special chips.
           from the next prompt on. L+R+Start is a plain Start (pause).
           Story flags, map moves and battles still happen.
 
- Options menu: in the field, hold L+R, then tap a button:
+ Option toggles (no menu): in the field, hold L+R, then tap a button:
    X       Turbo                     (default off)
    Y       Hero speed                (default off)
            Works for any hero, but it is mainly there to bring
            Sara up to the speed she had in the Game Boy version.
    A       Faster monsters           (default off)
    B       Rumble off                (rumble is on by default)
-   Select  Start-skips-dialogue      (default on)
+   Select  Start skips dialogue on/off
  Two blinks mean on, one blink means off. Settings are saved in SRAM.
 
  Moves (full list in docs/MOVES.md in the source repository):
@@ -118,9 +120,6 @@ soft-patching. The patched game is a plain 32 Mbit HiROM with no special chips.
 -------------------------------------------------------------------------------
  5. KNOWN ISSUES
 -------------------------------------------------------------------------------
- - The final-boss win path (ending and credits after defeating the last boss)
-   was verified by triggering the credits sequence directly, not through a
-   legitimate full playthrough. Please report any problems.
  - A few story readings are interpretive. See script/TRANSLATION_NOTES.md in
    the source repository.
  - The game's existing English graphics (title, LIFE/ATTACK/SPEED, staff
@@ -132,7 +131,8 @@ Bug reports: https://github.com/struktured/trinea-dx/issues
  6. CREDITS
 -------------------------------------------------------------------------------
  struktured labs (struktured)
-     Project lead, translation, ROM hacking, fonts, tools, testing
+     Project lead, LLM-assisted translation (curated by playing through each
+     character's story), ROM hacking, fonts, tools, testing
  eadmaster
      RetroSubs English subtitles for Trinea, the base for Sara's story
      only, and the character table files. Ryo's and Hornisse's stories
@@ -165,7 +165,8 @@ holders.
  8. CHANGELOG
 -------------------------------------------------------------------------------
  v1.1 (2026-10-28)
-   - Speed improvements, L+R options menu, rumble, Select controls
+   - Reduces some of the original game's slowdown; L+R+button option
+     toggles, rumble, Select controls
      overlay (Hornisse blue, Sara green, Ryo pink; Hornisse A = Overhead,
      Y = Low sweep), Start skips dialogue, staff roll credits.
    - Fixed: final-boss freeze (rumble left X/Y 8-bit during NMI);
