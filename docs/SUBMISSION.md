@@ -25,7 +25,7 @@ Also worth a short announcement: the RHDN forum thread (topic 40638, where 4ph h
 - **Category / type:** Translation. Language: English. Status: Complete. Genre: Action RPG.
 - **Version / release date:** 1.0 / 2026-09-26
 - **Author / group:** struktured labs (struktured)
-- **Patch format:** IPS (`Trinea (Japan) [T-En DX by struktured labs v1.1].ips`, 157,542 bytes) in `Trinea_DX_v1.1.zip` with `readme.txt`
+- **Patch format:** IPS (`Trinea (Japan) [T-En DX by struktured labs v1.1].ips`, 159,389 bytes) in `Trinea_DX_v1.1.zip` with `readme.txt`
 - **License:** CC BY-NC-SA 4.0 (translation); MIT (tools/asm source)
 - **Source code:** https://github.com/struktured/trinea-dx
 
@@ -37,9 +37,9 @@ Original (headerless)  Trinea (Japan).sfc   2,097,152 bytes
   MD5    8622B25466D1CF31E8A8771838B02CA7
   SHA-1  BA4866A599C9DC380C11F0CB3C1F8E0374D35DFF
 Patched                                    4,194,304 bytes
-  CRC32  3985B0B3
-  MD5    DC222F3AB2782F98EC890507C1E87F07
-  SHA-1  96B74801D77BD204951B5BA1D103E8915CB2FA6F
+  CRC32  9D3A203C
+  MD5    AB71AF90F4E6DE05009EEB5EE453B418
+  SHA-1  401B70D17D7811C7C5B868359F8F4AD85D1FCEF0
 ```
 
 ### Short description (about 250 chars)
