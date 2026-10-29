@@ -8,6 +8,8 @@ hirom
 ; scratch (prev buttons, feedback ticks, saved mosaic, raw pad) lives in WRAM !W+4..+11, not SRAM: SRAM is only read when
 ; the WRAM cache is invalid and only written when a toggle changes (issue #4 real-hardware hardening)
 !S = $306300
+!HOLD = $7ECF22   ; L+R+Start hold counter (ticks; free byte after asm/skip.asm !SK/!SKP)
+!HOLDN = 20
 !W = $7ECF10      ; WRAM cache/scratch (hw fix #4): +0 $A5 = cache valid, +1 opts, +2 sig valid, +3 opts^$5A (cache check), +4..+11 pad/feedback scratch
 
 ; --- main-loop tick wait (both copies): LDA $082C : CMP #$04 -> JSL turbo : NOP
@@ -173,6 +175,7 @@ endif
     CMP #$30
     BEQ +
     LDA #$00
+    STA.l !HOLD
     BRA ++
 +   LDA.l !W+11
     AND #$40
@@ -191,12 +194,22 @@ endif
     LSR
     ORA.l !W+8
     STA.l !W+8
-    LDA.l !W+11      ; Start -> bit2 (help overlay off, asm/help.asm)
-    AND #$10
-    LSR
-    LSR
+    LDA.l !W+11      ; Start -> bit2 (help overlay off, asm/help.asm), only once L+R+Start has been HELD for
+    AND #$10         ; !HOLDN ticks (about a second): mashing L+R+buttons used to turn the overlay off by accident
+    BEQ +++          ; (real-hardware report: Select stopped opening it). bit2 is set on the one tick the count hits
+    LDA.l !HOLD      ; !HOLDN, so the new-press logic below toggles exactly once per hold
+    CMP #!HOLDN
+    BCS ++++
+    INC
+    STA.l !HOLD
+    CMP #!HOLDN
+    BNE ++++
+    LDA #$04
     ORA.l !W+8
     STA.l !W+8
+    BRA ++++
++++ STA.l !HOLD      ; A = 0
+++++
     LDA.l !W+10
     AND #$C0
     ORA.l !W+8

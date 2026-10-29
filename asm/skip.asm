@@ -1,6 +1,6 @@
 hirom
 ; ===== Trinea DX: Start skips the rest of the current script's dialogue (option, default ON) =====
-; Start (new press) while a message is printing or waiting at [wait] turns on skip mode. While it is on, the script
+; Start (new press) while a message is printing or waiting at [wait] turns on skip mode (armed at the next [wait]). While it is on, the script
 ; interpreter keeps running every opcode as usual (flags, map moves, items, HP, character branches, battles); only the
 ; text is suppressed: glyphs are not drawn, [wait] (80) does not wait for A, 88 delays / 81 / 83 newlines are consumed.
 ; [page] (82) and [END] (FE) still clear the box. Skip mode ends when the script returns to the game ($C0:0DCF), at
@@ -78,20 +78,33 @@ sk_field:                   ; A8 (from options combo)
     STA.l !SKP
     RTL
 
-sk_poll:                    ; A8; skip on? -> Z clear (A=$5C). Turns it on for a new Start press if the option is on.
-    LDA.l !SK
-    CMP #$5C
-    BEQ .on
+sk_edge:                    ; A8: A = new Start press ($10/0, flags set), !SKP updated. B (high byte of A) clobbered
     LDA.l $000082
     AND #$10
     PHA
     EOR.l !SKP              ; changed and now pressed -> new press
     AND $01,s
-    STA.l !SK               ; scratch ($10 or 0, never $5C)
+    XBA
     PLA
     STA.l !SKP
+    XBA                     ; A = new press, Z from it
+    RTL
+
+; Skip mode is only ARMED at a [wait] (w80). A Start press while text is printing only sets "pending" ($A3); the
+; next [wait] turns that into skip mode. Text that leads into a choice/menu prompt with no [wait] in between (the
+; Cube of Time "Chronicle 1/2/3" list, op 46) is therefore always drawn in full: before this, a Start press while
+; that list was printing hid the rest of it (real-hardware report: "Chronicle 1" / "C" / blank). op 05/46, the
+; script end and field ticks clear pending as well (sk_clear / sk_field store 0).
+sk_poll:                    ; A8, from w80; skip on? -> Z clear (A=$5C). Arms on a new press or a pending one.
     LDA.l !SK
-    BEQ .off
+    CMP #$5C
+    BEQ .on
+    JSL sk_edge
+    BNE .arm
+    LDA.l !SK
+    CMP #$A3
+    BNE .off
+.arm:
     JSL getopt
     AND #$40                ; bit6 = skip disabled
     BNE .off
@@ -105,6 +118,21 @@ sk_poll:                    ; A8; skip on? -> Z clear (A=$5C). Turns it on for a
     LDA #$00
     STA.l !SK
     RTL                     ; Z set
+
+sk_pollp:                   ; A8, while printing: skip on? -> Z clear. A new press only marks pending.
+    LDA.l !SK
+    CMP #$5C
+    BEQ .on
+    JSL sk_edge
+    BEQ .no
+    LDA #$A3
+    STA.l !SK
+.no:
+    LDA #$00
+    RTL                     ; Z set
+.on:
+    LDA #$5C
+    RTL
 
 sk_byte:                    ; A8 = message byte, Y = ptr. C=1 -> consumed (Y+1)
     PHP
@@ -129,8 +157,8 @@ sk_byte:                    ; A8 = message byte, Y = ptr. C=1 -> consumed (Y+1)
     INY
     SEC
     RTL
-sk_pollw:                   ; A8 here; JSL sk_poll from a JSR context
-    JSL sk_poll
+sk_pollw:                   ; A8 here; JSL sk_pollp from a JSR context
+    JSL sk_pollp
     RTS
 
 w80:                        ; A8 X16, DB=$00. [wait]: release A, then press A; Start (skip) aborts
