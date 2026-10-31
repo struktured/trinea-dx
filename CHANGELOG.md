@@ -1,5 +1,8 @@
 # Changelog
 
+## v1.1.2 (2026-10-31)
+- Fixed: Select controls overlay text shifted sideways / wavy in stages using BG3 horizontal-scroll HDMA (e.g. Neo Edo). Overlay HDMA channel 6 now writes BG3HOFS=0 as well as BG3VOFS on every line (mode 3), so the stage's own scroll HDMA can no longer latch an offset under the page (#12).
+
 ## v1.1.1 (2026-10-28)
 - Removed the L+R+Select dialogue-skip toggle (undocumented in the game). Start always skips dialogue, including on saves that had it off (opts bit6 ignored, never written); L+R+Select does nothing.
 

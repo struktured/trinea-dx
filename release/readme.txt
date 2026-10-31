@@ -1,5 +1,5 @@
 ===============================================================================
-                    TRINEA DX v1.1.1 - English Translation + DX
+                    TRINEA DX v1.1.2 - English Translation + DX
                           by struktured labs
 ===============================================================================
 
@@ -7,8 +7,8 @@ Game:          Trinea
 Platform:      Super Nintendo / Super Famicom
 Genre:         Action RPG
 Original:      Yanoman / Japan Art Media (JAM), 1993 (Japan only)
-Patch version: 1.1.1
-Release date:  2026-10-28
+Patch version: 1.1.2
+Release date:  2026-10-31
 Status:        Complete
 Project:       Trinea DX (enhancement project; v1.0 = English translation)
 Source:        https://github.com/struktured/trinea-dx
@@ -38,7 +38,7 @@ the entire game into English:
  - The character select screen, shop descriptions and messages, and the
    money label.
  - A new variable-width dialogue font and additions to the 8x8 small font.
- - DX extras (v1.1.1): less of the original game's slowdown in some
+ - DX extras (v1.1.2): less of the original game's slowdown in some
    scenes, in-game L+R+button toggles (turbo, faster monsters, hero speed,
    rumble off), RumbleShock rumble, a Select controls overlay, Start to
    skip dialogue, and a boot splash. Every toggle can be switched off; the
@@ -62,9 +62,9 @@ Apply the patch to this ROM (No-Intro), headerless:
 After patching:
 
   Size:   4,194,304 bytes (32 Mbit)
-  CRC32:  9202DAC8
-  MD5:    CFE336F51FB889C9224F9493C6115387
-  SHA-1:  EA0FF1FC752586EAE2A082D5CD8B12561B01D108
+  CRC32:  B1C63C79
+  MD5:    34DC7CF2B2B07A5DEE9E935E333FDA97
+  SHA-1:  D9A22E954353C64F21947253EE8C162AEDE616DF
 
 -------------------------------------------------------------------------------
  3. HOW TO APPLY THE PATCH
@@ -72,7 +72,7 @@ After patching:
  1. Make a backup copy of your ROM and check it against the hashes above.
     If your file is 2,097,664 bytes, it has a copier header. Remove the
     header first.
- 2. Apply "Trinea (Japan) [T-En DX by struktured labs v1.1.1].ips" with an IPS
+ 2. Apply "Trinea (Japan) [T-En DX by struktured labs v1.1.2].ips" with an IPS
     patcher, for example:
       - Floating IPS (Flips)   https://github.com/Alcaro/Flips
       - ROM Patcher JS (web)   https://www.marcrobledo.com/RomPatcher.js/
@@ -164,6 +164,10 @@ holders.
 -------------------------------------------------------------------------------
  8. CHANGELOG
 -------------------------------------------------------------------------------
+ v1.1.2 (2026-10-31)
+   - Fixed: the Select controls overlay text was shifted sideways and
+     wrapped in stages that scroll BG3 with HDMA (e.g. Neo Edo). The
+     overlay now holds BG3 horizontal scroll at 0 on every line (#12).
  v1.1.1 (2026-10-28)
    - Removed the L+R+Select dialogue-skip toggle (it was undocumented in
      the game). Start always skips dialogue, also on saves that had it
