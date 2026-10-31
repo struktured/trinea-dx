@@ -124,8 +124,8 @@ def page(name,moves,btn,lr=False):
     hd=bytearray()
     for n,v in seg:
         while n>0:
-            c=min(n,127); hd+=bytes([c,v&0xff,(v>>8)&3]); n-=c
-    hd+=b'\0'; assert len(hd)<=64; hd+=bytes(64-len(hd))
+            c=min(n,127); hd+=bytes([c,0,0,v&0xff,(v>>8)&3]); n-=c   # mode 3: BG3HOFS lo,hi = 0, BG3VOFS lo,hi
+    hd+=b'\0'; assert len(hd)<=128; hd+=bytes(128-len(hd))
     return img,pal,hd
 
 # Button styles per character: the pad tables at C0:894B (Hornisse) / C0:88FE (Sara) / C0:8998 (Ryo) map each

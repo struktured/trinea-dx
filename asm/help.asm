@@ -184,10 +184,14 @@ help_show:
     STZ $085B : STZ $212D
     STZ $085C : STZ $2131
     STZ $00B4
-    ; HDMA channel 6 -> BG3VOFS ($2112, mode 2 = one register written twice): spaces the moves list out at
-    ; pixel level (table per character, 64 bytes each, built by helpgfx.py). The NMI writes $420C from $0831.
-    LDA #$02 : STA $4360
-    LDA #$12 : STA $4361
+    ; HDMA channel 6 -> BG3HOFS+BG3VOFS ($2111/$2112, mode 3 = two registers written twice): VOFS spaces the moves
+    ; list out at pixel level, HOFS is held at 0 on every line (table per character, 128 bytes each, built by
+    ; helpgfx.py). HOFS has to be in the table: the NMI re-enables the stage's own HDMA channels from $0831 before
+    ; h_wait masks them, so on lines 0-1 a stage table (Edo parallax, Ryo's stage) wrote $2111 and that value
+    ; latched for the whole frame (page ~23 px off, wrapped). Channel 6 runs after the stage's lower channels on
+    ; each line, so its 0 wins. The game's HOFS is put back from $01A9 on close. The NMI writes $420C from $0831.
+    LDA #$03 : STA $4360
+    LDA #$11 : STA $4361
     REP #$20
     LDA $1430
     AND #$00FF
@@ -195,7 +199,7 @@ help_show:
     CMP #$0003
     BCC +
     LDA #$0001
-+   ASL : ASL : ASL : ASL : ASL : ASL
++   ASL : ASL : ASL : ASL : ASL : ASL : ASL
     CLC
     ADC.w #help_hdma
     STA $4362
